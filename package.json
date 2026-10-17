@@ -8,7 +8,6 @@
     "start": "node scripts/serve.mjs",
     "typecheck": "tsc --noEmit",
     "test": "node --test tests/*.test.mjs",
-    "verify:workflow": "node scripts/verify-workflow.mjs",
     "test:e2e": "playwright test",
     "postbuild": "node scripts/offline.mjs",
     "preview": "node scripts/serve.mjs"

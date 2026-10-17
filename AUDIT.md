@@ -10,3 +10,7 @@
 ## Chosen change
 
 Retain React/Next.js as a static exporter; remove unused Google API routes and dependencies. Use browser-local atomic snapshots, UUIDs, explicit completion and approval, a shared deterministic progression engine, a generated offline cache and backup export. Google Apps Script is deferred because the requested local workflow needs no sync. The Daily Health Data workbook has not been accessed or modified.
+
+## Follow-up reliability review
+
+The first slice also lost equipment increments on reload, changed the original rep range when raising the rep goal, offered no backup restore, and had no explicit reviewed-load approval path. These are corrected in the current slice and covered by runtime and browser tests. Mobile icons/metadata and mobile WebKit coverage were added. This does not constitute deployment, full historical migration or physical iPhone verification.
