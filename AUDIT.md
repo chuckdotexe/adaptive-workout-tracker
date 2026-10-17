@@ -14,3 +14,7 @@ Retain React/Next.js as a static exporter; remove unused Google API routes and d
 ## Follow-up reliability review
 
 The first slice also lost equipment increments on reload, changed the original rep range when raising the rep goal, offered no backup restore, and had no explicit reviewed-load approval path. These are corrected in the current slice and covered by runtime and browser tests. Mobile icons/metadata and mobile WebKit coverage were added. This does not constitute deployment, full historical migration or physical iPhone verification.
+
+## Git queue architecture update
+
+The user's revised design replaces local persistence with completed.json and next-week.json on GitHub. Finish submits through authenticated GitHub Git APIs. The credential stays in tab memory; there is no backend or Google authentication in the website. ChatGPT manually runs the documented processing procedure through connected Sheets/GitHub access. Non-force Git reference updates protect concurrent submissions, and plan updates plus queue acknowledgments share one commit. Closing an unfinished tab loses its memory-only draft by design. Prior audit findings about the browser-local implementation are historical.

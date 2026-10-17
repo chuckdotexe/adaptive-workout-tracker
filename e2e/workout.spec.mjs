@@ -1,3 +1,44 @@
-import {test,expect} from '@playwright/test';import fs from 'node:fs';
-const exercises=JSON.parse(fs.readFileSync(new URL('../data/ironledger-program.json',import.meta.url))).filter(e=>e.week===1&&e.day===1);
-test('full workout persists after reload, completes and opens updated targets',async({page,context},testInfo)=>{await page.goto('/');await page.getByRole('button',{name:'Start workout',exact:true}).click();for(let j=0;j<exercises.length;j++){const e=exercises[j];await page.getByLabel('Exercise',{exact:true}).selectOption(String(j));await page.getByLabel('Load',{exact:true}).fill(String(e.weight??50));await page.getByLabel('Reps',{exact:true}).fill(String(e.maxReps));await page.getByLabel('Actual RIR',{exact:true}).fill(String(e.rirMin));await page.getByLabel('Equipment increment').fill('5');for(let i=0;i<e.sets;i++)await page.getByRole('button',{name:'Complete set',exact:true}).click();}await page.evaluate(()=>navigator.serviceWorker.ready);await page.waitForFunction(()=>!!navigator.serviceWorker.controller);await context.setOffline(true);await page.reload();await expect(page.getByText('4/4 sets logged',{exact:true})).toBeVisible();await expect(page.getByLabel('Equipment increment')).toHaveValue('5');await context.setOffline(true);await page.getByRole('button',{name:'Finish workout',exact:true}).click();await context.setOffline(false);await page.reload();await expect(page.getByTestId('target')).toContainText('260 lb');await page.screenshot({path:testInfo.outputPath('completed-workout.png'),fullPage:true});await page.getByRole('button',{name:'Start workout',exact:true}).click();await expect(page.getByText('0/4 sets logged',{exact:true})).toBeVisible();const s=await page.evaluate(()=>JSON.parse(localStorage.getItem('awt-v1')));expect(s.sessions[0].sets.length).toBe(exercises.reduce((n,e)=>n+e.sets,0));expect(new Set(s.sessions[0].sets.map(s=>s.id)).size).toBe(s.sessions[0].sets.length);});
+import {test,expect} from '@playwright/test';
+import {GitHubStore} from '../lib/github-store.mjs';
+import {prepareBatch,finalizeProcessing} from '../lib/processing.mjs';
+import {mockGitHub,connect,logWorkout,program,exercises} from './support.mjs';
+
+test('Finish saves to Git, processing publishes new targets, and the tracker reloads them',async({page},testInfo)=>{
+  const fixture=await mockGitHub(page);await connect(page);await logWorkout(page);
+  await page.getByRole('button',{name:'Finish workout',exact:true}).click();
+  await expect(page.getByRole('status')).toContainText('Workout saved to Git');
+  const queue=fixture.files['completed.json'];
+  expect(queue.sessions).toHaveLength(1);
+  expect(queue.sessions[0].sets).toHaveLength(exercises.reduce((n,e)=>n+e.sets,0));
+  expect(new Set(queue.sessions[0].sets.map(s=>s.id)).size).toBe(queue.sessions[0].sets.length);
+  expect(await page.evaluate(()=>Object.keys(localStorage))).toEqual([]);
+  expect(await page.evaluate(()=>Object.keys(sessionStorage))).toEqual([]);
+  const store=new GitHubStore({token:'test-only',fetchImpl:fixture.fetch});
+  const batch=await prepareBatch(await store.snapshot(program),program);
+  batch.nextPlan.workouts[0].exercises[0].weight=305;
+  batch.nextPlan.workouts[0].exercises[0].reason='Synthetic browser-test target';
+  await finalizeProcessing(store,batch,batch.nextPlan,{spreadsheetId:'mock-staging-only',range:'A2:V40',verified:true,sessions:batch.sessions},program);
+  await page.getByRole('button',{name:'Refresh from Git',exact:true}).click();
+  await expect(page.getByTestId('target')).toContainText('305 lb');
+  await expect(page.getByRole('heading',{name:'Awaiting ChatGPT processing (0)',exact:true})).toBeVisible();
+  await page.screenshot({path:testInfo.outputPath('git-workflow.png'),fullPage:true});
+  await page.reload();
+  await expect(page.getByTestId('target')).toContainText('305 lb');
+  await expect(page.getByRole('heading',{name:'Connect GitHub',exact:true})).toBeVisible();
+  expect(await page.evaluate(()=>document.cookie)).not.toContain('test-only');
+  expect(fixture.files['completed.json'].sessions).toHaveLength(0);
+  expect(fixture.files['next-week.json'].processedSessions).toHaveLength(1);
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+});
+
+test('selected program day is remembered without storing workout JSON',async({page})=>{
+  await mockGitHub(page);await page.goto('/');
+  await expect(page.getByLabel('Day',{exact:true})).toBeVisible();
+  await page.getByLabel('Week',{exact:true}).selectOption('3');
+  await page.getByLabel('Day',{exact:true}).selectOption('4');
+  await page.reload();
+  await expect(page.getByLabel('Week',{exact:true})).toHaveValue('3');
+  await expect(page.getByLabel('Day',{exact:true})).toHaveValue('4');
+  await expect(page.getByText(/Program day 16 of 48/)).toBeVisible();
+  expect(await page.evaluate(()=>Object.keys(localStorage))).toEqual([]);
+});

@@ -3,3 +3,4 @@
 select,input{font:inherit;max-width:100%;padding:9px;border-radius:8px;border:1px solid #889;background:transparent;color:inherit}label{display:block}details{margin-top:16px}summary{cursor:pointer}
 input[type=checkbox]{width:auto;margin-right:10px}section .set{margin:12px 0}label{margin:8px 0}select{max-width:100%;width:100%}button{margin:4px 0}[role=alert]{border:1px solid #ff9f8e;padding:12px;color:#ffb4a6}small{display:block;margin:8px 0}
 :root{color-scheme:dark}button,input,select{font:inherit}input,select{font-size:16px}select{background-color:#101b2c;color:#f4f6fa}
+fieldset{border:0;margin:0;padding:0;min-width:0}fieldset:disabled{opacity:.7}

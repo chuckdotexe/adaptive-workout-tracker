@@ -34,3 +34,11 @@ The finish screen no longer asks the user to review, re-enter or approve targets
 Validation: 26 unit/data tests passed, including automatic completion, idempotent repeated completion, unknown values, actual 300 lb leg press and mixed-load curls. Chromium/mobile-WebKit browser tests exercise one-step completion and recovery of old pending workouts without manual target entry. The production build passes. This update does not add an AI API or Sheets sync.
 
 Automatic completion deployment: GitHub Actions run https://github.com/chuckdotexe/adaptive-workout-tracker/actions/runs/39055004731 passed build, 26 unit/data checks, 12 browser checks and Pages deployment for 5f52c37. Live Chromium and WebKit verification passed logging all 24 sets, one-step automatic completion, zero manual target fields, automatic recovery of a previous pending review without altering actual sets, null load preservation and offline reopening. No Sheets reads or writes occurred.
+
+## Git queue workflow (2026-10-17)
+
+Supersedes the browser-local UI described above. The tracker now appends complete sessions to completed.json and loads next-week.json from GitHub. Drafts and credentials remain only in tab memory; only a day/plan preference is stored in cookies. Existing legacy local records are untouched.
+
+Verified locally: 38 unit tests, production build, TypeScript check, and 12 Playwright cases across Chromium and mobile WebKit. Tests include concurrent submissions, lost success responses, ID/digest conflicts, receipt coverage, atomic queue/plan processing, retained new arrivals, failed browser submissions, day preferences, and no browser workout storage. GitHub API responses and Sheets receipts were simulated in these tests; no actual workout or Google Sheet was written. The generated mobile page was visually inspected.
+
+The ChatGPT task procedure is PROCESS_WORKOUTS.md. Finalization requires a complete verified Sheets receipt, but the script does not query Sheets itself; the agent must perform actual read-back verification through connected tools. Live token connection, real workout submission, real Sheets processing, and physical iPhone use remain to be verified. The initial queue is empty and the upcoming plan is seeded from the original program.
