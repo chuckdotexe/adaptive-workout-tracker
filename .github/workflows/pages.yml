@@ -23,18 +23,18 @@ jobs:
       - run: npx playwright install --with-deps chromium webkit
       - run: npm run test:e2e
       - run: npm run build
-        if: vars.GITHUB_PAGES_ENABLED == 'true'
+        if: vars.PAGES_ENABLED == 'true'
         env:
           NEXT_PUBLIC_BASE_PATH: /adaptive-workout-tracker
       - uses: actions/upload-pages-artifact@v3
-        if: vars.GITHUB_PAGES_ENABLED == 'true'
+        if: vars.PAGES_ENABLED == 'true'
         with:
           path: out
   deploy:
     permissions:
       pages: write
       id-token: write
-    if: vars.GITHUB_PAGES_ENABLED == 'true'
+    if: vars.PAGES_ENABLED == 'true'
     needs: build
     runs-on: ubuntu-latest
     environment:

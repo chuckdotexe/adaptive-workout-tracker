@@ -29,13 +29,13 @@ Approval is explicit. For review decisions, enter a load and a rep goal within t
 
 Export JSON backups regularly. Restore validates the file and shows its counts before an explicit replacement confirmation. Invalid files do not change storage. A valid backup can recover corrupt device storage. Restoring replaces, rather than merges, device records. Browser/OS storage deletion can still remove local data. The old prototype's `awt-v03-local` data remains untouched; automatic migration is not implemented.
 
-All 328 prescriptions are checked against the source CSV for names, notes, load text, sets, rep and RIR ranges. Per-hand load wording remains visible. Numeric load entry uses pounds. Non-rep/cardio notes remain in the source; dedicated cardio logging is pending. No historical records are automatically imported from the supplied prototype validation files.
+All 328 prescriptions are checked against the public program CSV for names, coaching notes, load text, sets, rep and RIR ranges. Copied historical evidence has been removed from public program notes; the original supplied CSV remains unchanged locally. Per-hand load wording remains visible. Numeric load entry uses pounds. Non-rep/cardio notes remain in the source; dedicated cardio logging is pending. No historical records are automatically imported from the supplied prototype validation files.
 
 ## Scope and next steps from the handoff
 
-The current application is not deployed. GitHub Actions installs from the lockfile in a fresh runner and verifies the app. Deployment is disabled unless the repository variable `GITHUB_PAGES_ENABLED` is explicitly set to `true`; no hosting provider is being selected by this change. The previous Pages eligibility check was rejected for the private repository's current plan.
+GitHub Pages deployment is enabled by repository variable `PAGES_ENABLED=true`. GitHub Actions verifies the app in a fresh runner before publishing the static build. The public URL is https://chuckdotexe.github.io/adaptive-workout-tracker/.
 
-The supplied program contains personal training notes and starting-load evidence. It must not be published to an unauthenticated host as-is. Hosting access and which program data may be published need resolution before deployment. No credentials, historical workout JSON, or Google API integration are included in the deployed app.
+Program targets are public with the owner's permission. Copied workout-log evidence is removed from the current program notes. Completed workout records stay on the device pending authenticated Sheets sync. No credentials, historical workout JSON or Google API integration are included in the published build. Git commits are source version history, not the workout log.
 
 After the slice is verified: explicit historical alias mapping and migration, then authenticated staging sync with offline retry/idempotency tests and workbook reconciliation. Daily Health Data must remain unchanged. No staging workbook or authenticated backend has been configured, and no Sheets access or writes have occurred. Timers, supersets, substitutions, cross-device sync and real iPhone home-screen verification remain pending. The PWA has icons, mobile metadata and a tested offline cache; WebKit emulation is not physical iPhone verification.
 
