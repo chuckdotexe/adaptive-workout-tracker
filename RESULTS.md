@@ -7,9 +7,9 @@
 - `npm run typecheck`: PASS. TypeScript files are checked; JavaScript application logic is exercised by tests.
 - `npm run test:e2e`: 12 passed, 0 failed: six browser scenarios in Chromium and mobile WebKit. Covers all 24 sets in Week 1 Day 1, offline app reopening, saved equipment increments, approval and 260 lb bench target, unique next workout, JSON export/restore, invalid backup rejection, corrupt-storage recovery, failed writes, stale tab protection, and explicit 300 lb leg-press review reopening on Day 2. This is emulation, not a real iPhone install test.
 - `npm audit`: 0 known vulnerabilities.
-- Fresh GitHub runner verification is being rerun for this commit. The previous GitHub run's build/check job passed; its Pages deployment failed because the private repository's account plan is ineligible. Deployment is now gated off by default, independent of verification.
+- Fresh checkout on GitHub Actions: PASS for commit d0f8d53, run https://github.com/chuckdotexe/adaptive-workout-tracker/actions/runs/39053103072. The runner installed from the lockfile, built the static app, passed 21 unit/data tests and 12 Chromium/mobile-WebKit browser checks; deployment was skipped. The subsequent mobile-control styling correction was rebuilt, passed all 12 browser checks again locally, and was visually inspected.
 
-Initial recovery-browser tests failed because the test alert locator also selected Next.js's hidden route announcer. The locator was scoped to the application; all checks then passed. The supplied prototype was source-audited, not baseline build-tested.
+Initial recovery-browser tests failed because the test alert locator also selected Next.js's hidden route announcer. The locator was scoped to the application; all checks then passed. Visual inspection of the mobile WebKit screenshot exposed unreadable native selects; explicit dark control styling fixed it and was visually rechecked. The supplied prototype was source-audited, not baseline build-tested.
 
 ## Still pending in the handoff
 
