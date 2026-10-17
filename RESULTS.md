@@ -26,3 +26,9 @@ Initial recovery-browser tests failed because the test alert locator also select
 Historical alias mapping/import; longer-term fatigue history; cross-week prescription review; authenticated staging sync, retry/reconciliation against a real staging workbook; and physical iPhone home-screen validation. No staging workbook creation, Google credentials, source-workbook reads or writes were performed. Deployment was performed as recorded above. Local tests do not establish cross-device durability or indefinite browser retention. Current Plan on the existing workbook has not been reconciled, so the supplied CSV is not claimed to supersede it.
 
 Screenshots are generated in per-test folders under test-results/ using synthetic data only. No health history JSON is tracked or published.
+
+## Automatic completion update
+
+The finish screen no longer asks the user to review, re-enter or approve targets. `automatic-progression-v3` saves conservative targets when a workout finishes. Old pending review screens are finalized automatically on reopening; original sets remain unchanged. Unknown data is not invented, and mixed working loads conservatively hold the lowest recorded load.
+
+Validation: 26 unit/data tests passed, including automatic completion, idempotent repeated completion, unknown values, actual 300 lb leg press and mixed-load curls. Chromium/mobile-WebKit browser tests exercise one-step completion and recovery of old pending workouts without manual target entry. The production build passes. This update does not add an AI API or Sheets sync.

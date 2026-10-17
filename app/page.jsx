@@ -1,7 +1,7 @@
 'use client';
 import {useEffect, useState} from 'react';
 import program from '../data/ironledger-program.json';
-import {empty, read, save, start, record, finish, approve, targetFor, setIncrement, restore} from '../lib/workout.mjs';
+import {empty, read, save, start, record, completeWorkout, targetFor, setIncrement, restore} from '../lib/workout.mjs';
 
 export default function Home() {
   const [state, setState] = useState(empty);
@@ -10,7 +10,6 @@ export default function Home() {
   const [week, setWeek] = useState(1), [day, setDay] = useState(1), [idx, setIdx] = useState(0);
   const [weight, setWeight] = useState(''), [reps, setReps] = useState(''), [rir, setRir] = useState('');
   const [note, setNote] = useState('');
-  const [reviews, setReviews] = useState({});
   const [pendingRestore, setPendingRestore] = useState(null);
   const session = state.sessions.find(s => s.id === state.activeId);
   const exercises = program.filter(e => e.week === (session?.week ?? week) && e.day === (session?.day ?? day));
@@ -20,7 +19,12 @@ export default function Home() {
 
   useEffect(() => {
     try {
-      const stored = read(localStorage);
+      let stored = read(localStorage);
+      const pending = stored.sessions.find(s => s.id === stored.activeId);
+      if (pending?.status === 'finished') {
+        stored = completeWorkout(stored, program.filter(e => e.week === pending.week && e.day === pending.day));
+        save(localStorage, stored);
+      }
       setState(stored);
       setWeek(stored.selection?.week ?? 1);
       setDay(stored.selection?.day ?? 1);
@@ -71,25 +75,17 @@ export default function Home() {
     } catch (e) { setError('Backup not loaded: ' + e.message); }
     event.target.value = '';
   }
-  function approveTargets() {
-    const confirmed = {};
-    for (const [id, review] of Object.entries(reviews)) {
-      if (!review.confirmed) continue;
-      if (review.weight === '' || review.reps === '') { setError('Enter a reviewed load and rep goal'); return; }
-      confirmed[id] = {weight: Number(review.weight), targetReps: Number(review.reps)};
-    }
-    if (commit(s => approve(s, exercises, confirmed))) { setReviews({}); setIdx(0); }
-  }
-  function updateReview(id, value) {
-    setReviews(previous => ({...previous, [id]: {...previous[id], ...value}}));
-  }
   function applyBackup() {
     try {
       // This button explicitly replaces device data, including corrupt storage.
-      save(localStorage, pendingRestore);
-      setState(pendingRestore); setReady(true); setError('');
-      setWeek(pendingRestore.selection?.week ?? 1); setDay(pendingRestore.selection?.day ?? 1);
-      setIdx(0); setReviews({}); setPendingRestore(null);
+      const pending = pendingRestore.sessions.find(s => s.id === pendingRestore.activeId);
+      const restored = pending?.status === 'finished'
+        ? completeWorkout(pendingRestore, program.filter(e => e.week === pending.week && e.day === pending.day))
+        : pendingRestore;
+      save(localStorage, restored);
+      setState(restored); setReady(true); setError('');
+      setWeek(restored.selection?.week ?? 1); setDay(restored.selection?.day ?? 1);
+      setIdx(0); setPendingRestore(null);
     } catch (e) { setError('Backup not restored: ' + e.message); }
   }
 
@@ -118,14 +114,14 @@ export default function Home() {
         <h2>{ex.name}</h2>
         <p data-testid="target">Target: {ex.sets} × {target.targetReps} reps · {target.weight ?? 'Unspecified'} lb{ex.weightText.includes('per hand') ? ' per hand' : ''} · RIR {ex.rirMin ?? 'unspecified'}{ex.rirMax !== ex.rirMin ? '–' + ex.rirMax : ''}</p>
         <p>Program range: {ex.minReps}–{ex.maxReps} reps · Original load: {ex.weightText || 'Unspecified'} · Rest {ex.restSeconds ?? 'unspecified'} seconds</p>
-        {state.targets[ex.id] && <p>Approved next-session target · {state.targets[ex.id].reason}</p>}
+        {state.targets[ex.id] && <p>Next-session target · {state.targets[ex.id].reason}</p>}
         {session?.status === 'active' && <>
           <div className="controls">
             <label>Load (lb)<input aria-label="Load" type="number" min="0" step="any" value={weight} onChange={e => setWeight(e.target.value)}/></label>
             <label>Reps<input aria-label="Reps" type="number" min="0" value={reps} onChange={e => setReps(e.target.value)}/></label>
             <label>Actual RIR<input aria-label="Actual RIR" type="number" min="0" max="10" step="any" value={rir} onChange={e => setRir(e.target.value)} placeholder="Unknown"/></label>
           </div>
-          <small>Leave load or RIR blank if unknown. Unknown values require review for progression.</small>
+          <small>Leave load or RIR blank if unknown. Unknown values keep the previous target without increasing the load.</small>
           <label>Set notes<input value={note} onChange={e => setNote(e.target.value)}/></label>
           <button className="wide" disabled={done.length >= ex.sets} onClick={() => commit(s => {
             if (reps === '') throw Error('Reps are required');
@@ -147,26 +143,19 @@ export default function Home() {
         <button disabled={idx === 0} onClick={() => setIdx(idx - 1)}>Previous</button>
         <button disabled={idx >= exercises.length - 1} onClick={() => setIdx(idx + 1)}>Next exercise</button>
       </div>
-      {session?.status === 'active' && <button className="wide" onClick={() => commit(s => finish(s, exercises))}>Finish workout</button>}
+      {session?.status === 'active' && <button className="wide" onClick={() => commit(s => completeWorkout(s, exercises))}>Finish workout</button>}
       {session?.status === 'finished' && <section className="card">
-        <h2>Review next-session targets</h2>
-        {exercises.map(e => {
-          const d = session.decisions[e.id];
-          return <div key={e.id} className="set">
-            <p><strong>{e.name}</strong>: {d.action} · {d.proposedWeight ?? 'unspecified'} lb · {d.targetReps ?? e.minReps} reps · {d.reason}</p>
-            <p>Actual loads: {(d.actualLoads ?? session.sets.filter(s => s.exerciseId === e.id).map(s => s.weight)).map(w => w ?? 'unknown').join(', ')} lb</p>
-            {d.action === 'review' && <>
-              <label>Reviewed load for {e.name}<input type="number" min="0" step="any" value={reviews[e.id]?.weight ?? ''}
-                onChange={event => updateReview(e.id, {weight: event.target.value})}/></label>
-              <label>Reviewed reps for {e.name}<input type="number" min={e.minReps} max={e.maxReps} step="1" value={reviews[e.id]?.reps ?? ''}
-                onChange={event => updateReview(e.id, {reps: event.target.value})}/></label>
-              <label><input type="checkbox" checked={reviews[e.id]?.confirmed ?? false}
-                onChange={event => updateReview(e.id, {confirmed: event.target.checked})}/>Approve reviewed target for {e.name}</label>
-            </>}
-          </div>;
-        })}
-        <p>Unchecked review decisions retain the prior target. Actual logged loads are always preserved. Targets apply to this exact program week and day.</p>
-        <button onClick={approveTargets}>Approve targets and close workout</button>
+        <h2>Workout ready to save</h2>
+        <p>Your next targets will be calculated and saved automatically.</p>
+        <button onClick={() => commit(s => completeWorkout(s, exercises))}>Save workout</button>
+      </section>}
+      {!session && state.sessions.length > 0 && <section className="card" role="status">
+        <h2>Workout saved</h2><p>Next-session targets updated automatically.</p>
+        <details><summary>See next-session targets</summary>
+          {Object.entries(state.sessions.at(-1).decisions).map(([id, d]) => <p key={id}>
+            <strong>{program.find(e => e.id === id)?.name}</strong>: {d.proposedWeight ?? 'Load not yet recorded'}{d.proposedWeight !== null ? ' lb' : ''} · {d.targetReps} reps · {d.reason}
+          </p>)}
+        </details>
       </section>}
       <section className="card">
         <h2>Saved workouts ({state.sessions.length})</h2>

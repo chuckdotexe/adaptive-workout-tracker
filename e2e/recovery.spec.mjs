@@ -80,7 +80,7 @@ test('valid backup can recover corrupt device storage only after confirmation', 
   expect(await page.evaluate(() => JSON.parse(localStorage.getItem('awt-v1')))).toEqual(original);
 });
 
-test('leg press review uses explicitly confirmed actual load and reopens the correct program day', async ({page}) => {
+test('existing pending workout saves automatically using actual load and reopens the correct program day', async ({page}) => {
   const lower = program.filter(e => e.week === 1 && e.day === 2);
   let state = start(empty(), 1, 2, 'lower-session', '2026-10-17');
   for (const e of lower) {
@@ -93,10 +93,8 @@ test('leg press review uses explicitly confirmed actual load and reopens the cor
   await page.goto('/');
   await page.evaluate(s => localStorage.setItem('awt-v1', JSON.stringify(s)), state);
   await page.reload();
-  await page.getByLabel('Reviewed load for Leg Press', {exact: true}).fill('300');
-  await page.getByLabel('Reviewed reps for Leg Press', {exact: true}).fill('10');
-  await page.getByLabel('Approve reviewed target for Leg Press', {exact: true}).check();
-  await page.getByRole('button', {name: 'Approve targets and close workout'}).click();
+  await expect(page.getByRole('heading', {name: 'Workout saved', exact: true})).toBeVisible();
+  await expect(page.getByLabel('Reviewed load for Leg Press', {exact: true})).toHaveCount(0);
   await page.reload();
   await expect(page.getByLabel('Day', {exact: true})).toHaveValue('2');
   await expect(page.getByTestId('target')).toContainText('300 lb');

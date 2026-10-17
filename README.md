@@ -1,6 +1,6 @@
 # Adaptive Workout Tracker
 
-The first handoff slice: select a program day, log every working set, save locally, finish, review and approve progression, then reopen with the approved target. Code and checks live in the private GitHub repository. No database or backend is required for this slice.
+The first handoff slice: select a program day, log every working set, save locally, finish, automatically calculate and save progression, then reopen with the approved target. Code and checks live in the private GitHub repository. No database or backend is required for this slice.
 
 ## Reproduce checks
 
@@ -21,9 +21,9 @@ Linux CI installs browser system dependencies with `npx playwright install --wit
 
 Choose week/day and start a workout. Enter actual load, reps, RIR and notes. Equipment increments save with the session. Unknown load/RIR remain null; progression requests review. Each workout and set has a unique ID. A successful save writes a validated snapshot before changing the UI. Storage errors are visible; a stale tab cannot silently overwrite a later saved snapshot. This is a single-user app; avoid simultaneous editing from multiple tabs.
 
-Finishing requires all prescribed sets. Rules `double-progression-v2` preserve the original program rep range and store a separate rep goal. Reps below the minimum or harder-than-prescribed RIR hold the actual working load. Otherwise build reps by one from the lowest achieved set, capped at the maximum. All sets at the ceiling within prescribed RIR propose an increase using the equipment increment. Mixed loads, unknown values, excess RIR at the ceiling or unknown equipment increments require review. Actual logs never change. RPE from observed RIR is marked derived, not directly observed.
+Finishing requires all prescribed sets. Rules `automatic-progression-v3` preserve the original program rep range and store a separate rep goal. Reps below the minimum or harder-than-prescribed RIR hold the actual working load. Otherwise build reps by one from the lowest achieved set, capped at the maximum. All sets at the ceiling within prescribed RIR propose an increase using the equipment increment. Mixed loads, unknown values, excess RIR at the ceiling or unknown equipment increments require review. Actual logs never change. RPE from observed RIR is marked derived, not directly observed.
 
-Approval is explicit. For review decisions, enter a load and a rep goal within the program range and check its approval box. Unchecked review decisions keep the previous target. Targets apply to the same exact week/day/exercise; they are not transferred blindly into another week with different prescriptions. The selected program day persists after approval. Decisions record rule version, actual loads and approval provenance. Longer-term fatigue modelling and historical import remain pending.
+Finishing a workout automatically calculates and saves targets, without a review form, rep/load re-entry or approval checkboxes. Missing data holds the previous target; a known consistent actual load is held when performance is uncertain. Mixed loads use the lowest recorded load as the conservative next target. Completely unknown loads remain unknown. Valid increases require the configured equipment increment; otherwise the load is held. Original actual sets never change. Older workouts left on the former review screen are completed automatically on reopening. Targets currently apply to the same exact week/day/exercise. Longer-term fatigue modelling and historical import remain pending.
 
 ## Data recovery
 

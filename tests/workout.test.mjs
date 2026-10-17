@@ -80,3 +80,35 @@ test('older v1 target goals remain readable without overriding original rep rang
 test('a second active workout cannot hide the current workout', () => {
   assert.throws(() => start(completed(), 1, 1, 'other', 'today'), /Close the current workout/);
 });
+
+import {completeWorkout} from '../lib/workout.mjs';
+test('finish automatically saves next targets without review or approval', () => {
+  const s = completeWorkout(setIncrement(completed(), single, 5), [single]);
+  assert.equal(s.activeId, null);
+  assert.equal(s.targets[single.id].weight, 260);
+  assert.equal(s.targets[single.id].automatic, true);
+  assert.deepEqual(completeWorkout(s, [single]), s);
+});
+test('automatic completion retains unknown load without inventing one', () => {
+  const ex = {...single, weight: null, weightText: ''};
+  const sets = Array.from({length: ex.sets}, () => ({weight: null, reps: 5, rir: null}));
+  const s = completeWorkout(completed(ex, sets), [ex]);
+  assert.equal(s.activeId, null);
+  assert.equal(s.targets[ex.id].weight, null);
+  assert.ok(s.sessions[0].sets.every(s => s.weight === null && s.rir === null));
+  assert.deepEqual(restore(JSON.stringify(s)), s);
+});
+test('uncertain leg press holds actual 300 rather than nominal 280 automatically', () => {
+  const ex = program.find(e => e.week === 1 && e.name === 'Leg Press');
+  const sets = [5,4,4,4].map(rir => ({weight: 300, reps: 10, rir}));
+  const s = completeWorkout(completed(ex, sets), [ex]);
+  assert.equal(s.targets[ex.id].weight, 300);
+  assert.equal(s.sessions[0].decisions[ex.id].action, 'hold');
+});
+test('mixed curl loads hold the lower recorded load and preserve each actual set', () => {
+  const ex = program.find(e => e.week === 1 && e.name === 'Seated Leg Curl');
+  const sets = [{weight:140,reps:9,rir:1},{weight:130,reps:10,rir:2}];
+  const s = completeWorkout(completed(ex, sets), [ex]);
+  assert.equal(s.targets[ex.id].weight, 130);
+  assert.deepEqual(s.sessions[0].sets.map(s => s.weight), [140,130]);
+});
