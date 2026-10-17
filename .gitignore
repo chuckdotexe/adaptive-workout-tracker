@@ -1,0 +1,15 @@
+# Exclude historical health records and generated files
+node_modules/
+.next/
+out/
+test-results/
+playwright-report/
+.env*
+!.env.example
+*.tsbuildinfo
+data/reconciled-recent-sessions.json
+data/reconciliation-audit.json
+data/workflow-validation.json
+docs/
+scripts/migrate-workout.mjs
+scripts/verify-workflow.mjs

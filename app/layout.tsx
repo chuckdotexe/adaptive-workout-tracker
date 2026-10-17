@@ -1,0 +1,1 @@
+import type {ReactNode} from 'react';import './style.css';export const metadata={title:'Adaptive Workout Tracker',description:'Private adaptive training tracker',manifest:(process.env.NEXT_PUBLIC_BASE_PATH||'')+'/manifest.webmanifest'};export default function Layout({children}:{children:ReactNode}){return <html lang="en"><body>{children}</body></html>}
