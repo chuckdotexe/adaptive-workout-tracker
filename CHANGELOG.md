@@ -2,6 +2,12 @@
 
 Code changes must update this file and README.md in the same commit. Updates are not required for workout processing, data-only changes, or other work without code changes. Entries describe verified work; a source commit alone does not confirm a successful deployment.
 
+## 2026-10-21 — 90-second rest interval
+
+- Set the workout rest countdown and Restart button to 90 seconds for every exercise, as requested.
+- Updated the displayed rest interval and README to match.
+- Validation: production build passed; existing browser recovery and submission checks passed in Chromium and mobile WebKit.
+
 ## 2026-10-21 — Verified staging test processing
 
 - Verified the user-designated test in the private staging copy, Test Workout Log, preserving unknown measurements and unique IDs.
