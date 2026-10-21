@@ -28,7 +28,9 @@ export async function logWorkout(page){
     await page.getByLabel('Load',{exact:true}).fill(String(ex.weight??50));
     await page.getByLabel('Reps',{exact:true}).fill(String(ex.maxReps));
     await page.getByLabel('Actual RIR',{exact:true}).fill(String(ex.rirMin));
+    await page.getByText('Notes & equipment',{exact:true}).click();
     await page.getByLabel('Equipment increment').fill('5');
+    await page.getByText('Notes & equipment',{exact:true}).click();
     for(let i=0;i<ex.sets;i++)await page.getByRole('button',{name:'Complete set',exact:true}).click();
   }
 }

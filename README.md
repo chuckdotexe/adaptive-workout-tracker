@@ -10,9 +10,9 @@ The website reads the files directly from `chuckdotexe/adaptive-workout-tracker`
 ## Use
 
 1. Open https://chuckdotexe.github.io/adaptive-workout-tracker/.
-2. Connect GitHub using a fine-grained personal access token restricted to this repository, with **Contents: Read and write**. GitHub Pages has no backend, so the static app sends the credential directly to GitHub. It is held only in tab memory, never embedded in the build, committed, or saved in browser storage. Reconnect after reload or closing the tab. Repository Contents permission covers repository files, not only these two files.
-3. Select your program week/day and start. Log actual load, reps, RIR, notes, and optional equipment increments. Only a day-preference cookie is persisted on the device.
-4. Tap **Finish workout**. Wait for **Workout saved to Git**. A failed save keeps the same submission in memory for retry; it never claims success or clears the draft. Once a submission is attempted, it is frozen until confirmed to avoid changing an uncertain remote write.
+2. Connect GitHub using a fine-grained personal access token restricted to this repository, with **Contents: Read and write**. GitHub Pages has no backend, so the static app sends the credential directly to GitHub. It is remembered in localStorage in this browser on this device, and removed with Disconnect. It is never embedded in the build or committed. Repository Contents permission covers repository files, not only these two files.
+3. Select your program week/day and start. Log actual load, reps, RIR, notes, and optional equipment increments. Sets and the session plan are saved on the device immediately. Use plus/minus controls for load, reps and RIR. A rest countdown starts with each completed set.
+4. Tap **Finish workout**. Wait for **Workout saved to Git**. A failed save keeps the same submission on the device for retry; it never claims success or clears the draft. Once a submission is attempted, it is frozen until confirmed to avoid changing an uncertain remote write.
 5. Tell ChatGPT **Process my workouts**. ChatGPT reads the queue, verifies/deduplicates Sheets rows, reads recent comparable history, analyzes targets, then atomically updates the upcoming plan and removes only processed queue entries.
 6. Refresh from Git to load the updated targets. Until processing, the prior plan remains available; days outside its window show original program targets clearly labeled.
 
@@ -20,7 +20,7 @@ All completed workouts and plans in this public repository are public, including
 
 ## Persistence and connectivity
 
-No workout JSON, draft, upcoming plan, or token is persisted in localStorage, sessionStorage, IndexedDB, or the service-worker cache. Drafts exist only in memory until Finish succeeds. An internet connection is required. Closing/reloading a tab before a confirmed submit loses its unsaved draft; the page asks the browser to warn before leaving. Mobile operating systems can terminate tabs without that warning.
+The active workout, session plan, exercise selection, pending submission and rest deadline are stored under `awt-recovery-v1`. Reload restores them even if GitHub is unavailable. The repository token is remembered under `awt-github-token`; Disconnect removes it. Browser data clearing removes recovery and credentials. Internet is needed for Git submission. The compact workout view keeps primary controls together; notes and equipment options expand when needed.
 
 The service worker caches only the public static application shell, not responses from GitHub. Existing legacy local records (`awt-v1` and `awt-v03-local`) are neither read, deleted, nor automatically uploaded. The earlier local-storage workflow is superseded; any existing device history remains there until separately migrated.
 

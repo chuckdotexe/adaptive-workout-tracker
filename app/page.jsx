@@ -5,6 +5,10 @@ import {empty, start, record, setIncrement, validate} from '../lib/workout.mjs';
 import {GitHubStore, DEFAULT_REPOSITORY} from '../lib/github-store.mjs';
 import {currentDay, makeSubmission, ordinal, targetFromPlan} from '../lib/online-workflow.mjs';
 
+const RECOVERY = 'awt-recovery-v1', AUTH = 'awt-github-token';
+function Stepper({label,value,onChange,step=1,max=Infinity}) {
+ return <label className="stepper">{label}<input aria-label={label} type="number" min="0" max={max} step="any" value={value} onChange={e=>onChange(e.target.value)}/><div><button type="button" aria-label={'Decrease '+label} onClick={()=>onChange(Math.max(0,+(value||0)-step))}>−</button><button type="button" aria-label={'Increase '+label} onClick={()=>onChange(Math.min(max,+(value||0)+step))}>+</button></div></label>;
+}
 export default function Home() {
   const [remote, setRemote] = useState(null), [draft, setDraft] = useState(empty);
   const [sessionPlan, setSessionPlan] = useState(null);
@@ -12,6 +16,8 @@ export default function Home() {
   const [busy, setBusy] = useState(false), [error, setError] = useState(''), [message, setMessage] = useState('');
   const [week, setWeek] = useState(1), [day, setDay] = useState(1), [idx, setIdx] = useState(0);
   const [weight, setWeight] = useState(''), [reps, setReps] = useState(''), [rir, setRir] = useState(''), [note, setNote] = useState('');
+  const [ready,setReady]=useState(false), [restEnd,setRestEnd]=useState(null), [clock,setClock]=useState(Date.now());
+  const recovered=useRef(false);
   const pending = useRef(null), submitting = useRef(false);
   const session = draft.sessions.find(s => s.id === draft.activeId);
   const exercises = program.filter(e => e.week === (session?.week ?? week) && e.day === (session?.day ?? day));
@@ -24,7 +30,7 @@ export default function Home() {
 
   function choose(w, d, revision = remote?.plan.revision ?? '') {
     setWeek(w); setDay(d); setIdx(0);
-    // Only a day preference is persisted. No workouts, plans, or credentials.
+    // Remember selection independently of the recoverable workout.
     document.cookie = `awt-day=${w}-${d}; Max-Age=31536000; Path=/; SameSite=Lax${location.protocol === 'https:' ? '; Secure' : ''}`;
     document.cookie = `awt-plan=${encodeURIComponent(revision)}; Max-Age=31536000; Path=/; SameSite=Lax${location.protocol === 'https:' ? '; Secure' : ''}`;
   }
@@ -33,7 +39,7 @@ export default function Home() {
     try {
       const snapshot = await new GitHubStore({token: auth}).snapshot(program);
       setRemote(snapshot);
-      if (!session) {
+      if (!session && !recovered.current) {
         const next = currentDay(snapshot.plan, snapshot.queue);
         const cookie = remember && document.cookie.match(/(?:^|; )awt-day=([1-8])-([1-6])(?:;|$)/);
         const samePlan = document.cookie.split('; ').includes('awt-plan=' + encodeURIComponent(snapshot.plan.revision));
@@ -45,8 +51,20 @@ export default function Home() {
     finally { setBusy(false); }
   }
   useEffect(() => {
-    load('', true);
-    if ('serviceWorker' in navigator) navigator.serviceWorker.register((process.env.NEXT_PUBLIC_BASE_PATH || '') + '/sw.js').catch(() => {});
+    let auth='';
+    try {
+      auth=localStorage.getItem(AUTH)||''; setToken(auth);
+      const raw=localStorage.getItem(RECOVERY);
+      if(raw) {const saved=JSON.parse(raw); const state=validate(saved.draft); recovered.current=!!state.activeId; setDraft(state);setRemote(saved.remote);setSessionPlan(saved.sessionPlan);setIdx(saved.idx||0);setRestEnd(saved.restEnd||null);pending.current=saved.pending||null;}
+    } catch(e) {setError('Device recovery unavailable: '+e.message);}
+    setReady(true); load(auth,true);
+    if ('serviceWorker' in navigator) {
+      const hadController = !!navigator.serviceWorker.controller;
+      const update = () => { if (hadController && !recovered.current) window.location.reload(); };
+      navigator.serviceWorker.addEventListener('controllerchange', update);
+      navigator.serviceWorker.register((process.env.NEXT_PUBLIC_BASE_PATH || '') + '/sw.js', {updateViaCache: 'none'}).then(reg => reg.update()).catch(() => {});
+      return () => navigator.serviceWorker.removeEventListener('controllerchange', update);
+    }
   }, []);
   useEffect(() => {
     setWeight(targetWeight ?? ''); setReps(targetReps); setRir(ex.rirMin ?? ''); setNote('');
@@ -57,15 +75,21 @@ export default function Home() {
     return () => window.removeEventListener('beforeunload', warn);
   }, [session]);
 
+  useEffect(()=>{
+    if(!ready) return;
+    try {localStorage.setItem(RECOVERY,JSON.stringify({draft,remote,sessionPlan,idx,restEnd,pending:pending.current}));}
+    catch {setError('Device storage unavailable. Keep this page open until Git confirms your save.');}
+  },[ready,draft,remote,sessionPlan,idx,restEnd]);
+  useEffect(()=>{if(!restEnd)return;const id=setInterval(()=>setClock(Date.now()),250);return ()=>clearInterval(id);},[restEnd]);
   function change(fn) {
-    try { setDraft(validate(fn(draft))); setError(''); }
+    try { const next=validate(fn(draft)); localStorage.setItem(RECOVERY,JSON.stringify({draft:next,remote,sessionPlan,idx,restEnd,pending:pending.current}));setDraft(next); setError(''); }
     catch (e) { setError(e.message); }
   }
   async function connect(event) {
     event.preventDefault();
     const value = credential.trim();
     if (!value) {setError('Enter your GitHub repository token.'); return;}
-    if (await load(value)) {setToken(value); setCredential(''); setMessage('GitHub connected for this tab.');}
+    if (await load(value)) {localStorage.setItem(AUTH,value);setToken(value); setCredential(''); setMessage('GitHub connection remembered on this device.');}
   }
   function begin() {
     if (!token) {setError('Connect GitHub before starting so Finish can submit your workout.'); return;}
@@ -76,35 +100,36 @@ export default function Home() {
       const increment = targetFromPlan(remote.plan, e)?.increment;
       if (increment != null) next = setIncrement(next, e, increment);
     }
-    setDraft(next); setSessionPlan(remote.plan); pending.current = null; setMessage(''); setError('');
+    localStorage.setItem(RECOVERY,JSON.stringify({draft:next,remote,sessionPlan:remote.plan,idx}));recovered.current=true;setDraft(next); setSessionPlan(remote.plan); pending.current = null; setMessage(''); setError('');
   }
   async function finishWorkout() {
     if (submitting.current) return;
     submitting.current = true; setBusy(true); setError(''); setMessage('');
     try {
       if (!pending.current) pending.current = makeSubmission(session, exercises, sessionPlan);
+      localStorage.setItem(RECOVERY,JSON.stringify({draft,remote,sessionPlan,idx,restEnd,pending:pending.current}));
       const result = await new GitHubStore({token}).submit(pending.current, program);
-      setRemote(result); setDraft(empty()); setSessionPlan(null); pending.current = null;
+      localStorage.setItem(RECOVERY,JSON.stringify({draft:empty(),remote:result}));recovered.current=false;setRestEnd(null);setRemote(result); setDraft(empty()); setSessionPlan(null); pending.current = null;
       const next = currentDay(result.plan, result.queue); if (next) choose(next.week, next.day, result.plan.revision);
       setMessage('Workout saved to Git. Tell ChatGPT “Process my workouts” to update Sheets and your upcoming plan.');
-    } catch (e) {setError('Workout not confirmed saved: ' + e.message + ' Keep this tab open and retry Finish workout.');}
+    } catch (e) {setError('Workout not confirmed saved: ' + e.message + ' Your workout is retained on this device. Reconnect or retry Finish workout.');}
     finally {setBusy(false); submitting.current = false;}
   }
 
-  return <main>
+  return <main className={session ? "active-workout" : ""}>
     <h1>Adaptive Workout Tracker</h1>
-    <p>Completed workouts and upcoming targets stored in Git</p>
+    <p className="intro">Workouts recover on this device after reload.</p>
     {error && <p role="alert">{error}</p>}
     {message && <p role="status">{message}</p>}
-    <section className="card">
+    <section className={session ? "card connection compact-connection" : "card connection"}>
       <h2>{token ? 'GitHub connected' : 'Connect GitHub'}</h2>
       {!token ? <form onSubmit={connect}>
         <label>GitHub repository token<input aria-label="GitHub repository token" type="password" autoComplete="off" value={credential} onChange={e => setCredential(e.target.value)}/></label>
-        <small>Use a fine-grained token for {DEFAULT_REPOSITORY} with Contents read/write. It stays in tab memory and is sent only to GitHub. Reconnect after closing or reloading the page.</small>
+        <small>Use a fine-grained token for {DEFAULT_REPOSITORY} with Contents read/write. It is remembered in this browser on this device and sent only to GitHub. Disconnect removes it.</small>
         <button disabled={busy || !credential}>Connect GitHub</button>
-      </form> : <p>Ready to submit. <button className="secondary" disabled={busy || !!session} onClick={() => {setToken(''); setMessage('GitHub disconnected.');}}>Disconnect</button></p>}
+      </form> : <p>Ready to submit. <button className="secondary" disabled={busy} onClick={() => {localStorage.removeItem(AUTH);setToken(''); setMessage('GitHub disconnected.');}}>Disconnect</button></p>}
       <button className="secondary" disabled={busy || !!session} onClick={() => load()}>Refresh from Git</button>
-      <small>No workout data is saved on this device. Keep this tab open until Finish confirms the online save. An internet connection is required.</small>
+      <small>Sets save on this device immediately. Internet is required to submit to GitHub.</small>
     </section>
     {!remote ? <p>{busy ? 'Loading workouts from Git…' : 'Connect or refresh to load the workout files.'}</p> : <>
       {!session && <section className="card">
@@ -117,43 +142,45 @@ export default function Home() {
         {!currentDay(remote.plan, remote.queue) && <p>Program complete. Select a day to repeat it.</p>}
         <button disabled={busy || !token} onClick={begin}>Start workout</button>
       </section>}
-      {session && <p>Workout {session.date} · Week {session.week}, day {session.day} · {pending.current ? 'Submission pending; retry to confirm save' : 'In progress; not yet saved online'}</p>}
+      {session && <p>Workout {session.date} · Week {session.week}, day {session.day} · {pending.current ? 'Submission pending; retry to confirm save' : 'Saved on device'}</p>}
       <section className="card">
         <label>Exercise<select aria-label="Exercise" value={Math.min(idx,exercises.length-1)} onChange={e=>setIdx(+e.target.value)}>{exercises.map((e,i)=><option key={e.id} value={i}>{e.name}</option>)}</select></label>
         <h2>{ex.name}</h2>
         <p data-testid="target">Target: {ex.sets} × {targetReps} reps · {targetWeight ?? 'Unspecified'} lb{ex.weightText.includes('per hand') ? ' per hand' : ''} · RIR {ex.rirMin ?? 'unspecified'}{ex.rirMax !== ex.rirMin ? '–'+ex.rirMax : ''}</p>
-        <p>Program range: {ex.minReps}–{ex.maxReps} reps · Original load: {ex.weightText || 'Unspecified'} · Rest {ex.restSeconds ?? 'unspecified'} seconds</p>
-        {target && <p>Upcoming target · {target.reason}</p>}
+        <p className="extra">Program range: {ex.minReps}–{ex.maxReps} reps · Original load: {ex.weightText || 'Unspecified'} · Rest {ex.restSeconds ?? 'unspecified'} seconds</p>
+        {target && <p className="extra">Upcoming target · {target.reason}</p>}
         {session && <fieldset disabled={busy || !!pending.current}>
           <div className="controls">
-            <label>Load (lb)<input aria-label="Load" type="number" min="0" step="any" value={weight} onChange={e=>setWeight(e.target.value)}/></label>
-            <label>Reps<input aria-label="Reps" type="number" min="0" value={reps} onChange={e=>setReps(e.target.value)}/></label>
-            <label>Actual RIR<input aria-label="Actual RIR" type="number" min="0" max="10" step="any" value={rir} onChange={e=>setRir(e.target.value)} placeholder="Unknown"/></label>
+            <Stepper label="Load" value={weight} onChange={setWeight} step={session.increments?.[ex.id]||5}/>
+            <Stepper label="Reps" value={reps} onChange={setReps}/>
+            <Stepper label="Actual RIR" value={rir} onChange={setRir} max={10}/>
           </div>
-          <small>Leave load or RIR blank if unknown.</small>
-          <label>Set notes<input value={note} onChange={e=>setNote(e.target.value)}/></label>
+
           <button className="wide" disabled={done.length >= ex.sets} onClick={()=>change(s=>{
             if (reps === '') throw Error('Reps are required');
+            setRestEnd(Date.now()+(ex.restSeconds||90)*1000);setClock(Date.now());
             return record(s,ex,{id:crypto.randomUUID(),weight:weight === '' ? null : +weight,reps:+reps,rir:rir === '' ? null : +rir,notes:note,created:new Date().toISOString()});
           })}>Complete set</button>
-          <label>Equipment increment (lb, optional)<input aria-label="Equipment increment" type="number" min="0" step="any" value={session.increments?.[ex.id] ?? ''} onChange={e=>change(s=>setIncrement(s,ex,+e.target.value))}/></label>
+          <details><summary>Notes & equipment</summary><label>Set notes<input value={note} onChange={e=>setNote(e.target.value)}/></label>
+          <label>Equipment increment (lb, optional)<input aria-label="Equipment increment" type="number" min="0" step="any" value={session.increments?.[ex.id] ?? ''} onChange={e=>change(s=>setIncrement(s,ex,+e.target.value))}/></label></details>
         </fieldset>}
-        <p>{done.length}/{ex.sets} sets logged</p>
+        {session && <div className="timer" role="timer">Rest {Math.floor(Math.max(0,Math.ceil(((restEnd||clock)-clock)/1000))/60)}:{String(Math.max(0,Math.ceil(((restEnd||clock)-clock)/1000))%60).padStart(2,'0')} <button className="secondary" onClick={()=>{setClock(Date.now());setRestEnd(Date.now()+(ex.restSeconds||90)*1000);}}>Restart</button><button className="secondary" onClick={()=>setRestEnd(null)}>Clear</button></div>}
+        <p>{done.length}/{ex.sets} sets logged</p><div className="logged-sets">
         {done.map((s,i)=><p key={s.id}>Set {i+1}: {s.weight ?? 'Unspecified'} lb × {s.reps} · RIR {s.rir ?? 'unknown'} {s.notes}
           <button className="secondary" disabled={busy || !!pending.current} onClick={()=>change(st=>({...st,sessions:st.sessions.map(x=>x.id===session.id ? {...x,sets:x.sets.filter(row=>row.id!==s.id)} : x)}))}>Remove set {i+1}</button>
         </p>)}
-        <details><summary>Original program notes</summary><p>{ex.notes}</p></details>
+        </div><details className="extra"><summary>Original program notes</summary><p>{ex.notes}</p></details>
       </section>
       <div className="row"><button disabled={idx===0} onClick={()=>setIdx(idx-1)}>Previous</button><button disabled={idx>=exercises.length-1} onClick={()=>setIdx(idx+1)}>Next exercise</button></div>
       {session && <button className="wide" disabled={busy} onClick={finishWorkout}>{busy ? 'Saving to Git…' : 'Finish workout'}</button>}
-      <section className="card">
+      <section className="card overview">
         <h2>Awaiting ChatGPT processing ({remote.queue.sessions.length})</h2>
         <p>Say “Process my workouts” in ChatGPT. It reads completed.json, updates Sheets, and publishes next-week.json.</p>
         {remote.queue.sessions.map(s=><details key={s.id}><summary>{s.date} · W{s.week} D{s.day} · {s.sets.length} sets</summary>
           {s.sets.map(set=><p key={set.id}>{program.find(e=>e.id===set.exerciseId)?.name} · {set.weight ?? 'unknown'} lb × {set.reps} · RIR {set.rir ?? 'unknown'}</p>)}
         </details>)}
       </section>
-      <section className="card"><h2>Next six workouts</h2><p>Plan updated {new Date(remote.plan.updatedAt).toLocaleString()}</p>
+      <section className="card overview"><h2>Next six workouts</h2><p>Plan updated {new Date(remote.plan.updatedAt).toLocaleString()}</p>
         {remote.plan.workouts.map(w=><details key={`${w.week}-${w.day}`}><summary>Week {w.week}, day {w.day} · {w.dayLabel}</summary>
           {w.exercises.map(t=><p key={t.exerciseId}>{program.find(e=>e.id===t.exerciseId)?.name}: {t.weight ?? 'Unspecified'} lb × {t.targetReps} · {t.reason}</p>)}
         </details>)}

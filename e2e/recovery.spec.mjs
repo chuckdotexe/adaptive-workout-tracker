@@ -9,6 +9,8 @@ test('failed online save retains the draft for retry and does not claim success'
   await expect(page.getByRole('status')).toHaveCount(0);
   expect(fixture.files['completed.json'].sessions).toHaveLength(0);
   await expect(page.getByLabel('Load',{exact:true})).toBeDisabled();
+  await page.reload();
+  await expect(page.getByLabel('Load',{exact:true})).toBeDisabled();
   fixture.rejectWrite=false;
   await page.getByRole('button',{name:'Finish workout',exact:true}).click();
   await expect(page.getByRole('status')).toContainText('Workout saved to Git');
@@ -24,17 +26,23 @@ test('incomplete workout is not submitted and remains editable',async({page})=>{
   await expect(page.getByText('1/4 sets logged',{exact:true})).toBeVisible();
   expect(fixture.files['completed.json'].sessions).toHaveLength(0);
 });
-test('no local storage access is required and legacy local records are untouched',async({page})=>{
-  await mockGitHub(page);
-  await page.addInitScript(()=>{
-    Storage.prototype.getItem=()=>{throw Error('Local storage disabled');};
-    Storage.prototype.setItem=()=>{throw Error('Local storage disabled');};
-  });
-  await connect(page);
-  await page.getByRole('button',{name:'Start workout',exact:true}).click();
-  await page.getByRole('button',{name:'Complete set',exact:true}).click();
-  await expect(page.getByText('1/4 sets logged',{exact:true})).toBeVisible();
-  await expect(page.locator('main [role=alert]')).toHaveCount(0);
+test('reload offline recovers sets, token, timer and exercise on iPhone',async({page})=>{
+ await mockGitHub(page);await connect(page);
+ await page.setViewportSize({width:390,height:664});
+ await page.getByRole('button',{name:'Start workout',exact:true}).click();
+ await page.getByRole('button',{name:'Increase Reps',exact:true}).click();
+ await page.getByRole('button',{name:'Complete set',exact:true}).click();
+ await expect(page.getByText('1/4 sets logged',{exact:true})).toBeVisible();
+ await expect(page.getByRole('timer')).toContainText('Rest');
+ expect(await page.evaluate(()=>document.documentElement.scrollHeight<=innerHeight)).toBe(true);
+ await page.screenshot({path:'test-results/compact-workout.png'});
+ await page.route('https://api.github.com/**',route=>route.abort());
+ await page.reload();
+ await expect(page.getByText('1/4 sets logged',{exact:true})).toBeVisible();
+ await expect(page.getByRole('button',{name:'Disconnect',exact:true})).toBeVisible();
+ await expect(page.getByRole('timer')).toContainText('Rest');
+ await page.getByRole('button',{name:'Complete set',exact:true}).click();
+ await expect(page.getByText('2/4 sets logged',{exact:true})).toBeVisible();
 });
 test('GitHub errors are visible and cannot be mistaken for an empty queue',async({page})=>{
   await page.route('https://api.github.com/**',route=>route.fulfill({status:403,contentType:'application/json',body:'{}'}));
