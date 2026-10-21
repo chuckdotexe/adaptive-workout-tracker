@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "revision": "processed-072f263d-3036-4eb6-a749-82910c7b5016",
-  "updatedAt": "2026-10-21T15:00:26.788Z",
+  "revision": "position-f7a00cc4-bfde-45e2-994f-2dc06bf80438",
+  "updatedAt": "2026-10-21T15:06:16.127Z",
   "processedSessions": [
     {
       "id": "b4774b22-e8b1-406f-914c-cab7b67a2f86",
@@ -9,202 +9,6 @@
     }
   ],
   "workouts": [
-    {
-      "week": 1,
-      "day": 1,
-      "dayLabel": "Monday - Upper Power + Chest",
-      "exercises": [
-        {
-          "exerciseId": "w1d1e1",
-          "weight": 255,
-          "targetReps": 4,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        },
-        {
-          "exerciseId": "w1d1e2",
-          "weight": 70,
-          "targetReps": 6,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        },
-        {
-          "exerciseId": "w1d1e3",
-          "weight": null,
-          "targetReps": 8,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        },
-        {
-          "exerciseId": "w1d1e4",
-          "weight": 160,
-          "targetReps": 8,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        },
-        {
-          "exerciseId": "w1d1e5",
-          "weight": null,
-          "targetReps": 12,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        },
-        {
-          "exerciseId": "w1d1e6",
-          "weight": 70,
-          "targetReps": 8,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        },
-        {
-          "exerciseId": "w1d1e7",
-          "weight": null,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        },
-        {
-          "exerciseId": "w1d1e8",
-          "weight": null,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        }
-      ]
-    },
-    {
-      "week": 1,
-      "day": 2,
-      "dayLabel": "Tuesday - Lower Strength + Delts",
-      "exercises": [
-        {
-          "exerciseId": "w1d2e1",
-          "weight": 280,
-          "targetReps": 6,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        },
-        {
-          "exerciseId": "w1d2e2",
-          "weight": 185,
-          "targetReps": 6,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        },
-        {
-          "exerciseId": "w1d2e3",
-          "weight": null,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        },
-        {
-          "exerciseId": "w1d2e4",
-          "weight": 165,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        },
-        {
-          "exerciseId": "w1d2e5",
-          "weight": 25,
-          "targetReps": 12,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        },
-        {
-          "exerciseId": "w1d2e6",
-          "weight": null,
-          "targetReps": 12,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        }
-      ]
-    },
-    {
-      "week": 1,
-      "day": 3,
-      "dayLabel": "Wednesday - Cardio + Advanced Abs",
-      "exercises": [
-        {
-          "exerciseId": "w1d3e1",
-          "weight": null,
-          "targetReps": 1,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        },
-        {
-          "exerciseId": "w1d3e2",
-          "weight": null,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        },
-        {
-          "exerciseId": "w1d3e3",
-          "weight": null,
-          "targetReps": 12,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        }
-      ]
-    },
-    {
-      "week": 1,
-      "day": 4,
-      "dayLabel": "Thursday - Back + Shoulders Hypertrophy",
-      "exercises": [
-        {
-          "exerciseId": "w1d4e1",
-          "weight": null,
-          "targetReps": 8,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        },
-        {
-          "exerciseId": "w1d4e2",
-          "weight": 70,
-          "targetReps": 8,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        },
-        {
-          "exerciseId": "w1d4e3",
-          "weight": null,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        },
-        {
-          "exerciseId": "w1d4e4",
-          "weight": null,
-          "targetReps": 12,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        },
-        {
-          "exerciseId": "w1d4e5",
-          "weight": null,
-          "targetReps": 12,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        },
-        {
-          "exerciseId": "w1d4e6",
-          "weight": 30,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        },
-        {
-          "exerciseId": "w1d4e7",
-          "weight": 55,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        }
-      ]
-    },
     {
       "week": 1,
       "day": 5,
@@ -332,6 +136,202 @@
         {
           "exerciseId": "w1d6e10",
           "weight": null,
+          "targetReps": 10,
+          "increment": null,
+          "reason": "Original program target; awaiting processed workout history."
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "day": 1,
+      "dayLabel": "Monday - Upper Power + Chest",
+      "exercises": [
+        {
+          "exerciseId": "w2d1e1",
+          "weight": 255,
+          "targetReps": 4,
+          "increment": null,
+          "reason": "Original program target; awaiting processed workout history."
+        },
+        {
+          "exerciseId": "w2d1e2",
+          "weight": 70,
+          "targetReps": 6,
+          "increment": null,
+          "reason": "Original program target; awaiting processed workout history."
+        },
+        {
+          "exerciseId": "w2d1e3",
+          "weight": null,
+          "targetReps": 8,
+          "increment": null,
+          "reason": "Original program target; awaiting processed workout history."
+        },
+        {
+          "exerciseId": "w2d1e4",
+          "weight": 160,
+          "targetReps": 8,
+          "increment": null,
+          "reason": "Original program target; awaiting processed workout history."
+        },
+        {
+          "exerciseId": "w2d1e5",
+          "weight": null,
+          "targetReps": 12,
+          "increment": null,
+          "reason": "Original program target; awaiting processed workout history."
+        },
+        {
+          "exerciseId": "w2d1e6",
+          "weight": 70,
+          "targetReps": 8,
+          "increment": null,
+          "reason": "Original program target; awaiting processed workout history."
+        },
+        {
+          "exerciseId": "w2d1e7",
+          "weight": null,
+          "targetReps": 10,
+          "increment": null,
+          "reason": "Original program target; awaiting processed workout history."
+        },
+        {
+          "exerciseId": "w2d1e8",
+          "weight": null,
+          "targetReps": 10,
+          "increment": null,
+          "reason": "Original program target; awaiting processed workout history."
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "day": 2,
+      "dayLabel": "Tuesday - Lower Strength + Delts",
+      "exercises": [
+        {
+          "exerciseId": "w2d2e1",
+          "weight": 280,
+          "targetReps": 6,
+          "increment": null,
+          "reason": "Original program target; awaiting processed workout history."
+        },
+        {
+          "exerciseId": "w2d2e2",
+          "weight": 185,
+          "targetReps": 6,
+          "increment": null,
+          "reason": "Original program target; awaiting processed workout history."
+        },
+        {
+          "exerciseId": "w2d2e3",
+          "weight": null,
+          "targetReps": 10,
+          "increment": null,
+          "reason": "Original program target; awaiting processed workout history."
+        },
+        {
+          "exerciseId": "w2d2e4",
+          "weight": 165,
+          "targetReps": 10,
+          "increment": null,
+          "reason": "Original program target; awaiting processed workout history."
+        },
+        {
+          "exerciseId": "w2d2e5",
+          "weight": 25,
+          "targetReps": 12,
+          "increment": null,
+          "reason": "Original program target; awaiting processed workout history."
+        },
+        {
+          "exerciseId": "w2d2e6",
+          "weight": null,
+          "targetReps": 12,
+          "increment": null,
+          "reason": "Original program target; awaiting processed workout history."
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "day": 3,
+      "dayLabel": "Wednesday - Cardio + Advanced Abs",
+      "exercises": [
+        {
+          "exerciseId": "w2d3e1",
+          "weight": null,
+          "targetReps": 1,
+          "increment": null,
+          "reason": "Original program target; awaiting processed workout history."
+        },
+        {
+          "exerciseId": "w2d3e2",
+          "weight": null,
+          "targetReps": 10,
+          "increment": null,
+          "reason": "Original program target; awaiting processed workout history."
+        },
+        {
+          "exerciseId": "w2d3e3",
+          "weight": null,
+          "targetReps": 12,
+          "increment": null,
+          "reason": "Original program target; awaiting processed workout history."
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "day": 4,
+      "dayLabel": "Thursday - Back + Shoulders Hypertrophy",
+      "exercises": [
+        {
+          "exerciseId": "w2d4e1",
+          "weight": null,
+          "targetReps": 8,
+          "increment": null,
+          "reason": "Original program target; awaiting processed workout history."
+        },
+        {
+          "exerciseId": "w2d4e2",
+          "weight": 70,
+          "targetReps": 8,
+          "increment": null,
+          "reason": "Original program target; awaiting processed workout history."
+        },
+        {
+          "exerciseId": "w2d4e3",
+          "weight": null,
+          "targetReps": 10,
+          "increment": null,
+          "reason": "Original program target; awaiting processed workout history."
+        },
+        {
+          "exerciseId": "w2d4e4",
+          "weight": null,
+          "targetReps": 12,
+          "increment": null,
+          "reason": "Original program target; awaiting processed workout history."
+        },
+        {
+          "exerciseId": "w2d4e5",
+          "weight": null,
+          "targetReps": 12,
+          "increment": null,
+          "reason": "Original program target; awaiting processed workout history."
+        },
+        {
+          "exerciseId": "w2d4e6",
+          "weight": 30,
+          "targetReps": 10,
+          "increment": null,
+          "reason": "Original program target; awaiting processed workout history."
+        },
+        {
+          "exerciseId": "w2d4e7",
+          "weight": 55,
           "targetReps": 10,
           "increment": null,
           "reason": "Original program target; awaiting processed workout history."
