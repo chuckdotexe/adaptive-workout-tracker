@@ -12,7 +12,7 @@ The website reads the files directly from `chuckdotexe/adaptive-workout-tracker`
 1. Open https://chuckdotexe.github.io/adaptive-workout-tracker/.
 2. Connect GitHub using a fine-grained personal access token restricted to this repository, with **Contents: Read and write**. GitHub Pages has no backend, so the static app sends the credential directly to GitHub. It is remembered in localStorage in this browser on this device, and removed with Disconnect. It is never embedded in the build or committed. Repository Contents permission covers repository files, not only these two files.
 3. Select your program week/day and start. Log actual load, reps, RIR, notes, and optional equipment increments. Sets and the session plan are saved on the device immediately. Use plus/minus controls for load, reps and RIR. A rest countdown starts with each completed set.
-4. Tap **Finish workout**. Wait for **Workout saved to Git**. A failed save keeps the same submission on the device for retry; it never claims success or clears the draft. Once a submission is attempted, it is frozen until confirmed to avoid changing an uncertain remote write.
+4. Complete every prescribed set before moving to the next lift. Both **Next exercise** and forward jumps in the exercise selector stay locked until earlier lifts are complete. You can go backward to review or remove sets; removing a set locks forward navigation again. The selector shows logged/prescribed set counts. Tap **Finish workout**. Wait for **Workout saved to Git**. If sets are missing, Finish names the incomplete lifts and offers buttons to return to them. A failed online save keeps the same submission on the device for retry; it never claims success or clears the draft. Once a submission is attempted, it is frozen until confirmed to avoid changing an uncertain remote write.
 5. Tell ChatGPT **Process my workouts**. ChatGPT reads the queue, verifies/deduplicates Sheets rows, reads recent comparable history, analyzes targets, then atomically updates the upcoming plan and removes only processed queue entries.
 6. Refresh from Git to load the updated targets. Until processing, the prior plan remains available; days outside its window show original program targets clearly labeled.
 
@@ -33,6 +33,10 @@ Submission and processing use Git tree/commit APIs and non-force branch updates.
 Processing must verify all Sheets rows before finalizing. Plan update, receipts, and removal of acknowledged queue entries happen in one Git commit. New arrivals remain queued. Sheets and Git cannot participate in one transaction: Sheets ID-based deduplication makes a failure between them recoverable. The processing agent must read back Sheets values; the finalization script checks the supplied receipt's coverage, not Google Sheets independently.
 
 The initial next-week.json contains the original first six training sessions, not inferred personal history. ChatGPT uses the last one or two comparable sessions per exercise; increases require two supporting sessions and a known increment. See the processing procedure for conservative hold rules. Automated fatigue diagnosis, substitutions, cardio logging, and automatic ChatGPT triggering are not implemented.
+
+## Project documentation
+
+See [CHANGELOG.md](CHANGELOG.md) for dated changes and validation results. Every project change must update both this README and the changelog in the same commit, including documentation and workout-processing changes. Keep this README accurate for current behavior; record what changed, why, and what was verified in the changelog. Do not copy credentials or private workout details into documentation. This requirement is also recorded in [AGENTS.md](AGENTS.md) for future assistants.
 
 ## Development
 
