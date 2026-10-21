@@ -27,6 +27,7 @@ export default function Home() {
   const targetWeight = target ? target.weight : ex.weight;
   const targetReps = target?.targetReps ?? ex.minReps;
   const done = session?.sets.filter(s => s.exerciseId === ex.id) ?? [];
+  const missing = session ? exercises.map((e,i)=>({...e,index:i,logged:session.sets.filter(s=>s.exerciseId===e.id).length})).filter(e=>e.logged<e.sets) : [];
 
   function choose(w, d, revision = remote?.plan.revision ?? '') {
     setWeek(w); setDay(d); setIdx(0);
@@ -81,6 +82,13 @@ export default function Home() {
     catch {setError('Device storage unavailable. Keep this page open until Git confirms your save.');}
   },[ready,draft,remote,sessionPlan,idx,restEnd]);
   useEffect(()=>{if(!restEnd)return;const id=setInterval(()=>setClock(Date.now()),250);return ()=>clearInterval(id);},[restEnd]);
+  function canVisit(index) {
+    return !session || index <= idx || exercises.slice(0,index).every(e=>session.sets.filter(s=>s.exerciseId===e.id).length >= e.sets);
+  }
+  function navigate(index) {
+    if (canVisit(index)) {setIdx(index);setError('');}
+    else setError('Complete all sets for the earlier lifts before continuing. Your workout is saved on this device.');
+  }
   function change(fn) {
     try { const next=validate(fn(draft)); localStorage.setItem(RECOVERY,JSON.stringify({draft:next,remote,sessionPlan,idx,restEnd,pending:pending.current}));setDraft(next); setError(''); }
     catch (e) { setError(e.message); }
@@ -112,7 +120,7 @@ export default function Home() {
       localStorage.setItem(RECOVERY,JSON.stringify({draft:empty(),remote:result}));recovered.current=false;setRestEnd(null);setRemote(result); setDraft(empty()); setSessionPlan(null); pending.current = null;
       const next = currentDay(result.plan, result.queue); if (next) choose(next.week, next.day, result.plan.revision);
       setMessage('Workout saved to Git. Tell ChatGPT “Process my workouts” to update Sheets and your upcoming plan.');
-    } catch (e) {setError('Workout not confirmed saved: ' + e.message + ' Your workout is retained on this device. Reconnect or retry Finish workout.');}
+    } catch (e) {setError('Workout not confirmed saved: ' + e.message + ' Your workout is retained on this device.');}
     finally {setBusy(false); submitting.current = false;}
   }
 
@@ -120,6 +128,7 @@ export default function Home() {
     <h1>Adaptive Workout Tracker</h1>
     <p className="intro">Workouts recover on this device after reload.</p>
     {error && <p role="alert">{error}</p>}
+    {error && missing.length > 0 && <div className="missing-sets"><strong>Missing sets</strong>{missing.map(e=><button key={e.id} className="secondary" onClick={()=>{setIdx(e.index);setError('');}}>{e.name} · {e.logged}/{e.sets}</button>)}</div>}
     {message && <p role="status">{message}</p>}
     <section className={session ? "card connection compact-connection" : "card connection"}>
       <h2>{token ? 'GitHub connected' : 'Connect GitHub'}</h2>
@@ -144,7 +153,7 @@ export default function Home() {
       </section>}
       {session && <p>Workout {session.date} · Week {session.week}, day {session.day} · {pending.current ? 'Submission pending; retry to confirm save' : 'Saved on device'}</p>}
       <section className="card">
-        <label>Exercise<select aria-label="Exercise" value={Math.min(idx,exercises.length-1)} onChange={e=>setIdx(+e.target.value)}>{exercises.map((e,i)=><option key={e.id} value={i}>{e.name}</option>)}</select></label>
+        <label>Exercise<select aria-label="Exercise" value={Math.min(idx,exercises.length-1)} onChange={e=>navigate(+e.target.value)}>{exercises.map((e,i)=><option key={e.id} value={i} disabled={!canVisit(i)}>{e.name}{session ? ` · ${session.sets.filter(s=>s.exerciseId===e.id).length}/${e.sets}` : ''}</option>)}</select></label>
         <h2>{ex.name}</h2>
         <p data-testid="target">Target: {ex.sets} × {targetReps} reps · {targetWeight ?? 'Unspecified'} lb{ex.weightText.includes('per hand') ? ' per hand' : ''} · RIR {ex.rirMin ?? 'unspecified'}{ex.rirMax !== ex.rirMin ? '–'+ex.rirMax : ''}</p>
         <p className="extra">Program range: {ex.minReps}–{ex.maxReps} reps · Original load: {ex.weightText || 'Unspecified'} · Rest {ex.restSeconds ?? 'unspecified'} seconds</p>
@@ -165,14 +174,14 @@ export default function Home() {
           <label>Equipment increment (lb, optional)<input aria-label="Equipment increment" type="number" min="0" step="any" value={session.increments?.[ex.id] ?? ''} onChange={e=>change(s=>setIncrement(s,ex,+e.target.value))}/></label></details>
         </fieldset>}
         {session && <div className="timer" role="timer">Rest {Math.floor(Math.max(0,Math.ceil(((restEnd||clock)-clock)/1000))/60)}:{String(Math.max(0,Math.ceil(((restEnd||clock)-clock)/1000))%60).padStart(2,'0')} <button className="secondary" onClick={()=>{setClock(Date.now());setRestEnd(Date.now()+(ex.restSeconds||90)*1000);}}>Restart</button><button className="secondary" onClick={()=>setRestEnd(null)}>Clear</button></div>}
-        <p>{done.length}/{ex.sets} sets logged</p><div className="logged-sets">
+        <p><span>{done.length}/{ex.sets} sets logged</span>{session && done.length < ex.sets ? ` · ${ex.sets-done.length} remaining before next lift` : ''}</p><div className="logged-sets">
         {done.map((s,i)=><p key={s.id}>Set {i+1}: {s.weight ?? 'Unspecified'} lb × {s.reps} · RIR {s.rir ?? 'unknown'} {s.notes}
           <button className="secondary" disabled={busy || !!pending.current} onClick={()=>change(st=>({...st,sessions:st.sessions.map(x=>x.id===session.id ? {...x,sets:x.sets.filter(row=>row.id!==s.id)} : x)}))}>Remove set {i+1}</button>
         </p>)}
         </div><details className="extra"><summary>Original program notes</summary><p>{ex.notes}</p></details>
       </section>
-      <div className="row"><button disabled={idx===0} onClick={()=>setIdx(idx-1)}>Previous</button><button disabled={idx>=exercises.length-1} onClick={()=>setIdx(idx+1)}>Next exercise</button></div>
-      {session && <button className="wide" disabled={busy} onClick={finishWorkout}>{busy ? 'Saving to Git…' : 'Finish workout'}</button>}
+      <div className="row"><button disabled={idx===0} onClick={()=>setIdx(idx-1)}>Previous</button><button disabled={idx>=exercises.length-1 || !canVisit(idx+1)} onClick={()=>navigate(idx+1)}>Next exercise</button></div>
+      {session && <button className="wide" disabled={busy} onClick={()=>finishWorkout()}>{busy ? 'Saving to Git…' : 'Finish workout'}</button>}
       <section className="card overview">
         <h2>Awaiting ChatGPT processing ({remote.queue.sessions.length})</h2>
         <p>Say “Process my workouts” in ChatGPT. It reads completed.json, updates Sheets, and publishes next-week.json.</p>

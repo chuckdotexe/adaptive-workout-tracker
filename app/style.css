@@ -12,3 +12,5 @@ fieldset{border:0;margin:0;padding:0;min-width:0}fieldset:disabled{opacity:.7}
 .active-workout .card>h2{display:none}.active-workout details{margin-top:5px;font-size:12px}.active-workout .timer{margin-top:5px}.active-workout>p{margin:4px 0}.active-workout .logged-sets{max-height:64px}.active-workout .card{margin:5px 0}.active-workout .compact-connection{margin:0}.active-workout>button{padding:10px}
 
 .active-workout h1{display:none}.active-workout .card{padding:8px}.active-workout .compact-connection{padding:0}.active-workout .stepper input{padding:3px}.active-workout .row button{padding:8px}.active-workout .logged-sets{max-height:40px}
+
+.missing-sets{display:flex;flex-direction:column;gap:4px;margin:8px 0}.missing-sets button{text-align:left;font-size:13px}.missing-sets strong{font-size:14px}
