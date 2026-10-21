@@ -36,7 +36,7 @@ The initial next-week.json contains the original first six training sessions, no
 
 ## Project documentation
 
-See [CHANGELOG.md](CHANGELOG.md) for dated changes and validation results. Every project change must update both this README and the changelog in the same commit, including documentation and workout-processing changes. Keep this README accurate for current behavior; record what changed, why, and what was verified in the changelog. Do not copy credentials or private workout details into documentation. This requirement is also recorded in [AGENTS.md](AGENTS.md) for future assistants.
+See [CHANGELOG.md](CHANGELOG.md) for dated changes and validation results. Code changes must update both this README and the changelog in the same commit. Workout processing, data-only changes, and other work without code changes do not require updates to either document. Keep this README accurate for current behavior; record what changed, why, and what was verified in the changelog. Do not copy credentials or private workout details into documentation. This requirement is also recorded in [AGENTS.md](AGENTS.md) for future assistants.
 
 ## Development
 

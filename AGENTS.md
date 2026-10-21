@@ -3,9 +3,9 @@ When the user asks to "process my workouts", "process workouts", or run the work
 
 ## Required documentation updates
 
-For every project change, update both README.md and CHANGELOG.md in the same commit. This includes code, UI, configuration, documentation, and workout-processing/data changes. Do not mark work complete or publish it without both updates.
+When code changes, update both README.md and CHANGELOG.md in the same commit. Workout processing, data-only updates, and other work without code changes do not require README or changelog updates. Update documentation independently only when its content needs correction.
 
-- Keep README.md accurate for current behavior, usage, limitations, and development instructions. For changes that do not affect usage, update its relevant project-status or documentation information.
+- Keep README.md accurate for current behavior, usage, limitations, and development instructions.
 - Add a dated CHANGELOG.md entry describing the change, its reason, and actual validation. State when checks were not run; never claim unperformed tests or deployment.
 - Keep newest entries first and distinguish local changes from confirmed publication when reporting status.
 - Do not include tokens, credentials, or private workout records in either document.

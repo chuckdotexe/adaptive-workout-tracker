@@ -1,6 +1,6 @@
 # Changelog
 
-Every project change must update this file and README.md in the same commit. Entries describe verified work; a source commit alone does not confirm a successful deployment.
+Code changes must update this file and README.md in the same commit. Updates are not required for workout processing, data-only changes, or other work without code changes. Entries describe verified work; a source commit alone does not confirm a successful deployment.
 
 ## 2026-10-21 — Verified staging test processing
 
