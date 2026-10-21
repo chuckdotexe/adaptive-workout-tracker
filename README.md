@@ -62,3 +62,7 @@ The test suite covers program fidelity, retry/idempotency, concurrent submission
 The existing Daily Health Data workbook must remain unchanged until staging reconciliation succeeds. This implementation does not write to any Sheet. Follow PROCESS_WORKOUTS.md for the first connected processing run.
 
 API reference: [GitHub Git references](https://docs.github.com/en/rest/git/refs) and [repository contents](https://docs.github.com/en/rest/repos/contents).
+
+## Processing verification status
+
+On 2026-10-21, the user-designated test completed Git-to-Sheets processing in the private staging workbook, Test Workout Log. All submitted set IDs and cell values were read back and matched before acknowledgment. Test entries are excluded from real training history; current training days and targets are retained. The original Daily Health Data workbook remains unchanged. Production migration/reconciliation is still pending.

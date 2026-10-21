@@ -2,6 +2,13 @@
 
 Every project change must update this file and README.md in the same commit. Entries describe verified work; a source commit alone does not confirm a successful deployment.
 
+## 2026-10-21 — Verified staging test processing
+
+- Verified the user-designated test in the private staging copy, Test Workout Log, preserving unknown measurements and unique IDs.
+- Read back every submitted cell and checked unique set IDs before publishing the acknowledgment and clearing the processed queue entry.
+- Retained current training days and targets because synthetic test data must not drive progression. Original Daily Health Data workbook unchanged.
+- Validation: live Sheets readback matched the prepared batch across all 22 columns; duplicate-ID check passed. No application code changed; application tests were not rerun for this data/documentation operation.
+
 ## 2026-10-21 — Documentation policy
 
 - Added this changelog and linked it from the existing README.

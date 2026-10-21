@@ -1,8 +1,13 @@
 {
   "version": 1,
-  "revision": "initial-program-v1",
-  "updatedAt": "2026-10-17T18:38:47.574Z",
-  "processedSessions": [],
+  "revision": "processed-072f263d-3036-4eb6-a749-82910c7b5016",
+  "updatedAt": "2026-10-21T15:00:26.788Z",
+  "processedSessions": [
+    {
+      "id": "b4774b22-e8b1-406f-914c-cab7b67a2f86",
+      "digest": "e8004f9df0977d9ae13795e8843f75b3020bd6858c206e8741ad7b242b7d8dd4"
+    }
+  ],
   "workouts": [
     {
       "week": 1,
@@ -333,5 +338,17 @@
         }
       ]
     }
-  ]
+  ],
+  "testProcessing": {
+    "excludedFromTrainingHistory": true,
+    "reason": "User-designated test; retain current training days and targets."
+  },
+  "sheetsReceipt": {
+    "spreadsheetId": "1lNjvd1gT5-fzHP9TphPdXsfQ2DPKr3ZgMhvC8bX2NBc",
+    "range": "'Test Workout Log'!A2:V25",
+    "verifiedAt": "2026-10-21T15:00:26.789Z",
+    "sessionIds": [
+      "b4774b22-e8b1-406f-914c-cab7b67a2f86"
+    ]
+  }
 }
