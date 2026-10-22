@@ -2,6 +2,13 @@
 
 Code changes must update this file and README.md in the same commit. Updates are not required for workout processing, data-only changes, or other work without code changes. Entries describe verified work; a source commit alone does not confirm a successful deployment.
 
+## 2026-10-22 — Free exercise selection
+
+- Removed dropdown/Next restrictions and separate machine-busy/skip controls. Choose any exercise directly without marking it skipped.
+- Preserved logged set counts and exercise selection through reload; Finish still identifies unfinished lifts and prevents accidental incomplete submission.
+- Retained compatibility with previously saved explicit omissions and their restore action; historical data is not rewritten.
+- Validation: production build, 41 unit tests and 20 Chromium/mobile WebKit browser checks, including jumping past unfinished lifts, returning after reload, missing-set validation, and cardio submission. One mobile WebKit recovery check timed out during the full run and passed on an isolated rerun.
+
 ## 2026-10-22 — Cardio logging, unavailable machines, and timer alerts
 
 - Added treadmill minutes, mph, and incline fields with original cardio targets. Duration exports to Sheets; strength placeholders are not used as cardio measurements.

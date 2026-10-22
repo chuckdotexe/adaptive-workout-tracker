@@ -51,23 +51,22 @@ test('GitHub errors are visible and cannot be mistaken for an empty queue',async
   await expect(page.getByRole('button',{name:'Start workout',exact:true})).toHaveCount(0);
 });
 
-test('cannot advance or jump over an unfinished lift; revisiting remains possible',async({page})=>{
- await mockGitHub(page);await connect(page);
+test('exercise dropdown and Next allow unfinished lifts without losing sets; Finish lists missing sets',async({page})=>{
+ const fixture=await mockGitHub(page);await connect(page);
  await page.getByRole('button',{name:'Start workout',exact:true}).click();
  const next=page.getByRole('button',{name:'Next exercise',exact:true});
- await expect(next).toBeDisabled();
- await expect(page.getByLabel('Exercise',{exact:true}).locator('option').nth(1)).toHaveAttribute('disabled','');
- for(let i=0;i<3;i++) await page.getByRole('button',{name:'Complete set',exact:true}).click();
- await expect(next).toBeDisabled();
+ await expect(next).toBeEnabled();
+ await expect(page.getByLabel('Exercise',{exact:true}).locator('option').nth(7)).not.toHaveAttribute('disabled','');
  await page.getByRole('button',{name:'Complete set',exact:true}).click();
- await expect(next).toBeEnabled();await next.click();
- await expect(page.getByLabel('Exercise',{exact:true})).toHaveValue('1');
- await expect(next).toBeDisabled();
- await page.getByRole('button',{name:'Previous',exact:true}).click();
- await expect(page.getByLabel('Exercise',{exact:true})).toHaveValue('0');
- await page.getByRole('button',{name:'Remove set 1',exact:true}).click();
- await expect(next).toBeDisabled();
+ await page.getByLabel('Exercise',{exact:true}).selectOption('7');
+ await expect(page.getByLabel('Exercise',{exact:true})).toHaveValue('7');
+ await page.reload();await expect(page.getByLabel('Exercise',{exact:true})).toHaveValue('7');
+ await page.getByLabel('Exercise',{exact:true}).selectOption('0');
+ await expect(page.getByText('1/4 sets logged',{exact:true})).toBeVisible();
+ await next.click();await expect(page.getByLabel('Exercise',{exact:true})).toHaveValue('1');
  await page.getByRole('button',{name:'Finish workout',exact:true}).click();
- await expect(page.locator('main [role=alert]')).toContainText('Bench Press (3/4)');
- await expect(page.getByRole('button',{name:'Bench Press · 3/4',exact:true})).toBeVisible();
+ await expect(page.locator('main [role=alert]')).toContainText('Bench Press (1/4)');
+ await expect(page.getByRole('button',{name:'Bench Press · 1/4',exact:true})).toBeVisible();
+ expect(fixture.files['completed.json'].sessions).toHaveLength(0);
+ await expect(page.getByRole('button',{name:'Machine busy: do later',exact:true})).toHaveCount(0);
 });

@@ -123,19 +123,7 @@ export default function Home() {
     catch {setError('Device storage unavailable. Keep this page open until Git confirms your save.');}
   },[ready,draft,remote,sessionPlan,idx,restEnd]);
   useEffect(()=>{if(!restEnd)return;const id=setInterval(()=>setClock(Date.now()),250);return ()=>clearInterval(id);},[restEnd]);
-  function canVisit(index) {
-    return !session || index <= idx || exercises.slice(0,index).every(e=>session.deferred?.includes(e.id) || session.skipped?.[e.id] || session.sets.filter(s=>s.exerciseId===e.id).length >= e.sets);
-  }
-  function deferExercise(skip=false) {
-    if(pending.current) return;
-    change(st=>({...st,sessions:st.sessions.map(x=>x.id===session.id ? {...x,deferred:[...new Set([...(x.deferred||[]),ex.id])],...(skip ? {skipped:{...x.skipped,[ex.id]:'Machine unavailable'}} : {})} : x)}));
-    const next=exercises.findIndex((e,i)=>i>idx && !session.skipped?.[e.id] && session.sets.filter(s=>s.exerciseId===e.id).length<e.sets);
-    if(next>=0)setIdx(next);
-  }
-  function navigate(index) {
-    if (canVisit(index)) {setIdx(index);setError('');}
-    else setError('Complete all sets for the earlier lifts before continuing. Your workout is saved on this device.');
-  }
+  function navigate(index) {setIdx(index);setError('');setShowMissing(false);}
   function change(fn) {
     try { const next=validate(fn(draft)); localStorage.setItem(RECOVERY,JSON.stringify({draft:next,remote,sessionPlan,idx,restEnd,pending:pending.current}));setDraft(next); setError('');setMessage('');setShowMissing(false); return true; }
     catch (e) { setError(e.message); return false; }
@@ -211,7 +199,7 @@ export default function Home() {
       </section>}
       {session && <p>Workout {session.date} · Week {session.week}, day {session.day} · {pending.current ? 'Submission pending; retry to confirm save' : 'Saved on device'}</p>}
       <section className="card">
-        <label className="exercise-picker">Exercise<select aria-label="Exercise" value={Math.min(idx,exercises.length-1)} onChange={e=>navigate(+e.target.value)}>{exercises.map((e,i)=><option key={e.id} value={i} disabled={!canVisit(i)}>{e.name}{session ? (session.skipped?.[e.id] ? ' · skipped' : ` · ${session.sets.filter(s=>s.exerciseId===e.id).length}/${e.sets}`+(session.deferred?.includes(e.id) ? ' · return later' : '')) : ''}</option>)}</select></label>
+        <label className="exercise-picker">Exercise<select aria-label="Exercise" value={Math.min(idx,exercises.length-1)} onChange={e=>navigate(+e.target.value)}>{exercises.map((e,i)=><option key={e.id} value={i}>{e.name}{session ? (session.skipped?.[e.id] ? ' · skipped' : ` · ${session.sets.filter(s=>s.exerciseId===e.id).length}/${e.sets}`) : ''}</option>)}</select></label>
         <h2>{ex.name}</h2>
         <p data-testid="target">{cardio ? `Cardio: ${cardioTarget(ex)} · conversational pace` : <>Target: {ex.sets} × {targetReps} reps · {targetWeight ?? 'Unspecified'} lb{ex.weightText.includes('per hand') ? ' per hand' : ''} · RIR {ex.rirMin ?? 'unspecified'}{ex.rirMax !== ex.rirMin ? '–'+ex.rirMax : ''}</>}</p>
         <p className="extra">Program range: {ex.minReps}–{ex.maxReps} reps · Original load: {ex.weightText || 'Unspecified'} · Rest {REST_SECONDS} seconds</p>
@@ -225,19 +213,18 @@ export default function Home() {
 
           {cardio && <p>Minutes required · speed and incline optional</p>}
           <button className="wide" disabled={done.length >= ex.sets || !!session.skipped?.[ex.id]} onClick={logEntry}>{cardio ? 'Complete cardio' : 'Complete set'}</button>
-          <details><summary>Notes, equipment & skip</summary>{done.length<ex.sets && !session.skipped?.[ex.id] && <button className="secondary" onClick={()=>deferExercise(true)}>Skip remaining sets: machine unavailable</button>}{session.skipped?.[ex.id] && <button onClick={()=>change(st=>({...st,sessions:st.sessions.map(x=>{if(x.id!==session.id)return x;const skipped={...x.skipped};delete skipped[ex.id];return {...x,skipped};})}))}>Undo skip</button>}<label>Set notes<input value={note} onChange={e=>setNote(e.target.value)}/></label>
+          <details><summary>Notes & equipment</summary>{session.skipped?.[ex.id] && <button onClick={()=>change(st=>({...st,sessions:st.sessions.map(x=>{if(x.id!==session.id)return x;const skipped={...x.skipped};delete skipped[ex.id];return {...x,skipped};})}))}>Require remaining sets</button>}<label>Set notes<input value={note} onChange={e=>setNote(e.target.value)}/></label>
           <label>Equipment increment (lb, optional)<input aria-label="Equipment increment" type="number" min="0" step="any" value={session.increments?.[ex.id] ?? ''} onChange={e=>change(s=>setIncrement(s,ex,+e.target.value))}/></label></details>
         </fieldset>}
         {session && !cardio && <div className="timer" role="timer">{restEnd && clock>=restEnd ? 'Rest complete · ' : 'Rest '}{Math.floor(Math.max(0,Math.ceil(((restEnd||clock)-clock)/1000))/60)}:{String(Math.max(0,Math.ceil(((restEnd||clock)-clock)/1000))%60).padStart(2,'0')} <button className="secondary" onClick={startRest}>Restart</button><button className="secondary" onClick={()=>{setRestEnd(null);stopAlarm();}}>Clear</button><button className="secondary" aria-pressed={sound} onClick={toggleSound}>Sound {sound ? 'on' : 'off'}</button></div>}
-        <p>{session?.skipped?.[ex.id] && <strong>Skipped: machine unavailable · </strong>}<span>{done.length}/{ex.sets} sets logged</span>{session && done.length < ex.sets && !session.skipped?.[ex.id] ? ` · ${ex.sets-done.length} remaining before next lift` : ''}</p><div className="logged-sets">
+        <p>{session?.skipped?.[ex.id] && <strong>Skipped: machine unavailable · </strong>}<span>{done.length}/{ex.sets} sets logged</span>{session && done.length < ex.sets && !session.skipped?.[ex.id] ? ` · ${ex.sets-done.length} sets remaining` : ''}</p><div className="logged-sets">
         {done.map((s,i)=><p key={s.id}>{s.kind==='cardio' ? `${s.durationMinutes} min · ${s.speedMph ?? '?'} mph · ${s.inclinePercent ?? '?'}% incline` : <>Set {i+1}: {s.weight ?? 'Unspecified'} lb × {s.reps} · RIR {s.rir ?? 'unknown'}</>} {s.notes}
           <button className="secondary" disabled={busy || !!pending.current} onClick={()=>change(st=>({...st,sessions:st.sessions.map(x=>x.id===session.id ? {...x,sets:x.sets.filter(row=>row.id!==s.id)} : x)}))}>Remove set {i+1}</button>
         </p>)}
         </div><details className="extra"><summary>Original program notes</summary><p>{ex.notes}</p></details>
       </section>
-      {session && <div className="next-up">Next up: {nextExercise?.name || 'Finish workout'}{done.length<ex.sets && !session.skipped?.[ex.id] && <button className="secondary" disabled={busy || !!pending.current} onClick={()=>deferExercise()}>Machine busy: do later</button>}</div>}
-      {session?.deferred?.some(id=>missing.some(e=>e.id===id)) && <details className="return-later"><summary>Return to deferred exercises ({missing.filter(e=>session.deferred.includes(e.id)).length})</summary>{missing.filter(e=>session.deferred.includes(e.id)).map(e=><button className="secondary" key={e.id} onClick={()=>setIdx(e.index)}>{e.name} · {e.logged}/{e.sets}</button>)}</details>}
-      <div className="row"><button disabled={idx===0} onClick={()=>setIdx(idx-1)}>Previous</button><button disabled={idx>=exercises.length-1 || !canVisit(idx+1)} onClick={()=>navigate(idx+1)}>Next exercise</button></div>
+      {session && <div className="next-up">Next up: {nextExercise?.name || 'Finish workout'}</div>}
+      <div className="row"><button disabled={idx===0} onClick={()=>setIdx(idx-1)}>Previous</button><button disabled={idx>=exercises.length-1} onClick={()=>navigate(idx+1)}>Next exercise</button></div>
       {session && <button className="wide" disabled={busy} onClick={()=>finishWorkout()}>{busy ? 'Saving to Git…' : 'Finish workout'}</button>}
       <section className="card overview">
         <h2>Awaiting ChatGPT processing ({remote.queue.sessions.length})</h2>
