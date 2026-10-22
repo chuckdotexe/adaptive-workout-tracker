@@ -2,6 +2,14 @@
 
 Code changes must update this file and README.md in the same commit. Updates are not required for workout processing, data-only changes, or other work without code changes. Entries describe verified work; a source commit alone does not confirm a successful deployment.
 
+## 2026-10-22 — Cardio logging, unavailable machines, and timer alerts
+
+- Added treadmill minutes, mph, and incline fields with original cardio targets. Duration exports to Sheets; strength placeholders are not used as cardio measurements.
+- Added Next up, persistent machine-busy deferral with a return list, and explicit machine-unavailable omissions with an undo action. Omitted sets are never fabricated; deferred exercises remain required at Finish.
+- Added opt-in timer tones, a test beep, visible completion, and vibration where supported. Browser audio support and an unlocked/active audio session are required; no physical-iPhone or locked-screen alert guarantee is claimed.
+- Reused saved credentials for submission, kept restored logging available during refresh, distinguished token presence from verified writes, and extended bounded retries to transient GitHub read failures.
+- Validation: 41 unit tests and 20 Chromium/mobile WebKit browser checks, including cardio export, omission recovery, transient read retries, audio scheduling with an injected audio implementation, and 390 × 664 screen fit. Production build verified. Audio hardware on a physical iPhone was not tested.
+
 ## 2026-10-21 — 90-second rest interval
 
 - Set the workout rest countdown and Restart button to 90 seconds for every exercise, as requested.
