@@ -232,15 +232,19 @@
         {
           "id": "3f88287a-e012-462b-91ca-941501d9d77b",
           "weight": null,
-          "reps": 1,
+          "reps": 0,
           "rir": null,
-          "notes": "",
+          "notes": "Cardio measurements confirmed by user: 10 minutes, 10% incline, 2.7 mph.",
           "created": "2026-10-22T11:38:14.231Z",
           "exerciseId": "w1d5e7",
           "unit": "lb",
           "loadSemantics": "",
           "rpe": null,
-          "rpeSource": "missing"
+          "rpeSource": "missing",
+          "kind": "cardio",
+          "durationMinutes": 10,
+          "inclinePercent": 10,
+          "speedMph": 2.7
         }
       ],
       "decisions": {},
