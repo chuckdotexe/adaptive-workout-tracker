@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "revision": "processed-7541ff5d-3271-4e33-8a9a-d64a9cd134fd",
-  "updatedAt": "2026-10-23T12:13:20.876Z",
+  "revision": "processed-c671aad5-3717-4a07-bd65-5188bd23651f",
+  "updatedAt": "2026-10-23T17:02:20.383Z",
   "processedSessions": [
     {
       "id": "b4774b22-e8b1-406f-914c-cab7b67a2f86",
@@ -10,6 +10,10 @@
     {
       "id": "beb44c55-605f-490c-ad14-a6c94d80947a",
       "digest": "9eab2804465f1b305296225ca81b137ef80489d158f58d43006c09170fa0c6b3"
+    },
+    {
+      "id": "471656aa-420f-449b-bdf9-3c1a4ecb1650",
+      "digest": "75babb0213de3428b27eb0292fd47535e62a4dc7d27e9039d92fc00b8d168db2"
     }
   ],
   "workouts": [
@@ -23,56 +27,64 @@
           "weight": 255,
           "targetReps": 4,
           "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
+          "reason": "Repeated 255 lb plateau; Oct 12 unusually high effort and Oct 15 reps 6/6/5/4 with final RIR 1. Hold; no two qualifying sessions.",
+          "restSeconds": 90
         },
         {
           "exerciseId": "w2d1e2",
           "weight": 70,
           "targetReps": 6,
           "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
+          "reason": "Dumbbell history rose 50–60 to 70 lb per hand; Oct 15 reached RIR 1 and Oct 21 stayed at 8 reps. Hold; machine rows excluded.",
+          "restSeconds": 90
         },
         {
           "exerciseId": "w2d1e3",
           "weight": null,
           "targetReps": 8,
           "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
+          "reason": "Only Oct 15 mixed 140/160/180 lb. Keep unknown target; machine/increment and second comparable session unconfirmed.",
+          "restSeconds": 90
         },
         {
           "exerciseId": "w2d1e4",
           "weight": 160,
           "targetReps": 8,
           "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
+          "reason": "160 lb repeated 8 reps Oct 12; Oct 15 reached 12 reps but final RIR 1. Hold; other grips excluded.",
+          "restSeconds": 90
         },
         {
           "exerciseId": "w2d1e5",
           "weight": null,
           "targetReps": 12,
           "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
+          "reason": "Only Oct 15 10 lb at 20/20/16 reps with final RIR 0. Keep unknown target; setup/increment unconfirmed.",
+          "restSeconds": 90
         },
         {
           "exerciseId": "w2d1e6",
           "weight": 70,
           "targetReps": 8,
           "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
+          "reason": "70 lb total repeatedly near 10 reps; Oct 15 12/12 ended at RIR 0. Hold.",
+          "restSeconds": 90
         },
         {
           "exerciseId": "w2d1e7",
           "weight": 30,
           "targetReps": 10,
           "increment": null,
-          "reason": "Hold lower recorded 30 lb; mixed 30/40 lb sets. Prior comparable session reached RIR 1; no load increase."
+          "reason": "Hold lower recorded 30 lb; mixed 30/40 lb sets. Prior comparable session reached RIR 1; no load increase.",
+          "restSeconds": 90
         },
         {
           "exerciseId": "w2d1e8",
           "weight": null,
           "targetReps": 10,
           "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
+          "reason": "Only Oct 15 mixed 60/70 lb. Preserve unknown target; stable load and second comparable session missing.",
+          "restSeconds": 90
         }
       ]
     },
@@ -86,42 +98,48 @@
           "weight": 280,
           "targetReps": 6,
           "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
+          "reason": "History 240, mixed 240/280, then Oct 17 300 lb. Preserve 280 target; earlier effort and machine equivalence missing.",
+          "restSeconds": 90
         },
         {
           "exerciseId": "w2d2e2",
           "weight": 185,
           "targetReps": 6,
           "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
+          "reason": "185 lb repeated 8 reps then Oct 17 3x10 at RIR 4–5. Hold; prior effort/increment missing.",
+          "restSeconds": 90
         },
         {
           "exerciseId": "w2d2e3",
-          "weight": null,
+          "weight": 140,
           "targetReps": 10,
           "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
+          "reason": "Oct 17 mixed 140x9 RIR 1 and 130x10; Oct 22 3x10 at 140 RIR 2. Hold 140 on same seated machine; not two ceiling sessions.",
+          "restSeconds": 90
         },
         {
           "exerciseId": "w2d2e4",
           "weight": 165,
           "targetReps": 10,
           "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
+          "reason": "History 150 to 165; Oct 17 3x15 at 165 RIR 3/2/2. Hold; previous effort/increment missing.",
+          "restSeconds": 90
         },
         {
           "exerciseId": "w2d2e5",
           "weight": 25,
           "targetReps": 12,
           "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
+          "reason": "25 lb per hand: Oct 17 20/17/15 reps reached RIR 1; Oct 22 3x12 RIR 3. Hold and build consistency.",
+          "restSeconds": 90
         },
         {
           "exerciseId": "w2d2e6",
           "weight": null,
           "targetReps": 12,
           "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
+          "reason": "Oct 17 50 lb versus Oct 21 100 lb: equipment/load equivalence unconfirmed. Preserve unknown target.",
+          "restSeconds": 90
         }
       ]
     },
@@ -135,21 +153,24 @@
           "weight": null,
           "targetReps": 1,
           "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
+          "reason": "Maintain cardio without external load; history varies in duration/speed/incline. Latest Oct 22 confirmed 10 minutes at 2.7 mph, 10% incline; no inferred progression.",
+          "restSeconds": 90
         },
         {
           "exerciseId": "w2d3e2",
           "weight": null,
           "targetReps": 10,
           "increment": null,
-          "reason": "Bodyweight only; no external load. Last set RIR 1, so hold rep goal and improve consistent strict reps."
+          "reason": "Bodyweight only; no external load. Last set RIR 1, so hold rep goal and improve consistent strict reps.",
+          "restSeconds": 90
         },
         {
           "exerciseId": "w2d3e3",
           "weight": null,
           "targetReps": 12,
           "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
+          "reason": "No comparable history found. Preserve unknown load and program reps; do not substitute crunches.",
+          "restSeconds": 90
         }
       ]
     },
@@ -163,49 +184,56 @@
           "weight": null,
           "targetReps": 8,
           "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
+          "reason": "Only Oct 21 mixed 115/130 lb at 12 reps. Preserve unknown target; no second session/increment; other grips excluded.",
+          "restSeconds": 90
         },
         {
           "exerciseId": "w2d4e2",
           "weight": 70,
           "targetReps": 8,
           "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
+          "reason": "Dumbbell history rose 50–60 to 70 lb per hand; Oct 15 reached RIR 1 and Oct 21 stayed at 8 reps. Hold; machine rows excluded.",
+          "restSeconds": 90
         },
         {
           "exerciseId": "w2d4e3",
           "weight": null,
           "targetReps": 10,
           "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
+          "reason": "Only Oct 21 mixed 40/45/50 lb at 15 reps. Preserve unknown target; no stable two-session evidence.",
+          "restSeconds": 90
         },
         {
           "exerciseId": "w2d4e4",
           "weight": null,
           "targetReps": 12,
           "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
+          "reason": "Oct 21 15 lb at 20/20/20/18 reps, final RIR 1. Preserve unknown target; do not equate cable setups.",
+          "restSeconds": 90
         },
         {
           "exerciseId": "w2d4e5",
           "weight": null,
           "targetReps": 12,
           "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
+          "reason": "Oct 17 50 lb versus Oct 21 100 lb: equipment/load equivalence unconfirmed. Preserve unknown target.",
+          "restSeconds": 90
         },
         {
           "exerciseId": "w2d4e6",
           "weight": 30,
           "targetReps": 10,
           "increment": null,
-          "reason": "Keep prior 30 lb target: today's 70/80/90 lb differs sharply from recent 30 lb history and ends at RIR 1. Equipment/load equivalence unconfirmed; do not infer an increase."
+          "reason": "Keep prior 30 lb target: today's 70/80/90 lb differs sharply from recent 30 lb history and ends at RIR 1. Equipment/load equivalence unconfirmed; do not infer an increase.",
+          "restSeconds": 90
         },
         {
           "exerciseId": "w2d4e7",
           "weight": 55,
           "targetReps": 10,
           "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
+          "reason": "Earlier 55–60 lb history lacks effort; Oct 21 mixed 50/55/60 at 15 reps. Preserve 55 target; no increase.",
+          "restSeconds": 90
         }
       ]
     },
@@ -219,49 +247,56 @@
           "weight": 180,
           "targetReps": 10,
           "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
+          "reason": "180 lb repeatedly 3x8, then Oct 22 3x10 at RIR 3/4/3. Hold same machine; below 15-rep ceiling.",
+          "restSeconds": 90
         },
         {
           "exerciseId": "w2d5e2",
           "weight": 200,
           "targetReps": 12,
           "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
+          "reason": "200 lb repeatedly 2x12; Oct 22 2x12 RIR 4/2. Hold; below ceiling and no known increment.",
+          "restSeconds": 90
         },
         {
           "exerciseId": "w2d5e3",
-          "weight": null,
+          "weight": 140,
           "targetReps": 10,
           "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
+          "reason": "Oct 17 mixed 140x9 RIR 1 and 130x10; Oct 22 3x10 at 140 RIR 2. Hold 140 on same seated machine; not two ceiling sessions.",
+          "restSeconds": 90
         },
         {
           "exerciseId": "w2d5e4",
-          "weight": null,
+          "weight": 25,
           "targetReps": 10,
           "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
+          "reason": "Oct 22 only comparable session: 25 lb external load, 3x10 RIR 3. Hold recorded load; no second session/increment.",
+          "restSeconds": 90
         },
         {
           "exerciseId": "w2d5e5",
           "weight": 300,
           "targetReps": 12,
           "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
+          "reason": "History changed 180 to 300 lb with equipment uncertainty; Oct 22 4x12 RIR 2. Hold 300 same machine; preserve three prescribed sets.",
+          "restSeconds": 90
         },
         {
           "exerciseId": "w2d5e6",
           "weight": 25,
           "targetReps": 12,
           "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
+          "reason": "25 lb per hand: Oct 17 20/17/15 reps reached RIR 1; Oct 22 3x12 RIR 3. Hold and build consistency.",
+          "restSeconds": 90
         },
         {
           "exerciseId": "w2d5e7",
           "weight": null,
           "targetReps": 1,
           "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
+          "reason": "Maintain cardio without external load; history varies in duration/speed/incline. Latest Oct 22 confirmed 10 minutes at 2.7 mph, 10% incline; no inferred progression.",
+          "restSeconds": 90
         }
       ]
     },
@@ -275,80 +310,90 @@
           "weight": 85,
           "targetReps": 8,
           "increment": null,
-          "reason": "Hold recorded 85 lb per hand; reps below ceiling and only one comparable logged session. No load increase."
+          "reason": "Older 85 lb dumbbell history 12/11/8 lacks effort; Oct 23 4x8 RIR 4/4/2/2. Hold 85 per hand; no two qualifying sessions.",
+          "restSeconds": 90
         },
         {
           "exerciseId": "w2d6e2",
           "weight": 60,
           "targetReps": 10,
           "increment": null,
-          "reason": "Hold lower recorded 60 lb; mixed 60/70 lb working sets and no second comparable session."
+          "reason": "Hold lower recorded 60 lb; mixed 60/70 lb working sets and no second comparable session.",
+          "restSeconds": 90
         },
         {
           "exerciseId": "w2d6e3",
           "weight": 170,
           "targetReps": 12,
           "increment": null,
-          "reason": "Hold lower recorded 170 lb from mixed 170/190 lb sets; prior machine history lacks matching effort/equipment confirmation. No progression increase."
+          "reason": "Hold lower recorded 170 lb from mixed 170/190 lb sets; prior machine history lacks matching effort/equipment confirmation. No progression increase.",
+          "restSeconds": 90
         },
         {
           "exerciseId": "w2d6e4",
           "weight": 70,
           "targetReps": 8,
           "increment": null,
-          "reason": "Hold lower recorded 70 lb; mixed 70/80 lb loads, missed minimum reps and RIR 1."
+          "reason": "Older 70 lb history lacks effort; Oct 23 mixed 70/80 with 8/8/7 reps, RIR 5/1/1. Hold 70 total; missed minimum and fatigue.",
+          "restSeconds": 90
         },
         {
           "exerciseId": "w2d6e5",
           "weight": 30,
           "targetReps": 10,
           "increment": null,
-          "reason": "Hold lower recorded 30 lb; mixed 30/40 lb sets. Prior comparable session reached RIR 1; no load increase."
+          "reason": "Hold lower recorded 30 lb; mixed 30/40 lb sets. Prior comparable session reached RIR 1; no load increase.",
+          "restSeconds": 90
         },
         {
           "exerciseId": "w2d6e6",
           "weight": 30,
           "targetReps": 10,
           "increment": null,
-          "reason": "Keep prior 30 lb target: today's 70/80/90 lb differs sharply from recent 30 lb history and ends at RIR 1. Equipment/load equivalence unconfirmed; do not infer an increase."
+          "reason": "Keep prior 30 lb target: today's 70/80/90 lb differs sharply from recent 30 lb history and ends at RIR 1. Equipment/load equivalence unconfirmed; do not infer an increase.",
+          "restSeconds": 90
         },
         {
           "exerciseId": "w2d6e7",
           "weight": 25,
           "targetReps": 10,
           "increment": null,
-          "reason": "Hold recorded 25 lb; final sets reached RIR 1 and 0. Build consistent reps/effort before increasing."
+          "reason": "Hold recorded 25 lb; final sets reached RIR 1 and 0. Build consistent reps/effort before increasing.",
+          "restSeconds": 90
         },
         {
           "exerciseId": "w2d6e8",
           "weight": 30,
           "targetReps": 10,
           "increment": null,
-          "reason": "Hold lower recorded 30 lb; mixed 30/35 lb loads and final RIR 0. No load increase."
+          "reason": "Hold lower recorded 30 lb; mixed 30/35 lb loads and final RIR 0. No load increase.",
+          "restSeconds": 90
         },
         {
           "exerciseId": "w2d6e9",
           "weight": 70,
           "targetReps": 12,
           "increment": null,
-          "reason": "Hold recorded 70 lb; final set missed minimum reps and reached RIR 0. No load increase."
+          "reason": "Hold recorded 70 lb; final set missed minimum reps and reached RIR 0. No load increase.",
+          "restSeconds": 90
         },
         {
           "exerciseId": "w2d6e10",
           "weight": null,
           "targetReps": 10,
           "increment": null,
-          "reason": "Bodyweight only; no external load. Last set RIR 1, so hold rep goal and improve consistent strict reps."
+          "reason": "Bodyweight only; no external load. Last set RIR 1, so hold rep goal and improve consistent strict reps.",
+          "restSeconds": 90
         }
       ]
     }
   ],
   "sheetsReceipt": {
     "spreadsheetId": "1lNjvd1gT5-fzHP9TphPdXsfQ2DPKr3ZgMhvC8bX2NBc",
-    "range": "'Test Workout Log'!A26:V51",
-    "verifiedAt": "2026-10-23T12:13:20.877Z",
+    "range": "'Test Workout Log'!A52:V69",
+    "verifiedAt": "2026-10-23T17:02:20.384Z",
     "sessionIds": [
-      "beb44c55-605f-490c-ad14-a6c94d80947a"
+      "471656aa-420f-449b-bdf9-3c1a4ecb1650"
     ]
   }
 }
