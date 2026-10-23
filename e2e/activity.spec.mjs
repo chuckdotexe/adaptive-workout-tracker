@@ -44,3 +44,18 @@ test('sound is opt-in and rest completes visibly after 90 seconds',async({page})
  await expect(page.getByRole('timer')).toContainText('Rest complete');
  await page.getByRole('button',{name:'Restart',exact:true}).click();await expect(page.getByRole('timer')).toContainText('1:30');
 });
+
+test('hanging leg raise has reps and RIR without a load input and survives reload',async({page})=>{
+ await mockGitHub(page);await connect(page);await page.getByLabel('Day',{exact:true}).selectOption('3');
+ await page.getByRole('button',{name:'Start workout',exact:true}).click();
+ await page.getByLabel('Exercise',{exact:true}).selectOption('1');
+ await expect(page.getByTestId('target')).toContainText('Bodyweight');
+ await expect(page.getByLabel('Load',{exact:true})).toHaveCount(0);
+ await page.getByLabel('Reps',{exact:true}).fill('12');
+ await page.getByRole('button',{name:'Complete set',exact:true}).click();
+ await page.reload();
+ await expect(page.getByText('Set 1: Bodyweight × 12 · RIR 2',{exact:false})).toBeVisible();
+ await expect(page.getByLabel('Load',{exact:true})).toHaveCount(0);
+ await page.getByText('Notes & equipment',{exact:true}).click();
+ await expect(page.getByLabel('Equipment increment')).toHaveCount(0);
+});

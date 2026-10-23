@@ -30,3 +30,12 @@ test('temporary failure while reading Git retries the whole submission without d
  await store.submit(session,program);await store.submit(session,program);
  assert.equal(fixture.files['completed.json'].sessions.length,1);
 });
+
+test('hanging leg raises store bodyweight rather than a stale external load',()=>{
+ const ex=program.find(e=>e.week===1&&e.day===3&&e.name==='Hanging Leg Raise');
+ const state=record(start(empty(),1,3,'bodyweight-test','2026-10-23'),ex,{id:'raise',weight:50,reps:12,rir:2});
+ validate(JSON.parse(JSON.stringify(state)));
+ const set=state.sessions[0].sets[0];assert.equal(set.weight,null);assert.equal(set.bodyweight,true);assert.equal(set.unit,'');
+ const row=sheetRows({id:'bodyweight-test',date:'2026-10-23',week:1,day:3,sets:[set],prescriptions:[{exerciseId:ex.id,name:ex.name,loadSemantics:set.loadSemantics}]})[0];
+ assert.equal(row[6],12);assert.equal(row[7],'');assert.equal(row[8],'');assert.equal(row[9],'');assert.match(row[17],/Bodyweight/);assert.equal(row[19],2);
+});

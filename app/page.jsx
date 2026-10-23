@@ -1,6 +1,6 @@
 'use client';
 import {useEffect, useRef, useState} from 'react';
-import {isCardio, cardioTarget} from '../lib/activity.mjs';
+import {isCardio, cardioTarget,isBodyweight} from '../lib/activity.mjs';
 import program from '../data/ironledger-program.json';
 import {empty, start, record, setIncrement, validate} from '../lib/workout.mjs';
 import {GitHubStore, DEFAULT_REPOSITORY} from '../lib/github-store.mjs';
@@ -27,7 +27,7 @@ export default function Home() {
   const session = draft.sessions.find(s => s.id === draft.activeId);
   const exercises = program.filter(e => e.week === (session?.week ?? week) && e.day === (session?.day ?? day));
   const ex = exercises[idx] ?? exercises[0];
-  const cardio = isCardio(ex);
+  const cardio = isCardio(ex), bodyweight=isBodyweight(ex);
   const plan = sessionPlan ?? remote?.plan;
   const target = plan && targetFromPlan(plan, ex);
   const targetWeight = target ? target.weight : ex.weight;
@@ -201,12 +201,12 @@ export default function Home() {
       <section className="card">
         <label className="exercise-picker">Exercise<select aria-label="Exercise" value={Math.min(idx,exercises.length-1)} onChange={e=>navigate(+e.target.value)}>{exercises.map((e,i)=><option key={e.id} value={i}>{e.name}{session ? (session.skipped?.[e.id] ? ' · skipped' : ` · ${session.sets.filter(s=>s.exerciseId===e.id).length}/${e.sets}`) : ''}</option>)}</select></label>
         <h2>{ex.name}</h2>
-        <p data-testid="target">{cardio ? `Cardio: ${cardioTarget(ex)} · conversational pace` : <>Target: {ex.sets} × {targetReps} reps · {targetWeight ?? 'Unspecified'} lb{ex.weightText.includes('per hand') ? ' per hand' : ''} · RIR {ex.rirMin ?? 'unspecified'}{ex.rirMax !== ex.rirMin ? '–'+ex.rirMax : ''}</>}</p>
+        <p data-testid="target">{cardio ? `Cardio: ${cardioTarget(ex)} · conversational pace` : <>Target: {ex.sets} × {targetReps} reps · {bodyweight ? 'Bodyweight' : `${targetWeight ?? 'Unspecified'} lb${ex.weightText.includes('per hand') ? ' per hand' : ''}`} · RIR {ex.rirMin ?? 'unspecified'}{ex.rirMax !== ex.rirMin ? '–'+ex.rirMax : ''}</>}</p>
         <p className="extra">Program range: {ex.minReps}–{ex.maxReps} reps · Original load: {ex.weightText || 'Unspecified'} · Rest {REST_SECONDS} seconds</p>
         {target && <p className="extra">Upcoming target · {target.reason}</p>}
         {session && <fieldset disabled={busy || !!pending.current}>
           {cardio ? <div className="controls cardio-controls"><Stepper label="Minutes" value={minutes} onChange={setMinutes}/><Stepper label="Speed (mph)" value={speed} onChange={setSpeed} step={0.1}/><Stepper label="Incline (%)" value={incline} onChange={setIncline} max={100}/></div> : <div className="controls">
-            <Stepper label="Load" value={weight} onChange={setWeight} step={session.increments?.[ex.id]||5}/>
+            {bodyweight ? <div className="bodyweight-label">Bodyweight</div> : <Stepper label="Load" value={weight} onChange={setWeight} step={session.increments?.[ex.id]||5}/> }
             <Stepper label="Reps" value={reps} onChange={setReps}/>
             <Stepper label="Actual RIR" value={rir} onChange={setRir} max={10}/>
           </div>}
@@ -214,11 +214,11 @@ export default function Home() {
           {cardio && <p>Minutes required · speed and incline optional</p>}
           <button className="wide" disabled={done.length >= ex.sets || !!session.skipped?.[ex.id]} onClick={logEntry}>{cardio ? 'Complete cardio' : 'Complete set'}</button>
           <details><summary>Notes & equipment</summary>{session.skipped?.[ex.id] && <button onClick={()=>change(st=>({...st,sessions:st.sessions.map(x=>{if(x.id!==session.id)return x;const skipped={...x.skipped};delete skipped[ex.id];return {...x,skipped};})}))}>Require remaining sets</button>}<label>Set notes<input value={note} onChange={e=>setNote(e.target.value)}/></label>
-          <label>Equipment increment (lb, optional)<input aria-label="Equipment increment" type="number" min="0" step="any" value={session.increments?.[ex.id] ?? ''} onChange={e=>change(s=>setIncrement(s,ex,+e.target.value))}/></label></details>
+          {!bodyweight && <label>Equipment increment (lb, optional)<input aria-label="Equipment increment" type="number" min="0" step="any" value={session.increments?.[ex.id] ?? ''} onChange={e=>change(s=>setIncrement(s,ex,+e.target.value))}/></label>}</details>
         </fieldset>}
         {session && !cardio && <div className="timer" role="timer">{restEnd && clock>=restEnd ? 'Rest complete · ' : 'Rest '}{Math.floor(Math.max(0,Math.ceil(((restEnd||clock)-clock)/1000))/60)}:{String(Math.max(0,Math.ceil(((restEnd||clock)-clock)/1000))%60).padStart(2,'0')} <button className="secondary" onClick={startRest}>Restart</button><button className="secondary" onClick={()=>{setRestEnd(null);stopAlarm();}}>Clear</button><button className="secondary" aria-pressed={sound} onClick={toggleSound}>Sound {sound ? 'on' : 'off'}</button></div>}
         <p>{session?.skipped?.[ex.id] && <strong>Skipped: machine unavailable · </strong>}<span>{done.length}/{ex.sets} sets logged</span>{session && done.length < ex.sets && !session.skipped?.[ex.id] ? ` · ${ex.sets-done.length} sets remaining` : ''}</p><div className="logged-sets">
-        {done.map((s,i)=><p key={s.id}>{s.kind==='cardio' ? `${s.durationMinutes} min · ${s.speedMph ?? '?'} mph · ${s.inclinePercent ?? '?'}% incline` : <>Set {i+1}: {s.weight ?? 'Unspecified'} lb × {s.reps} · RIR {s.rir ?? 'unknown'}</>} {s.notes}
+        {done.map((s,i)=><p key={s.id}>{s.kind==='cardio' ? `${s.durationMinutes} min · ${s.speedMph ?? '?'} mph · ${s.inclinePercent ?? '?'}% incline` : <>Set {i+1}: {s.bodyweight ? 'Bodyweight' : `${s.weight ?? 'Unspecified'} lb`} × {s.reps} · RIR {s.rir ?? 'unknown'}</>} {s.notes}
           <button className="secondary" disabled={busy || !!pending.current} onClick={()=>change(st=>({...st,sessions:st.sessions.map(x=>x.id===session.id ? {...x,sets:x.sets.filter(row=>row.id!==s.id)} : x)}))}>Remove set {i+1}</button>
         </p>)}
         </div><details className="extra"><summary>Original program notes</summary><p>{ex.notes}</p></details>
@@ -230,12 +230,12 @@ export default function Home() {
         <h2>Awaiting ChatGPT processing ({remote.queue.sessions.length})</h2>
         <p>Say “Process my workouts” in ChatGPT. It reads completed.json, updates Sheets, and publishes next-week.json.</p>
         {remote.queue.sessions.map(s=><details key={s.id}><summary>{s.date} · W{s.week} D{s.day} · {s.sets.length} sets</summary>
-          {s.sets.map(set=><p key={set.id}>{program.find(e=>e.id===set.exerciseId)?.name} · {set.kind==='cardio' ? `${set.durationMinutes} min · ${set.speedMph ?? '?'} mph · ${set.inclinePercent ?? '?'}% incline` : `${set.weight ?? 'unknown'} lb × ${set.reps} · RIR ${set.rir ?? 'unknown'}`}</p>)}
+          {s.sets.map(set=><p key={set.id}>{program.find(e=>e.id===set.exerciseId)?.name} · {set.kind==='cardio' ? `${set.durationMinutes} min · ${set.speedMph ?? '?'} mph · ${set.inclinePercent ?? '?'}% incline` : `${set.bodyweight ? 'Bodyweight' : `${set.weight ?? 'unknown'} lb`} × ${set.reps} · RIR ${set.rir ?? 'unknown'}`}</p>)}
         </details>)}
       </section>
       <section className="card overview"><h2>Next six workouts</h2><p>Plan updated {new Date(remote.plan.updatedAt).toLocaleString()}</p>
         {remote.plan.workouts.map(w=><details key={`${w.week}-${w.day}`}><summary>Week {w.week}, day {w.day} · {w.dayLabel}</summary>
-          {w.exercises.map(t=><p key={t.exerciseId}>{program.find(e=>e.id===t.exerciseId)?.name}: {t.weight ?? 'Unspecified'} lb × {t.targetReps} · {t.reason}</p>)}
+          {w.exercises.map(t=><p key={t.exerciseId}>{program.find(e=>e.id===t.exerciseId)?.name}: {isBodyweight(program.find(e=>e.id===t.exerciseId)) ? 'Bodyweight' : `${t.weight ?? 'Unspecified'} lb`} × {t.targetReps} · {t.reason}</p>)}
         </details>)}
       </section>
     </>}

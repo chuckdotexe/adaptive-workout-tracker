@@ -2,6 +2,12 @@
 
 Code changes must update this file and README.md in the same commit. Updates are not required for workout processing, data-only changes, or other work without code changes. Entries describe verified work; a source commit alone does not confirm a successful deployment.
 
+## 2026-10-23 — Bodyweight hanging leg raises
+
+- Replaced the hanging-leg-raise load input with Bodyweight; retained reps and actual RIR and removed its equipment-increment field.
+- New records and prescriptions use no external load. Sheets preserves blank weight/volume and identifies bodyweight in notes; existing actual records are not rewritten.
+- Validation: production build, 42 unit tests and 22 Chromium/mobile WebKit browser checks, including saved bodyweight records and load-free logging through reload.
+
 ## 2026-10-22 — Free exercise selection
 
 - Removed dropdown/Next restrictions and separate machine-busy/skip controls. Choose any exercise directly without marking it skipped.

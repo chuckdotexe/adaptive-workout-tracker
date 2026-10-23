@@ -18,3 +18,5 @@ fieldset{border:0;margin:0;padding:0;min-width:0}fieldset:disabled{opacity:.7}
 .next-up{font-size:12px;display:flex;align-items:center;justify-content:space-between;gap:5px;margin:4px 0}.next-up button{font-size:11px;padding:5px;min-height:34px}.return-later{font-size:12px}.return-later button{font-size:12px;padding:6px}.timer{gap:5px}.timer button{padding:6px;font-size:11px}.active-workout .cardio-controls~details{font-size:12px}.active-workout .card{margin:4px 0}.active-workout .logged-sets{max-height:35px}
 
 .active-workout .exercise-picker{font-size:0}.active-workout .exercise-picker select{font-size:16px}.active-workout .next-up{line-height:1.2}.active-workout .timer{font-size:20px}
+
+.bodyweight-label{display:flex;align-items:center;justify-content:center;font-size:14px;color:#c8d6ed}
