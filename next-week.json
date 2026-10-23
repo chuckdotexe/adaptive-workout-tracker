@@ -1,147 +1,18 @@
 {
   "version": 1,
-  "revision": "position-f7a00cc4-bfde-45e2-994f-2dc06bf80438",
-  "updatedAt": "2026-10-21T15:06:16.127Z",
+  "revision": "processed-7541ff5d-3271-4e33-8a9a-d64a9cd134fd",
+  "updatedAt": "2026-10-23T12:13:20.876Z",
   "processedSessions": [
     {
       "id": "b4774b22-e8b1-406f-914c-cab7b67a2f86",
       "digest": "e8004f9df0977d9ae13795e8843f75b3020bd6858c206e8741ad7b242b7d8dd4"
+    },
+    {
+      "id": "beb44c55-605f-490c-ad14-a6c94d80947a",
+      "digest": "9eab2804465f1b305296225ca81b137ef80489d158f58d43006c09170fa0c6b3"
     }
   ],
   "workouts": [
-    {
-      "week": 1,
-      "day": 5,
-      "dayLabel": "Friday - Lower Hypertrophy + Delts",
-      "exercises": [
-        {
-          "exerciseId": "w1d5e1",
-          "weight": 180,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        },
-        {
-          "exerciseId": "w1d5e2",
-          "weight": 200,
-          "targetReps": 12,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        },
-        {
-          "exerciseId": "w1d5e3",
-          "weight": null,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        },
-        {
-          "exerciseId": "w1d5e4",
-          "weight": null,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        },
-        {
-          "exerciseId": "w1d5e5",
-          "weight": 300,
-          "targetReps": 12,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        },
-        {
-          "exerciseId": "w1d5e6",
-          "weight": 25,
-          "targetReps": 12,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        },
-        {
-          "exerciseId": "w1d5e7",
-          "weight": null,
-          "targetReps": 1,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        }
-      ]
-    },
-    {
-      "week": 1,
-      "day": 6,
-      "dayLabel": "Saturday - Chest + Arms Specialization",
-      "exercises": [
-        {
-          "exerciseId": "w1d6e1",
-          "weight": 85,
-          "targetReps": 8,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        },
-        {
-          "exerciseId": "w1d6e2",
-          "weight": null,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        },
-        {
-          "exerciseId": "w1d6e3",
-          "weight": 140,
-          "targetReps": 12,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        },
-        {
-          "exerciseId": "w1d6e4",
-          "weight": 70,
-          "targetReps": 8,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        },
-        {
-          "exerciseId": "w1d6e5",
-          "weight": null,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        },
-        {
-          "exerciseId": "w1d6e6",
-          "weight": 30,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        },
-        {
-          "exerciseId": "w1d6e7",
-          "weight": null,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        },
-        {
-          "exerciseId": "w1d6e8",
-          "weight": null,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        },
-        {
-          "exerciseId": "w1d6e9",
-          "weight": null,
-          "targetReps": 12,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        },
-        {
-          "exerciseId": "w1d6e10",
-          "weight": null,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
-        }
-      ]
-    },
     {
       "week": 2,
       "day": 1,
@@ -191,10 +62,10 @@
         },
         {
           "exerciseId": "w2d1e7",
-          "weight": null,
+          "weight": 30,
           "targetReps": 10,
           "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
+          "reason": "Hold lower recorded 30 lb; mixed 30/40 lb sets. Prior comparable session reached RIR 1; no load increase."
         },
         {
           "exerciseId": "w2d1e8",
@@ -271,7 +142,7 @@
           "weight": null,
           "targetReps": 10,
           "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
+          "reason": "Bodyweight only; no external load. Last set RIR 1, so hold rep goal and improve consistent strict reps."
         },
         {
           "exerciseId": "w2d3e3",
@@ -327,7 +198,7 @@
           "weight": 30,
           "targetReps": 10,
           "increment": null,
-          "reason": "Original program target; awaiting processed workout history."
+          "reason": "Keep prior 30 lb target: today's 70/80/90 lb differs sharply from recent 30 lb history and ends at RIR 1. Equipment/load equivalence unconfirmed; do not infer an increase."
         },
         {
           "exerciseId": "w2d4e7",
@@ -337,18 +208,147 @@
           "reason": "Original program target; awaiting processed workout history."
         }
       ]
+    },
+    {
+      "week": 2,
+      "day": 5,
+      "dayLabel": "Friday - Lower Hypertrophy + Delts",
+      "exercises": [
+        {
+          "exerciseId": "w2d5e1",
+          "weight": 180,
+          "targetReps": 10,
+          "increment": null,
+          "reason": "Original program target; awaiting processed workout history."
+        },
+        {
+          "exerciseId": "w2d5e2",
+          "weight": 200,
+          "targetReps": 12,
+          "increment": null,
+          "reason": "Original program target; awaiting processed workout history."
+        },
+        {
+          "exerciseId": "w2d5e3",
+          "weight": null,
+          "targetReps": 10,
+          "increment": null,
+          "reason": "Original program target; awaiting processed workout history."
+        },
+        {
+          "exerciseId": "w2d5e4",
+          "weight": null,
+          "targetReps": 10,
+          "increment": null,
+          "reason": "Original program target; awaiting processed workout history."
+        },
+        {
+          "exerciseId": "w2d5e5",
+          "weight": 300,
+          "targetReps": 12,
+          "increment": null,
+          "reason": "Original program target; awaiting processed workout history."
+        },
+        {
+          "exerciseId": "w2d5e6",
+          "weight": 25,
+          "targetReps": 12,
+          "increment": null,
+          "reason": "Original program target; awaiting processed workout history."
+        },
+        {
+          "exerciseId": "w2d5e7",
+          "weight": null,
+          "targetReps": 1,
+          "increment": null,
+          "reason": "Original program target; awaiting processed workout history."
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "day": 6,
+      "dayLabel": "Saturday - Chest + Arms Specialization",
+      "exercises": [
+        {
+          "exerciseId": "w2d6e1",
+          "weight": 85,
+          "targetReps": 8,
+          "increment": null,
+          "reason": "Hold recorded 85 lb per hand; reps below ceiling and only one comparable logged session. No load increase."
+        },
+        {
+          "exerciseId": "w2d6e2",
+          "weight": 60,
+          "targetReps": 10,
+          "increment": null,
+          "reason": "Hold lower recorded 60 lb; mixed 60/70 lb working sets and no second comparable session."
+        },
+        {
+          "exerciseId": "w2d6e3",
+          "weight": 170,
+          "targetReps": 12,
+          "increment": null,
+          "reason": "Hold lower recorded 170 lb from mixed 170/190 lb sets; prior machine history lacks matching effort/equipment confirmation. No progression increase."
+        },
+        {
+          "exerciseId": "w2d6e4",
+          "weight": 70,
+          "targetReps": 8,
+          "increment": null,
+          "reason": "Hold lower recorded 70 lb; mixed 70/80 lb loads, missed minimum reps and RIR 1."
+        },
+        {
+          "exerciseId": "w2d6e5",
+          "weight": 30,
+          "targetReps": 10,
+          "increment": null,
+          "reason": "Hold lower recorded 30 lb; mixed 30/40 lb sets. Prior comparable session reached RIR 1; no load increase."
+        },
+        {
+          "exerciseId": "w2d6e6",
+          "weight": 30,
+          "targetReps": 10,
+          "increment": null,
+          "reason": "Keep prior 30 lb target: today's 70/80/90 lb differs sharply from recent 30 lb history and ends at RIR 1. Equipment/load equivalence unconfirmed; do not infer an increase."
+        },
+        {
+          "exerciseId": "w2d6e7",
+          "weight": 25,
+          "targetReps": 10,
+          "increment": null,
+          "reason": "Hold recorded 25 lb; final sets reached RIR 1 and 0. Build consistent reps/effort before increasing."
+        },
+        {
+          "exerciseId": "w2d6e8",
+          "weight": 30,
+          "targetReps": 10,
+          "increment": null,
+          "reason": "Hold lower recorded 30 lb; mixed 30/35 lb loads and final RIR 0. No load increase."
+        },
+        {
+          "exerciseId": "w2d6e9",
+          "weight": 70,
+          "targetReps": 12,
+          "increment": null,
+          "reason": "Hold recorded 70 lb; final set missed minimum reps and reached RIR 0. No load increase."
+        },
+        {
+          "exerciseId": "w2d6e10",
+          "weight": null,
+          "targetReps": 10,
+          "increment": null,
+          "reason": "Bodyweight only; no external load. Last set RIR 1, so hold rep goal and improve consistent strict reps."
+        }
+      ]
     }
   ],
-  "testProcessing": {
-    "excludedFromTrainingHistory": true,
-    "reason": "User-designated test; retain current training days and targets."
-  },
   "sheetsReceipt": {
     "spreadsheetId": "1lNjvd1gT5-fzHP9TphPdXsfQ2DPKr3ZgMhvC8bX2NBc",
-    "range": "'Test Workout Log'!A2:V25",
-    "verifiedAt": "2026-10-21T15:00:26.789Z",
+    "range": "'Test Workout Log'!A26:V51",
+    "verifiedAt": "2026-10-23T12:13:20.877Z",
     "sessionIds": [
-      "b4774b22-e8b1-406f-914c-cab7b67a2f86"
+      "beb44c55-605f-490c-ad14-a6c94d80947a"
     ]
   }
 }
