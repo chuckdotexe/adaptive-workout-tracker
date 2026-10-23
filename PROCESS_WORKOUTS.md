@@ -1,5 +1,7 @@
 # Process my workouts
 
+Automatic website-triggered runs use [AUTOMATION.md](AUTOMATION.md). This procedure remains the interactive recovery path.
+
 Repository: chuckdotexe/adaptive-workout-tracker, branch main.
 Online files: completed.json (append-only submission queue until acknowledged) and next-week.json (next six training sessions plus processed-session receipts).
 

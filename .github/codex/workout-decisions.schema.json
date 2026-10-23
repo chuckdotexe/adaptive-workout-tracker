@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["decisions"],
+  "properties": {
+    "decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["exerciseId", "weight", "targetReps", "reason"],
+        "properties": {
+          "exerciseId": {"type": "string"},
+          "weight": {"type": ["number", "null"]},
+          "targetReps": {"type": "integer"},
+          "reason": {"type": "string"}
+        }
+      }
+    }
+  }
+}

@@ -2,6 +2,7 @@ name: Verify workout tracker
 on:
   push:
     branches: [main]
+    paths-ignore: [completed.json, next-week.json]
   workflow_dispatch:
 permissions:
   contents: read

@@ -20,7 +20,7 @@ test('Finish saves to Git, processing publishes new targets, and the tracker rel
   await finalizeProcessing(store,batch,batch.nextPlan,{spreadsheetId:'mock-staging-only',range:'A2:V40',verified:true,sessions:batch.sessions},program);
   await page.getByRole('button',{name:'Refresh from Git',exact:true}).click();
   await expect(page.getByTestId('target')).toContainText('305 lb');
-  await expect(page.getByRole('heading',{name:'Awaiting ChatGPT processing (0)',exact:true})).toBeVisible();
+  await expect(page.getByRole('heading',{name:'Awaiting processing (0)',exact:true})).toBeVisible();
   await page.screenshot({path:testInfo.outputPath('git-workflow.png'),fullPage:true});
   await page.reload();
   await expect(page.getByTestId('target')).toContainText('305 lb');

@@ -165,7 +165,7 @@ export default function Home() {
       const result = await new GitHubStore({token:auth}).submit(pending.current, program);
       localStorage.setItem(RECOVERY,JSON.stringify({draft:empty(),remote:result}));recovered.current=false;setRestEnd(null);setRemote(result); setDraft(empty()); setSessionPlan(null); pending.current = null;
       const next = currentDay(result.plan, result.queue); if (next) choose(next.week, next.day, result.plan.revision);
-      setMessage('Workout saved to Git. Tell ChatGPT “Process my workouts” to update Sheets and your upcoming plan.');
+      setMessage('Workout saved to Git. Awaiting target processing; refresh from Git to check for an updated plan.');
     } catch (e) {setError('Workout not confirmed saved: ' + e.message + ' Your workout is retained on this device.');}
     finally {setBusy(false); submitting.current = false;}
   }
@@ -227,8 +227,8 @@ export default function Home() {
       <div className="row"><button disabled={idx===0} onClick={()=>setIdx(idx-1)}>Previous</button><button disabled={idx>=exercises.length-1} onClick={()=>navigate(idx+1)}>Next exercise</button></div>
       {session && <button className="wide" disabled={busy} onClick={()=>finishWorkout()}>{busy ? 'Saving to Git…' : 'Finish workout'}</button>}
       <section className="card overview">
-        <h2>Awaiting ChatGPT processing ({remote.queue.sessions.length})</h2>
-        <p>Say “Process my workouts” in ChatGPT. It reads completed.json, updates Sheets, and publishes next-week.json.</p>
+        <h2>Awaiting processing ({remote.queue.sessions.length})</h2>
+        <p>Completed sessions stay queued until the processing runner verifies Sheets and publishes upcoming targets. Automation requires its one-time GitHub setup.</p>
         {remote.queue.sessions.map(s=><details key={s.id}><summary>{s.date} · W{s.week} D{s.day} · {s.sets.length} sets</summary>
           {s.sets.map(set=><p key={set.id}>{program.find(e=>e.id===set.exerciseId)?.name} · {set.kind==='cardio' ? `${set.durationMinutes} min · ${set.speedMph ?? '?'} mph · ${set.inclinePercent ?? '?'}% incline` : `${set.bodyweight ? 'Bodyweight' : `${set.weight ?? 'unknown'} lb`} × ${set.reps} · RIR ${set.rir ?? 'unknown'}`}</p>)}
         </details>)}

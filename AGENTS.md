@@ -3,6 +3,8 @@ When the user asks to "process my workouts", "process workouts", or run the work
 
 ## Required documentation updates
 
+For automatic GitHub processing, follow AUTOMATION.md. The Codex analysis job only returns bounded JSON decisions; deterministic prepare/publish jobs perform all Sheets/Git I/O. Do not attempt the interactive PROCESS_WORKOUTS.md tool workflow from that read-only analysis job.
+
 When code changes, update both README.md and CHANGELOG.md in the same commit. Workout processing, data-only updates, and other work without code changes do not require README or changelog updates. Update documentation independently only when its content needs correction.
 
 - Keep README.md accurate for current behavior, usage, limitations, and development instructions.

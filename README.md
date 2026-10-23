@@ -5,7 +5,7 @@ A personal, mobile-friendly tracker with two online JSON files:
 - `completed.json`: completed workouts awaiting ChatGPT processing. Finish appends a session with unique session/set IDs.
 - `next-week.json`: the next six training sessions and targets, with processing receipts to make retries safe.
 
-The website reads the files directly from `chuckdotexe/adaptive-workout-tracker` on `main`. GitHub is the data store; Google Sheets is the long-term history. Say **Process my workouts** in this repository's ChatGPT/Codex task to follow [PROCESS_WORKOUTS.md](PROCESS_WORKOUTS.md).
+The website reads the files directly from `chuckdotexe/adaptive-workout-tracker` on `main`. GitHub is the data store; Google Sheets is the long-term history. Automatic processing is provided by [the Codex GitHub workflow](AUTOMATION.md), after its one-time runner credentials are configured. The manual recovery procedure is [PROCESS_WORKOUTS.md](PROCESS_WORKOUTS.md).
 
 ## Use
 
@@ -13,7 +13,7 @@ The website reads the files directly from `chuckdotexe/adaptive-workout-tracker`
 2. Connect GitHub using a fine-grained personal access token restricted to this repository, with **Contents: Read and write**. GitHub Pages has no backend, so the static app sends the credential directly to GitHub. It is remembered in localStorage in this browser on this device, and removed with Disconnect. It is never embedded in the build or committed. Repository Contents permission covers repository files, not only these two files.
 3. Select your program week/day and start. Log actual load, reps, RIR, notes, and optional equipment increments. Sets and the session plan are saved on the device immediately. Use plus/minus controls for load, reps and RIR. A 90-second rest countdown starts with each completed set; Restart also starts a fresh 90 seconds for strength exercises. Tap **Sound off** to enable a test beep and timer-end tones; the preference is remembered. Sound requires browser audio support and an active audio session; background/locked-screen alerts are not guaranteed. Vibration is attempted only on supporting browsers.
 4. Choose any exercise from the dropdown whenever a machine is busy; **Previous** and **Next exercise** also work before all sets are logged. No separate skip or deferral action is needed. Returning to an exercise restores its logged set count. **Next up** names the next unfinished exercise, and Finish lists any lifts that still need sets. The selector shows logged/prescribed set counts. Hanging leg raises are bodyweight: log reps and actual RIR, with no load or equipment increment. Their saved/exported weight stays blank, rather than becoming zero or an invented bodyweight in pounds. Treadmill walks use **Minutes**, **Speed (mph)**, and **Incline (%)**, with the original cardio duration target shown. Minutes are required; speed and incline may be left unknown. Cardio exports to Sheets duration rather than weight/reps/RIR. Tap **Finish workout**. Wait for **Workout saved to Git**. If sets are missing, Finish names the incomplete lifts and offers buttons to return to them. A failed online save keeps the same submission on the device for retry; it never claims success or clears the draft. Once a submission is attempted, it is frozen until confirmed to avoid changing an uncertain remote write.
-5. Tell ChatGPT **Process my workouts**. ChatGPT reads the queue, verifies/deduplicates Sheets rows, reads recent comparable history, analyzes targets, then atomically updates the upcoming plan and removes only processed queue entries.
+5. After [one-time automation setup](AUTOMATION.md), the submission push triggers GitHub Actions. The runner verifies/deduplicates Sheets rows, Codex reviews comparable history, and validated targets plus queue acknowledgment are published atomically. Until setup is complete, sessions remain queued and manual processing is available.
 6. Refresh from Git to load the updated targets. Until processing, the prior plan remains available; days outside its window show original program targets clearly labeled.
 
 All completed workouts and plans in this public repository are public, including cleared records in Git history. The user chose this architecture. No Google credentials belong in the tracker.
@@ -32,7 +32,7 @@ Submission and processing use Git tree/commit APIs and non-force branch updates.
 
 Processing must verify all Sheets rows before finalizing. Plan update, receipts, and removal of acknowledged queue entries happen in one Git commit. New arrivals remain queued. Sheets and Git cannot participate in one transaction: Sheets ID-based deduplication makes a failure between them recoverable. The processing agent must read back Sheets values; the finalization script checks the supplied receipt's coverage, not Google Sheets independently.
 
-The initial next-week.json contains the original first six training sessions, not inferred personal history. ChatGPT uses the last one or two comparable sessions per exercise; increases require two supporting sessions and a known increment. See the processing procedure for conservative hold rules. Automated fatigue diagnosis, substitutions and automatic ChatGPT triggering are not implemented.
+The initial next-week.json contains the original first six training sessions, not inferred personal history. ChatGPT uses the last one or two comparable sessions per exercise; increases require two supporting sessions and a known increment. See the processing procedure for conservative hold rules. Automated fatigue diagnosis and substitutions are not implemented. Automatic processing runs through GitHub Actions after configuration; it does not start a web ChatGPT conversation.
 
 ## Project documentation
 
@@ -51,7 +51,7 @@ npx playwright install chromium webkit
 npm run test:e2e
 ```
 
-`npm start` serves the production build on http://127.0.0.1:4173. GitHub Pages deployment uses `PAGES_ENABLED=true` and the repository base path. Data-only commits use `[skip ci]`; the app reads live data without rebuilding.
+`npm start` serves the production build on http://127.0.0.1:4173. GitHub Pages deployment uses `PAGES_ENABLED=true` and the repository base path. Workout submissions trigger processing without rebuilding Pages. Processing commits use `[skip ci]` to prevent loops; the app reads live data without rebuilding.
 
 The test suite covers program fidelity, retry/idempotency, concurrent submissions, processing receipts, atomic plan/queue updates, new arrivals, failed saves, and the browser workflow in Chromium and mobile WebKit. Tests simulate GitHub and Sheets receipts; they do not prove live Sheets writes or physical iPhone behavior.
 

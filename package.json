@@ -13,6 +13,7 @@
     "preview": "node scripts/serve.mjs"
   },
   "dependencies": {
+    "google-auth-library": "^11.3.1",
     "next": "16.4.2",
     "react": "19.2.4",
     "react-dom": "19.2.4"

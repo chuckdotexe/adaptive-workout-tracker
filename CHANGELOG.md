@@ -2,6 +2,14 @@
 
 Code changes must update this file and README.md in the same commit. Updates are not required for workout processing, data-only changes, or other work without code changes. Entries describe verified work; a source commit alone does not confirm a successful deployment.
 
+## 2026-10-23 — GitHub-triggered Codex processing
+
+- Added a completed.json push trigger and manual recovery run, with separate Sheets preparation, read-only Codex analysis and validated atomic publication jobs.
+- Removed the submission commit's skip-CI marker and excluded data-only changes from Pages builds. Removed the website's copy/paste ChatGPT handoff instructions.
+- Added service-account Sheets access, RAW writes, set-ID deduplication, full readback verification, conservative target bounds and synthetic-test exclusion. Production workbook writes remain blocked.
+- Documented the required OpenAI/Google runner secrets and enable variable in AUTOMATION.md. Desktop/web connections do not automatically authenticate a GitHub runner.
+- Validation: 49 unit tests, 24 Chromium/mobile WebKit browser checks, script syntax checks and a production build passed. Live paid Codex/Sheets automation is not verified until credentials and staging access are supplied; disabled configuration must preserve the queue.
+
 ## 2026-10-23 — Preserve program position while older workouts remain queued
 
 - Prevented older pending workouts or out-of-order arrivals from moving the app backward behind the published upcoming plan.
