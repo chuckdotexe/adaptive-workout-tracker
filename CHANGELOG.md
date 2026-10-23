@@ -2,6 +2,12 @@
 
 Code changes must update this file and README.md in the same commit. Updates are not required for workout processing, data-only changes, or other work without code changes. Entries describe verified work; a source commit alone does not confirm a successful deployment.
 
+## 2026-10-23 — Preserve program position while older workouts remain queued
+
+- Prevented older pending workouts or out-of-order arrivals from moving the app backward behind the published upcoming plan.
+- Used the same position calculation when preparing future processing batches, preserving six consecutive upcoming days without clearing older workouts.
+- Validation: production build, 43 unit tests and 24 Chromium/mobile WebKit browser checks, including an older queued workout alongside a newer plan.
+
 ## 2026-10-23 — Bodyweight hanging leg raises
 
 - Replaced the hanging-leg-raise load input with Bodyweight; retained reps and actual RIR and removed its equipment-increment field.

@@ -103,3 +103,11 @@ test('anonymous writes are rejected before network access',async()=>{
   let requests=0;const store=new GitHubStore({fetchImpl:()=>{requests++;}});
   await assert.rejects(()=>store.submit(submission(),program),/Connect GitHub/);assert.equal(requests,0);
 });
+
+test('older queued workouts cannot regress a newer plan or future processing batch',async()=>{
+ const plan=seedPlan(program,{week:2,day:1}),queue={version:1,sessions:[submission()]};
+ assert.deepEqual(currentDay(plan,queue),{week:2,day:1});
+ const batch=await prepareBatch({head:'test',queue,plan},program);
+ assert.deepEqual(batch.nextPlan.workouts.map(w=>[w.week,w.day]),[[2,1],[2,2],[2,3],[2,4],[2,5],[2,6]]);
+ assert.deepEqual(currentDay(seedPlan(program),{sessions:[submission('later',5),submission('older',1)]}),{week:1,day:6});
+});

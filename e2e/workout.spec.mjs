@@ -42,3 +42,15 @@ test('selected program day is remembered alongside device recovery',async({page}
   await expect(page.getByText(/Program day 16 of 48/)).toBeVisible();
   expect(await page.evaluate(()=>localStorage.getItem('awt-recovery-v1'))).toBeTruthy();
 });
+
+test('refresh selects the newer published plan while an older workout remains queued',async({page})=>{
+ const fixture=await mockGitHub(page);await connect(page);await logWorkout(page);
+ await page.getByRole('button',{name:'Finish workout',exact:true}).click();
+ await expect(page.getByRole('status')).toContainText('Workout saved to Git');
+ const {seedPlan}=await import('../lib/online-workflow.mjs');
+ fixture.files['next-week.json']=seedPlan(program,{week:2,day:1});
+ await page.reload();
+ await expect(page.getByLabel('Week',{exact:true})).toHaveValue('2');
+ await expect(page.getByLabel('Day',{exact:true})).toHaveValue('1');
+ expect(fixture.files['completed.json'].sessions).toHaveLength(1);
+});
