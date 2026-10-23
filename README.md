@@ -9,6 +9,8 @@ The website reads the files directly from `chuckdotexe/adaptive-workout-tracker`
 
 ## Use
 
+Resistance exercise targets display the original program rep range (for example, 3 × 10–12 reps), including in the next-six-workouts overview. The Reps control still starts at the saved suggested count; record the reps actually completed. Fixed-rep prescriptions show a single number, and cardio shows its duration target.
+
 1. Open https://chuckdotexe.github.io/adaptive-workout-tracker/.
 2. Connect GitHub using a fine-grained personal access token restricted to this repository, with **Contents: Read and write**. GitHub Pages has no backend, so the static app sends the credential directly to GitHub. It is remembered in localStorage in this browser on this device, and removed with Disconnect. It is never embedded in the build or committed. Repository Contents permission covers repository files, not only these two files.
 3. Select your program week/day and start. Log actual load, reps, RIR, notes, and optional equipment increments. Sets and the session plan are saved on the device immediately. Use plus/minus controls for load, reps and RIR. A 90-second rest countdown starts with each completed set; Restart also starts a fresh 90 seconds for strength exercises. Tap **Sound off** to enable a test beep and timer-end tones; the preference is remembered. Sound requires browser audio support and an active audio session; background/locked-screen alerts are not guaranteed. Vibration is attempted only on supporting browsers.

@@ -2,6 +2,12 @@
 
 Code changes must update this file and README.md in the same commit. Updates are not required for workout processing, data-only changes, or other work without code changes. Entries describe verified work; a source commit alone does not confirm a successful deployment.
 
+## 2026-10-23 — Display program rep ranges
+
+- Show the program rep range as the workout target and in the next-six-workouts overview instead of presenting the suggested single count as the prescription. Fixed-rep exercises retain one number; cardio retains its duration target.
+- Preserve saved progression targets and actual-rep logging.
+- Validation: production build and all 24 existing Chromium/mobile WebKit browser checks passed.
+
 ## 2026-10-23 — GitHub-triggered Codex processing
 
 - Added a completed.json push trigger and manual recovery run, with separate Sheets preparation, read-only Codex analysis and validated atomic publication jobs.

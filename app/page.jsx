@@ -7,6 +7,7 @@ import {GitHubStore, DEFAULT_REPOSITORY} from '../lib/github-store.mjs';
 import {currentDay, makeSubmission, ordinal, targetFromPlan} from '../lib/online-workflow.mjs';
 
 const REST_SECONDS = 90;
+const repRange = ex => ex.minReps === ex.maxReps ? `${ex.minReps}` : `${ex.minReps}–${ex.maxReps}`;
 const RECOVERY = 'awt-recovery-v1', AUTH = 'awt-github-token';
 function Stepper({label,value,onChange,step=1,max=Infinity}) {
  return <label className="stepper">{label}<input aria-label={label} type="number" min="0" max={max} step="any" value={value} onChange={e=>onChange(e.target.value)}/><div><button type="button" aria-label={'Decrease '+label} onClick={()=>onChange(Math.max(0,+(value||0)-step))}>−</button><button type="button" aria-label={'Increase '+label} onClick={()=>onChange(Math.min(max,+(value||0)+step))}>+</button></div></label>;
@@ -201,7 +202,7 @@ export default function Home() {
       <section className="card">
         <label className="exercise-picker">Exercise<select aria-label="Exercise" value={Math.min(idx,exercises.length-1)} onChange={e=>navigate(+e.target.value)}>{exercises.map((e,i)=><option key={e.id} value={i}>{e.name}{session ? (session.skipped?.[e.id] ? ' · skipped' : ` · ${session.sets.filter(s=>s.exerciseId===e.id).length}/${e.sets}`) : ''}</option>)}</select></label>
         <h2>{ex.name}</h2>
-        <p data-testid="target">{cardio ? `Cardio: ${cardioTarget(ex)} · conversational pace` : <>Target: {ex.sets} × {targetReps} reps · {bodyweight ? 'Bodyweight' : `${targetWeight ?? 'Unspecified'} lb${ex.weightText.includes('per hand') ? ' per hand' : ''}`} · RIR {ex.rirMin ?? 'unspecified'}{ex.rirMax !== ex.rirMin ? '–'+ex.rirMax : ''}</>}</p>
+        <p data-testid="target">{cardio ? `Cardio: ${cardioTarget(ex)} · conversational pace` : <>Target: {ex.sets} × {repRange(ex)} reps · {bodyweight ? 'Bodyweight' : `${targetWeight ?? 'Unspecified'} lb${ex.weightText.includes('per hand') ? ' per hand' : ''}`} · RIR {ex.rirMin ?? 'unspecified'}{ex.rirMax !== ex.rirMin ? '–'+ex.rirMax : ''}</>}</p>
         <p className="extra">Program range: {ex.minReps}–{ex.maxReps} reps · Original load: {ex.weightText || 'Unspecified'} · Rest {REST_SECONDS} seconds</p>
         {target && <p className="extra">Upcoming target · {target.reason}</p>}
         {session && <fieldset disabled={busy || !!pending.current}>
@@ -235,7 +236,7 @@ export default function Home() {
       </section>
       <section className="card overview"><h2>Next six workouts</h2><p>Plan updated {new Date(remote.plan.updatedAt).toLocaleString()}</p>
         {remote.plan.workouts.map(w=><details key={`${w.week}-${w.day}`}><summary>Week {w.week}, day {w.day} · {w.dayLabel}</summary>
-          {w.exercises.map(t=><p key={t.exerciseId}>{program.find(e=>e.id===t.exerciseId)?.name}: {isBodyweight(program.find(e=>e.id===t.exerciseId)) ? 'Bodyweight' : `${t.weight ?? 'Unspecified'} lb`} × {t.targetReps} · {t.reason}</p>)}
+          {w.exercises.map(t=>{const exercise=program.find(e=>e.id===t.exerciseId);return <p key={t.exerciseId}>{exercise.name}: {isCardio(exercise) ? cardioTarget(exercise) : <>{isBodyweight(exercise) ? 'Bodyweight' : `${t.weight ?? 'Unspecified'} lb`} × {repRange(exercise)} reps</>} · {t.reason}</p>;})}
         </details>)}
       </section>
     </>}
