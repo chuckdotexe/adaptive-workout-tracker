@@ -655,27 +655,29 @@
           "id": "6687e31a-75ca-48a5-b2ce-16f8ae856ef4",
           "notes": "",
           "created": "2026-10-23T11:52:57.966Z",
-          "weight": 1,
+          "weight": null,
           "reps": 15,
           "rir": 2,
           "exerciseId": "w1d6e10",
-          "unit": "lb",
-          "loadSemantics": "",
+          "unit": "",
+          "loadSemantics": "Bodyweight; no external load",
           "rpe": 8,
-          "rpeSource": "derived"
+          "rpeSource": "derived",
+          "bodyweight": true
         },
         {
           "id": "b9561fce-f1c3-4f43-9f2f-16c6bf321024",
           "notes": "No load possible on this",
           "created": "2026-10-23T11:55:12.155Z",
-          "weight": 1,
+          "weight": null,
           "reps": 15,
           "rir": 1,
           "exerciseId": "w1d6e10",
-          "unit": "lb",
-          "loadSemantics": "",
+          "unit": "",
+          "loadSemantics": "Bodyweight; no external load",
           "rpe": 9,
-          "rpeSource": "derived"
+          "rpeSource": "derived",
+          "bodyweight": true
         },
         {
           "id": "3ebdc77d-b384-46f0-9d84-030efba71d87",
@@ -823,7 +825,7 @@
           "targetReps": 10,
           "rirMin": 2,
           "rirMax": 3,
-          "loadSemantics": "",
+          "loadSemantics": "Bodyweight; no external load",
           "increment": null
         }
       ]
