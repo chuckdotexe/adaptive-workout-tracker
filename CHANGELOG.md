@@ -2,6 +2,13 @@
 
 Code changes must update this file and README.md in the same commit. Updates are not required for workout processing, data-only changes, or other work without code changes. Entries describe verified work; a source commit alone does not confirm a successful deployment.
 
+## 2026-10-26 — Reconcile staging and switch to production
+
+- Migrated 68 real workout entries from three sessions to Daily Health Data / Workout Log; verified all 22 columns against staging and Git receipts, excluding the synthetic test session. Preserved 935 existing data rows, their order and the original summary formula.
+- Switched the existing two-hour task and repository configuration to production. Staging remains an archive; API-billed automation remains disabled.
+- Prevented duplicate history reads when destination and history are the same tab; production use requires a recorded migration-verification timestamp.
+- Validation: all 53 unit checks and script syntax checks passed, including shared-log history deduplication. Live migration readback and Google-rendered formatting/formula checks passed. Browser checks were not repeated for this processing/configuration-only change.
+
 ## 2026-10-26 — Workout history, readable sets and total time
 
 - Added the latest recorded set above a larger target; enlarged set counts and removed the mobile height cap that hid all but one logged set.

@@ -65,10 +65,10 @@ The test suite covers program fidelity, retry/idempotency, concurrent submission
 
 `node scripts/process-workouts.mjs prepare` prints the current batch and Sheets rows. `node scripts/process-workouts.mjs finalize` accepts `{batch,nextPlan,sheetReceipt}` on stdin after actual Sheets verification. These commands are for ChatGPT's execution tools, not user-managed file transfer. Credentials come from GITHUB_TOKEN or Git Credential Manager; WORKOUT_REPOSITORY and WORKOUT_BRANCH optionally override the default target.
 
-The existing Daily Health Data workbook must remain unchanged until staging reconciliation succeeds. This implementation does not write to any Sheet. Follow PROCESS_WORKOUTS.md for the first connected processing run.
+Production reconciliation is complete. The task now writes to **Daily Health Data → Workout Log**, preserving A:T and using U/V for session/set IDs. History and new records are read from this single production log without double-counting a staging copy. Follow PROCESS_WORKOUTS.md for verification and recovery.
 
 API reference: [GitHub Git references](https://docs.github.com/en/rest/git/refs) and [repository contents](https://docs.github.com/en/rest/repos/contents).
 
 ## Processing verification status
 
-On 2026-10-21, the user-designated test completed Git-to-Sheets processing in the private staging workbook, Test Workout Log. All submitted set IDs and cell values were read back and matched before acknowledgment. Test entries are excluded from real training history; current training days and targets are retained. The original Daily Health Data workbook remains unchanged. Production migration/reconciliation is still pending.
+On 2026-10-26, all 68 real entries from three sessions in staging were matched against Git receipts, copied into production Workout Log A937:V1004 and independently read back across all 22 columns. All 935 previous data rows, their order and the original summary formula were preserved. The 24-row synthetic test session was excluded. Staging remains an archive; future scheduled processing uses production. Existing plans/queue receipts were not reset or replayed. API-billed automation remains disabled.

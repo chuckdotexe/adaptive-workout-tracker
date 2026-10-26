@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {reconcileRows,decisionContext,applyDecisions,historyFor,publicReviewContext} from '../lib/automation.mjs';
-import {GoogleSheetStore} from '../lib/google-sheet-store.mjs';
+import {GoogleSheetStore,readWorkoutSheetState} from '../lib/google-sheet-store.mjs';
 import {SHEET_HEADERS,sheetRows} from '../lib/processing.mjs';
 import {seedPlan,makeSubmission} from '../lib/online-workflow.mjs';
 import {empty,start,record} from '../lib/workout.mjs';
@@ -31,6 +31,15 @@ test('Sheets append uses RAW literals and never exposes response details on fail
  assert.match(request.url,/valueInputOption=RAW/);assert.equal(JSON.parse(request.options.body).values[0][0],'=NOT_A_FORMULA');
  const denied=new GoogleSheetStore({spreadsheetId:'staging',token:'test',fetchImpl:async()=>new Response('sensitive response',{status:403})});
  await assert.rejects(()=>denied.metadata(),error=>!error.message.includes('sensitive')&&error.message.includes('Queue preserved'));
+});
+test('production uses its single workout log once, while separate staging history remains supported',async()=>{
+ const calls=[];
+ const store={metadata:async()=>({sheets:['Workout Log','Test Workout Log'].map(title=>({properties:{title,gridProperties:{columnCount:22,rowCount:1004}}}))}),read:async(title)=>{calls.push(title);return [SHEET_HEADERS,['2026-10-26','Strength']];}};
+ const production=await readWorkoutSheetState(store,{logSheet:'Workout Log',historySheet:'Workout Log'},SHEET_HEADERS);
+ assert.deepEqual(calls,['Workout Log']);assert.equal(production.values.length,2);assert.deepEqual(production.historical,[]);
+ calls.length=0;
+ const staging=await readWorkoutSheetState(store,{logSheet:'Test Workout Log',historySheet:'Workout Log'},SHEET_HEADERS);
+ assert.deepEqual(calls,['Test Workout Log','Workout Log']);assert.equal(staging.historical.length,1);
 });
 function benchRows(date,rir=2){return Array.from({length:4},(_,i)=>[date,'Strength','Session','Bench Press','',i+1,6,255,'lb',1530,10-rir,'','','','','','','', '',rir]);}
 test('Codex increases require two qualifying sessions and known increments; test data is excluded',()=>{

@@ -1,7 +1,8 @@
 {
   "version": 1,
-  "spreadsheetId": "1lNjvd1gT5-fzHP9TphPdXsfQ2DPKr3ZgMhvC8bX2NBc",
-  "logSheet": "Test Workout Log",
+  "spreadsheetId": "1sNIsfGpvUEk_qcd5oj23vur7xdBFrBC4NfxOs6WVML4",
+  "logSheet": "Workout Log",
   "historySheet": "Workout Log",
+  "productionMigrationVerifiedAt": "2026-10-26T15:27:03.644Z",
   "excludedSessionIds": ["b4774b22-e8b1-406f-914c-cab7b67a2f86"]
 }

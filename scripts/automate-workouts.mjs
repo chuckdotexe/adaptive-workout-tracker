@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises';
 import {GitHubStore} from '../lib/github-store.mjs';
-import {GoogleSheetStore} from '../lib/google-sheet-store.mjs';
+import {GoogleSheetStore,readWorkoutSheetState} from '../lib/google-sheet-store.mjs';
 import {prepareBatch,finalizeProcessing,SHEET_HEADERS} from '../lib/processing.mjs';
 import {reconcileRows,decisionContext,applyDecisions,publicReviewContext} from '../lib/automation.mjs';
 
@@ -11,24 +11,14 @@ const requireValue=(value,message)=>{if(!value)throw Error(message);};
 async function output(name,value){
   if(process.env.GITHUB_OUTPUT)await fs.appendFile(process.env.GITHUB_OUTPUT,name+'='+JSON.stringify(value)+'\n');
 }
-async function sheetState(sheets){
-  const metadata=await sheets.metadata();
-  const destination=metadata.sheets.find(s=>s.properties.title===config.logSheet)?.properties;
-  const history=metadata.sheets.find(s=>s.properties.title===config.historySheet)?.properties;
-  requireValue(destination&&destination.gridProperties.columnCount>=22,'Configured staging log is missing or has fewer than 22 columns.');
-  requireValue(history,'Configured history tab is missing.');
-  const values=await sheets.read(config.logSheet,'V',destination.gridProperties.rowCount);
-  const historical=await sheets.read(config.historySheet,'T',history.gridProperties.rowCount);
-  requireValue(SHEET_HEADERS.slice(0,20).every((x,i)=>x===historical[0]?.[i]),'History headers do not match A:T.');
-  return {values,historical:historical.slice(1)};
-}
+const sheetState=sheets=>readWorkoutSheetState(sheets,config,SHEET_HEADERS);
 function contextFor(batch,state){
   const context=decisionContext(batch,program,[...state.historical,...state.values.slice(1)],config.excludedSessionIds);
   return publicReviewContext(context);
 }
 try{
   requireValue(config.version===1,'Unsupported automation configuration.');
-  requireValue(config.spreadsheetId!=='1sNIsfGpvUEk_qcd5oj23vur7xdBFrBC4NfxOs6WVML4','Production workbook migration is not validated. Automation is staging-only.');
+  requireValue(config.spreadsheetId!=='1sNIsfGpvUEk_qcd5oj23vur7xdBFrBC4NfxOs6WVML4'||Number.isFinite(Date.parse(config.productionMigrationVerifiedAt)),'Production workbook migration must be verified before use.');
   requireValue(process.env.GITHUB_TOKEN,'Missing GitHub runner token.');
   const store=new GitHubStore({token:process.env.GITHUB_TOKEN});
   const snapshot=await store.snapshot(program);
@@ -41,11 +31,11 @@ try{
     // A successful append response is not a receipt. Read every set back independently.
     state=await sheetState(sheets);
     const verified=reconcileRows(state.values,batch.recentSessions);
-    requireValue(!verified.missing.length,'Staging readback is incomplete. Queue preserved.');
+    requireValue(!verified.missing.length,'Workout log readback is incomplete. Queue preserved.');
     await output('reference',{revision:snapshot.plan.revision,sessions:batch.sessions});
     await output('context',contextFor(batch,state));
     await output('needed',true);
-    console.log('Staging readback verified for '+batch.sessions.length+' session(s), '+batch.rows.length+' set(s).');
+    console.log('Workout log readback verified for '+batch.sessions.length+' session(s), '+batch.rows.length+' set(s).');
   }else if(process.argv[2]==='finalize'){
     let reference,decisions;
     try{reference=JSON.parse(process.env.WORKOUT_REFERENCE);decisions=JSON.parse(process.env.CODEX_DECISIONS);}catch{throw Error('Missing or invalid runner reference / Codex JSON output. Queue preserved.');}
@@ -59,7 +49,7 @@ try{
     requireValue(batch.sessions.every(s=>reference.sessions.some(r=>r.id===s.id&&r.digest===s.digest)),'A prepared workout changed. Queue preserved.');
     const sheets=await GoogleSheetStore.connect(config),state=await sheetState(sheets);
     const verified=reconcileRows(state.values,selected);
-    requireValue(!verified.missing.length,'Verified staging rows are missing. Queue preserved.');
+    requireValue(!verified.missing.length,'Verified workout log rows are missing. Queue preserved.');
     const nextPlan=applyDecisions(batch,program,contextFor(batch,state),decisions);
     const first=Math.min(...verified.verified),last=Math.max(...verified.verified);
     const sheetReceipt={spreadsheetId:config.spreadsheetId,range:"'"+config.logSheet.replaceAll("'","''")+"'!A"+first+':V'+last,verified:true,sessions:batch.sessions};

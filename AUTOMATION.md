@@ -2,6 +2,8 @@
 
 Current setup: the combined Outlook/workout task checks every two hours using existing subscription access and connected tools, following PROCESS_WORKOUTS.md. Keep the computer and app running. It reports completed/failed processing to Discord #dockbox and stays silent when nothing is pending. The API-billed workflow described below is installed but disabled; do not enable or purchase API credits without the user's instruction.
 
+Production destination: **Daily Health Data → Workout Log A:V**. Staging reconciliation and full readback completed on October 26, 2026; `.github/workout-automation.json` records the production ID and verification timestamp. Historical and newly submitted performance share this one tab and are read once, without combining a duplicate staging copy. Staging remains an archive.
+
 The website's successful Finish submission changes `completed.json`. That push starts **Process submitted workouts with Codex**. No web ChatGPT conversation or copy/paste handoff is part of the automatic path.
 
 ## One-time setup
@@ -11,11 +13,11 @@ The workflow is installed but stays inactive until the following configuration i
 1. In the repository's **Settings → Secrets and variables → Actions → Secrets**, add:
    - `OPENAI_API_KEY`: an OpenAI API project key with access to the Codex action's selected/default model. This path uses API access; it does not reuse the desktop chat login. Configure the API project's budget separately.
    - `GOOGLE_SERVICE_ACCOUNT_JSON`: the complete JSON credential for a Google service account in a project with the Google Sheets API enabled. Do not put it in repository files, the website, or a chat message.
-2. Share the private staging workbook listed in `.github/workout-automation.json` with that service account's `client_email` as **Editor**. Share only the staging workbook, not the production Daily Health Data workbook. The configured tabs must already exist: `Test Workout Log` (A:V headers) and `Workout Log` (A:T history).
+2. Only if the user explicitly chooses this paid alternative, grant that service account access to the configured production workbook. The configured `Workout Log` tab has A:V headers and holds both the destination and historical records. This service-account setup is not required by the existing connected-tool task.
 3. Under **Variables**, create `WORKOUT_AUTOMATION_ENABLED` with value `true`. Optionally set `WORKOUT_CODEX_MODEL` to an API model your project can access; leaving it unset uses the Codex action's default.
 4. Open **Actions → Process submitted workouts with Codex → Run workflow** to process the current backlog and verify the complete live setup. Thereafter, each successful website submission triggers it automatically.
 
-Existing site tokens still need only repository Contents read/write; the runner uses its own short-lived `GITHUB_TOKEN`. The configured staging destination is intentionally separate from production. Production remains blocked until its migration/reconciliation is implemented and verified.
+Existing site tokens still need only repository Contents read/write; the optional runner uses its own short-lived `GITHUB_TOKEN`. Production is configured following verified migration; it is no longer blocked by the former staging-only guard.
 
 ## What the runner does
 
@@ -35,6 +37,6 @@ Loads can increase only when two comparable sessions satisfy rep/RIR/consistent-
 
 ## Validation status
 
-Unit tests cover row reuse/conflicts, RAW writes, prompt-data minimization, excluded test history, bounded target validation and submission trigger compatibility. Browser tests cover submission/recovery and published plan loading. A disabled configuration run can be tested without any paid model call or Sheets write. A full live automatic run requires the two secrets and staging share above; do not describe it as verified until that run completes.
+Unit tests cover row reuse/conflicts, RAW writes, prompt-data minimization, excluded test history, bounded target validation, submission trigger compatibility and single-tab history deduplication. Browser tests cover submission/recovery and published plan loading. Production migration was verified through connected tools. The API-billed GitHub path remains disabled and unverified end to end; a disabled configuration run does not prove that optional path.
 
 References: [Codex GitHub Action](https://learn.chatgpt.com/docs/github-action), [Google service-account authentication](https://developers.google.com/identity/protocols/oauth2/service-account), [Sheets RAW append](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/append).
