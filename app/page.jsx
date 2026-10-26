@@ -1,5 +1,6 @@
 'use client';
 import {useEffect, useRef, useState} from 'react';
+import Link from 'next/link';
 import {isCardio, cardioTarget,isBodyweight} from '../lib/activity.mjs';
 import program from '../data/ironledger-program.json';
 import initialHistory from '../data/last-sets.json';
@@ -180,6 +181,7 @@ export default function Home() {
 
   return <main className={session ? "active-workout" : ""}>
     <h1>Adaptive Workout Tracker</h1>
+    <p className="preview-navigation"><Link href="/upcoming/">Next five workouts →</Link></p>
     <p className="intro">Workouts recover on this device after reload.</p>
     {error && <p role="alert">{error}</p>}
     {showMissing && missing.length > 0 && <div className="missing-sets"><strong>Missing sets</strong>{missing.map(e=><button key={e.id} className="secondary" onClick={()=>{setIdx(e.index);setError('');}}>{e.name} · {e.logged}/{e.sets}</button>)}</div>}

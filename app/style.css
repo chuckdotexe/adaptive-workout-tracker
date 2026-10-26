@@ -31,3 +31,13 @@ fieldset{border:0;margin:0;padding:0;min-width:0}fieldset:disabled{opacity:.7}
 .workout-timing summary{padding:6px 0}
 .workout-timing .row>*{flex:1;min-width:0}
 .target-effort{white-space:nowrap}
+
+.preview-navigation a,.back-link{color:#a9c9ff;display:inline-flex;align-items:center;min-height:44px;font-size:16px;text-underline-offset:4px}
+.active-workout .preview-navigation{margin:0}
+.upcoming-page h1{margin:12px 0}
+.upcoming-exercises{list-style:none;padding:0;margin:12px 0 0}
+.upcoming-exercises li{padding:14px 0;border-top:1px solid #324056}
+.upcoming-exercises strong{font-size:18px;line-height:1.4}
+.upcoming-exercises p{margin:7px 0;line-height:1.5}
+.preview-target{font-size:17px;font-weight:600}
+.upcoming-exercises details{margin:8px 0 0}

@@ -2,6 +2,12 @@
 
 Code changes must update this file and README.md in the same commit. Updates are not required for workout processing, data-only changes, or other work without code changes. Entries describe verified work; a source commit alone does not confirm a successful deployment.
 
+## 2026-10-26 — Next five workouts page
+
+- Added a tracker link and separate upcoming page showing five published workouts with exercises, loads, rep ranges, RIR, rest intervals and progression reasons.
+- Exclude submitted workouts awaiting processing, label cached fallback data and preserve the workout draft when returning. Support the GitHub Pages base path and the end of the program.
+- Validation: production build and all 30 Chromium/mobile WebKit browser checks passed, including five-workout ordering, submitted-session exclusion, cached-plan labelling and active-draft recovery after navigation. Confirmed the new route is included in the generated offline cache.
+
 ## 2026-10-26 — Reconcile staging and switch to production
 
 - Migrated 68 real workout entries from three sessions to Daily Health Data / Workout Log; verified all 22 columns against staging and Git receipts, excluding the synthetic test session. Preserved 935 existing data rows, their order and the original summary formula.
