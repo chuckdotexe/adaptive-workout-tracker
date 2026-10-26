@@ -2,6 +2,8 @@
 import {useEffect, useRef, useState} from 'react';
 import {isCardio, cardioTarget,isBodyweight} from '../lib/activity.mjs';
 import program from '../data/ironledger-program.json';
+import initialHistory from '../data/last-sets.json';
+import {lastRecordedSet,historyName,elapsedSeconds,stopWorkoutTimer,durationLabel} from '../lib/session-details.mjs';
 import {empty, start, record, setIncrement, validate} from '../lib/workout.mjs';
 import {GitHubStore, DEFAULT_REPOSITORY} from '../lib/github-store.mjs';
 import {currentDay, makeSubmission, ordinal, targetFromPlan} from '../lib/online-workflow.mjs';
@@ -34,6 +36,9 @@ export default function Home() {
   const targetWeight = target ? target.weight : ex.weight;
   const targetReps = target?.targetReps ?? ex.minReps;
   const done = session?.sets.filter(s => s.exerciseId === ex.id) ?? [];
+  const publishedHistory=plan?.workouts.flatMap(w=>w.exercises).filter(t=>historyName(program.find(e=>e.id===t.exerciseId)?.name)===historyName(ex.name)).map(t=>t.lastSet).filter(Boolean).sort((a,b)=>a.date.localeCompare(b.date)).at(-1);
+  const historyFallback=[publishedHistory,initialHistory[historyName(ex.name)]].filter(Boolean).sort((a,b)=>a.date.localeCompare(b.date)).at(-1);
+  const lastSet=lastRecordedSet(ex,[...(remote?.queue.sessions || []),...draft.sessions.filter(s=>s.status==='finished')],program,historyFallback);
   const nextExercise = session ? [...exercises.slice(idx+1),...exercises.slice(0,idx)].find(e=>!session.skipped?.[e.id] && session.sets.filter(s=>s.exerciseId===e.id).length<e.sets) : exercises[idx+1];
   const missing = session ? exercises.map((e,i)=>({...e,index:i,logged:session.sets.filter(s=>s.exerciseId===e.id).length})).filter(e=>e.logged<e.sets && !session.skipped?.[e.id]) : [];
 
@@ -123,7 +128,8 @@ export default function Home() {
     try {localStorage.setItem(RECOVERY,JSON.stringify({draft,remote,sessionPlan,idx,restEnd,pending:pending.current}));}
     catch {setError('Device storage unavailable. Keep this page open until Git confirms your save.');}
   },[ready,draft,remote,sessionPlan,idx,restEnd]);
-  useEffect(()=>{if(!restEnd)return;const id=setInterval(()=>setClock(Date.now()),250);return ()=>clearInterval(id);},[restEnd]);
+  useEffect(()=>{if(!restEnd && !session?.timerStartedAt)return;const id=setInterval(()=>setClock(Date.now()),250);return ()=>clearInterval(id);},[restEnd,session?.timerStartedAt]);
+  function updateTiming(fn){if(pending.current)return;change(state=>({...state,sessions:state.sessions.map(s=>s.id===session.id?fn(s):s)}));setClock(Date.now());}
   function navigate(index) {setIdx(index);setError('');setShowMissing(false);}
   function change(fn) {
     try { const next=validate(fn(draft)); localStorage.setItem(RECOVERY,JSON.stringify({draft:next,remote,sessionPlan,idx,restEnd,pending:pending.current}));setDraft(next); setError('');setMessage('');setShowMissing(false); return true; }
@@ -149,6 +155,7 @@ export default function Home() {
     const now = new Date();
     const date = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}`;
     let next = start(empty(), week, day, crypto.randomUUID(), date);
+    next.sessions[0]={...next.sessions[0],elapsedSeconds:0,timerStartedAt:now.toISOString()};
     for (const e of exercises) {
       const increment = targetFromPlan(remote.plan, e)?.increment;
       if (increment != null) next = setIncrement(next, e, increment);
@@ -182,9 +189,9 @@ export default function Home() {
       {!token ? <form onSubmit={connect}>
         <label>GitHub repository token<input aria-label="GitHub repository token" type="password" autoComplete="off" value={credential} onChange={e => setCredential(e.target.value)}/></label>
         <small>Use a fine-grained token for {DEFAULT_REPOSITORY} with Contents read/write. It is remembered in this browser on this device and sent only to GitHub. Disconnect removes it.</small>
-        <button disabled={busy || !credential}>Connect GitHub</button>
+        <button disabled={!ready || busy || !credential}>Connect GitHub</button>
       </form> : <p>{online ? (token ? 'Token saved · sync on Finish' : 'Connect to sync') : 'Offline · logging on device'}. <button className="secondary" disabled={busy} onClick={() => {localStorage.removeItem(AUTH);setToken(''); setMessage('GitHub disconnected.');}}>Disconnect</button></p>}
-      <button className="secondary" disabled={busy || !!session} onClick={() => load()}>Refresh from Git</button>
+      <button className="secondary" disabled={!ready || busy || !!session} onClick={() => load()}>Refresh from Git</button>
       <small>Sets save on this device immediately. Internet is required to submit to GitHub.</small>
     </section>
     {!remote ? <p>{busy ? 'Loading workouts from Git…' : 'Connect or refresh to load the workout files.'}</p> : <>
@@ -202,7 +209,8 @@ export default function Home() {
       <section className="card">
         <label className="exercise-picker">Exercise<select aria-label="Exercise" value={Math.min(idx,exercises.length-1)} onChange={e=>navigate(+e.target.value)}>{exercises.map((e,i)=><option key={e.id} value={i}>{e.name}{session ? (session.skipped?.[e.id] ? ' · skipped' : ` · ${session.sets.filter(s=>s.exerciseId===e.id).length}/${e.sets}`) : ''}</option>)}</select></label>
         <h2>{ex.name}</h2>
-        <p data-testid="target">{cardio ? `Cardio: ${cardioTarget(ex)} · conversational pace` : <>Target: {ex.sets} × {repRange(ex)} reps · {bodyweight ? 'Bodyweight' : `${targetWeight ?? 'Unspecified'} lb${ex.weightText.includes('per hand') ? ' per hand' : ''}`} · RIR {ex.rirMin ?? 'unspecified'}{ex.rirMax !== ex.rirMin ? '–'+ex.rirMax : ''}</>}</p>
+        <p className="last-history" data-testid="last-set">{lastSet ? <>Last recorded set ({lastSet.date}): {lastSet.kind==='cardio' ? `${lastSet.durationMinutes} min · ${lastSet.speedMph ?? '?'} mph · ${lastSet.inclinePercent ?? '?'}%` : <>{lastSet.bodyweight ? 'Bodyweight' : `${lastSet.weight ?? 'Unknown'} lb${lastSet.loadSemantics?.includes('per hand') ? ' per hand' : ''}`} × {lastSet.reps} · RIR {lastSet.rir ?? 'unknown'}</>}</> : 'Last recorded set: no previous record available'}</p>
+        <p className="workout-target" data-testid="target">{cardio ? `Cardio: ${cardioTarget(ex)} · conversational pace` : <>Target: {ex.sets} × {repRange(ex)} reps · {bodyweight ? 'Bodyweight' : `${targetWeight ?? 'Unspecified'} lb${ex.weightText.includes('per hand') ? ' per hand' : ''}`} · <span className="target-effort">RIR {ex.rirMin ?? 'unspecified'}{ex.rirMax !== ex.rirMin ? '–'+ex.rirMax : ''}</span></>}</p>
         <p className="extra">Program range: {ex.minReps}–{ex.maxReps} reps · Original load: {ex.weightText || 'Unspecified'} · Rest {REST_SECONDS} seconds</p>
         {target && <p className="extra">Upcoming target · {target.reason}</p>}
         {session && <fieldset disabled={busy || !!pending.current}>
@@ -218,18 +226,19 @@ export default function Home() {
           {!bodyweight && <label>Equipment increment (lb, optional)<input aria-label="Equipment increment" type="number" min="0" step="any" value={session.increments?.[ex.id] ?? ''} onChange={e=>change(s=>setIncrement(s,ex,+e.target.value))}/></label>}</details>
         </fieldset>}
         {session && !cardio && <div className="timer" role="timer">{restEnd && clock>=restEnd ? 'Rest complete · ' : 'Rest '}{Math.floor(Math.max(0,Math.ceil(((restEnd||clock)-clock)/1000))/60)}:{String(Math.max(0,Math.ceil(((restEnd||clock)-clock)/1000))%60).padStart(2,'0')} <button className="secondary" onClick={startRest}>Restart</button><button className="secondary" onClick={()=>{setRestEnd(null);stopAlarm();}}>Clear</button><button className="secondary" aria-pressed={sound} onClick={toggleSound}>Sound {sound ? 'on' : 'off'}</button></div>}
-        <p>{session?.skipped?.[ex.id] && <strong>Skipped: machine unavailable · </strong>}<span>{done.length}/{ex.sets} sets logged</span>{session && done.length < ex.sets && !session.skipped?.[ex.id] ? ` · ${ex.sets-done.length} sets remaining` : ''}</p><div className="logged-sets">
+        <p className="sets-count">{session?.skipped?.[ex.id] && <strong>Skipped: machine unavailable · </strong>}<span>{done.length}/{ex.sets} sets logged</span>{session && done.length < ex.sets && !session.skipped?.[ex.id] ? ` · ${ex.sets-done.length} sets remaining` : ''}</p><div className="logged-sets">
         {done.map((s,i)=><p key={s.id}>{s.kind==='cardio' ? `${s.durationMinutes} min · ${s.speedMph ?? '?'} mph · ${s.inclinePercent ?? '?'}% incline` : <>Set {i+1}: {s.bodyweight ? 'Bodyweight' : `${s.weight ?? 'Unspecified'} lb`} × {s.reps} · RIR {s.rir ?? 'unknown'}</>} {s.notes}
           <button className="secondary" disabled={busy || !!pending.current} onClick={()=>change(st=>({...st,sessions:st.sessions.map(x=>x.id===session.id ? {...x,sets:x.sets.filter(row=>row.id!==s.id)} : x)}))}>Remove set {i+1}</button>
         </p>)}
         </div><details className="extra"><summary>Original program notes</summary><p>{ex.notes}</p></details>
       </section>
       {session && <div className="next-up">Next up: {nextExercise?.name || 'Finish workout'}</div>}
+      {session && <details className="workout-timing"><summary>Workout time {durationLabel(elapsedSeconds(session,clock))}</summary><fieldset disabled={busy || !!pending.current}><div className="row"><button className="secondary" onClick={()=>updateTiming(s=>s.timerStartedAt ? stopWorkoutTimer(s) : {...s,elapsedSeconds:s.elapsedSeconds||0,timerStartedAt:new Date().toISOString()})}>{session.timerStartedAt ? 'Stop workout timer' : 'Resume workout timer'}</button><label>Total minutes<input aria-label="Workout total minutes" type="number" min="0" step="0.1" value={Math.round(elapsedSeconds(session,clock)/60*10)/10} onChange={e=>{if(e.target.value!=='')updateTiming(s=>({...s,elapsedSeconds:+e.target.value*60,timerStartedAt:null}));}}/></label></div><small>Editing total minutes stops the timer. Resume to continue timing.</small></fieldset></details>}
       <div className="row"><button disabled={idx===0} onClick={()=>setIdx(idx-1)}>Previous</button><button disabled={idx>=exercises.length-1} onClick={()=>navigate(idx+1)}>Next exercise</button></div>
       {session && <button className="wide" disabled={busy} onClick={()=>finishWorkout()}>{busy ? 'Saving to Git…' : 'Finish workout'}</button>}
       <section className="card overview">
         <h2>Awaiting processing ({remote.queue.sessions.length})</h2>
-        <p>Completed sessions stay queued until the processing runner verifies Sheets and publishes upcoming targets. Automation requires its one-time GitHub setup.</p>
+        <p>Completed sessions stay queued until the scheduled processor verifies Sheets and publishes upcoming targets. The combined Outlook/workout task checks every two hours while the computer and app are running.</p>
         {remote.queue.sessions.map(s=><details key={s.id}><summary>{s.date} · W{s.week} D{s.day} · {s.sets.length} sets</summary>
           {s.sets.map(set=><p key={set.id}>{program.find(e=>e.id===set.exerciseId)?.name} · {set.kind==='cardio' ? `${set.durationMinutes} min · ${set.speedMph ?? '?'} mph · ${set.inclinePercent ?? '?'}% incline` : `${set.bodyweight ? 'Bodyweight' : `${set.weight ?? 'unknown'} lb`} × ${set.reps} · RIR ${set.rir ?? 'unknown'}`}</p>)}
         </details>)}

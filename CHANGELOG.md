@@ -2,6 +2,15 @@
 
 Code changes must update this file and README.md in the same commit. Updates are not required for workout processing, data-only changes, or other work without code changes. Entries describe verified work; a source commit alone does not confirm a successful deployment.
 
+## 2026-10-26 — Workout history, readable sets and total time
+
+- Added the latest recorded set above a larger target; enlarged set counts and removed the mobile height cap that hid all but one logged set.
+- Renamed Chest Supported Row to DB Chest Supported Row while preserving exercise IDs and historical name matching.
+- Added automatic workout timing, Stop/Resume and editable total minutes with reload recovery, immutable submission timing and workout-total export notes.
+- Seeded last-set display only from already-public Git workouts and carry history forward in processed plans; no private Sheets history is copied into static assets.
+- Updated the scheduled processing instructions to use comparable historical trends and preserve last-set metadata.
+- Validation: production build, 52 unit checks and 26 Chromium/mobile WebKit browser checks passed, including timer recovery/manual totals, renamed-row history matching and visibility of all four logged sets. Mobile layout permits vertical scrolling for readable history and sets.
+
 ## 2026-10-23 — Display program rep ranges
 
 - Show the program rep range as the workout target and in the next-six-workouts overview instead of presenting the suggested single count as the prescription. Fixed-rep exercises retain one number; cardio retains its duration target.

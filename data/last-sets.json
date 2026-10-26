@@ -1,0 +1,198 @@
+{
+  "Bench Press": {
+    "date": "2026-10-26",
+    "weight": 255,
+    "reps": 4,
+    "rir": 2,
+    "bodyweight": false,
+    "loadSemantics": "255 lb"
+  },
+  "DB Chest Supported Row": {
+    "date": "2026-10-26",
+    "weight": 70,
+    "reps": 10,
+    "rir": 1,
+    "bodyweight": false,
+    "loadSemantics": "70 lb per hand"
+  },
+  "Low-Incline Machine Chest Press": {
+    "date": "2026-10-26",
+    "weight": 180,
+    "reps": 12,
+    "rir": 1,
+    "bodyweight": false,
+    "loadSemantics": ""
+  },
+  "Neutral Grip Lat Pulldown": {
+    "date": "2026-10-26",
+    "weight": 160,
+    "reps": 10,
+    "rir": 1,
+    "bodyweight": false,
+    "loadSemantics": "160 lb"
+  },
+  "Single-Arm Cable Lateral Raise": {
+    "date": "2026-10-26",
+    "weight": 15,
+    "reps": 18,
+    "rir": 0,
+    "bodyweight": false,
+    "loadSemantics": ""
+  },
+  "EZ Bar Curl": {
+    "date": "2026-10-26",
+    "weight": 80,
+    "reps": 8,
+    "rir": 0,
+    "bodyweight": false,
+    "loadSemantics": "70 lb total"
+  },
+  "Single-Arm Overhead Cable Triceps Extension": {
+    "date": "2026-10-26",
+    "weight": 30,
+    "reps": 15,
+    "rir": 1,
+    "bodyweight": false,
+    "loadSemantics": ""
+  },
+  "Cable Crunch": {
+    "date": "2026-10-26",
+    "weight": 70,
+    "reps": 15,
+    "rir": 2,
+    "bodyweight": false,
+    "loadSemantics": ""
+  },
+  "Seated Leg Curl": {
+    "date": "2026-10-22",
+    "weight": 140,
+    "reps": 10,
+    "rir": 2,
+    "bodyweight": false,
+    "loadSemantics": ""
+  },
+  "Lateral Raise": {
+    "date": "2026-10-22",
+    "weight": 25,
+    "reps": 12,
+    "rir": 3,
+    "bodyweight": false,
+    "loadSemantics": "25 lb per hand"
+  },
+  "Incline Treadmill Walk": {
+    "date": "2026-10-22",
+    "weight": null,
+    "reps": 0,
+    "rir": null,
+    "bodyweight": false,
+    "loadSemantics": "",
+    "kind": "cardio",
+    "durationMinutes": 10,
+    "speedMph": 2.7,
+    "inclinePercent": 10
+  },
+  "Hanging Leg Raise": {
+    "date": "2026-10-23",
+    "weight": null,
+    "reps": 15,
+    "rir": 1,
+    "bodyweight": true,
+    "loadSemantics": "Bodyweight; no external load"
+  },
+  "Bayesian Curl": {
+    "date": "2026-10-23",
+    "weight": 90,
+    "reps": 10,
+    "rir": 1,
+    "bodyweight": false,
+    "loadSemantics": "30 lb"
+  },
+  "Hack Squat": {
+    "date": "2026-10-22",
+    "weight": 180,
+    "reps": 10,
+    "rir": 3,
+    "bodyweight": false,
+    "loadSemantics": "180 lb"
+  },
+  "Leg Extension": {
+    "date": "2026-10-22",
+    "weight": 200,
+    "reps": 12,
+    "rir": 2,
+    "bodyweight": false,
+    "loadSemantics": "200 lb"
+  },
+  "45-Degree Back Extension": {
+    "date": "2026-10-22",
+    "weight": 25,
+    "reps": 10,
+    "rir": 3,
+    "bodyweight": false,
+    "loadSemantics": ""
+  },
+  "Standing Calf Raise": {
+    "date": "2026-10-22",
+    "weight": 300,
+    "reps": 12,
+    "rir": 2,
+    "bodyweight": false,
+    "loadSemantics": "300 lb"
+  },
+  "Dumbbell Incline Press": {
+    "date": "2026-10-23",
+    "weight": 85,
+    "reps": 8,
+    "rir": 2,
+    "bodyweight": false,
+    "loadSemantics": "85 lb per hand"
+  },
+  "Low to High Cable Fly": {
+    "date": "2026-10-23",
+    "weight": 70,
+    "reps": 12,
+    "rir": 4,
+    "bodyweight": false,
+    "loadSemantics": ""
+  },
+  "Chest Fly (Machine)": {
+    "date": "2026-10-23",
+    "weight": 190,
+    "reps": 12,
+    "rir": 2,
+    "bodyweight": false,
+    "loadSemantics": "140 lb"
+  },
+  "Preacher Curl": {
+    "date": "2026-10-23",
+    "weight": 80,
+    "reps": 7,
+    "rir": 1,
+    "bodyweight": false,
+    "loadSemantics": "70 lb total"
+  },
+  "Cross-Body Cable Triceps Extension": {
+    "date": "2026-10-23",
+    "weight": 25,
+    "reps": 10,
+    "rir": 0,
+    "bodyweight": false,
+    "loadSemantics": ""
+  },
+  "Hammer Curl": {
+    "date": "2026-10-23",
+    "weight": 35,
+    "reps": 10,
+    "rir": 0,
+    "bodyweight": false,
+    "loadSemantics": ""
+  },
+  "Straight-Bar Cable Triceps Extension": {
+    "date": "2026-10-23",
+    "weight": 70,
+    "reps": 11,
+    "rir": 0,
+    "bodyweight": false,
+    "loadSemantics": ""
+  }
+}

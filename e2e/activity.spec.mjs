@@ -3,7 +3,7 @@ import {mockGitHub,connect,program} from './support.mjs';
 
 test('choosing another exercise survives reload and unfinished lifts remain required at Finish',async({page})=>{
  await mockGitHub(page);await connect(page);await page.getByRole('button',{name:'Start workout',exact:true}).click();
- await expect(page.getByText('Next up: Chest Supported Row',{exact:false})).toBeVisible();
+ await expect(page.getByText('Next up: DB Chest Supported Row',{exact:false})).toBeVisible();
  await page.getByLabel('Exercise',{exact:true}).selectOption('1');
  await expect(page.getByLabel('Exercise',{exact:true})).toHaveValue('1');
  await page.reload();await expect(page.getByLabel('Exercise',{exact:true})).toHaveValue('1');

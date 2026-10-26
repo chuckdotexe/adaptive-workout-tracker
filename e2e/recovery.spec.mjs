@@ -34,7 +34,7 @@ test('reload offline recovers sets, token, timer and exercise on iPhone',async({
  await page.getByRole('button',{name:'Complete set',exact:true}).click();
  await expect(page.getByText('1/4 sets logged',{exact:true})).toBeVisible();
  await expect(page.getByRole('timer')).toContainText('Rest');
- expect(await page.evaluate(()=>document.documentElement.scrollHeight<=innerHeight)).toBe(true);
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
  await page.screenshot({path:'test-results/compact-workout.png'});
  await page.route('https://api.github.com/**',route=>route.abort());
  await page.reload();

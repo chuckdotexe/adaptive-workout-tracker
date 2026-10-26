@@ -5,9 +5,13 @@ A personal, mobile-friendly tracker with two online JSON files:
 - `completed.json`: completed workouts awaiting ChatGPT processing. Finish appends a session with unique session/set IDs.
 - `next-week.json`: the next six training sessions and targets, with processing receipts to make retries safe.
 
-The website reads the files directly from `chuckdotexe/adaptive-workout-tracker` on `main`. GitHub is the data store; Google Sheets is the long-term history. Automatic processing is provided by [the Codex GitHub workflow](AUTOMATION.md), after its one-time runner credentials are configured. The manual recovery procedure is [PROCESS_WORKOUTS.md](PROCESS_WORKOUTS.md).
+The website reads the files directly from `chuckdotexe/adaptive-workout-tracker` on `main`. GitHub is the data store; Google Sheets is the long-term history. The existing combined Outlook/workout task checks every two hours using subscription access and [the connected-tool processing procedure](PROCESS_WORKOUTS.md). Keep the computer and app running. Completion/failure notices go to Discord #dockbox; empty queues are silent. The [optional API-billed GitHub workflow](AUTOMATION.md) remains disabled.
 
 ## Use
+
+The workout screen shows the last recorded set above a larger rep-range target, larger set counts, and every logged set without a clipped list. History starts with already-published Git workouts and is carried forward in processed plans; unavailable history is labelled explicitly. Chest-supported dumbbell rows are named **DB Chest Supported Row**, with load per hand.
+
+Starting a workout starts its elapsed-time clock. Expand **Workout time** to Stop/Resume or enter total minutes manually (manual edits stop the clock). It survives reload, stops on Finish, and is saved with the session; Sheets export records it as workout-total notes, separate from cardio duration. Old drafts have no invented start time and can use Resume or manual minutes. Larger text and visible sets may require vertical scrolling on an iPhone.
 
 Resistance exercise targets display the original program rep range (for example, 3 × 10–12 reps), including in the next-six-workouts overview. The Reps control still starts at the saved suggested count; record the reps actually completed. Fixed-rep prescriptions show a single number, and cardio shows its duration target.
 

@@ -1,0 +1,24 @@
+import {test,expect} from '@playwright/test';
+import {mockGitHub,connect,exercises} from './support.mjs';
+test('all logged sets remain visible and workout timer/manual total survive reload',async({page})=>{
+ const fixture=await mockGitHub(page);await connect(page);
+ await page.getByRole('button',{name:'Start workout',exact:true}).click();
+ await expect(page.getByTestId('last-set')).toBeVisible();
+ await expect(page.getByTestId('target')).toContainText(`${exercises[0].minReps}–${exercises[0].maxReps}`);
+ for(let i=0;i<4;i++)await page.getByRole('button',{name:'Complete set',exact:true}).click();
+ for(let i=1;i<=4;i++)await expect(page.getByRole('button',{name:`Remove set ${i}`,exact:true})).toBeVisible();
+ expect(await page.locator('.logged-sets').evaluate(el=>el.scrollHeight<=el.clientHeight)).toBe(true);
+ await page.getByText(/^Workout time /).click();
+ await page.getByRole('button',{name:'Stop workout timer',exact:true}).click();
+ await page.getByLabel('Workout total minutes',{exact:true}).fill('42.5');
+ await page.reload();await page.getByText(/^Workout time /).click();
+ await expect(page.getByLabel('Workout total minutes',{exact:true})).toHaveValue('42.5');
+ await expect(page.getByRole('button',{name:'Resume workout timer',exact:true})).toBeVisible();
+ const saved=await page.evaluate(()=>JSON.parse(localStorage.getItem('awt-recovery-v1')));
+ expect(saved.draft.sessions[0].elapsedSeconds).toBe(2550);
+ await page.getByRole('button',{name:'Resume workout timer',exact:true}).click();
+ await expect(page.getByRole('button',{name:'Stop workout timer',exact:true})).toBeVisible();
+ await page.getByLabel('Exercise',{exact:true}).selectOption('1');
+ await expect(page.getByText('Next up:',{exact:false})).toBeVisible();
+ await expect(page.getByLabel('Exercise',{exact:true})).toContainText('DB Chest Supported Row');
+});

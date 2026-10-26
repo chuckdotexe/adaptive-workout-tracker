@@ -1,6 +1,6 @@
 # Process my workouts
 
-Automatic website-triggered runs use [AUTOMATION.md](AUTOMATION.md). This procedure remains the interactive recovery path.
+The existing two-hour Outlook/workout task uses this procedure with connected tools and subscription access. The API-billed GitHub workflow in [AUTOMATION.md](AUTOMATION.md) remains disabled.
 
 Repository: chuckdotexe/adaptive-workout-tracker, branch main.
 Online files: completed.json (append-only submission queue until acknowledged) and next-week.json (next six training sessions plus processed-session receipts).
@@ -34,7 +34,9 @@ The receipt is an assertion by the processing agent after tool verification; the
 
 ## Analyze and update the plan
 
-Read the last one or two comparable completed sessions per upcoming exercise from Sheets, including newly written sessions. Match explicit exercise names/aliases, equipment and per-hand/total load semantics. The new queued session includes its original prescriptions and equipment increments. Never equate different machines or infer missing loads.
+Read available comparable history per upcoming exercise from Sheets to assess trends, including newly written sessions; use the latest two comparable sessions for the increase criteria below. Match explicit exercise names/aliases, equipment and per-hand/total load semantics. DB Chest Supported Row is the original Chest Supported Row (Dumbbell), not a machine row. The new queued session includes its original prescriptions and equipment increments. Never equate different machines or infer missing loads.
+
+For each upcoming exercise, include `lastSet` from its latest comparable recorded set: `date`, `weight` (null for unknown/bodyweight), `reps`, `rir`, `bodyweight`, and `loadSemantics`; include cardio measurements when applicable. Preserve actual values and dates. This supports the app's history display above the target, separate from the prescription. The finalizer also carries forward last-set data from newly processed sessions. Do not invent history where none exists. Session `durationMinutes` is the total workout time; preserve it in processing/export notes rather than treating it as exercise/cardio time.
 
 Modify the prepared nextPlan exercise targets with concise reasons. Preserve the original program exercise order, sets, rep ranges, RIR and rest in data/ironledger-program.json. Do not move program days or add/remove exercises. Keep six consecutive upcoming training sessions (fewer only at the end of week eight). Preserve existing targets for unaffected exercises; brand-new days begin with the original program target.
 

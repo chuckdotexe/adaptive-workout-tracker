@@ -1,5 +1,7 @@
 # Automatic workout processing
 
+Current setup: the combined Outlook/workout task checks every two hours using existing subscription access and connected tools, following PROCESS_WORKOUTS.md. Keep the computer and app running. It reports completed/failed processing to Discord #dockbox and stays silent when nothing is pending. The API-billed workflow described below is installed but disabled; do not enable or purchase API credits without the user's instruction.
+
 The website's successful Finish submission changes `completed.json`. That push starts **Process submitted workouts with Codex**. No web ChatGPT conversation or copy/paste handoff is part of the automatic path.
 
 ## One-time setup
