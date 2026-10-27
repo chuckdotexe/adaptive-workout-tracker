@@ -237,7 +237,7 @@ export default function Home() {
       </section>
       {session && <div className="next-up">Next up: {nextExercise?.name || 'Finish workout'}</div>}
       {session && <details className="workout-timing"><summary>Workout time {durationLabel(elapsedSeconds(session,clock))}</summary><fieldset disabled={busy || !!pending.current}><div className="row"><button className="secondary" onClick={()=>updateTiming(s=>s.timerStartedAt ? stopWorkoutTimer(s) : {...s,elapsedSeconds:s.elapsedSeconds||0,timerStartedAt:new Date().toISOString()})}>{session.timerStartedAt ? 'Stop workout timer' : 'Resume workout timer'}</button><label>Total minutes<input aria-label="Workout total minutes" type="number" min="0" step="0.1" value={Math.round(elapsedSeconds(session,clock)/60*10)/10} onChange={e=>{if(e.target.value!=='')updateTiming(s=>({...s,elapsedSeconds:+e.target.value*60,timerStartedAt:null}));}}/></label></div><small>Editing total minutes stops the timer. Resume to continue timing.</small></fieldset></details>}
-      <div className="row"><button disabled={idx===0} onClick={()=>setIdx(idx-1)}>Previous</button><button disabled={idx>=exercises.length-1} onClick={()=>navigate(idx+1)}>Next exercise</button></div>
+      <div className="row"><button disabled={idx>=exercises.length-1} onClick={()=>navigate(idx+1)}>Next exercise</button></div>
       {session && <button className="wide" disabled={busy} onClick={()=>finishWorkout()}>{busy ? 'Saving to Git…' : 'Finish workout'}</button>}
       <section className="card overview">
         <h2>Awaiting processing ({remote.queue.sessions.length})</h2>

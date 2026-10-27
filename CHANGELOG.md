@@ -2,6 +2,11 @@
 
 Code changes must update this file and README.md in the same commit. Updates are not required for workout processing, data-only changes, or other work without code changes. Entries describe verified work; a source commit alone does not confirm a successful deployment.
 
+## 2026-10-27 — Simplify exercise navigation
+
+- Remove the redundant Previous button; use the exercise dropdown to return to any lift. Keep Next exercise as the full-width forward action.
+- Validation: production build and existing dropdown/forward navigation checks passed in Chromium and mobile WebKit, including return to earlier exercises with logged sets preserved.
+
 ## 2026-10-27 — Clarify dumbbell lateral raises
 
 - Rename the dumbbell exercise to DB Lateral Raise in the program JSON, source CSV and bootstrap history; preserve cable variations and all prescriptions. Match legacy dumbbell names when reading history.
