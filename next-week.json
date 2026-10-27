@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "revision": "history-16c61824-655f-40ed-8af4-0a7f6af838ca",
-  "updatedAt": "2026-10-26T13:35:10.996Z",
+  "revision": "processed-0e045361-7edb-4794-92d1-3dab6eff8b38",
+  "updatedAt": "2026-10-27T13:34:44.904Z",
   "processedSessions": [
     {
       "id": "b4774b22-e8b1-406f-914c-cab7b67a2f86",
@@ -18,118 +18,13 @@
     {
       "id": "1cc32550-f511-40e9-a34e-e439bdf9e161",
       "digest": "55727d42d0e8dadaa8e9fe3f1bd19c90ad7970a56bb0983efaad8d67266743dc"
+    },
+    {
+      "id": "170af20a-48f1-4278-b4be-70a4625d8cf2",
+      "digest": "03bcebffd9038990e29c0fc8d2933b32027a83b2dd00c5ca183f2957953074ab"
     }
   ],
   "workouts": [
-    {
-      "week": 2,
-      "day": 2,
-      "dayLabel": "Tuesday - Lower A — Quad Focus + Delts",
-      "exercises": [
-        {
-          "exerciseId": "w2d2e1",
-          "weight": 280,
-          "targetReps": 6,
-          "increment": null,
-          "reason": "History 240, mixed 240/280, then Oct 17 300 lb. Preserve 280 target; earlier effort and machine equivalence missing.",
-          "restSeconds": 90,
-          "lastSet": {
-            "date": "2026-10-17",
-            "weight": 300,
-            "unit": "lb",
-            "reps": 10,
-            "rir": 4,
-            "bodyweight": false,
-            "loadSemantics": ""
-          }
-        },
-        {
-          "exerciseId": "w2d2e2",
-          "weight": 185,
-          "targetReps": 6,
-          "increment": null,
-          "reason": "185 lb repeated 8 reps then Oct 17 3x10 at RIR 4–5. Hold; prior effort/increment missing.",
-          "restSeconds": 90,
-          "lastSet": {
-            "date": "2026-10-17",
-            "weight": 185,
-            "unit": "lb",
-            "reps": 10,
-            "rir": 4,
-            "bodyweight": false,
-            "loadSemantics": ""
-          }
-        },
-        {
-          "exerciseId": "w2d2e3",
-          "weight": 140,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Oct 17 mixed 140x9 RIR 1 and 130x10; Oct 22 3x10 at 140 RIR 2. Hold 140 on same seated machine; not two ceiling sessions.",
-          "restSeconds": 90,
-          "lastSet": {
-            "date": "2026-10-22",
-            "weight": 140,
-            "unit": "lb",
-            "reps": 10,
-            "rir": 2,
-            "bodyweight": false,
-            "loadSemantics": ""
-          }
-        },
-        {
-          "exerciseId": "w2d2e4",
-          "weight": 165,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "History 150 to 165; Oct 17 3x15 at 165 RIR 3/2/2. Hold; previous effort/increment missing.",
-          "restSeconds": 90,
-          "lastSet": {
-            "date": "2026-10-17",
-            "weight": 165,
-            "unit": "lb",
-            "reps": 15,
-            "rir": 2,
-            "bodyweight": false,
-            "loadSemantics": ""
-          }
-        },
-        {
-          "exerciseId": "w2d2e5",
-          "weight": 25,
-          "targetReps": 12,
-          "increment": null,
-          "reason": "25 lb per hand: Oct 17 20/17/15 reps reached RIR 1; Oct 22 3x12 RIR 3. Hold and build consistency.",
-          "restSeconds": 90,
-          "lastSet": {
-            "date": "2026-10-22",
-            "weight": 25,
-            "unit": "lb",
-            "reps": 12,
-            "rir": 3,
-            "bodyweight": false,
-            "loadSemantics": "per hand"
-          }
-        },
-        {
-          "exerciseId": "w2d2e6",
-          "weight": null,
-          "targetReps": 12,
-          "increment": null,
-          "reason": "Oct 17 50 lb versus Oct 21 100 lb: equipment/load equivalence unconfirmed. Preserve unknown target.",
-          "restSeconds": 90,
-          "lastSet": {
-            "date": "2026-10-21",
-            "weight": 100,
-            "unit": "lb",
-            "reps": 20,
-            "rir": 3,
-            "bodyweight": false,
-            "loadSemantics": ""
-          }
-        }
-      ]
-    },
     {
       "week": 2,
       "day": 3,
@@ -140,7 +35,7 @@
           "weight": null,
           "targetReps": 1,
           "increment": null,
-          "reason": "Maintain cardio without external load; history varies in duration/speed/incline. Latest Oct 22 confirmed 10 minutes at 2.7 mph, 10% incline; no inferred progression.",
+          "reason": "Keep original timed cardio target and no external load. Incline-walk history varies: Oct22 10min at2.7mph/10%, Oct25 30min at2.7–3.0mph/11–12%, Oct26 10min at2.8mph/11%. No inferred speed/incline increase; placeholder reps are not minutes.",
           "restSeconds": 90,
           "lastSet": {
             "date": "2026-10-22",
@@ -261,12 +156,11 @@
           "weight": null,
           "targetReps": 12,
           "increment": null,
-          "reason": "Oct 17 50 lb versus Oct 21 100 lb: equipment/load equivalence unconfirmed. Preserve unknown target.",
+          "reason": "Keep load unknown: Oct17 50x20, Oct21 100x20, Oct27 60/70/90x20 RIR5/5/3. Machine equivalence and stable load unconfirmed; do not equate these stacks or infer progression.",
           "restSeconds": 90,
           "lastSet": {
-            "date": "2026-10-21",
-            "weight": 100,
-            "unit": "lb",
+            "date": "2026-10-27",
+            "weight": 90,
             "reps": 20,
             "rir": 3,
             "bodyweight": false,
@@ -353,14 +247,13 @@
           "weight": 140,
           "targetReps": 10,
           "increment": null,
-          "reason": "Oct 17 mixed 140x9 RIR 1 and 130x10; Oct 22 3x10 at 140 RIR 2. Hold 140 on same seated machine; not two ceiling sessions.",
+          "reason": "Hold recorded 140 lb on the same seated machine. Oct 17 140x9 RIR 1 then 130x10; Oct 22 3x10 at 140 RIR 2; Oct 27 2x12 RIR 1/1. More reps per set but greater effort, not two qualifying sessions; preserve three prescribed sets for this day.",
           "restSeconds": 90,
           "lastSet": {
-            "date": "2026-10-22",
+            "date": "2026-10-27",
             "weight": 140,
-            "unit": "lb",
-            "reps": 10,
-            "rir": 2,
+            "reps": 12,
+            "rir": 1,
             "bodyweight": false,
             "loadSemantics": ""
           }
@@ -387,7 +280,7 @@
           "weight": 300,
           "targetReps": 12,
           "increment": null,
-          "reason": "History changed 180 to 300 lb with equipment uncertainty; Oct 22 4x12 RIR 2. Hold 300 same machine; preserve three prescribed sets.",
+          "reason": "Hold 300 lb on the same standing-calf machine. Older 180 to300 shift has equipment uncertainty; Oct13 2x12 lacks RIR, Oct22 3x12 RIR2. No two qualifying ceiling sessions; preserve three prescribed sets.",
           "restSeconds": 90,
           "lastSet": {
             "date": "2026-10-22",
@@ -404,16 +297,15 @@
           "weight": 25,
           "targetReps": 12,
           "increment": null,
-          "reason": "25 lb per hand: Oct 17 20/17/15 reps reached RIR 1; Oct 22 3x12 RIR 3. Hold and build consistency.",
+          "reason": "Hold 25 lb per hand: older20–22.5 to25; Oct17 20/17/15 reached RIR1, Oct22 3x12 RIR3, Oct27 3x20 RIR4/4/0. Volume rose900 to1500 per-hand lb-reps but final set reached failure; retain12-rep goal at prescribed RIR.",
           "restSeconds": 90,
           "lastSet": {
-            "date": "2026-10-22",
+            "date": "2026-10-27",
             "weight": 25,
-            "unit": "lb",
-            "reps": 12,
-            "rir": 3,
+            "reps": 20,
+            "rir": 0,
             "bodyweight": false,
-            "loadSemantics": "per hand"
+            "loadSemantics": "25 lb per hand"
           }
         },
         {
@@ -421,7 +313,7 @@
           "weight": null,
           "targetReps": 1,
           "increment": null,
-          "reason": "Maintain cardio without external load; history varies in duration/speed/incline. Latest Oct 22 confirmed 10 minutes at 2.7 mph, 10% incline; no inferred progression.",
+          "reason": "Keep original timed cardio target and no external load. Incline-walk history varies: Oct22 10min at2.7mph/10%, Oct25 30min at2.7–3.0mph/11–12%, Oct26 10min at2.8mph/11%. No inferred speed/incline increase; placeholder reps are not minutes.",
           "restSeconds": 90,
           "lastSet": {
             "date": "2026-10-22",
@@ -758,15 +650,117 @@
           }
         }
       ]
+    },
+    {
+      "week": 3,
+      "day": 2,
+      "dayLabel": "Tuesday - Lower A — Quad Focus + Delts",
+      "exercises": [
+        {
+          "exerciseId": "w3d2e1",
+          "weight": 280,
+          "targetReps": 6,
+          "increment": null,
+          "reason": "Hold 280 lb on the same leg press: older 240/mixed 280 history, Oct 17 4x10 at 300 RIR 4–5, Oct 27 4x10 at 280 RIR 3/3/2/2. Volume 12000 to 11200; equipment equivalence and increment unknown, so no increase.",
+          "lastSet": {
+            "date": "2026-10-27",
+            "weight": 280,
+            "reps": 10,
+            "rir": 2,
+            "bodyweight": false,
+            "loadSemantics": "280 lb"
+          },
+          "restSeconds": 90
+        },
+        {
+          "exerciseId": "w3d2e2",
+          "weight": 185,
+          "targetReps": 6,
+          "increment": null,
+          "reason": "Hold 185 lb total. Long history at 185; Oct 17 3x10 RIR 5/5/4, Oct 27 185/185/205x10 RIR 4/4/2. Mixed load and conflicting 185-lb note on the 205 set preclude progression; actual 205 retained in history.",
+          "lastSet": {
+            "date": "2026-10-27",
+            "weight": 205,
+            "reps": 10,
+            "rir": 2,
+            "bodyweight": false,
+            "loadSemantics": "185 lb"
+          },
+          "restSeconds": 90
+        },
+        {
+          "exerciseId": "w3d2e3",
+          "weight": 140,
+          "targetReps": 10,
+          "increment": null,
+          "reason": "Hold recorded 140 lb on the same seated machine. Oct 17 140x9 RIR 1 then 130x10; Oct 22 3x10 at 140 RIR 2; Oct 27 2x12 RIR 1/1. More reps per set but greater effort, not two qualifying sessions; preserve two prescribed sets.",
+          "lastSet": {
+            "date": "2026-10-27",
+            "weight": 140,
+            "reps": 12,
+            "rir": 1,
+            "bodyweight": false,
+            "loadSemantics": ""
+          },
+          "restSeconds": 90
+        },
+        {
+          "exerciseId": "w3d2e4",
+          "weight": 165,
+          "targetReps": 10,
+          "increment": null,
+          "reason": "Hold 165 lb. History rose 150 to165; Oct 17 3x15 at165 RIR3/2/2; Oct27 165/175/175x15 RIR4/1/1. Higher volume with excessive effort and conflicting 165-lb notes; no increase to175.",
+          "lastSet": {
+            "date": "2026-10-27",
+            "weight": 175,
+            "reps": 15,
+            "rir": 1,
+            "bodyweight": false,
+            "loadSemantics": "165 lb"
+          },
+          "restSeconds": 90
+        },
+        {
+          "exerciseId": "w3d2e5",
+          "weight": 25,
+          "targetReps": 12,
+          "increment": null,
+          "reason": "Hold 25 lb per hand: older20–22.5 to25; Oct17 20/17/15 reached RIR1, Oct22 3x12 RIR3, Oct27 3x20 RIR4/4/0. Volume rose900 to1500 per-hand lb-reps but final set reached failure; retain12-rep goal at prescribed RIR.",
+          "lastSet": {
+            "date": "2026-10-27",
+            "weight": 25,
+            "reps": 20,
+            "rir": 0,
+            "bodyweight": false,
+            "loadSemantics": "25 lb per hand"
+          },
+          "restSeconds": 90
+        },
+        {
+          "exerciseId": "w3d2e6",
+          "weight": null,
+          "targetReps": 12,
+          "increment": null,
+          "reason": "Keep load unknown: Oct17 50x20, Oct21 100x20, Oct27 60/70/90x20 RIR5/5/3. Machine equivalence and stable load unconfirmed; do not equate these stacks or infer progression.",
+          "lastSet": {
+            "date": "2026-10-27",
+            "weight": 90,
+            "reps": 20,
+            "rir": 3,
+            "bodyweight": false,
+            "loadSemantics": ""
+          },
+          "restSeconds": 90
+        }
+      ]
     }
   ],
   "sheetsReceipt": {
-    "spreadsheetId": "1lNjvd1gT5-fzHP9TphPdXsfQ2DPKr3ZgMhvC8bX2NBc",
-    "range": "'Test Workout Log'!A70:V93",
-    "verifiedAt": "2026-10-26T13:35:10.998Z",
+    "spreadsheetId": "1sNIsfGpvUEk_qcd5oj23vur7xdBFrBC4NfxOs6WVML4",
+    "range": "'Workout Log'!A1005:V1022",
+    "verifiedAt": "2026-10-27T13:34:44.904Z",
     "sessionIds": [
-      "1cc32550-f511-40e9-a34e-e439bdf9e161"
+      "170af20a-48f1-4278-b4be-70a4625d8cf2"
     ]
-  },
-  "historyUpdatedAt": "2026-10-27T11:16:09.813Z"
+  }
 }
