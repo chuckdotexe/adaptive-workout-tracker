@@ -5,7 +5,7 @@ A personal, mobile-friendly tracker with two online JSON files:
 - `completed.json`: completed workouts awaiting ChatGPT processing. Finish appends a session with unique session/set IDs.
 - `next-week.json`: the next six training sessions and targets, with processing receipts to make retries safe.
 
-The website reads the files directly from `chuckdotexe/adaptive-workout-tracker` on `main`. GitHub is the data store; Google Sheets is the long-term history. The existing combined Outlook/workout task checks every two hours using subscription access and [the connected-tool processing procedure](PROCESS_WORKOUTS.md). Keep the computer and app running. Completion/failure notices go to Discord #workout-processing; empty queues are silent. The [optional API-billed GitHub workflow](AUTOMATION.md) remains disabled.
+The website reads the files directly from `chuckdotexe/adaptive-workout-tracker` on `main`. GitHub is the data store; Google Sheets is the long-term history. The existing combined Outlook/workout task checks every two hours at ten past odd-numbered hours Eastern (including the daily 9:10 a.m. workout run) using subscription access and [the connected-tool processing procedure](PROCESS_WORKOUTS.md). The weekday command center runs at 9:30 a.m. Eastern and reads the verified log for historical workout feedback. Keep the computer and app running. Completion/failure notices go to Discord #workout-processing; empty queues are silent. The [optional API-billed GitHub workflow](AUTOMATION.md) remains disabled.
 
 Dumbbell lateral raises are named **DB Lateral Raise**; cable variations remain separate. Older dumbbell names still match last-set history.
 
