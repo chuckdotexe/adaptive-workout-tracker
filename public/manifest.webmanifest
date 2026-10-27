@@ -1,6 +1,6 @@
 {
-  "name": "Adaptive Workout Tracker",
-  "short_name": "Workout",
+  "name": "Adaptive 1 | Workout Tracker",
+  "short_name": "Adaptive 1",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#101827",

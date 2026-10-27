@@ -4,6 +4,7 @@ import Link from 'next/link';
 import {isCardio, cardioTarget,isBodyweight} from '../lib/activity.mjs';
 import program from '../data/ironledger-program.json';
 import initialHistory from '../data/last-sets.json';
+import programInfo from '../data/program.json';
 import {lastRecordedSet,historyName,elapsedSeconds,stopWorkoutTimer,durationLabel} from '../lib/session-details.mjs';
 import {empty, start, record, setIncrement, validate} from '../lib/workout.mjs';
 import {GitHubStore, DEFAULT_REPOSITORY} from '../lib/github-store.mjs';
@@ -181,7 +182,7 @@ export default function Home() {
   }
 
   return <main className={session ? "active-workout" : ""}>
-    <h1>Adaptive Workout Tracker</h1>
+    <h1>{programInfo.name}</h1>
     <p className="preview-navigation"><Link href="/upcoming/" target="_blank" rel="noopener noreferrer">Next five workouts →</Link></p>
     <p className="intro">Workouts recover on this device after reload.</p>
     {error && <p role="alert">{error}</p>}
@@ -208,7 +209,7 @@ export default function Home() {
         {!currentDay(remote.plan, remote.queue) && <p>Program complete. Select a day to repeat it.</p>}
         <button disabled={busy} onClick={begin}>Start workout</button>
       </section>}
-      {session && <p>Workout {session.date} · Week {session.week}, day {session.day} · {pending.current ? 'Submission pending; retry to confirm save' : 'Saved on device'}</p>}
+      {session && <p>{programInfo.name} · Workout {session.date} · Week {session.week}, day {session.day} · {pending.current ? 'Submission pending; retry to confirm save' : 'Saved on device'}</p>}
       <section className="card">
         <label className="exercise-picker">Exercise<select aria-label="Exercise" value={Math.min(idx,exercises.length-1)} onChange={e=>navigate(+e.target.value)}>{exercises.map((e,i)=><option key={e.id} value={i}>{e.name}{session ? (session.skipped?.[e.id] ? ' · skipped' : ` · ${session.sets.filter(s=>s.exerciseId===e.id).length}/${e.sets}`) : ''}</option>)}</select></label>
         <h2>{ex.name}</h2>

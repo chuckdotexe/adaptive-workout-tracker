@@ -24,7 +24,7 @@
     {
       "week": 2,
       "day": 2,
-      "dayLabel": "Tuesday - Lower Strength + Delts",
+      "dayLabel": "Tuesday - Lower A — Quad Focus + Delts",
       "exercises": [
         {
           "exerciseId": "w2d2e1",
@@ -133,7 +133,7 @@
     {
       "week": 2,
       "day": 3,
-      "dayLabel": "Wednesday - Cardio + Advanced Abs",
+      "dayLabel": "Wednesday - Cardio + Core",
       "exercises": [
         {
           "exerciseId": "w2d3e1",
@@ -186,7 +186,7 @@
     {
       "week": 2,
       "day": 4,
-      "dayLabel": "Thursday - Back + Shoulders Hypertrophy",
+      "dayLabel": "Thursday - Upper B — Back + Shoulders",
       "exercises": [
         {
           "exerciseId": "w2d4e1",
@@ -312,7 +312,7 @@
     {
       "week": 2,
       "day": 5,
-      "dayLabel": "Friday - Lower Hypertrophy + Delts",
+      "dayLabel": "Friday - Lower B — Posterior Chain + Delts",
       "exercises": [
         {
           "exerciseId": "w2d5e1",
@@ -442,7 +442,7 @@
     {
       "week": 2,
       "day": 6,
-      "dayLabel": "Saturday - Chest + Arms Specialization",
+      "dayLabel": "Saturday - Upper C — Chest + Arms",
       "exercises": [
         {
           "exerciseId": "w2d6e1",
@@ -619,7 +619,7 @@
     {
       "week": 3,
       "day": 1,
-      "dayLabel": "Monday - Upper Power + Chest",
+      "dayLabel": "Monday - Upper A — Chest Focus",
       "exercises": [
         {
           "exerciseId": "w3d1e1",

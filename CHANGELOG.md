@@ -2,6 +2,12 @@
 
 Code changes must update this file and README.md in the same commit. Updates are not required for workout processing, data-only changes, or other work without code changes. Entries describe verified work; a source commit alone does not confirm a successful deployment.
 
+## 2026-10-27 — Adaptive 1 program and day labels
+
+- Name the current program Adaptive 1 in the tracker, active workout, preview, browser title and home-screen metadata.
+- Apply the six requested day labels throughout all eight program weeks, the source CSV and published upcoming plan; preserve exercises and prescriptions.
+- Validation: 54 unit checks, production build and all four upcoming-page browser checks passed in Chromium/mobile WebKit. JSON comparison confirmed only day labels changed in the program and upcoming plan.
+
 ## 2026-10-27 — Simplify exercise navigation
 
 - Remove the redundant Previous button; use the exercise dropdown to return to any lift. Keep Next exercise as the full-width forward action.

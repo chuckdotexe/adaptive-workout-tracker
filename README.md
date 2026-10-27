@@ -9,6 +9,8 @@ The website reads the files directly from `chuckdotexe/adaptive-workout-tracker`
 
 Dumbbell lateral raises are named **DB Lateral Raise**; cable variations remain separate. Older dumbbell names still match last-set history.
 
+The current program is **Adaptive 1**. Its six day labels are Upper A — Chest Focus; Lower A — Quad Focus + Delts; Cardio + Core; Upper B — Back + Shoulders; Lower B — Posterior Chain + Delts; and Upper C — Chest + Arms. Weekdays and program order stay the same.
+
 ## Use
 
 Last-set history includes legacy production Sheets records as well as website submissions. Processing requires the historical source rows and fills display metadata independently of target loads; active workouts keep their starting prescription while receiving refreshed history. **Next five workouts** opens a new tab so the tracker stays open.

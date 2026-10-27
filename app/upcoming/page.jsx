@@ -2,6 +2,7 @@
 import {useEffect,useState} from 'react';
 import Link from 'next/link';
 import program from '../../data/ironledger-program.json';
+import programInfo from '../../data/program.json';
 import {GitHubStore} from '../../lib/github-store.mjs';
 import {currentDay,ordinal,validatePlan,validateQueue} from '../../lib/online-workflow.mjs';
 import {isBodyweight,isCardio,cardioTarget} from '../../lib/activity.mjs';
@@ -30,7 +31,7 @@ export default function Upcoming(){
  return <main className="upcoming-page">
   <Link className="back-link" href="/">← Back to workout</Link>
   <h1>Next five workouts</h1>
-  <p>Upcoming training sessions in program order.</p>
+  <p>{programInfo.name} · Upcoming training sessions in program order.</p>
   <button className="secondary" disabled={busy} onClick={refresh}>{busy?'Refreshing…':'Refresh workouts'}</button>
   {error&&<p role="alert">{error}{snapshot?' Showing the last available plan.':''}</p>}
   {snapshot&&<>
