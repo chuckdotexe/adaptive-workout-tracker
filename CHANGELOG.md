@@ -2,6 +2,12 @@
 
 Code changes must update this file and README.md in the same commit. Updates are not required for workout processing, data-only changes, or other work without code changes. Entries describe verified work; a source commit alone does not confirm a successful deployment.
 
+## 2026-10-27 — Clarify dumbbell lateral raises
+
+- Rename the dumbbell exercise to DB Lateral Raise in the program JSON, source CSV and bootstrap history; preserve cable variations and all prescriptions. Match legacy dumbbell names when reading history.
+- Correct six production Workout Log names from October 17 and 22 without changing measurements or set IDs.
+- Validation: all 54 unit checks and production build passed. Read back all 1,004 log rows and confirmed exactly six name cells changed; measurements and other cells were preserved.
+
 ## 2026-10-27 — Restore legacy history and open previews separately
 
 - Fixed missing last-set displays for exercises recorded in Sheets before website submissions; added deterministic legacy-row extraction, explicit exercise aliases and history-only repair without changing targets or queue receipts.

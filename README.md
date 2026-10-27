@@ -7,6 +7,8 @@ A personal, mobile-friendly tracker with two online JSON files:
 
 The website reads the files directly from `chuckdotexe/adaptive-workout-tracker` on `main`. GitHub is the data store; Google Sheets is the long-term history. The existing combined Outlook/workout task checks every two hours using subscription access and [the connected-tool processing procedure](PROCESS_WORKOUTS.md). Keep the computer and app running. Completion/failure notices go to Discord #dockbox; empty queues are silent. The [optional API-billed GitHub workflow](AUTOMATION.md) remains disabled.
 
+Dumbbell lateral raises are named **DB Lateral Raise**; cable variations remain separate. Older dumbbell names still match last-set history.
+
 ## Use
 
 Last-set history includes legacy production Sheets records as well as website submissions. Processing requires the historical source rows and fills display metadata independently of target loads; active workouts keep their starting prescription while receiving refreshed history. **Next five workouts** opens a new tab so the tracker stays open.
