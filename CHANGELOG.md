@@ -2,6 +2,13 @@
 
 Code changes must update this file and README.md in the same commit. Updates are not required for workout processing, data-only changes, or other work without code changes. Entries describe verified work; a source commit alone does not confirm a successful deployment.
 
+## 2026-10-27 — Restore legacy history and open previews separately
+
+- Fixed missing last-set displays for exercises recorded in Sheets before website submissions; added deterministic legacy-row extraction, explicit exercise aliases and history-only repair without changing targets or queue receipts.
+- Read refreshed history separately from a pinned active workout prescription. Require historical source rows in interactive finalization to prevent repeat omissions.
+- Open Next five workouts in a separate tab, preserving the active tracker.
+- Validation: 54 unit checks, production build and all 32 Chromium/mobile WebKit browser checks passed, including legacy last-set history during an active workout and preview popup navigation. Backfilled 40 upcoming exercise entries from the actual Workout Log and verified Git publication; target prescriptions and queue receipts were preserved.
+
 ## 2026-10-26 — Next five workouts page
 
 - Added a tracker link and separate upcoming page showing five published workouts with exercises, loads, rep ranges, RIR, rest intervals and progression reasons.

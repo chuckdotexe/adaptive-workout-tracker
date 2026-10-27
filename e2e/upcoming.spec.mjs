@@ -7,7 +7,9 @@ test('next-five page shows five workouts and returning preserves an active set',
  await mockGitHub(page);await connect(page);
  await page.getByRole('button',{name:'Start workout',exact:true}).click();
  await page.getByRole('button',{name:'Complete set',exact:true}).click();
+ const popup=page.waitForEvent('popup');
  await page.getByRole('link',{name:'Next five workouts →',exact:true}).click();
+ const tracker=page;page=await popup;
  await expect(page.getByRole('heading',{name:'Next five workouts',exact:true})).toBeVisible();
  await expect(page.locator('.upcoming-workout')).toHaveCount(5);
  await expect(page.locator('.upcoming-workout').first()).toContainText('Week 1, day 1');
@@ -17,8 +19,8 @@ test('next-five page shows five workouts and returning preserves an active set',
  await expect(page.locator('.upcoming-workout').first()).toContainText('Rest 90 sec');
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
  await page.screenshot({path:`test-results/upcoming-${testInfo.project.name}.png`});
- await page.getByRole('link',{name:'← Back to workout',exact:true}).click();
- await expect(page.getByText('1/4 sets logged',{exact:true})).toBeVisible();
+ await page.close();
+ await expect(tracker.getByText('1/4 sets logged',{exact:true})).toBeVisible();
 });
 
 test('preview excludes submitted sessions and retains a labelled cached plan offline',async({page})=>{
@@ -26,7 +28,7 @@ test('preview excludes submitted sessions and retains a labelled cached plan off
  let state=start(empty(),1,1,'pending-preview','2026-10-26');
  for(const ex of exercises)for(let i=0;i<ex.sets;i++)state=record(state,ex,{id:`${ex.id}-${i}`,weight:ex.weight,reps:ex.minReps,rir:2});
  fixture.files['completed.json'].sessions=[makeSubmission(state.sessions[0],exercises,seedPlan(program))];
- await connect(page);await page.getByRole('link',{name:'Next five workouts →',exact:true}).click();
+ await connect(page);const popup=page.waitForEvent('popup');await page.getByRole('link',{name:'Next five workouts →',exact:true}).click();page=await popup;
  await expect(page.locator('.upcoming-workout')).toHaveCount(5);
  await expect(page.locator('.upcoming-workout').first()).toContainText('Week 1, day 2');
  await expect(page.locator('.upcoming-workout').last()).toContainText('Week 1, day 6');

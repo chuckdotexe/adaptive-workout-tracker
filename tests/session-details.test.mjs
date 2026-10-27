@@ -1,6 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {elapsedSeconds,stopWorkoutTimer,lastRecordedSet} from '../lib/session-details.mjs';
+import {elapsedSeconds,stopWorkoutTimer,lastRecordedSet,lastSetFromRows,attachSheetHistory} from '../lib/session-details.mjs';
 import fs from 'node:fs';
 import {makeSubmission,seedPlan} from '../lib/online-workflow.mjs';
 import {sheetRows} from '../lib/processing.mjs';
@@ -29,4 +29,15 @@ test('last-set history survives exercise rename and excludes machine rows',()=>{
  const last=lastRecordedSet(ex,sessions,[]);
  assert.equal(last.date,'2026-10-21');assert.equal(last.reps,7);assert.equal(last.loadSemantics,'70 lb per hand');
  assert.equal(lastRecordedSet(ex,sessions,[],{date:'2026-10-26',reps:9}).reps,9);
+});
+test('legacy Sheets history supplies last actual set without replacing its prescription',()=>{
+ const program=JSON.parse(fs.readFileSync(new URL('../data/ironledger-program.json',import.meta.url)));
+ const ex=program.find(e=>e.name==='Leg Press'&&e.week===2&&e.day===2);
+ const rows=[1,4,2,3].map(set=>['2026-10-17','Strength','Legs','Leg Press','',set,10,300,'lb',3000,6,'','','','','','','','',set===1?5:4]);
+ rows.push(['2026-10-25','Strength','Other','Leg Press (Different Machine)','',1,20,500,'lb']);
+ const last=lastSetFromRows(ex,rows);assert.equal(last.weight,300);assert.equal(last.reps,10);assert.equal(last.rir,4);
+ const plan=seedPlan(program,{week:2,day:2}),updated=attachSheetHistory(plan,program,rows);
+ assert.equal(updated.workouts[0].exercises[0].weight,plan.workouts[0].exercises[0].weight);
+ assert.deepEqual(updated.workouts[0].exercises[0].lastSet,last);
+ assert.deepEqual(lastSetFromRows(ex,[...rows,['2026-10-26','Strength','Test','Leg Press','',4,99,999,'lb','','','','','','','','','','',0,'synthetic']],['synthetic']),last);
 });

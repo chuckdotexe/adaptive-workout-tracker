@@ -47,10 +47,12 @@ Use the latest comparable session to hold a recorded load or build reps. Increas
 Run `node scripts/process-workouts.mjs finalize` with this JSON on stdin (the agent supplies it; the user does not manage files):
 
 ```
-{"batch": "the full prepared batch object", "nextPlan": "the analyzed plan object", "sheetReceipt": "the verified receipt object"}
+{"batch": "the full prepared batch object", "nextPlan": "the analyzed plan object", "sheetReceipt": "the verified receipt object", "historySource": {"spreadsheetId": "the configured production ID", "values": ["A:V header row followed by the actually read historical rows"]}}
 ```
 
 The example strings above stand for objects, not literal strings. The script re-reads both Git files, verifies session hashes and receipts, preserves new arrivals, writes the new plan and removes only the processed IDs in ONE Git commit, and advances main without force. It retries concurrent submissions. If another processor changed the plan, prepare and analyze again; Sheets IDs make the retry safe. Git history retains cleared records. Receipts in next-week.json prevent an old tab from re-adding already processed sessions.
+
+Supply `historySource` from actual connected-tool reads of production Workout Log A:V. Include the full header plus the relevant historical records, not just today's uploaded rows. The CLI requires this source and deterministically adds last-set metadata for upcoming exercises, including legacy Sheets records. Never fabricate source rows or substitute the current prescription for actual performance. To repair missing display history independently of processing, run `node scripts/process-workouts.mjs history` with this same historySource object on stdin; it updates only last-set metadata, preserving targets, receipts and the queue.
 
 With connector-only access, perform the equivalent Git tree + commit + non-force ref update using lib/processing.mjs rules. Never update the files separately and never force-push. A failed Git publish leaves the queue available; rerun with the same verified Sheets IDs.
 

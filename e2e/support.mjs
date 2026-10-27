@@ -5,7 +5,7 @@ export const program=JSON.parse(fs.readFileSync(new URL('../data/ironledger-prog
 export const exercises=program.filter(e=>e.week===1&&e.day===1);
 export async function mockGitHub(page){
   const fixture=new GitHubFixture(program);
-  await page.route('https://api.github.com/**',async route=>{
+  await page.context().route('https://api.github.com/**',async route=>{
     const req=route.request();
     try {
       const response=await fixture.fetch(req.url(),{method:req.method(),headers:req.headers(),body:req.postData()});

@@ -37,7 +37,8 @@ export default function Home() {
   const targetWeight = target ? target.weight : ex.weight;
   const targetReps = target?.targetReps ?? ex.minReps;
   const done = session?.sets.filter(s => s.exerciseId === ex.id) ?? [];
-  const publishedHistory=plan?.workouts.flatMap(w=>w.exercises).filter(t=>historyName(program.find(e=>e.id===t.exerciseId)?.name)===historyName(ex.name)).map(t=>t.lastSet).filter(Boolean).sort((a,b)=>a.date.localeCompare(b.date)).at(-1);
+  // Keep active prescriptions pinned, but show history from the freshly fetched plan.
+  const publishedHistory=[sessionPlan,remote?.plan].filter(Boolean).flatMap(p=>p.workouts.flatMap(w=>w.exercises)).filter(t=>historyName(program.find(e=>e.id===t.exerciseId)?.name)===historyName(ex.name)).map(t=>t.lastSet).filter(Boolean).sort((a,b)=>a.date.localeCompare(b.date)).at(-1);
   const historyFallback=[publishedHistory,initialHistory[historyName(ex.name)]].filter(Boolean).sort((a,b)=>a.date.localeCompare(b.date)).at(-1);
   const lastSet=lastRecordedSet(ex,[...(remote?.queue.sessions || []),...draft.sessions.filter(s=>s.status==='finished')],program,historyFallback);
   const nextExercise = session ? [...exercises.slice(idx+1),...exercises.slice(0,idx)].find(e=>!session.skipped?.[e.id] && session.sets.filter(s=>s.exerciseId===e.id).length<e.sets) : exercises[idx+1];
@@ -181,7 +182,7 @@ export default function Home() {
 
   return <main className={session ? "active-workout" : ""}>
     <h1>Adaptive Workout Tracker</h1>
-    <p className="preview-navigation"><Link href="/upcoming/">Next five workouts →</Link></p>
+    <p className="preview-navigation"><Link href="/upcoming/" target="_blank" rel="noopener noreferrer">Next five workouts →</Link></p>
     <p className="intro">Workouts recover on this device after reload.</p>
     {error && <p role="alert">{error}</p>}
     {showMissing && missing.length > 0 && <div className="missing-sets"><strong>Missing sets</strong>{missing.map(e=><button key={e.id} className="secondary" onClick={()=>{setIdx(e.index);setError('');}}>{e.name} · {e.logged}/{e.sets}</button>)}</div>}
@@ -211,7 +212,7 @@ export default function Home() {
       <section className="card">
         <label className="exercise-picker">Exercise<select aria-label="Exercise" value={Math.min(idx,exercises.length-1)} onChange={e=>navigate(+e.target.value)}>{exercises.map((e,i)=><option key={e.id} value={i}>{e.name}{session ? (session.skipped?.[e.id] ? ' · skipped' : ` · ${session.sets.filter(s=>s.exerciseId===e.id).length}/${e.sets}`) : ''}</option>)}</select></label>
         <h2>{ex.name}</h2>
-        <p className="last-history" data-testid="last-set">{lastSet ? <>Last recorded set ({lastSet.date}): {lastSet.kind==='cardio' ? `${lastSet.durationMinutes} min · ${lastSet.speedMph ?? '?'} mph · ${lastSet.inclinePercent ?? '?'}%` : <>{lastSet.bodyweight ? 'Bodyweight' : `${lastSet.weight ?? 'Unknown'} lb${lastSet.loadSemantics?.includes('per hand') ? ' per hand' : ''}`} × {lastSet.reps} · RIR {lastSet.rir ?? 'unknown'}</>}</> : 'Last recorded set: no previous record available'}</p>
+        <p className="last-history" data-testid="last-set">{lastSet ? <>Last recorded set ({lastSet.date}): {lastSet.kind==='cardio' ? `${lastSet.durationMinutes} min · ${lastSet.speedMph ?? '?'} mph · ${lastSet.inclinePercent ?? '?'}%` : <>{lastSet.bodyweight ? 'Bodyweight' : `${lastSet.weight ?? 'Unknown'} ${lastSet.unit || 'lb'}${lastSet.loadSemantics?.includes('per hand') ? ' per hand' : ''}`} × {lastSet.reps} · RIR {lastSet.rir ?? 'unknown'}</>}</> : 'Last recorded set: no previous record available'}</p>
         <p className="workout-target" data-testid="target">{cardio ? `Cardio: ${cardioTarget(ex)} · conversational pace` : <>Target: {ex.sets} × {repRange(ex)} reps · {bodyweight ? 'Bodyweight' : `${targetWeight ?? 'Unspecified'} lb${ex.weightText.includes('per hand') ? ' per hand' : ''}`} · <span className="target-effort">RIR {ex.rirMin ?? 'unspecified'}{ex.rirMax !== ex.rirMin ? '–'+ex.rirMax : ''}</span></>}</p>
         <p className="extra">Program range: {ex.minReps}–{ex.maxReps} reps · Original load: {ex.weightText || 'Unspecified'} · Rest {REST_SECONDS} seconds</p>
         {target && <p className="extra">Upcoming target · {target.reason}</p>}

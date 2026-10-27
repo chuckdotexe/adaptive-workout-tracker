@@ -3,6 +3,7 @@ import {GitHubStore} from '../lib/github-store.mjs';
 import {GoogleSheetStore,readWorkoutSheetState} from '../lib/google-sheet-store.mjs';
 import {prepareBatch,finalizeProcessing,SHEET_HEADERS} from '../lib/processing.mjs';
 import {reconcileRows,decisionContext,applyDecisions,publicReviewContext} from '../lib/automation.mjs';
+import {attachSheetHistory} from '../lib/session-details.mjs';
 
 const read=async path=>JSON.parse(await fs.readFile(new URL('../'+path,import.meta.url),'utf8'));
 const program=await read('data/ironledger-program.json');
@@ -50,7 +51,7 @@ try{
     const sheets=await GoogleSheetStore.connect(config),state=await sheetState(sheets);
     const verified=reconcileRows(state.values,selected);
     requireValue(!verified.missing.length,'Verified workout log rows are missing. Queue preserved.');
-    const nextPlan=applyDecisions(batch,program,contextFor(batch,state),decisions);
+    const nextPlan=attachSheetHistory(applyDecisions(batch,program,contextFor(batch,state),decisions),program,[...state.historical,...state.values.slice(1)],config.excludedSessionIds);
     const first=Math.min(...verified.verified),last=Math.max(...verified.verified);
     const sheetReceipt={spreadsheetId:config.spreadsheetId,range:"'"+config.logSheet.replaceAll("'","''")+"'!A"+first+':V'+last,verified:true,sessions:batch.sessions};
     const result=await finalizeProcessing(store,batch,nextPlan,sheetReceipt,program);

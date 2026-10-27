@@ -22,3 +22,17 @@ test('all logged sets remain visible and workout timer/manual total survive relo
  await expect(page.getByText('Next up:',{exact:false})).toBeVisible();
  await expect(page.getByLabel('Exercise',{exact:true})).toContainText('DB Chest Supported Row');
 });
+test('active workout receives legacy history from a refreshed plan without changing its target',async({page})=>{
+ const fixture=await mockGitHub(page);await connect(page);
+ await page.getByLabel('Day',{exact:true}).selectOption('2');
+ await page.getByRole('button',{name:'Start workout',exact:true}).click();
+ await page.getByRole('button',{name:'Complete set',exact:true}).click();
+ const target=fixture.files['next-week.json'].workouts.find(w=>w.week===1&&w.day===2).exercises[0];
+ target.lastSet={date:'2026-10-17',weight:300,unit:'lb',reps:10,rir:4,bodyweight:false,loadSemantics:''};
+ fixture.files['next-week.json'].revision='refreshed-history';
+ await page.reload();
+ await expect(page.getByTestId('last-set')).toContainText('300 lb × 10 · RIR 4');
+ await expect(page.getByTestId('last-set')).toContainText('2026-10-17');
+ await expect(page.getByTestId('target')).toContainText('280 lb');
+ await expect(page.getByText('1/4 sets logged',{exact:true})).toBeVisible();
+});

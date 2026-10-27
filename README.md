@@ -9,6 +9,8 @@ The website reads the files directly from `chuckdotexe/adaptive-workout-tracker`
 
 ## Use
 
+Last-set history includes legacy production Sheets records as well as website submissions. Processing requires the historical source rows and fills display metadata independently of target loads; active workouts keep their starting prescription while receiving refreshed history. **Next five workouts** opens a new tab so the tracker stays open.
+
 Open **Next five workouts** from the tracker to view a separate `/upcoming/` page with the next five published training sessions, exercises, rep ranges, loads (including per-hand/bodyweight), RIR, 90-second rest defaults and target reasons. Submitted queue entries are excluded. The page reads the current Git plan, supports refresh and labels cached fallback data when offline. Returning to the tracker restores an active draft. At the end of the program or while processing is pending, it shows only the sessions actually published.
 
 The workout screen shows the last recorded set above a larger rep-range target, larger set counts, and every logged set without a clipped list. History starts with already-published Git workouts and is carried forward in processed plans; unavailable history is labelled explicitly. Chest-supported dumbbell rows are named **DB Chest Supported Row**, with load per hand.
