@@ -1,6 +1,6 @@
 # Automatic workout processing
 
-Current setup: the combined Outlook/workout task checks every two hours using existing subscription access and connected tools, following PROCESS_WORKOUTS.md. Keep the computer and app running. It reports completed/failed processing to Discord #dockbox and stays silent when nothing is pending. The API-billed workflow described below is installed but disabled; do not enable or purchase API credits without the user's instruction.
+Current setup: the combined Outlook/workout task checks every two hours using existing subscription access and connected tools, following PROCESS_WORKOUTS.md. Keep the computer and app running. It reports completed/failed processing to Discord #workout-processing and stays silent when nothing is pending. The API-billed workflow described below is installed but disabled; do not enable or purchase API credits without the user's instruction.
 
 Production destination: **Daily Health Data → Workout Log A:V**. Staging reconciliation and full readback completed on October 26, 2026; `.github/workout-automation.json` records the production ID and verification timestamp. Historical and newly submitted performance share this one tab and are read once, without combining a duplicate staging copy. Staging remains an archive.
 
