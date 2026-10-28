@@ -1,4 +1,147 @@
 {
   "version": 1,
-  "sessions": []
+  "sessions": [
+    {
+      "id": "f3d9e728-bcfb-407a-922f-79779a6fe721",
+      "week": 2,
+      "day": 3,
+      "date": "2026-10-28",
+      "status": "finished",
+      "sets": [
+        {
+          "id": "f11827c6-a10a-4cd1-bf99-08b5da9a7afe",
+          "notes": "",
+          "created": "2026-10-28T11:38:48.391Z",
+          "kind": "cardio",
+          "durationMinutes": 30,
+          "speedMph": 2.7,
+          "inclinePercent": 11,
+          "reps": 0,
+          "weight": null,
+          "rir": null,
+          "exerciseId": "w2d3e1",
+          "unit": "",
+          "loadSemantics": "",
+          "rpe": null,
+          "rpeSource": "missing"
+        },
+        {
+          "id": "f3fb0ceb-6589-49cc-869b-2f7f9d139958",
+          "notes": "",
+          "created": "2026-10-28T11:40:13.803Z",
+          "weight": null,
+          "reps": 15,
+          "rir": 2,
+          "bodyweight": true,
+          "exerciseId": "w2d3e2",
+          "unit": "",
+          "loadSemantics": "Bodyweight",
+          "rpe": 8,
+          "rpeSource": "derived"
+        },
+        {
+          "id": "0f06758f-f93f-4b96-afcd-15819ac05942",
+          "notes": "",
+          "created": "2026-10-28T11:42:48.551Z",
+          "weight": null,
+          "reps": 15,
+          "rir": 2,
+          "bodyweight": true,
+          "exerciseId": "w2d3e2",
+          "unit": "",
+          "loadSemantics": "Bodyweight",
+          "rpe": 8,
+          "rpeSource": "derived"
+        },
+        {
+          "id": "516ccfcb-e912-42c8-9d45-941f4f7865a3",
+          "notes": "",
+          "created": "2026-10-28T11:44:56.651Z",
+          "weight": null,
+          "reps": 14,
+          "rir": 1,
+          "bodyweight": true,
+          "exerciseId": "w2d3e2",
+          "unit": "",
+          "loadSemantics": "Bodyweight",
+          "rpe": 9,
+          "rpeSource": "derived"
+        },
+        {
+          "id": "ab14f404-db21-4436-ba98-128d5709359c",
+          "notes": "",
+          "created": "2026-10-28T11:47:11.989Z",
+          "weight": 40,
+          "reps": 15,
+          "rir": 2,
+          "exerciseId": "w2d3e3",
+          "unit": "lb",
+          "loadSemantics": "",
+          "rpe": 8,
+          "rpeSource": "derived"
+        },
+        {
+          "id": "f72b3120-36a3-471f-80e2-0adcba32c944",
+          "notes": "",
+          "created": "2026-10-28T11:54:46.199Z",
+          "weight": 45,
+          "reps": 15,
+          "rir": 5,
+          "exerciseId": "w2d3e3",
+          "unit": "lb",
+          "loadSemantics": "",
+          "rpe": 5,
+          "rpeSource": "derived"
+        }
+      ],
+      "decisions": {},
+      "increments": {},
+      "elapsedSeconds": 2600.877,
+      "timerStartedAt": null,
+      "durationMinutes": 43.35,
+      "submittedAt": "2026-10-28T11:54:47.844Z",
+      "planRevision": "processed-0e045361-7edb-4794-92d1-3dab6eff8b38",
+      "prescriptions": [
+        {
+          "exerciseId": "w2d3e1",
+          "name": "Incline Treadmill Walk",
+          "sets": 1,
+          "minReps": 1,
+          "maxReps": 1,
+          "weight": null,
+          "targetReps": 1,
+          "rirMin": null,
+          "rirMax": null,
+          "loadSemantics": "",
+          "increment": null
+        },
+        {
+          "exerciseId": "w2d3e2",
+          "name": "Hanging Leg Raise",
+          "sets": 3,
+          "minReps": 10,
+          "maxReps": 15,
+          "weight": null,
+          "targetReps": 10,
+          "rirMin": 2,
+          "rirMax": 3,
+          "loadSemantics": "Bodyweight",
+          "increment": null
+        },
+        {
+          "exerciseId": "w2d3e3",
+          "name": "Cable Woodchop",
+          "sets": 2,
+          "minReps": 12,
+          "maxReps": 15,
+          "weight": null,
+          "targetReps": 12,
+          "rirMin": 2,
+          "rirMax": 3,
+          "loadSemantics": "",
+          "increment": null
+        }
+      ]
+    }
+  ]
 }
