@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "revision": "processed-0e045361-7edb-4794-92d1-3dab6eff8b38",
+  "revision": "load-repair-1d1be767-f019-4b59-bcd4-63acf8983350",
   "updatedAt": "2026-10-27T13:34:44.904Z",
   "processedSessions": [
     {
@@ -85,10 +85,10 @@
       "exercises": [
         {
           "exerciseId": "w2d4e1",
-          "weight": null,
+          "weight": 115,
           "targetReps": 8,
           "increment": null,
-          "reason": "Only Oct 21 mixed 115/130 lb at 12 reps. Preserve unknown target; no second session/increment; other grips excluded.",
+          "reason": "Initialize at the lowest recorded Oct 21 load, 115 lb (12 reps, RIR 5), retaining the program rep range. This is a conservative starting target, not an increase; a second qualifying session and known increment are required before increasing.",
           "restSeconds": 90,
           "lastSet": {
             "date": "2026-10-21",
@@ -119,10 +119,10 @@
         },
         {
           "exerciseId": "w2d4e3",
-          "weight": null,
+          "weight": 40,
           "targetReps": 10,
           "increment": null,
-          "reason": "Only Oct 21 mixed 40/45/50 lb at 15 reps. Preserve unknown target; no stable two-session evidence.",
+          "reason": "Initialize at the lowest recorded Oct 21 load, 40 lb (15 reps, RIR 5), retaining the program rep range. Mixed 40/45/50 lb supports a conservative starting target, not a load increase.",
           "restSeconds": 90,
           "lastSet": {
             "date": "2026-10-21",
@@ -136,10 +136,10 @@
         },
         {
           "exerciseId": "w2d4e4",
-          "weight": null,
+          "weight": 15,
           "targetReps": 12,
           "increment": null,
-          "reason": "Oct 21 15 lb at 20/20/20/18 reps, final RIR 1. Preserve unknown target; do not equate cable setups.",
+          "reason": "Initialize from Oct 21 working load, 15 lb across four sets. Final sets reached RIR 1; hold load and use the program rep range without increasing.",
           "restSeconds": 90,
           "lastSet": {
             "date": "2026-10-21",
@@ -153,10 +153,10 @@
         },
         {
           "exerciseId": "w2d4e5",
-          "weight": null,
+          "weight": 60,
           "targetReps": 12,
           "increment": null,
-          "reason": "Keep load unknown: Oct17 50x20, Oct21 100x20, Oct27 60/70/90x20 RIR5/5/3. Machine equivalence and stable load unconfirmed; do not equate these stacks or infer progression.",
+          "reason": "User confirmed Oct 17, 21 and 27 records used the same machine. Initialize conservatively at the lowest Oct 27 load, 60 lb (20 reps, RIR 5); later 70/90 lb remain actual history, not automatically prescribed targets. Build consistency before increasing.",
           "restSeconds": 90,
           "lastSet": {
             "date": "2026-10-27",
@@ -738,10 +738,10 @@
         },
         {
           "exerciseId": "w3d2e6",
-          "weight": null,
+          "weight": 60,
           "targetReps": 12,
           "increment": null,
-          "reason": "Keep load unknown: Oct17 50x20, Oct21 100x20, Oct27 60/70/90x20 RIR5/5/3. Machine equivalence and stable load unconfirmed; do not equate these stacks or infer progression.",
+          "reason": "User confirmed Oct 17, 21 and 27 records used the same machine. Initialize conservatively at the lowest Oct 27 load, 60 lb (20 reps, RIR 5); later 70/90 lb remain actual history, not automatically prescribed targets. Build consistency before increasing.",
           "lastSet": {
             "date": "2026-10-27",
             "weight": 90,
