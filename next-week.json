@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "revision": "c45dfae0-1bf0-4af4-b581-796067c9eed1",
-  "updatedAt": "2026-10-30T23:36:56.866Z",
+  "revision": "d5b20307-480a-47f3-b229-f9b07beb2ace",
+  "updatedAt": "2026-10-30T23:46:04.688Z",
   "processedSessions": [
     {
       "id": "b4774b22-e8b1-406f-914c-cab7b67a2f86",
@@ -129,10 +129,10 @@
         },
         {
           "exerciseId": "w2d6e6",
-          "weight": 30,
+          "weight": 90,
           "targetReps": 10,
           "increment": null,
-          "reason": "Latestrecorded90x15/15/12 endedRIR0, with Hoist double machine and30lb in notes. Preserve actual90.30-versus90 convention needs clarification before changing the original-setup30 target; no invented machine conversion.",
+          "reason": "User confirmed 90 lb is the correct machine setting (October 30). Latest 90 x 15/15/12 ended at RIR 0; use 90 for 10 reps at RIR 2–3, reassessing later sets rather than increasing. Legacy 30 lb notes do not override the confirmed setting.",
           "restSeconds": 90,
           "lastSet": {
             "date": "2026-10-29",
@@ -620,10 +620,10 @@
         },
         {
           "exerciseId": "w3d4e6",
-          "weight": 30,
+          "weight": 90,
           "targetReps": 10,
           "increment": null,
-          "reason": "Latestrecorded90x15/15/12 endedRIR0, with Hoist double machine and30lb in notes. Preserve actual90.30-versus90 convention needs clarification before changing the original-setup30 target; no invented machine conversion.",
+          "reason": "User confirmed 90 lb is the correct machine setting (October 30). Latest 90 x 15/15/12 ended at RIR 0; use 90 for 10 reps at RIR 2–3, reassessing later sets rather than increasing. Legacy 30 lb notes do not override the confirmed setting.",
           "lastSet": {
             "date": "2026-10-29",
             "weight": 90,
