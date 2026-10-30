@@ -25,7 +25,7 @@ Existing site tokens still need only repository Contents read/write; the optiona
 2. **Codex review:** on a separate read-only runner, review bounded proposed targets and evidence flags derived from comparable exercise history. This job has neither Google credentials nor Git write permission. Raw workout notes, dates, session/set IDs and private historical set values are excluded from its prompt and public Actions logs. The synthetic test session is excluded from training history.
 3. **Publish:** re-read Git and Sheets, compare prepared session hashes, reject unexpected or out-of-bounds model targets, and use the existing atomic Git finalizer. The plan and acknowledgment are one non-force commit. New arrivals are preserved.
 
-Loads can increase only when two comparable sessions satisfy rep/RIR/consistent-load requirements and an increment is known. Bodyweight/cardio receive no external load. Uncertain loads, mixed weights and low RIR produce conservative holds. These limits are validated in code, not delegated solely to a prompt.
+The review uses all comparable history. Successful heavier working sets are retained as evidence; final-set RIR above 2 and within-session weight increases trigger assessment rather than an automatic lowest-load hold. One clear session can support a bounded trial with a known equipment increment; two sessions are corroboration. Unknown increments require a conditional recommendation or rep progression. Back-offs, low RIR, missing effort and concrete equipment mismatches remain explicit review cases. Bodyweight/cardio receive no external load. Deterministic bounds validate the analysis output; the paid workflow remains disabled.
 
 ## Failures and recovery
 

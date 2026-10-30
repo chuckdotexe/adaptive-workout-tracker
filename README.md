@@ -46,7 +46,7 @@ Submission and processing use Git tree/commit APIs and non-force branch updates.
 
 Processing must verify all Sheets rows before finalizing. Plan update, receipts, and removal of acknowledged queue entries happen in one Git commit. New arrivals remain queued. Sheets and Git cannot participate in one transaction: Sheets ID-based deduplication makes a failure between them recoverable. The processing agent must read back Sheets values; the finalization script checks the supplied receipt's coverage, not Google Sheets independently.
 
-The initial next-week.json contains the original first six training sessions, not inferred personal history. ChatGPT uses the last one or two comparable sessions per exercise; increases require two supporting sessions and a known increment. See the processing procedure for conservative hold rules. Automated fatigue diagnosis and substitutions are not implemented. Automatic processing runs through GitHub Actions after configuration; it does not start a web ChatGPT conversation.
+The initial next-week.json contains the original first six training sessions, not inferred personal history. ChatGPT reviews all comparable history for every exercise. Final-set RIR above 2 or a weight increase triggers set-by-set assessment; successful heavier sets can establish the next target without a rigid two-session gate. Small load trials remain conditional on equipment and prescribed reps/RIR; fatigue can call for fewer reps at the same load rather than automatically choosing the lowest weight. See PROCESS_WORKOUTS.md. Automated fatigue diagnosis and substitutions are not implemented. Automatic processing runs through GitHub Actions after configuration; it does not start a web ChatGPT conversation.
 
 ## Project documentation
 
