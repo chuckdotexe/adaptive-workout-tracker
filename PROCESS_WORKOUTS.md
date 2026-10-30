@@ -68,3 +68,5 @@ Report sessions/sets processed, the actual Sheets destination, main target chang
 
 
 Confirmed equipment: On October 29, 2026 the user confirmed the recent Reverse Pec Deck entries (50, 100 and 60–90 lb) used the same machine. Treat those records as comparable; do not keep claiming machine equivalence is unconfirmed.
+
+Bayesian Curl load convention confirmed by the user on October 30, 2026: use the recorded 90 lb machine setting. Legacy notes mentioning 30 lb do not override this setting. Preserve source actuals; latest 90 × 15/15/12 ended at RIR 0, so prescribe 90 for 10 reps at RIR 2–3 and reassess rather than increase.

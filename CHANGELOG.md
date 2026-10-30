@@ -2,6 +2,11 @@
 
 Code changes must update this file and README.md in the same commit. Updates are not required for workout processing, data-only changes, or other work without code changes. Entries describe verified work; a source commit alone does not confirm a successful deployment.
 
+## 2026-10-30 — Confirm Bayesian curl load
+
+- Use the user-confirmed 90 lb machine setting and remove the obsolete 30-versus-90 conflict gate. Preserve actual records and use 10 reps to address final-set fatigue.
+- Validation: focused automation checks passed.
+
 ## 2026-10-30 — Review progression across the full program
 
 - Replace blanket lowest-load and two-session increase gates with set-by-set working-load, final-effort and rep-headroom assessment. Successful ramps retain heavier loads; load trials remain bounded and conditional.

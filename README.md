@@ -80,3 +80,5 @@ API reference: [GitHub Git references](https://docs.github.com/en/rest/git/refs)
 ## Processing verification status
 
 On 2026-10-26, all 68 real entries from three sessions in staging were matched against Git receipts, copied into production Workout Log A937:V1004 and independently read back across all 22 columns. All 935 previous data rows, their order and the original summary formula were preserved. The 24-row synthetic test session was excluded. Staging remains an archive; future scheduled processing uses production. Existing plans/queue receipts were not reset or replayed. API-billed automation remains disabled.
+
+Bayesian Curl uses the user-confirmed 90 lb machine setting; older 30 lb setup notes do not override recorded loads.

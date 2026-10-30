@@ -79,3 +79,5 @@ test('website submission commits can trigger Actions rather than skipping CI',as
 });
 
 test('legacy numeric strings and renamed exercises retain all comparable history',()=>{const ex=program.find(x=>x.name==='DB Lateral Raise');const rows=Array.from({length:3},(_,i)=>['2026-10-'+(20+i),'Strength','Day','Lateral Raise','','1','20','25','lb','','','','','','','','','25 lb per hand','','3']);const copy=structuredClone(rows);const h=historyFor(ex,rows);assert.equal(h.length,3);assert.equal(h[0].sets[0].weight,25);assert.deepEqual(rows,copy)});
+
+test('confirmed Bayesian machine setting is not blocked by legacy setup notes',()=>{const ex=program.find(e=>e.name==='Bayesian Curl');const rows=[['2026-10-29','Strength','Day','Bayesian Curl','','1','15','90','lb','','','','','','','','','Hoist double machine · 30 lb','','2']];const h=historyFor(ex,rows);assert.equal(h[0].sets[0].weight,90);assert.equal(h[0].equipmentConflict,false);});
