@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "revision": "17b69670-0c86-45e6-87cb-d9bdb934478d",
-  "updatedAt": "2026-10-30T23:47:50.177Z",
+  "revision": "processed-d0093760-6d93-4287-a78f-269166c3b84b",
+  "updatedAt": "2026-10-31T18:33:56.073Z",
   "processedSessions": [
     {
       "id": "b4774b22-e8b1-406f-914c-cab7b67a2f86",
@@ -34,186 +34,13 @@
     {
       "id": "d6cb1561-ea1a-4f02-ab4e-109cadb6ab40",
       "digest": "b8a0b7579b7d4cdf03667e48ddb82ec2fa968cd97b50e4cde92f0277f5a7aac3"
+    },
+    {
+      "id": "8a33c9bd-898c-4803-a82c-359a6560bed5",
+      "digest": "403ac29a8bad07c11fb7184f5c39fd996e942d601eb65b39c43fc0d234eae85c"
     }
   ],
   "workouts": [
-    {
-      "week": 2,
-      "day": 6,
-      "dayLabel": "Saturday - Upper C — Chest + Arms",
-      "exercises": [
-        {
-          "exerciseId": "w2d6e1",
-          "weight": 85,
-          "targetReps": 8,
-          "increment": null,
-          "reason": "Latest 85 per hand 4 × 8 RIR 4/4/2/2; early sets had room but later sets were on effort target at the bottom of 8–12. Keep 85 and build toward 9 only while later sets remain RIR 2; final RIR 2 does not justify an automatic jump.",
-          "restSeconds": 90,
-          "lastSet": {
-            "date": "2026-10-23",
-            "weight": 85,
-            "unit": "lb",
-            "reps": 8,
-            "rir": 2,
-            "bodyweight": false,
-            "loadSemantics": "per hand"
-          }
-        },
-        {
-          "exerciseId": "w2d6e2",
-          "weight": 75,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Latest 60 × 12 then 70 × 12 both RIR 4; 70 was a successful heavier set and still easy. Trial 75 if that setting is available, for 10–15 at RIR 2–3; return 70 if minimum 10 or effort target is missed. No two-session or lowest-load gate.",
-          "restSeconds": 90,
-          "lastSet": {
-            "date": "2026-10-23",
-            "weight": 70,
-            "unit": "lb",
-            "reps": 12,
-            "rir": 4,
-            "bodyweight": false,
-            "loadSemantics": ""
-          }
-        },
-        {
-          "exerciseId": "w2d6e3",
-          "weight": 190,
-          "targetReps": 12,
-          "increment": null,
-          "reason": "Latest 170 × 12 RIR 4 then 190 × 12 RIR 2 supports 190 on that machine, not resetting 170 because sets ramped. Start 12 and assess both sets at target effort; return 170 if 12 cannot be repeated without RIR 0–1.",
-          "restSeconds": 90,
-          "lastSet": {
-            "date": "2026-10-23",
-            "weight": 190,
-            "unit": "lb",
-            "reps": 12,
-            "rir": 2,
-            "bodyweight": false,
-            "loadSemantics": ""
-          }
-        },
-        {
-          "exerciseId": "w2d6e4",
-          "weight": 70,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Latest 70 × 8 RIR 5 then 80 × 8/7 RIR 1/1. 80 missed minimum 8 and effort; use 70 for 8–10, assessing fatigue across all 3 sets. A larger first-set reserve does not rescue the failed heavier sets.",
-          "restSeconds": 90,
-          "lastSet": {
-            "date": "2026-10-23",
-            "weight": 80,
-            "unit": "lb",
-            "reps": 7,
-            "rir": 1,
-            "bodyweight": false,
-            "loadSemantics": "total"
-          }
-        },
-        {
-          "exerciseId": "w2d6e5",
-          "weight": 30,
-          "targetReps": 12,
-          "increment": null,
-          "reason": "Latest 30 × 15/15 ended RIR 1; earlier 30/40 ramp succeeded but has not repeated at target effort. Keep 30 for 12–14 rather than forcing 15; revisit 40 after repeated minimum reps at target RIR.",
-          "restSeconds": 90,
-          "lastSet": {
-            "date": "2026-10-26",
-            "weight": 30,
-            "unit": "lb",
-            "reps": 15,
-            "rir": 1,
-            "bodyweight": false,
-            "loadSemantics": ""
-          }
-        },
-        {
-          "exerciseId": "w2d6e6",
-          "weight": 90,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "User confirmed 90 lb is the correct machine setting (October 30). Latest 90 × 15/15/12 ended at RIR 0; use 90 for 10 reps at RIR 2–3, reassessing later sets rather than increasing. Legacy 30 lb notes do not override the confirmed setting.",
-          "restSeconds": 90,
-          "lastSet": {
-            "date": "2026-10-29",
-            "weight": 90,
-            "unit": "lb",
-            "reps": 12,
-            "rir": 0,
-            "bodyweight": false,
-            "loadSemantics": "total"
-          }
-        },
-        {
-          "exerciseId": "w2d6e7",
-          "weight": 25,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Latest 25 × 10/10/10 RIR 3/1/0 leaves no rep room below 10 within the program. Needs a lower available cable setting if 10 cannot stay RIR 2; do not force completion to failure. 25 remains recorded reference, not a claim it fits all sets.",
-          "restSeconds": 90,
-          "lastSet": {
-            "date": "2026-10-23",
-            "weight": 25,
-            "unit": "lb",
-            "reps": 10,
-            "rir": 0,
-            "bodyweight": false,
-            "loadSemantics": ""
-          }
-        },
-        {
-          "exerciseId": "w2d6e8",
-          "weight": 30,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Latest 30 × 10 RIR 3 then 35 × 10 RIR 0. Repeat 30 for 10–12 and reassess final-set effort before another increase. 35 at failure does not establish a repeatable working load.",
-          "restSeconds": 90,
-          "lastSet": {
-            "date": "2026-10-23",
-            "weight": 35,
-            "unit": "lb",
-            "reps": 10,
-            "rir": 0,
-            "bodyweight": false,
-            "loadSemantics": ""
-          }
-        },
-        {
-          "exerciseId": "w2d6e9",
-          "weight": 70,
-          "targetReps": 12,
-          "increment": null,
-          "reason": "Latest 70 × 12/11 RIR 2/0 missed minimum 12 on the final set. Needs a lower available stack setting for 12–15 at target effort; 70 remains a reference until that step is specified. Do not force failure or lower reps below the program minimum.",
-          "restSeconds": 90,
-          "lastSet": {
-            "date": "2026-10-23",
-            "weight": 70,
-            "unit": "lb",
-            "reps": 11,
-            "rir": 0,
-            "bodyweight": false,
-            "loadSemantics": ""
-          }
-        },
-        {
-          "exerciseId": "w2d6e10",
-          "weight": null,
-          "targetReps": 12,
-          "increment": null,
-          "reason": "Latest bodyweight 15/15/14 RIR 2/2/1, prior 15/15 ending RIR 1. Keep bodyweight and strict 12–13 at RIR 2; no external load. Build reps only as all sets remain within effort target.",
-          "restSeconds": 90,
-          "lastSet": {
-            "date": "2026-10-28",
-            "weight": null,
-            "unit": "",
-            "reps": 14,
-            "rir": 1,
-            "bodyweight": true,
-            "loadSemantics": "total"
-          }
-        }
-      ]
-    },
     {
       "week": 3,
       "day": 1,
@@ -326,12 +153,11 @@
           "weight": 30,
           "targetReps": 12,
           "increment": null,
-          "reason": "Latest 30 × 15/15 ended RIR 1; earlier 30/40 ramp succeeded but has not repeated at target effort. Keep 30 for 12–14 rather than forcing 15; revisit 40 after repeated minimum reps at target RIR.",
+          "reason": "Hold 30 lb for 12–14 reps at RIR 2–3. October 31 reached 15/15/15 at RIR 2/2/1; October 26 also ended at RIR 1. More volume was achieved, but repeated late-set fatigue argues for fewer reps rather than increasing to the older 40 lb setting now.",
           "restSeconds": 90,
           "lastSet": {
-            "date": "2026-10-26",
+            "date": "2026-10-31",
             "weight": 30,
-            "unit": "lb",
             "reps": 15,
             "rir": 1,
             "bodyweight": false,
@@ -495,17 +321,16 @@
         {
           "exerciseId": "w3d3e2",
           "weight": null,
-          "targetReps": 12,
+          "targetReps": 13,
           "increment": null,
-          "reason": "Latest bodyweight 15/15/14 RIR 2/2/1, prior 15/15 ending RIR 1. Keep bodyweight and strict 12–13 at RIR 2; no external load. Build reps only as all sets remain within effort target.",
+          "reason": "Keep bodyweight only. October 31 completed 15/15 at RIR 2/2, improving on October 23 ending at RIR 1; October 28 had a third set of 14 at RIR 1. For the three-set day start at 13–14; for the two-set day aim for 15 at RIR 2–3. No external load.",
           "lastSet": {
-            "date": "2026-10-28",
+            "date": "2026-10-31",
             "weight": null,
-            "unit": "",
-            "reps": 14,
-            "rir": 1,
+            "reps": 15,
+            "rir": 2,
             "bodyweight": true,
-            "loadSemantics": "total"
+            "loadSemantics": "Bodyweight"
           },
           "restSeconds": 90
         },
@@ -623,15 +448,14 @@
           "weight": 90,
           "targetReps": 10,
           "increment": null,
-          "reason": "User confirmed 90 lb is the correct machine setting (October 30). Latest 90 × 15/15/12 ended at RIR 0; use 90 for 10 reps at RIR 2–3, reassessing later sets rather than increasing. Legacy 30 lb notes do not override the confirmed setting.",
+          "reason": "Use the user-confirmed 90 lb machine setting. October 31 reached 15/14/12 at RIR 2/1/0, following 15/15/12 ending at RIR 0 on October 29. Hold 90 and start at 10 reps, stopping at RIR 2–3 on every set. If 10 cannot meet that effort, use the previously demonstrated 80 lb setting; repeated failure does not support an increase.",
           "lastSet": {
-            "date": "2026-10-29",
+            "date": "2026-10-31",
             "weight": 90,
-            "unit": "lb",
             "reps": 12,
             "rir": 0,
             "bodyweight": false,
-            "loadSemantics": "total"
+            "loadSemantics": "30 lb"
           },
           "restSeconds": 90
         },
@@ -783,14 +607,181 @@
           }
         }
       ]
+    },
+    {
+      "week": 3,
+      "day": 6,
+      "dayLabel": "Saturday - Upper C — Chest + Arms",
+      "exercises": [
+        {
+          "exerciseId": "w3d6e1",
+          "weight": 85,
+          "targetReps": 8,
+          "increment": null,
+          "reason": "Hold 85 lb per hand. October 31 improved to 12/10/8/8 reps versus four sets of 8 on October 23, but the final set reached RIR 1. Start with 8–10 reps and stop at RIR 2–3; avoid spending all reserve on the first set. No load increase yet.",
+          "lastSet": {
+            "date": "2026-10-31",
+            "weight": 85,
+            "reps": 8,
+            "rir": 1,
+            "bodyweight": false,
+            "loadSemantics": "85 lb per hand"
+          },
+          "restSeconds": 90
+        },
+        {
+          "exerciseId": "w3d6e2",
+          "weight": 80,
+          "targetReps": 12,
+          "increment": null,
+          "reason": "Adopt the demonstrated 80 lb working load: October 31 was 15/15 reps at RIR 2/1, up from 60/70 lb × 12 at RIR 4 on October 23. Aim for 12–14 reps at RIR 2–3 rather than forcing 15. No further load increase while the final set is below the effort target.",
+          "lastSet": {
+            "date": "2026-10-31",
+            "weight": 80,
+            "reps": 15,
+            "rir": 1,
+            "bodyweight": false,
+            "loadSemantics": ""
+          },
+          "restSeconds": 90
+        },
+        {
+          "exerciseId": "w3d6e3",
+          "weight": 200,
+          "targetReps": 12,
+          "increment": null,
+          "reason": "Conditional 200 lb trial if that setting is available on the same machine. October 31: 190 lb × 15/15 at RIR 3/4, versus 190 × 12 at RIR 2 on October 23. Both sets reached the rep ceiling with reserve, supporting a small increase now. Start at 12 reps; use 190 if the setting is unavailable or 12 reps cannot stay at RIR 2–3. The machine increment remains unconfirmed.",
+          "lastSet": {
+            "date": "2026-10-31",
+            "weight": 190,
+            "reps": 15,
+            "rir": 4,
+            "bodyweight": false,
+            "loadSemantics": "140 lb"
+          },
+          "restSeconds": 90
+        },
+        {
+          "exerciseId": "w3d6e4",
+          "weight": 70,
+          "targetReps": 10,
+          "increment": null,
+          "reason": "Hold 70 lb and start at 10 reps. October 31 improved to 12/12/11 at RIR 3/2/1; October 23 included failed 80 lb sets at 8/7 reps and RIR 1. Build repeatable reps at RIR 2–3 before another heavier trial; do not force the last set to 12.",
+          "lastSet": {
+            "date": "2026-10-31",
+            "weight": 70,
+            "reps": 11,
+            "rir": 1,
+            "bodyweight": false,
+            "loadSemantics": "70 lb total"
+          },
+          "restSeconds": 90
+        },
+        {
+          "exerciseId": "w3d6e5",
+          "weight": 30,
+          "targetReps": 12,
+          "increment": null,
+          "reason": "Hold 30 lb for 12–14 reps at RIR 2–3. October 31 reached 15/15/15 at RIR 2/2/1; October 26 also ended at RIR 1. More volume was achieved, but repeated late-set fatigue argues for fewer reps rather than increasing to the older 40 lb setting now.",
+          "lastSet": {
+            "date": "2026-10-31",
+            "weight": 30,
+            "reps": 15,
+            "rir": 1,
+            "bodyweight": false,
+            "loadSemantics": ""
+          },
+          "restSeconds": 90
+        },
+        {
+          "exerciseId": "w3d6e6",
+          "weight": 90,
+          "targetReps": 10,
+          "increment": null,
+          "reason": "Use the user-confirmed 90 lb machine setting. October 31 reached 15/14/12 at RIR 2/1/0, following 15/15/12 ending at RIR 0 on October 29. Hold 90 and start at 10 reps, stopping at RIR 2–3 on every set. If 10 cannot meet that effort, use the previously demonstrated 80 lb setting; repeated failure does not support an increase.",
+          "lastSet": {
+            "date": "2026-10-31",
+            "weight": 90,
+            "reps": 12,
+            "rir": 0,
+            "bodyweight": false,
+            "loadSemantics": "30 lb"
+          },
+          "restSeconds": 90
+        },
+        {
+          "exerciseId": "w3d6e7",
+          "weight": 25,
+          "targetReps": 10,
+          "increment": null,
+          "reason": "Hold the successful 25 lb load and start at 10–12 reps at RIR 2–3. October 31: 25 × 10, 20 × 15, then 25 × 14, all RIR 2, improving on three 25 lb sets ending at RIR 0 on October 23. The heavier final set succeeded; do not default to the 20 lb middle set. Use 20 if fatigue prevents the minimum 10 at target effort.",
+          "lastSet": {
+            "date": "2026-10-31",
+            "weight": 25,
+            "reps": 14,
+            "rir": 2,
+            "bodyweight": false,
+            "loadSemantics": ""
+          },
+          "restSeconds": 90
+        },
+        {
+          "exerciseId": "w3d6e8",
+          "weight": 30,
+          "targetReps": 12,
+          "increment": null,
+          "reason": "Hold 30 lb for 12–13 reps at RIR 2–3. October 31 improved to 15/14 at RIR 3/1 from 30 × 10 followed by a failed 35 × 10 at RIR 0 on October 23. Reduce forced reps on the second set before another load increase.",
+          "lastSet": {
+            "date": "2026-10-31",
+            "weight": 30,
+            "reps": 14,
+            "rir": 1,
+            "bodyweight": false,
+            "loadSemantics": ""
+          },
+          "restSeconds": 90
+        },
+        {
+          "exerciseId": "w3d6e9",
+          "weight": 70,
+          "targetReps": 12,
+          "increment": null,
+          "reason": "Hold 70 lb and start at 12 reps at RIR 2–3. October 31 improved to 15/14 at RIR 2/1 from 12/11 at RIR 2/0 on October 23. Both sets now meet the minimum, so reassess fewer reps at 70 rather than automatically lowering the load; use a lower available setting if 12 cannot meet effort.",
+          "lastSet": {
+            "date": "2026-10-31",
+            "weight": 70,
+            "reps": 14,
+            "rir": 1,
+            "bodyweight": false,
+            "loadSemantics": ""
+          },
+          "restSeconds": 90
+        },
+        {
+          "exerciseId": "w3d6e10",
+          "weight": null,
+          "targetReps": 15,
+          "increment": null,
+          "reason": "Keep bodyweight only. October 31 completed 15/15 at RIR 2/2, improving on October 23 ending at RIR 1; October 28 had a third set of 14 at RIR 1. For the three-set day start at 13–14; for the two-set day aim for 15 at RIR 2–3. No external load.",
+          "lastSet": {
+            "date": "2026-10-31",
+            "weight": null,
+            "reps": 15,
+            "rir": 2,
+            "bodyweight": true,
+            "loadSemantics": "Bodyweight"
+          },
+          "restSeconds": 90
+        }
+      ]
     }
   ],
   "sheetsReceipt": {
     "spreadsheetId": "1sNIsfGpvUEk_qcd5oj23vur7xdBFrBC4NfxOs6WVML4",
-    "range": "'Workout Log'!A1051:V1068",
-    "verifiedAt": "2026-10-30T16:25:18.625Z",
+    "range": "'Workout Log'!A1069:V1094",
+    "verifiedAt": "2026-10-31T18:33:56.073Z",
     "sessionIds": [
-      "d6cb1561-ea1a-4f02-ab4e-109cadb6ab40"
+      "8a33c9bd-898c-4803-a82c-359a6560bed5"
     ]
   }
 }
