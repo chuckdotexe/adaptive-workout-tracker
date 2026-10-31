@@ -2,6 +2,11 @@
 
 Code changes must update this file and README.md in the same commit. Updates are not required for workout processing, data-only changes, or other work without code changes. Entries describe verified work; a source commit alone does not confirm a successful deployment.
 
+## 2026-10-31 — Show personal machine reminders
+
+- Show the latest nonempty user comment when revisiting an exercise, separately from program notes. Preserve comment provenance through Sheets processing; do not attribute unmarked legacy notes to the user.
+- Validation: all 60 unit checks and the production build passed.
+
 ## 2026-10-30 — Confirm Bayesian curl load
 
 - Use the user-confirmed 90 lb machine setting and remove the obsolete 30-versus-90 conflict gate. Preserve actual records and use 10 reps to address final-set fatigue.
