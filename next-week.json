@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "revision": "processed-a8d7978b-2ad5-4310-9251-fed16e584511",
-  "updatedAt": "2026-11-03T14:00:00.000Z",
+  "revision": "processed-corrected-a8d7978b-2ad5-4310-9251-fed16e584511",
+  "updatedAt": "2026-11-03T14:05:00.000Z",
   "processedSessions": [
     {
       "id": "b4774b22-e8b1-406f-914c-cab7b67a2f86",
@@ -49,109 +49,6 @@
     }
   ],
   "workouts": [
-    {
-      "week": 3,
-      "day": 2,
-      "dayLabel": "Tuesday - Lower A — Quad Focus + Delts",
-      "exercises": [
-        {
-          "exerciseId": "w3d2e1",
-          "weight": 300,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Nov 3: 300 lb × 10 for four sets, RIR 3/3/2/2. Adopt recorded 300 lb baseline; at rep ceiling, consider a small increment only if equipment increment and form permit. Recorded load text says 280 lb, so confirm machine setting before increasing.",
-          "lastSet": {
-            "date": "2026-11-03",
-            "weight": 300,
-            "reps": 10,
-            "rir": 2,
-            "bodyweight": false,
-            "loadSemantics": "280 lb"
-          },
-          "restSeconds": 90
-        },
-        {
-          "exerciseId": "w3d2e2",
-          "weight": 205,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Nov 3: 205 lb × 10 for three sets, all RIR 2. Adopt 205 × 10; small conditional load trial next exposure if technique remains stable.",
-          "lastSet": {
-            "date": "2026-11-03",
-            "weight": 205,
-            "reps": 10,
-            "rir": 2,
-            "bodyweight": false,
-            "loadSemantics": "185 lb"
-          },
-          "restSeconds": 90
-        },
-        {
-          "exerciseId": "w3d2e3",
-          "weight": 140,
-          "targetReps": 12,
-          "increment": null,
-          "reason": "Nov 3: 140 lb × 12 twice at RIR 2. Maintain established 140 × 12; trial next machine increment only if available and full range preserved.",
-          "lastSet": {
-            "date": "2026-11-03",
-            "weight": 140,
-            "reps": 12,
-            "rir": 2,
-            "bodyweight": false,
-            "loadSemantics": ""
-          },
-          "restSeconds": 90
-        },
-        {
-          "exerciseId": "w3d2e4",
-          "weight": 175,
-          "targetReps": 15,
-          "increment": null,
-          "reason": "Nov 3: 175 lb × 12/15/15 at RIR 2/3/2. Maintain 175 × 15; trial a small increment when all sets meet rep ceiling.",
-          "lastSet": {
-            "date": "2026-11-03",
-            "weight": 175,
-            "reps": 15,
-            "rir": 2,
-            "bodyweight": false,
-            "loadSemantics": "165 lb"
-          },
-          "restSeconds": 90
-        },
-        {
-          "exerciseId": "w3d2e5",
-          "weight": 25,
-          "targetReps": 18,
-          "increment": null,
-          "reason": "Nov 3: 25 lb × 20 three times, final RIR 1. Use 25 × 18 to restore RIR 2; no load increase.",
-          "lastSet": {
-            "date": "2026-11-03",
-            "weight": 25,
-            "reps": 20,
-            "rir": 1,
-            "bodyweight": false,
-            "loadSemantics": "25 lb per hand"
-          },
-          "restSeconds": 90
-        },
-        {
-          "exerciseId": "w3d2e6",
-          "weight": 90,
-          "targetReps": 20,
-          "increment": null,
-          "reason": "Nov 3: 70/75/90 lb × 20, each RIR 2 on same confirmed machine. Adopt successful 90-lb final working set as next baseline, trial 90 for controlled reps; do not assume all three sets can immediately match.",
-          "lastSet": {
-            "date": "2026-11-03",
-            "weight": 90,
-            "reps": 20,
-            "rir": 2,
-            "bodyweight": false,
-            "loadSemantics": ""
-          },
-          "restSeconds": 90
-        }
-      ]
-    },
     {
       "week": 3,
       "day": 3,
@@ -774,6 +671,103 @@
             "loadSemantics": ""
           },
           "restSeconds": 90
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "day": 2,
+      "dayLabel": "Tuesday - Lower A — Quad Focus + Delts",
+      "exercises": [
+        {
+          "exerciseId": "w4d2e1",
+          "weight": 300,
+          "targetReps": 10,
+          "increment": null,
+          "reason": "Nov 3: 300 × 10 for four sets, RIR 3/3/2/2. Adopt recorded 300; verify conflicting 280-lb load label before further increase.",
+          "lastSet": {
+            "date": "2026-11-03",
+            "weight": 300,
+            "reps": 10,
+            "rir": 2,
+            "bodyweight": false,
+            "loadSemantics": "280 lb"
+          }
+        },
+        {
+          "exerciseId": "w4d2e2",
+          "weight": 205,
+          "targetReps": 10,
+          "increment": null,
+          "reason": "Nov 3: 205 × 10 for three sets at RIR 2. Maintain 205 × 10; conditional increment trial if technique and equipment allow.",
+          "lastSet": {
+            "date": "2026-11-03",
+            "weight": 205,
+            "reps": 10,
+            "rir": 2,
+            "bodyweight": false,
+            "loadSemantics": "185 lb"
+          }
+        },
+        {
+          "exerciseId": "w4d2e3",
+          "weight": 140,
+          "targetReps": 12,
+          "increment": null,
+          "reason": "Nov 3: 140 × 12 twice at RIR 2. Maintain 140 × 12; consider next increment when available.",
+          "lastSet": {
+            "date": "2026-11-03",
+            "weight": 140,
+            "reps": 12,
+            "rir": 2,
+            "bodyweight": false,
+            "loadSemantics": ""
+          }
+        },
+        {
+          "exerciseId": "w4d2e4",
+          "weight": 175,
+          "targetReps": 15,
+          "increment": null,
+          "reason": "Nov 3: 175 × 12/15/15, RIR 2/3/2. Build all sets to 15 before increment.",
+          "lastSet": {
+            "date": "2026-11-03",
+            "weight": 175,
+            "reps": 15,
+            "rir": 2,
+            "bodyweight": false,
+            "loadSemantics": "165 lb"
+          }
+        },
+        {
+          "exerciseId": "w4d2e5",
+          "weight": 25,
+          "targetReps": 18,
+          "increment": null,
+          "reason": "Nov 3: 25 × 20 three sets, final RIR 1. Reduce rep target to 18 to restore RIR 2.",
+          "lastSet": {
+            "date": "2026-11-03",
+            "weight": 25,
+            "reps": 20,
+            "rir": 1,
+            "bodyweight": false,
+            "loadSemantics": "25 lb per hand"
+          }
+        },
+        {
+          "exerciseId": "w4d2e6",
+          "weight": 90,
+          "targetReps": 20,
+          "increment": null,
+          "reason": "Nov 3: ramp 70/75/90 × 20, final RIR 2. Trial 90 as new working baseline; adjust if rep quality or effort drops.",
+          "lastSet": {
+            "date": "2026-11-03",
+            "weight": 90,
+            "reps": 20,
+            "rir": 2,
+            "bodyweight": false,
+            "loadSemantics": ""
+          }
         }
       ]
     }
