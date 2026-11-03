@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "revision": "processed-9dd7e64f-2c1f-4081-bd2a-953cc23c7860",
-  "updatedAt": "2026-11-02T18:14:07.629Z",
+  "revision": "processed-a8d7978b-2ad5-4310-9251-fed16e584511",
+  "updatedAt": "2026-11-03T14:00:00.000Z",
   "processedSessions": [
     {
       "id": "b4774b22-e8b1-406f-914c-cab7b67a2f86",
@@ -42,6 +42,10 @@
     {
       "id": "b768ca6f-39a6-44c0-851e-9dcb52e9c97c",
       "digest": "c611971e7c8db82e03eff405d67d256dc762f2dc8041c6dbdb5a1381dcb65e80"
+    },
+    {
+      "id": "a8d7978b-2ad5-4310-9251-fed16e584511",
+      "digest": "9a0c3043774b6d7988a75c23b2dff874d66807778481abe0036cff6112340b38"
     }
   ],
   "workouts": [
@@ -52,69 +56,65 @@
       "exercises": [
         {
           "exerciseId": "w3d2e1",
-          "weight": 280,
+          "weight": 300,
           "targetReps": 10,
           "increment": null,
-          "reason": "Latest 280 for 4 × 10 RIR 3/3/2/2 versus earlier 300 × 10 RIR 4–5. This supports a small next-step trial on the same machine, not a mandatory two-session hold. 280 remains baseline until increment is confirmed; start 6–8 after adding weight.",
+          "reason": "Nov 3: 300 lb × 10 for four sets, RIR 3/3/2/2. Adopt recorded 300 lb baseline; at rep ceiling, consider a small increment only if equipment increment and form permit. Recorded load text says 280 lb, so confirm machine setting before increasing.",
           "lastSet": {
-            "date": "2026-10-27",
-            "weight": 280,
-            "unit": "lb",
+            "date": "2026-11-03",
+            "weight": 300,
             "reps": 10,
             "rir": 2,
             "bodyweight": false,
-            "loadSemantics": "total"
+            "loadSemantics": "280 lb"
           },
           "restSeconds": 90
         },
         {
           "exerciseId": "w3d2e2",
           "weight": 205,
-          "targetReps": 6,
+          "targetReps": 10,
           "increment": null,
-          "reason": "Latest 185/185/205 × 10 RIR 4/4/2 demonstrates 205 successfully; mixed ramping does not justify returning automatically to 185. Trial 205 for 6–8 across working sets, at RIR 2. Return 185 if the minimum or form cannot be repeated.",
+          "reason": "Nov 3: 205 lb × 10 for three sets, all RIR 2. Adopt 205 × 10; small conditional load trial next exposure if technique remains stable.",
           "lastSet": {
-            "date": "2026-10-27",
+            "date": "2026-11-03",
             "weight": 205,
-            "unit": "lb",
             "reps": 10,
             "rir": 2,
             "bodyweight": false,
-            "loadSemantics": "total"
+            "loadSemantics": "185 lb"
           },
           "restSeconds": 90
         },
         {
           "exerciseId": "w3d2e3",
           "weight": 140,
-          "targetReps": 10,
+          "targetReps": 12,
           "increment": null,
-          "reason": "Latest 140 × 14/15/15 RIR 1/2/1, after 140 × 12 RIR 1. Keep 140 but start 10–12 and stop at prescribed RIR rather than forcing 15. If 10 is already too hard, use a lower recorded setting; no increase now.",
+          "reason": "Nov 3: 140 lb × 12 twice at RIR 2. Maintain established 140 × 12; trial next machine increment only if available and full range preserved.",
           "lastSet": {
-            "date": "2026-10-30",
+            "date": "2026-11-03",
             "weight": 140,
-            "unit": "lb",
-            "reps": 15,
-            "rir": 1,
+            "reps": 12,
+            "rir": 2,
             "bodyweight": false,
-            "loadSemantics": "total"
+            "loadSemantics": ""
           },
           "restSeconds": 90
         },
         {
           "exerciseId": "w3d2e4",
           "weight": 175,
-          "targetReps": 12,
+          "targetReps": 15,
           "increment": null,
-          "reason": "Latest 165 × 15 RIR 4 then 175 × 15/15 RIR 1/1. 175 merits a lower-rep trial at 12–13 to restore RIR 2, not automatic rejection because 15 was hard. Return 165 if 10–12 cannot be achieved at target effort.",
+          "reason": "Nov 3: 175 lb × 12/15/15 at RIR 2/3/2. Maintain 175 × 15; trial a small increment when all sets meet rep ceiling.",
           "lastSet": {
-            "date": "2026-10-27",
+            "date": "2026-11-03",
             "weight": 175,
-            "unit": "lb",
             "reps": 15,
-            "rir": 1,
+            "rir": 2,
             "bodyweight": false,
-            "loadSemantics": "total"
+            "loadSemantics": "165 lb"
           },
           "restSeconds": 90
         },
@@ -123,32 +123,30 @@
           "weight": 25,
           "targetReps": 18,
           "increment": null,
-          "reason": "Latest 25 per hand 3 × 20 RIR 3/2/1; earlier sessions also showed late failure. Keep 25 but use 18–19 rather than forcing 20. No increase until all sets stay at prescribed effort.",
+          "reason": "Nov 3: 25 lb × 20 three times, final RIR 1. Use 25 × 18 to restore RIR 2; no load increase.",
           "lastSet": {
-            "date": "2026-10-30",
+            "date": "2026-11-03",
             "weight": 25,
-            "unit": "lb",
             "reps": 20,
             "rir": 1,
             "bodyweight": false,
-            "loadSemantics": "per hand"
+            "loadSemantics": "25 lb per hand"
           },
           "restSeconds": 90
         },
         {
           "exerciseId": "w3d2e6",
-          "weight": 70,
-          "targetReps": 18,
+          "weight": 90,
+          "targetReps": 20,
           "increment": null,
-          "reason": "User confirmed the same machine. Latest 70 for 3 × 20 RIR 2/2/1 establishes 70; use 17–19 at RIR 2 rather than automatically dropping to 60. Earlier mixed 60/70/90 is context, not a reason to select the minimum.",
+          "reason": "Nov 3: 70/75/90 lb × 20, each RIR 2 on same confirmed machine. Adopt successful 90-lb final working set as next baseline, trial 90 for controlled reps; do not assume all three sets can immediately match.",
           "lastSet": {
-            "date": "2026-10-29",
-            "weight": 70,
-            "unit": "lb",
+            "date": "2026-11-03",
+            "weight": 90,
             "reps": 20,
-            "rir": 1,
+            "rir": 2,
             "bodyweight": false,
-            "loadSemantics": "total"
+            "loadSemantics": ""
           },
           "restSeconds": 90
         }
@@ -290,18 +288,17 @@
         },
         {
           "exerciseId": "w3d4e5",
-          "weight": 70,
-          "targetReps": 18,
+          "weight": 90,
+          "targetReps": 20,
           "increment": null,
-          "reason": "User confirmed the same machine. Latest 70 for 3 × 20 RIR 2/2/1 establishes 70; use 17–19 at RIR 2 rather than automatically dropping to 60. Earlier mixed 60/70/90 is context, not a reason to select the minimum.",
+          "reason": "Nov 3: 70/75/90 lb × 20, each RIR 2 on same confirmed machine. Adopt successful 90-lb final working set as next baseline, trial 90 for controlled reps; do not assume all three sets can immediately match.",
           "lastSet": {
-            "date": "2026-10-29",
-            "weight": 70,
-            "unit": "lb",
+            "date": "2026-11-03",
+            "weight": 90,
             "reps": 20,
-            "rir": 1,
+            "rir": 2,
             "bodyweight": false,
-            "loadSemantics": "total"
+            "loadSemantics": ""
           },
           "restSeconds": 90
         },
@@ -383,18 +380,17 @@
         {
           "exerciseId": "w3d5e3",
           "weight": 140,
-          "targetReps": 10,
+          "targetReps": 12,
           "increment": null,
-          "reason": "Latest 140 × 14/15/15 RIR 1/2/1, after 140 × 12 RIR 1. Keep 140 but start 10–12 and stop at prescribed RIR rather than forcing 15. If 10 is already too hard, use a lower recorded setting; no increase now.",
+          "reason": "Nov 3: 140 lb × 12 twice at RIR 2. Maintain established 140 × 12; trial next machine increment only if available and full range preserved.",
           "restSeconds": 90,
           "lastSet": {
-            "date": "2026-10-30",
+            "date": "2026-11-03",
             "weight": 140,
-            "unit": "lb",
-            "reps": 15,
-            "rir": 1,
+            "reps": 12,
+            "rir": 2,
             "bodyweight": false,
-            "loadSemantics": "total"
+            "loadSemantics": ""
           }
         },
         {
@@ -436,16 +432,15 @@
           "weight": 25,
           "targetReps": 18,
           "increment": null,
-          "reason": "Latest 25 per hand 3 × 20 RIR 3/2/1; earlier sessions also showed late failure. Keep 25 but use 18–19 rather than forcing 20. No increase until all sets stay at prescribed effort.",
+          "reason": "Nov 3: 25 lb × 20 three times, final RIR 1. Use 25 × 18 to restore RIR 2; no load increase.",
           "restSeconds": 90,
           "lastSet": {
-            "date": "2026-10-30",
+            "date": "2026-11-03",
             "weight": 25,
-            "unit": "lb",
             "reps": 20,
             "rir": 1,
             "bodyweight": false,
-            "loadSemantics": "per hand"
+            "loadSemantics": "25 lb per hand"
           }
         },
         {
@@ -785,10 +780,10 @@
   ],
   "sheetsReceipt": {
     "spreadsheetId": "1sNIsfGpvUEk_qcd5oj23vur7xdBFrBC4NfxOs6WVML4",
-    "range": "'Workout Log'!A1095:V1118",
-    "verifiedAt": "2026-11-02T18:14:07.629Z",
+    "range": "'Workout Log'!A1119:V1136",
+    "verifiedAt": "2026-11-03T14:00:00.000Z",
     "sessionIds": [
-      "b768ca6f-39a6-44c0-851e-9dcb52e9c97c"
+      "a8d7978b-2ad5-4310-9251-fed16e584511"
     ]
   }
 }
