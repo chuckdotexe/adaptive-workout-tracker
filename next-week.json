@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "revision": "processed-corrected-a8d7978b-2ad5-4310-9251-fed16e584511",
-  "updatedAt": "2026-11-03T14:05:00.000Z",
+  "revision": "processed-c4b764ae-c616-41d8-9149-bfb077e91f3d",
+  "updatedAt": "2026-11-04T14:15:27.808Z",
   "processedSessions": [
     {
       "id": "b4774b22-e8b1-406f-914c-cab7b67a2f86",
@@ -46,71 +46,13 @@
     {
       "id": "a8d7978b-2ad5-4310-9251-fed16e584511",
       "digest": "9a0c3043774b6d7988a75c23b2dff874d66807778481abe0036cff6112340b38"
+    },
+    {
+      "id": "2d63f559-f508-4b0a-8ecc-dd16c4be85c4",
+      "digest": "94abcae36d9fc53dcc7895a2c0206101a88abaa41e2a1e6e601cb1fb08ca3ab6"
     }
   ],
   "workouts": [
-    {
-      "week": 3,
-      "day": 3,
-      "dayLabel": "Wednesday - Cardio + Core",
-      "exercises": [
-        {
-          "exerciseId": "w3d3e1",
-          "weight": null,
-          "targetReps": 1,
-          "increment": null,
-          "reason": "Latest Oct 30 10 min at 2.7 mph/11%; Oct 28 30 min at the same pace/incline. Preserve each program duration and conversational effort. No resistance load and no invented pace/incline increase.",
-          "lastSet": {
-            "date": "2026-10-30",
-            "weight": null,
-            "unit": "",
-            "reps": 0,
-            "rir": null,
-            "bodyweight": false,
-            "loadSemantics": "total",
-            "kind": "cardio",
-            "durationMinutes": 10,
-            "speedMph": 2.7,
-            "inclinePercent": 11
-          },
-          "restSeconds": 90
-        },
-        {
-          "exerciseId": "w3d3e2",
-          "weight": null,
-          "targetReps": 13,
-          "increment": null,
-          "reason": "Keep bodyweight only. October 31 completed 15/15 at RIR 2/2, improving on October 23 ending at RIR 1; October 28 had a third set of 14 at RIR 1. For the three-set day start at 13–14; for the two-set day aim for 15 at RIR 2–3. No external load.",
-          "lastSet": {
-            "date": "2026-10-31",
-            "weight": null,
-            "unit": "",
-            "reps": 15,
-            "rir": 2,
-            "bodyweight": true,
-            "loadSemantics": "total"
-          },
-          "restSeconds": 90
-        },
-        {
-          "exerciseId": "w3d3e3",
-          "weight": 45,
-          "targetReps": 12,
-          "increment": null,
-          "reason": "Latest 40 × 15 RIR 2 then 45 × 15 RIR 5 supports 45 as the next working baseline, not 40. Start 12–15 on that same cable. Final RIR 5 warrants evaluating the next available step; its size is not yet confirmed.",
-          "restSeconds": 90,
-          "lastSet": {
-            "date": "2026-10-28",
-            "weight": 45,
-            "unit": "lb",
-            "reps": 15,
-            "rir": 5,
-            "bodyweight": false,
-            "loadSemantics": "total"
-          }
-        }
-      ]
-    },
     {
       "week": 3,
       "day": 4,
@@ -142,10 +84,11 @@
           "lastSet": {
             "date": "2026-11-02",
             "weight": 75,
+            "unit": "lb",
             "reps": 10,
             "rir": 3,
             "bodyweight": false,
-            "loadSemantics": "70 lb per hand"
+            "loadSemantics": "per hand"
           },
           "restSeconds": 90
         },
@@ -192,10 +135,11 @@
           "lastSet": {
             "date": "2026-11-03",
             "weight": 90,
+            "unit": "lb",
             "reps": 20,
             "rir": 2,
             "bodyweight": false,
-            "loadSemantics": ""
+            "loadSemantics": "total"
           },
           "restSeconds": 90
         },
@@ -279,15 +223,16 @@
           "weight": 140,
           "targetReps": 12,
           "increment": null,
-          "reason": "Nov 3: 140 lb × 12 twice at RIR 2. Maintain established 140 × 12; trial next machine increment only if available and full range preserved.",
+          "reason": "Hold 140 x12 for three sets: November 3 two sets x12 at RIR 2 improved from October 27 x12 at RIR 1; October 30 three sets 14/15/15 ended RIR 1. Build repeatable 12–15 at RIR 2 before a heavier trial on this three-set day; do not transfer two-set ceiling performance directly to three sets.",
           "restSeconds": 90,
           "lastSet": {
             "date": "2026-11-03",
             "weight": 140,
+            "unit": "lb",
             "reps": 12,
             "rir": 2,
             "bodyweight": false,
-            "loadSemantics": ""
+            "loadSemantics": "total"
           }
         },
         {
@@ -334,10 +279,11 @@
           "lastSet": {
             "date": "2026-11-03",
             "weight": 25,
+            "unit": "lb",
             "reps": 20,
             "rir": 1,
             "bodyweight": false,
-            "loadSemantics": "25 lb per hand"
+            "loadSemantics": "per hand"
           }
         },
         {
@@ -345,20 +291,19 @@
           "weight": null,
           "targetReps": 1,
           "increment": null,
-          "reason": "Latest Oct 30 10 min at 2.7 mph/11%; Oct 28 30 min at the same pace/incline. Preserve each program duration and conversational effort. No resistance load and no invented pace/incline increase.",
+          "reason": "November 4 completed 40 min at 2.6 mph/10%, versus October 28 30 min at 2.7 mph/11% and October 30 10 min after lifting. Longer duration at slightly lower intensity is not a like-for-like speed gain. Preserve this day's original duration, conversational effort; use 2.6 mph/10% only as a demonstrated reference, with no automatic increase or resistance load.",
           "restSeconds": 90,
           "lastSet": {
-            "date": "2026-10-30",
+            "date": "2026-11-04",
             "weight": null,
-            "unit": "",
             "reps": 0,
             "rir": null,
             "bodyweight": false,
-            "loadSemantics": "total",
+            "loadSemantics": "",
             "kind": "cardio",
-            "durationMinutes": 10,
-            "speedMph": 2.7,
-            "inclinePercent": 11
+            "durationMinutes": 40,
+            "speedMph": 2.6,
+            "inclinePercent": 10
           }
         }
       ]
@@ -404,10 +349,10 @@
         },
         {
           "exerciseId": "w3d6e3",
-          "weight": 200,
+          "weight": 190,
           "targetReps": 12,
           "increment": null,
-          "reason": "Conditional 200 lb trial if that setting is available on the same machine. October 31: 190 lb × 15/15 at RIR 3/4, versus 190 × 12 at RIR 2 on October 23. Both sets reached the rep ceiling with reserve, supporting a small increase now. Start at 12 reps; use 190 if the setting is unavailable or 12 reps cannot stay at RIR 2–3. The machine increment remains unconfirmed.",
+          "reason": "October 31 190 x15/15 at RIR 3/4 improved from October 23 170/190 x12 ending RIR 2; older machine records lack effort and may differ in setup. Ceiling with reserve supports the smallest available same-machine step at 12 reps/RIR 2. What setting follows 190? Keep demonstrated 190 x12 while confirming; replace the previous unverified 200 target, not an actual record.",
           "lastSet": {
             "date": "2026-10-31",
             "weight": 190,
@@ -445,10 +390,11 @@
           "lastSet": {
             "date": "2026-11-02",
             "weight": 30,
+            "unit": "lb",
             "reps": 15,
             "rir": 2,
             "bodyweight": false,
-            "loadSemantics": ""
+            "loadSemantics": "total"
           },
           "restSeconds": 90
         },
@@ -523,17 +469,20 @@
         {
           "exerciseId": "w3d6e10",
           "weight": null,
-          "targetReps": 15,
+          "targetReps": 10,
           "increment": null,
-          "reason": "Keep bodyweight only. October 31 completed 15/15 at RIR 2/2, improving on October 23 ending at RIR 1; October 28 had a third set of 14 at RIR 1. For the three-set day start at 13–14; for the two-set day aim for 15 at RIR 2–3. No external load.",
+          "reason": "November 4 bodyweight 15/11/11 at RIR 2/1/3 with reported shoulder/grip fatigue, versus October 31 15/15 at RIR 2 and October 28 15/15/14 ending RIR 1. Start 10 controlled reps per set at RIR 2, stop if grip/shoulders limit form; final RIR 3 does not justify adding reps after the earlier fatigue. No external load. Exercise substitution needs a separate program decision; preserve the original exercise here.",
           "lastSet": {
-            "date": "2026-10-31",
+            "date": "2026-11-04",
             "weight": null,
-            "unit": "",
-            "reps": 15,
-            "rir": 2,
+            "reps": 11,
+            "rir": 3,
+            "userComment": {
+              "text": "Shoulders and grip fatigued - need to switch exercises",
+              "date": "2026-11-04"
+            },
             "bodyweight": true,
-            "loadSemantics": "total"
+            "loadSemantics": "Bodyweight"
           },
           "restSeconds": 90
         }
@@ -553,10 +502,11 @@
           "lastSet": {
             "date": "2026-11-02",
             "weight": 255,
+            "unit": "lb",
             "reps": 5,
             "rir": 2,
             "bodyweight": false,
-            "loadSemantics": "255 lb"
+            "loadSemantics": "total"
           },
           "restSeconds": 90
         },
@@ -569,10 +519,11 @@
           "lastSet": {
             "date": "2026-11-02",
             "weight": 75,
+            "unit": "lb",
             "reps": 10,
             "rir": 3,
             "bodyweight": false,
-            "loadSemantics": "70 lb per hand"
+            "loadSemantics": "per hand"
           },
           "restSeconds": 90
         },
@@ -585,10 +536,11 @@
           "lastSet": {
             "date": "2026-11-02",
             "weight": 180,
+            "unit": "lb",
             "reps": 12,
             "rir": 2,
             "bodyweight": false,
-            "loadSemantics": ""
+            "loadSemantics": "total"
           },
           "restSeconds": 90
         },
@@ -601,10 +553,11 @@
           "lastSet": {
             "date": "2026-11-02",
             "weight": 160,
+            "unit": "lb",
             "reps": 12,
             "rir": 1,
             "bodyweight": false,
-            "loadSemantics": "160 lb"
+            "loadSemantics": "total"
           },
           "restSeconds": 90
         },
@@ -617,10 +570,11 @@
           "lastSet": {
             "date": "2026-11-02",
             "weight": 15,
+            "unit": "lb",
             "reps": 19,
             "rir": 1,
             "bodyweight": false,
-            "loadSemantics": ""
+            "loadSemantics": "total"
           },
           "restSeconds": 90
         },
@@ -633,10 +587,11 @@
           "lastSet": {
             "date": "2026-11-02",
             "weight": 70,
+            "unit": "lb",
             "reps": 11,
             "rir": 1,
             "bodyweight": false,
-            "loadSemantics": "70 lb total"
+            "loadSemantics": "total"
           },
           "restSeconds": 90
         },
@@ -649,10 +604,11 @@
           "lastSet": {
             "date": "2026-11-02",
             "weight": 30,
+            "unit": "lb",
             "reps": 15,
             "rir": 2,
             "bodyweight": false,
-            "loadSemantics": ""
+            "loadSemantics": "total"
           },
           "restSeconds": 90
         },
@@ -665,10 +621,11 @@
           "lastSet": {
             "date": "2026-11-02",
             "weight": 70,
+            "unit": "lb",
             "reps": 15,
             "rir": 2,
             "bodyweight": false,
-            "loadSemantics": ""
+            "loadSemantics": "total"
           },
           "restSeconds": 90
         }
@@ -688,11 +645,13 @@
           "lastSet": {
             "date": "2026-11-03",
             "weight": 300,
+            "unit": "lb",
             "reps": 10,
             "rir": 2,
             "bodyweight": false,
-            "loadSemantics": "280 lb"
-          }
+            "loadSemantics": "total"
+          },
+          "restSeconds": 90
         },
         {
           "exerciseId": "w4d2e2",
@@ -703,11 +662,13 @@
           "lastSet": {
             "date": "2026-11-03",
             "weight": 205,
+            "unit": "lb",
             "reps": 10,
             "rir": 2,
             "bodyweight": false,
-            "loadSemantics": "185 lb"
-          }
+            "loadSemantics": "total"
+          },
+          "restSeconds": 90
         },
         {
           "exerciseId": "w4d2e3",
@@ -718,11 +679,13 @@
           "lastSet": {
             "date": "2026-11-03",
             "weight": 140,
+            "unit": "lb",
             "reps": 12,
             "rir": 2,
             "bodyweight": false,
-            "loadSemantics": ""
-          }
+            "loadSemantics": "total"
+          },
+          "restSeconds": 90
         },
         {
           "exerciseId": "w4d2e4",
@@ -733,11 +696,13 @@
           "lastSet": {
             "date": "2026-11-03",
             "weight": 175,
+            "unit": "lb",
             "reps": 15,
             "rir": 2,
             "bodyweight": false,
-            "loadSemantics": "165 lb"
-          }
+            "loadSemantics": "total"
+          },
+          "restSeconds": 90
         },
         {
           "exerciseId": "w4d2e5",
@@ -748,11 +713,13 @@
           "lastSet": {
             "date": "2026-11-03",
             "weight": 25,
+            "unit": "lb",
             "reps": 20,
             "rir": 1,
             "bodyweight": false,
-            "loadSemantics": "25 lb per hand"
-          }
+            "loadSemantics": "per hand"
+          },
+          "restSeconds": 90
         },
         {
           "exerciseId": "w4d2e6",
@@ -763,21 +730,86 @@
           "lastSet": {
             "date": "2026-11-03",
             "weight": 90,
+            "unit": "lb",
             "reps": 20,
             "rir": 2,
             "bodyweight": false,
+            "loadSemantics": "total"
+          },
+          "restSeconds": 90
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "day": 3,
+      "dayLabel": "Wednesday - Cardio + Core",
+      "exercises": [
+        {
+          "exerciseId": "w4d3e1",
+          "weight": null,
+          "targetReps": 1,
+          "increment": null,
+          "reason": "November 4 completed 40 min at 2.6 mph/10%, versus October 28 30 min at 2.7 mph/11% and October 30 10 min after lifting. Longer duration at slightly lower intensity is not a like-for-like speed gain. Preserve this day's original duration, conversational effort; use 2.6 mph/10% only as a demonstrated reference, with no automatic increase or resistance load.",
+          "lastSet": {
+            "date": "2026-11-04",
+            "weight": null,
+            "reps": 0,
+            "rir": null,
+            "bodyweight": false,
+            "loadSemantics": "",
+            "kind": "cardio",
+            "durationMinutes": 40,
+            "speedMph": 2.6,
+            "inclinePercent": 10
+          },
+          "restSeconds": 90
+        },
+        {
+          "exerciseId": "w4d3e2",
+          "weight": null,
+          "targetReps": 10,
+          "increment": null,
+          "reason": "November 4 bodyweight 15/11/11 at RIR 2/1/3 with reported shoulder/grip fatigue, versus October 31 15/15 at RIR 2 and October 28 15/15/14 ending RIR 1. Start 10 controlled reps per set at RIR 2, stop if grip/shoulders limit form; final RIR 3 does not justify adding reps after the earlier fatigue. No external load. Exercise substitution needs a separate program decision; preserve the original exercise here.",
+          "lastSet": {
+            "date": "2026-11-04",
+            "weight": null,
+            "reps": 11,
+            "rir": 3,
+            "userComment": {
+              "text": "Shoulders and grip fatigued - need to switch exercises",
+              "date": "2026-11-04"
+            },
+            "bodyweight": true,
+            "loadSemantics": "Bodyweight"
+          },
+          "restSeconds": 90
+        },
+        {
+          "exerciseId": "w4d3e3",
+          "weight": 45,
+          "targetReps": 15,
+          "increment": null,
+          "reason": "Initialize at successful 45 lb: November 4 both sets 15 at RIR 3, following October 28 ramp 40/45 x15 at RIR 2/5. Ceiling with reserve supports a smallest available same-cable step at 12 reps/RIR 2. What increment is available? Retain 45 x15 until confirmed; do not invent a setting.",
+          "lastSet": {
+            "date": "2026-11-04",
+            "weight": 45,
+            "reps": 15,
+            "rir": 3,
+            "bodyweight": false,
             "loadSemantics": ""
-          }
+          },
+          "restSeconds": 90
         }
       ]
     }
   ],
   "sheetsReceipt": {
     "spreadsheetId": "1sNIsfGpvUEk_qcd5oj23vur7xdBFrBC4NfxOs6WVML4",
-    "range": "'Workout Log'!A1119:V1136",
-    "verifiedAt": "2026-11-03T14:00:00.000Z",
+    "range": "'Workout Log'!A1137:V1142",
+    "verifiedAt": "2026-11-04T14:15:27.808Z",
     "sessionIds": [
-      "a8d7978b-2ad5-4310-9251-fed16e584511"
+      "2d63f559-f508-4b0a-8ecc-dd16c4be85c4"
     ]
   }
 }
