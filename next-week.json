@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "revision": "processed-c4b764ae-c616-41d8-9149-bfb077e91f3d",
-  "updatedAt": "2026-11-04T14:15:27.808Z",
+  "revision": "processed-14a6118e-3b0d-498e-a694-e7f9d1fd4c2e",
+  "updatedAt": "2026-11-05T14:14:57.534Z",
   "processedSessions": [
     {
       "id": "b4774b22-e8b1-406f-914c-cab7b67a2f86",
@@ -50,135 +50,13 @@
     {
       "id": "2d63f559-f508-4b0a-8ecc-dd16c4be85c4",
       "digest": "94abcae36d9fc53dcc7895a2c0206101a88abaa41e2a1e6e601cb1fb08ca3ab6"
+    },
+    {
+      "id": "f5b7d68d-a7a7-4bdb-8b63-05f8f06b04ec",
+      "digest": "39b2da4dcf2f7dafa04025f93836ede348ec50d80e66bac73d3f2883d78a4645"
     }
   ],
   "workouts": [
-    {
-      "week": 3,
-      "day": 4,
-      "dayLabel": "Thursday - Upper B — Back + Shoulders",
-      "exercises": [
-        {
-          "exerciseId": "w3d4e1",
-          "weight": 145,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Latest 130/140/145 × 12 RIR 4/3/2 versus prior 115/130/130 × 12 establishes 145. Trial 145 for 10–12 at RIR 2 across working sets rather than resetting 130; return 140 if minimum 8 or effort cannot be repeated.",
-          "lastSet": {
-            "date": "2026-10-29",
-            "weight": 145,
-            "unit": "lb",
-            "reps": 12,
-            "rir": 2,
-            "bodyweight": false,
-            "loadSemantics": "total"
-          },
-          "restSeconds": 90
-        },
-        {
-          "exerciseId": "w3d4e2",
-          "weight": 75,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "November 2 recorded 75 per hand for 4 x 10 at RIR 3/4/2/3, versus October 29 11/11/10 at RIR 1/1/0 and October 26 70 x 10 ending RIR 1. Build toward 11–12 at 75, stopping at prescribed RIR 2. Final RIR 3 supports progression, but confirm the stale '70 lb per hand' note versus actual 75 and the available dumbbell step before adding load.",
-          "lastSet": {
-            "date": "2026-11-02",
-            "weight": 75,
-            "unit": "lb",
-            "reps": 10,
-            "rir": 3,
-            "bodyweight": false,
-            "loadSemantics": "per hand"
-          },
-          "restSeconds": 90
-        },
-        {
-          "exerciseId": "w3d4e3",
-          "weight": 60,
-          "targetReps": 12,
-          "increment": null,
-          "reason": "Latest 45/55/60 × 15 RIR 4/3/2 versus prior 40/45/50 supports 60 as a working trial. Start 12–15 at RIR 2 on that cable; use 55 if 10–12 cannot be repeated. Ramping alone is not an inconsistency penalty.",
-          "lastSet": {
-            "date": "2026-10-29",
-            "weight": 60,
-            "unit": "lb",
-            "reps": 15,
-            "rir": 2,
-            "bodyweight": false,
-            "loadSemantics": "total"
-          },
-          "restSeconds": 90
-        },
-        {
-          "exerciseId": "w3d4e4",
-          "weight": 15,
-          "targetReps": 18,
-          "increment": null,
-          "reason": "Latest 15 for 4 × 20 ended RIR 1; prior 20/20/20/18 also ended RIR 1. Keep 15 and target 17–19 so effort stays at RIR 2; no heavier trial while final sets exceed prescribed effort.",
-          "lastSet": {
-            "date": "2026-10-29",
-            "weight": 15,
-            "unit": "lb",
-            "reps": 20,
-            "rir": 1,
-            "bodyweight": false,
-            "loadSemantics": "total"
-          },
-          "restSeconds": 90
-        },
-        {
-          "exerciseId": "w3d4e5",
-          "weight": 90,
-          "targetReps": 20,
-          "increment": null,
-          "reason": "Nov 3: 70/75/90 lb × 20, each RIR 2 on same confirmed machine. Adopt successful 90-lb final working set as next baseline, trial 90 for controlled reps; do not assume all three sets can immediately match.",
-          "lastSet": {
-            "date": "2026-11-03",
-            "weight": 90,
-            "unit": "lb",
-            "reps": 20,
-            "rir": 2,
-            "bodyweight": false,
-            "loadSemantics": "total"
-          },
-          "restSeconds": 90
-        },
-        {
-          "exerciseId": "w3d4e6",
-          "weight": 90,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Use the user-confirmed 90 lb machine setting. October 31 reached 15/14/12 at RIR 2/1/0, following 15/15/12 ending at RIR 0 on October 29. Hold 90 and start at 10 reps, stopping at RIR 2–3 on every set. If 10 cannot meet that effort, use the previously demonstrated 80 lb setting; repeated failure does not support an increase.",
-          "lastSet": {
-            "date": "2026-10-31",
-            "weight": 90,
-            "unit": "lb",
-            "reps": 12,
-            "rir": 0,
-            "bodyweight": false,
-            "loadSemantics": "total"
-          },
-          "restSeconds": 90
-        },
-        {
-          "exerciseId": "w3d4e7",
-          "weight": 65,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Latest 60 × 15 then 65 × 15/12 RIR 4/2/0 demonstrates 65 before fatigue. Trial 65 for 10 at RIR 2 instead of forcing 15 or reverting 55. Return 60 if 10 already requires RIR 0–1; rope setup must match.",
-          "lastSet": {
-            "date": "2026-10-29",
-            "weight": 65,
-            "unit": "lb",
-            "reps": 12,
-            "rir": 0,
-            "bodyweight": false,
-            "loadSemantics": "total"
-          },
-          "restSeconds": 90
-        }
-      ]
-    },
     {
       "week": 3,
       "day": 5,
@@ -296,10 +174,11 @@
           "lastSet": {
             "date": "2026-11-04",
             "weight": null,
+            "unit": "",
             "reps": 0,
             "rir": null,
             "bodyweight": false,
-            "loadSemantics": "",
+            "loadSemantics": "total",
             "kind": "cardio",
             "durationMinutes": 40,
             "speedMph": 2.6,
@@ -401,17 +280,16 @@
         {
           "exerciseId": "w3d6e6",
           "weight": 90,
-          "targetReps": 10,
+          "targetReps": 12,
           "increment": null,
-          "reason": "Use the user-confirmed 90 lb machine setting. October 31 reached 15/14/12 at RIR 2/1/0, following 15/15/12 ending at RIR 0 on October 29. Hold 90 and start at 10 reps, stopping at RIR 2–3 on every set. If 10 cannot meet that effort, use the previously demonstrated 80 lb setting; repeated failure does not support an increase.",
+          "reason": "Nov 5 at confirmed 90 improved to 15/15/14 ending RIR 1 from Oct 31 15/14/12 ending RIR 0. Start with 12 reps and stop at RIR 2. Keep 90 while improving repeatability and use demonstrated 80 if the minimum 10 exceeds target effort.",
           "lastSet": {
-            "date": "2026-10-31",
+            "date": "2026-11-05",
             "weight": 90,
-            "unit": "lb",
-            "reps": 12,
-            "rir": 0,
+            "reps": 14,
+            "rir": 1,
             "bodyweight": false,
-            "loadSemantics": "total"
+            "loadSemantics": "30 lb"
           },
           "restSeconds": 90
         },
@@ -475,14 +353,15 @@
           "lastSet": {
             "date": "2026-11-04",
             "weight": null,
+            "unit": "",
             "reps": 11,
             "rir": 3,
+            "bodyweight": true,
+            "loadSemantics": "total",
             "userComment": {
               "text": "Shoulders and grip fatigued - need to switch exercises",
               "date": "2026-11-04"
-            },
-            "bodyweight": true,
-            "loadSemantics": "Bodyweight"
+            }
           },
           "restSeconds": 90
         }
@@ -512,18 +391,17 @@
         },
         {
           "exerciseId": "w4d1e2",
-          "weight": 75,
-          "targetReps": 10,
+          "weight": 80,
+          "targetReps": 8,
           "increment": null,
-          "reason": "Adopt recorded 75 per hand: November 2 four sets of 10 at RIR 3/4/2/3, improved from October 29 11/11/10 ending RIR 0 and October 26 70 x 10 ending RIR 1. At the 10-rep ceiling, a smallest available dumbbell step merits review. First confirm actual 75 versus stale '70 lb per hand' note and available step; retain 75 meanwhile, stop at RIR 2. Do not infer a heavier setting.",
+          "reason": "Nov 5 recorded 80 per hand for 9/9/9 at RIR 2/1/2, after Nov 2 recorded 75 for 4×10 ending RIR 3. Adopt 80 for 8 while stopping at RIR 2, with 75 as fallback if late sets exceed effort. Confirm the per-hand setting because the inherited label says 70. Use 75 if the 80 convention cannot be reproduced.",
           "lastSet": {
-            "date": "2026-11-02",
-            "weight": 75,
-            "unit": "lb",
-            "reps": 10,
-            "rir": 3,
+            "date": "2026-11-05",
+            "weight": 80,
+            "reps": 9,
+            "rir": 2,
             "bodyweight": false,
-            "loadSemantics": "per hand"
+            "loadSemantics": "70 lb per hand"
           },
           "restSeconds": 90
         },
@@ -726,15 +604,14 @@
           "weight": 90,
           "targetReps": 20,
           "increment": null,
-          "reason": "Nov 3: ramp 70/75/90 × 20, final RIR 2. Trial 90 as new working baseline; adjust if rep quality or effort drops.",
+          "reason": "Nov 5 held 90 across 18/20/20 at RIR 2 on the confirmed machine after Nov 3 ramped 70/75/90×20. Keep 90 and build the opening set toward 20 at RIR 2. The older successful 100 setting is a bounded trial at 12–15 once all three sets reach 20 with reserve.",
           "lastSet": {
-            "date": "2026-11-03",
+            "date": "2026-11-05",
             "weight": 90,
-            "unit": "lb",
             "reps": 20,
             "rir": 2,
             "bodyweight": false,
-            "loadSemantics": "total"
+            "loadSemantics": ""
           },
           "restSeconds": 90
         }
@@ -754,10 +631,11 @@
           "lastSet": {
             "date": "2026-11-04",
             "weight": null,
+            "unit": "",
             "reps": 0,
             "rir": null,
             "bodyweight": false,
-            "loadSemantics": "",
+            "loadSemantics": "total",
             "kind": "cardio",
             "durationMinutes": 40,
             "speedMph": 2.6,
@@ -774,14 +652,15 @@
           "lastSet": {
             "date": "2026-11-04",
             "weight": null,
+            "unit": "",
             "reps": 11,
             "rir": 3,
+            "bodyweight": true,
+            "loadSemantics": "total",
             "userComment": {
               "text": "Shoulders and grip fatigued - need to switch exercises",
               "date": "2026-11-04"
-            },
-            "bodyweight": true,
-            "loadSemantics": "Bodyweight"
+            }
           },
           "restSeconds": 90
         },
@@ -794,10 +673,130 @@
           "lastSet": {
             "date": "2026-11-04",
             "weight": 45,
+            "unit": "lb",
             "reps": 15,
             "rir": 3,
             "bodyweight": false,
+            "loadSemantics": "total"
+          },
+          "restSeconds": 90
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "day": 4,
+      "dayLabel": "Thursday - Upper B — Back + Shoulders",
+      "exercises": [
+        {
+          "exerciseId": "w4d4e1",
+          "weight": 145,
+          "targetReps": 12,
+          "increment": null,
+          "reason": "Nov 5 repeated 145 for all three sets of 12 at RIR 3/3/2, after Oct 29 reached 145 only on the final set. At the ceiling, trial the smallest available same-machine step for 8–10 at RIR 2 once confirmed. What setting follows 145? Until then repeat 145.",
+          "lastSet": {
+            "date": "2026-11-05",
+            "weight": 145,
+            "reps": 12,
+            "rir": 2,
+            "bodyweight": false,
             "loadSemantics": ""
+          },
+          "restSeconds": 90
+        },
+        {
+          "exerciseId": "w4d4e2",
+          "weight": 80,
+          "targetReps": 8,
+          "increment": null,
+          "reason": "Nov 5 recorded 80 per hand for 9/9/9 at RIR 2/1/2, after Nov 2 recorded 75 for 4×10 ending RIR 3. Adopt 80 for 8 while stopping at RIR 2, with 75 as fallback if late sets exceed effort. Confirm the per-hand setting because the inherited label says 70. Use 75 if the 80 convention cannot be reproduced.",
+          "lastSet": {
+            "date": "2026-11-05",
+            "weight": 80,
+            "reps": 9,
+            "rir": 2,
+            "bodyweight": false,
+            "loadSemantics": "70 lb per hand"
+          },
+          "restSeconds": 90
+        },
+        {
+          "exerciseId": "w4d4e3",
+          "weight": 65,
+          "targetReps": 12,
+          "increment": null,
+          "reason": "Nov 5 recorded 65×12 twice at RIR 2 before 60×12 at RIR 2 on set three. Oct 29 reached 60×15 after working up from 45. Start at the demonstrated 65 for 10–12 and use 60 on later sets if needed to maintain RIR 2.",
+          "lastSet": {
+            "date": "2026-11-05",
+            "weight": 60,
+            "reps": 12,
+            "rir": 2,
+            "bodyweight": false,
+            "loadSemantics": ""
+          },
+          "restSeconds": 90
+        },
+        {
+          "exerciseId": "w4d4e4",
+          "weight": 15,
+          "targetReps": 20,
+          "increment": null,
+          "reason": "Nov 5 repeated 15×20 on four sets ending RIR 3, up from RIR 1 at the same reps on Oct 29. What is the smallest available cable step above 15? Trial it at 12–15 reps and RIR 2, returning to 15 if the minimum is too hard. Until confirmed use 15×20.",
+          "lastSet": {
+            "date": "2026-11-05",
+            "weight": 15,
+            "reps": 20,
+            "rir": 3,
+            "bodyweight": false,
+            "loadSemantics": ""
+          },
+          "restSeconds": 90
+        },
+        {
+          "exerciseId": "w4d4e5",
+          "weight": 90,
+          "targetReps": 20,
+          "increment": null,
+          "reason": "Nov 5 held 90 across 18/20/20 at RIR 2 on the confirmed machine after Nov 3 ramped 70/75/90×20. Keep 90 and build the opening set toward 20 at RIR 2. The older successful 100 setting is a bounded trial at 12–15 once all three sets reach 20 with reserve.",
+          "lastSet": {
+            "date": "2026-11-05",
+            "weight": 90,
+            "reps": 20,
+            "rir": 2,
+            "bodyweight": false,
+            "loadSemantics": ""
+          },
+          "restSeconds": 90
+        },
+        {
+          "exerciseId": "w4d4e6",
+          "weight": 90,
+          "targetReps": 12,
+          "increment": null,
+          "reason": "Nov 5 at confirmed 90 improved to 15/15/14 ending RIR 1 from Oct 31 15/14/12 ending RIR 0. Start with 12 reps and stop at RIR 2. Keep 90 while improving repeatability and use demonstrated 80 if the minimum 10 exceeds target effort.",
+          "lastSet": {
+            "date": "2026-11-05",
+            "weight": 90,
+            "reps": 14,
+            "rir": 1,
+            "bodyweight": false,
+            "loadSemantics": "30 lb"
+          },
+          "restSeconds": 90
+        },
+        {
+          "exerciseId": "w4d4e7",
+          "weight": 65,
+          "targetReps": 10,
+          "increment": null,
+          "reason": "Nov 5 recorded 65×15/10/10 at RIR 3/2/2, versus Oct 29 65×15/12 ending RIR 0 after a 60 opening set. Repeat 65×10 across sets, then build reps while maintaining RIR 2. The late drop from 15 to 10 argues against adding load. Confirm the same rope and stack given the older 55 label.",
+          "lastSet": {
+            "date": "2026-11-05",
+            "weight": 65,
+            "reps": 10,
+            "rir": 2,
+            "bodyweight": false,
+            "loadSemantics": "55 lb"
           },
           "restSeconds": 90
         }
@@ -806,10 +805,10 @@
   ],
   "sheetsReceipt": {
     "spreadsheetId": "1sNIsfGpvUEk_qcd5oj23vur7xdBFrBC4NfxOs6WVML4",
-    "range": "'Workout Log'!A1137:V1142",
-    "verifiedAt": "2026-11-04T14:15:27.808Z",
+    "range": "'Workout Log'!A1143:V1164",
+    "verifiedAt": "2026-11-05T14:14:57.534Z",
     "sessionIds": [
-      "2d63f559-f508-4b0a-8ecc-dd16c4be85c4"
+      "f5b7d68d-a7a7-4bdb-8b63-05f8f06b04ec"
     ]
   }
 }
