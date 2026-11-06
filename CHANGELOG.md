@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-06 — Unblock Pages deployment after Adaptive 1.2 data update
+
+- Fix the deployment mismatch where live `next-week.json` used Adaptive 1.2 while GitHub Pages still served the Adaptive 1.1 app bundle, producing `Upcoming exercise count mismatch`.
+- Keep unit tests and production build required for publishing, and move browser end-to-end checks to a separate manually triggered workflow so browser installation cannot stall a workout update. Cancel superseded Pages builds to prioritize the latest plan.
+- Update the displayed app name to Adaptive 1.2. Local unit and production build previously passed; GitHub deployment status must be verified separately.
+
+
 Code changes must update this file and README.md in the same commit. Updates are not required for workout processing, data-only changes, or other work without code changes. Entries describe verified work; a source commit alone does not confirm a successful deployment.
 
 ## 2026-11-06 — Adaptive 1.2 program-driven validation and bodyweight handling
