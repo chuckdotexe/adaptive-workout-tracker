@@ -6,6 +6,7 @@ import {makeSubmission,seedPlan,validateQueue} from '../lib/online-workflow.mjs'
 import {sheetRows} from '../lib/processing.mjs';
 import {GitHubStore} from '../lib/github-store.mjs';
 import {GitHubFixture} from './helpers/github-fixture.mjs';
+import {isBodyweight} from '../lib/activity.mjs';
 const program=JSON.parse(fs.readFileSync(new URL('../data/ironledger-program.json',import.meta.url)));
 const exercises=program.filter(e=>e.week===1&&e.day===5),cardio=exercises.at(-1);
 function partial(){let state=start(empty(),1,5,'cardio-test','2026-10-22');state.sessions[0].skipped=Object.fromEntries(exercises.slice(0,-1).map(e=>[e.id,'Machine unavailable']));return state;}
@@ -31,8 +32,12 @@ test('temporary failure while reading Git retries the whole submission without d
  assert.equal(fixture.files['completed.json'].sessions.length,1);
 });
 
-test('hanging leg raises store bodyweight rather than a stale external load',()=>{
- const ex=program.find(e=>e.week===1&&e.day===3&&e.name==='Hanging Leg Raise');
+test('bodyweight exercises use JSON load semantics rather than a hard-coded exercise name',()=>{
+ const ex=program.find(e=>e.weightText==='Bodyweight');
+ assert.ok(ex,'Expected a bodyweight exercise defined by JSON metadata');
+ assert.equal(isBodyweight(ex),true);
+ assert.equal(isBodyweight({...ex,name:'Renamed Supported Ab Exercise'}),true);
+ assert.equal(isBodyweight({...ex,name:'Kneeling Cable Crunch',weightText:''}),false);
  const state=record(start(empty(),1,3,'bodyweight-test','2026-10-23'),ex,{id:'raise',weight:50,reps:12,rir:2});
  validate(JSON.parse(JSON.stringify(state)));
  const set=state.sessions[0].sets[0];assert.equal(set.weight,null);assert.equal(set.bodyweight,true);assert.equal(set.unit,'');

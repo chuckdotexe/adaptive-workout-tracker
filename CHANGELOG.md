@@ -2,6 +2,13 @@
 
 Code changes must update this file and README.md in the same commit. Updates are not required for workout processing, data-only changes, or other work without code changes. Entries describe verified work; a source commit alone does not confirm a successful deployment.
 
+## 2026-11-06 — Adaptive 1.2 program-driven validation and bodyweight handling
+
+- Fix the GitHub Pages build failure introduced by changing the active JSON program: tests had hard-coded a 307-row exercise count and the original hanging-leg-raise name, despite the current 299-row Adaptive 1.2 program.
+- Treat the source CSV as historical and validate the active JSON exercise inventory, rep/effort ranges and upcoming-plan references directly. Do not require current names, set counts, source-row mappings or exercise totals to match the original import.
+- Derive bodyweight behavior from JSON exercise metadata (`bodyweight` or `weightText`) instead of recognizing only the literal name "Hanging Leg Raise". Add coverage proving a renamed bodyweight exercise retains no external load.
+- Validation: all 61 unit tests passed locally after the fix. Build and deployment status must be checked separately in GitHub Actions.
+
 ## 2026-11-06 — Adaptive 1.1 and upcoming Saturday workout
 
 - Apply the revised volume and exercise spacing from week 3 day 6 forward while preserving all earlier workout prescriptions and exercise IDs. Move dumbbell lateral raises off lower-body days and onto Saturday; remove redundant Saturday curls/extensions, add one normal-week hammer-curl set, trim Friday back extensions and Monday crunches. Keep weekly cardio unchanged.
