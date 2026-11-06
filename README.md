@@ -9,7 +9,7 @@ The website reads the files directly from `chuckdotexe/adaptive-workout-tracker`
 
 Dumbbell lateral raises are named **DB Lateral Raise**; cable variations remain separate. Older dumbbell names still match last-set history.
 
-The current program is **Adaptive 1**. Its six day labels are Upper A — Chest Focus; Lower A — Quad Focus + Delts; Cardio + Core; Upper B — Back + Shoulders; Lower B — Posterior Chain + Delts; and Upper C — Chest + Arms. Weekdays and program order stay the same.
+The current program is **Adaptive 1.1**, effective with week 3, day 6 (Saturday, November 7, 2026). Its six day labels are Upper A — Chest Focus; Lower A — Quad Focus + Delts; Cardio + Core; Upper B — Back + Shoulders; Lower B — Posterior Chain; and Upper C — Chest + Arms + Delts. Completed weeks and earlier prescriptions remain unchanged in the public program. Weekdays, cardio prescriptions, working loads, adaptive targets and processed-session receipts remain intact. From the effective day onward, direct dumbbell lateral raises move from lower-body days to Saturday (alongside Monday single-arm and Thursday cable laterals); Saturday loses a redundant Bayesian curl and straight-bar triceps extension, gains a third hammer-curl set, and Friday loses one back-extension set. Monday cable crunch and Tuesday dumbbell laterals are removed in future weeks. Regular weeks retain a 2-reps-in-reserve strength target. **Week 5 remains a deload** with approximately half the regular sets and 3–4 reps in reserve; the new Saturday lateral raise has two deload sets, and the hammer curl remains one set that week.
 
 ## Use
 

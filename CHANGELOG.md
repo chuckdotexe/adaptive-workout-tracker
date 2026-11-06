@@ -2,6 +2,13 @@
 
 Code changes must update this file and README.md in the same commit. Updates are not required for workout processing, data-only changes, or other work without code changes. Entries describe verified work; a source commit alone does not confirm a successful deployment.
 
+## 2026-11-06 — Adaptive 1.1 and upcoming Saturday workout
+
+- Apply the revised volume and exercise spacing from week 3 day 6 forward while preserving all earlier workout prescriptions and exercise IDs. Move dumbbell lateral raises off lower-body days and onto Saturday; remove redundant Saturday curls/extensions, add one normal-week hammer-curl set, trim Friday back extensions and Monday crunches. Keep weekly cardio unchanged.
+- Preserve week 5 as a reduced-volume deload with 3–4 reps in reserve, instead of applying normal-week sets and effort targets. Update the source CSV, program JSON, app program name and next-six-workouts prescriptions together.
+- Retain existing adaptive loads, last-set history, processing receipts and the unprocessed workout queue. Add validation that the revised plan and CSV remain aligned after the plan advances.
+- Validation before publication: all 61 unit checks, production build and TypeScript checks passed. Browser end-to-end checks were attempted but could not start because the Chromium and WebKit Playwright browser executables were not installed in this environment; no browser behavior was assessed.
+
 ## 2026-10-31 — Show personal machine reminders
 
 - Show the latest nonempty user comment when revisiting an exercise, separately from program notes. Preserve comment provenance through Sheets processing; do not attribute unmarked legacy notes to the user.

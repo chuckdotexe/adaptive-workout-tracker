@@ -1924,7 +1924,7 @@
     "id": "w3d6e1",
     "week": 3,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Dumbbell Incline Press",
     "weight": 85,
     "weightText": "85 lb per hand",
@@ -1941,7 +1941,7 @@
     "id": "w3d6e2",
     "week": 3,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Low to High Cable Fly",
     "weight": null,
     "weightText": "",
@@ -1958,7 +1958,7 @@
     "id": "w3d6e3",
     "week": 3,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Chest Fly (Machine)",
     "weight": 140,
     "weightText": "140 lb",
@@ -1975,7 +1975,7 @@
     "id": "w3d6e4",
     "week": 3,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Preacher Curl",
     "weight": 70,
     "weightText": "70 lb total",
@@ -1992,7 +1992,7 @@
     "id": "w3d6e5",
     "week": 3,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Single-Arm Overhead Cable Triceps Extension",
     "weight": null,
     "weightText": "",
@@ -2006,27 +2006,10 @@
     "sourceCsvRow": 140
   },
   {
-    "id": "w3d6e6",
-    "week": 3,
-    "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
-    "name": "Bayesian Curl",
-    "weight": 30,
-    "weightText": "30 lb",
-    "sets": 3,
-    "minReps": 10,
-    "maxReps": 15,
-    "rirMin": 2,
-    "rirMax": 2,
-    "restSeconds": 75,
-    "notes": "Target RPE 8.0; rest 75 sec. Reps per side. Controlled stretch; arm behind torso. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 141
-  },
-  {
     "id": "w3d6e7",
     "week": 3,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Cross-Body Cable Triceps Extension",
     "weight": null,
     "weightText": "",
@@ -2037,47 +2020,30 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Reps per side. Per arm; stable elbow position. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 142
+    "sourceCsvRow": 141
   },
   {
     "id": "w3d6e8",
     "week": 3,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Hammer Curl",
     "weight": null,
     "weightText": "",
-    "sets": 2,
+    "sets": 3,
     "minReps": 10,
     "maxReps": 15,
     "rirMin": 2,
     "rirMax": 2,
     "restSeconds": 60,
     "notes": "Target RPE 8.0; rest 60 sec. Neutral grip; avoid torso swing. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 143
-  },
-  {
-    "id": "w3d6e9",
-    "week": 3,
-    "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
-    "name": "Straight-Bar Cable Triceps Extension",
-    "weight": null,
-    "weightText": "",
-    "sets": 2,
-    "minReps": 12,
-    "maxReps": 15,
-    "rirMin": 2,
-    "rirMax": 2,
-    "restSeconds": 60,
-    "notes": "Target RPE 8.0; rest 60 sec. Non-rope variation; substitute single-handle cross-body if uncomfortable. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 144
+    "sourceCsvRow": 142
   },
   {
     "id": "w3d6e10",
     "week": 3,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Hanging Leg Raise",
     "weight": null,
     "weightText": "",
@@ -2088,7 +2054,24 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "ORIGINAL EXERCISE: Hanging Straight-Leg Raise. Perform STRICT HANGING STRAIGHT-LEG RAISES, not knee raises. Target RPE 8.0; rest 75 sec. Strict with pelvic curl. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 145
+    "sourceCsvRow": 143
+  },
+  {
+    "id": "w3d6e11",
+    "week": 3,
+    "day": 6,
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
+    "name": "DB Lateral Raise",
+    "weight": 25,
+    "weightText": "25 lb per hand",
+    "sets": 3,
+    "minReps": 12,
+    "maxReps": 20,
+    "rirMin": 2,
+    "rirMax": 2,
+    "restSeconds": 60,
+    "notes": "Target RPE 8.0; rest 60 sec. Smooth controlled reps, avoid shrugging and body swing. Keep 2 reps in reserve after chest pressing. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
+    "sourceCsvRow": 144
   },
   {
     "id": "w4d1e1",
@@ -2105,7 +2088,7 @@
     "rirMax": 2,
     "restSeconds": 180,
     "notes": "Target RPE 8.0; rest 180 sec. Heavy compound; leave 1-3 reps in reserve. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 148
+    "sourceCsvRow": 147
   },
   {
     "id": "w4d1e2",
@@ -2122,7 +2105,7 @@
     "rirMax": 2,
     "restSeconds": 120,
     "notes": "ORIGINAL EXERCISE: Chest Supported Row (Dumbbell). Perform CHEST-SUPPORTED DUMBBELL ROW; 70 lb PER HAND, not machine weight. Target RPE 8.0; rest 120 sec. Controlled eccentric; full supported range. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 149
+    "sourceCsvRow": 148
   },
   {
     "id": "w4d1e3",
@@ -2139,7 +2122,7 @@
     "rirMax": 2,
     "restSeconds": 120,
     "notes": "Target RPE 8.0; rest 120 sec. Low incline; maintain upper-chest tension. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 150
+    "sourceCsvRow": 149
   },
   {
     "id": "w4d1e4",
@@ -2156,7 +2139,7 @@
     "rirMax": 2,
     "restSeconds": 90,
     "notes": "Target RPE 8.0; rest 90 sec. Drive elbows down; control stretch. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 151
+    "sourceCsvRow": 150
   },
   {
     "id": "w4d1e5",
@@ -2173,7 +2156,7 @@
     "rirMax": 2,
     "restSeconds": 60,
     "notes": "Target RPE 8.0; rest 60 sec. Per arm; no body swing. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 152
+    "sourceCsvRow": 151
   },
   {
     "id": "w4d1e6",
@@ -2190,7 +2173,7 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Controlled lowering; elbow-friendly grip. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 153
+    "sourceCsvRow": 152
   },
   {
     "id": "w4d1e7",
@@ -2207,24 +2190,7 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Per arm; use pain-free depth. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 154
-  },
-  {
-    "id": "w4d1e8",
-    "week": 4,
-    "day": 1,
-    "dayLabel": "Monday - Upper A — Chest Focus",
-    "name": "Cable Crunch",
-    "weight": null,
-    "weightText": "",
-    "sets": 3,
-    "minReps": 10,
-    "maxReps": 15,
-    "rirMin": 2,
-    "rirMax": 2,
-    "restSeconds": 60,
-    "notes": "Target RPE 8.0; rest 60 sec. Progress load while maintaining controlled spinal flexion. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 155
+    "sourceCsvRow": 153
   },
   {
     "id": "w4d2e1",
@@ -2241,7 +2207,7 @@
     "rirMax": 2,
     "restSeconds": 150,
     "notes": "Target RPE 8.0; rest 150 sec. Choose leg press or hip sled; consistent machine and depth for progression. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 157
+    "sourceCsvRow": 155
   },
   {
     "id": "w4d2e2",
@@ -2258,7 +2224,7 @@
     "rirMax": 2,
     "restSeconds": 150,
     "notes": "Target RPE 8.0; rest 150 sec. Neutral spine; 1-3 reps in reserve. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 158
+    "sourceCsvRow": 156
   },
   {
     "id": "w4d2e3",
@@ -2275,7 +2241,7 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Full comfortable knee flexion. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 159
+    "sourceCsvRow": 157
   },
   {
     "id": "w4d2e4",
@@ -2292,24 +2258,7 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Pause at stretched position. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 160
-  },
-  {
-    "id": "w4d2e5",
-    "week": 4,
-    "day": 2,
-    "dayLabel": "Tuesday - Lower A — Quad Focus + Delts",
-    "name": "DB Lateral Raise",
-    "weight": 25,
-    "weightText": "25 lb per hand",
-    "sets": 3,
-    "minReps": 12,
-    "maxReps": 20,
-    "rirMin": 2,
-    "rirMax": 2,
-    "restSeconds": 60,
-    "notes": "Target RPE 8.0; rest 60 sec. Smooth controlled reps. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 161
+    "sourceCsvRow": 158
   },
   {
     "id": "w4d2e6",
@@ -2326,7 +2275,7 @@
     "rirMax": 2,
     "restSeconds": 60,
     "notes": "Target RPE 8.0; rest 60 sec. Rear delts; avoid shrugging. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 162
+    "sourceCsvRow": 159
   },
   {
     "id": "w4d3e1",
@@ -2343,7 +2292,7 @@
     "rirMax": null,
     "restSeconds": null,
     "notes": "CARDIO ONLY: One timed cardio bout (not a resistance set). Cardio target: 30 min; Moderate pace. Conversational pace; incline and speed as tolerated. Keep cardio easy.",
-    "sourceCsvRow": 164
+    "sourceCsvRow": 161
   },
   {
     "id": "w4d3e2",
@@ -2360,7 +2309,7 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "ORIGINAL EXERCISE: Hanging Straight-Leg Raise. Perform STRICT HANGING STRAIGHT-LEG RAISES, not knee raises. Target RPE 8.0; rest 75 sec. Strict; posterior pelvic tilt; no swing. Progress difficulty after 15 strict reps. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 165
+    "sourceCsvRow": 162
   },
   {
     "id": "w4d3e3",
@@ -2377,7 +2326,7 @@
     "rirMax": 2,
     "restSeconds": 60,
     "notes": "Target RPE 8.0; rest 60 sec. Reps per side. Two sets per side; use controlled trunk rotation. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 166
+    "sourceCsvRow": 163
   },
   {
     "id": "w4d4e1",
@@ -2394,7 +2343,7 @@
     "rirMax": 2,
     "restSeconds": 90,
     "notes": "Target RPE 8.0; rest 90 sec. Controlled vertical pull; grip for comfort. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 168
+    "sourceCsvRow": 165
   },
   {
     "id": "w4d4e2",
@@ -2411,7 +2360,7 @@
     "rirMax": 2,
     "restSeconds": 90,
     "notes": "ORIGINAL EXERCISE: Chest Supported Row (Dumbbell). Perform CHEST-SUPPORTED DUMBBELL ROW; 70 lb PER HAND, not machine weight. Target RPE 8.0; rest 90 sec. Upper-back emphasis; controlled scapular movement. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 169
+    "sourceCsvRow": 166
   },
   {
     "id": "w4d4e3",
@@ -2428,7 +2377,7 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Reps per side. Elbow toward hip; full comfortable stretch. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 170
+    "sourceCsvRow": 167
   },
   {
     "id": "w4d4e4",
@@ -2445,7 +2394,7 @@
     "rirMax": 2,
     "restSeconds": 60,
     "notes": "Target RPE 8.0; rest 60 sec. Keep tension on lateral delts. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 171
+    "sourceCsvRow": 168
   },
   {
     "id": "w4d4e5",
@@ -2462,7 +2411,7 @@
     "rirMax": 2,
     "restSeconds": 60,
     "notes": "Target RPE 8.0; rest 60 sec. Rear delts. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 172
+    "sourceCsvRow": 169
   },
   {
     "id": "w4d4e6",
@@ -2479,7 +2428,7 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Reps per side. Arm slightly behind torso; steady upper arm. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 173
+    "sourceCsvRow": 170
   },
   {
     "id": "w4d4e7",
@@ -2496,13 +2445,13 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Controlled long-head stretch; pain-free range. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 174
+    "sourceCsvRow": 171
   },
   {
     "id": "w4d5e1",
     "week": 4,
     "day": 5,
-    "dayLabel": "Friday - Lower B — Posterior Chain + Delts",
+    "dayLabel": "Friday - Lower B — Posterior Chain",
     "name": "Hack Squat",
     "weight": 180,
     "weightText": "180 lb",
@@ -2513,13 +2462,13 @@
     "rirMax": 2,
     "restSeconds": 120,
     "notes": "Target RPE 8.0; rest 120 sec. Choose one machine and track consistently. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 176
+    "sourceCsvRow": 173
   },
   {
     "id": "w4d5e2",
     "week": 4,
     "day": 5,
-    "dayLabel": "Friday - Lower B — Posterior Chain + Delts",
+    "dayLabel": "Friday - Lower B — Posterior Chain",
     "name": "Leg Extension",
     "weight": 200,
     "weightText": "200 lb",
@@ -2530,13 +2479,13 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Controlled squeeze and descent. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 177
+    "sourceCsvRow": 174
   },
   {
     "id": "w4d5e3",
     "week": 4,
     "day": 5,
-    "dayLabel": "Friday - Lower B — Posterior Chain + Delts",
+    "dayLabel": "Friday - Lower B — Posterior Chain",
     "name": "Seated Leg Curl",
     "weight": null,
     "weightText": "",
@@ -2547,30 +2496,30 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Keep pelvis planted. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 178
+    "sourceCsvRow": 175
   },
   {
     "id": "w4d5e4",
     "week": 4,
     "day": 5,
-    "dayLabel": "Friday - Lower B — Posterior Chain + Delts",
+    "dayLabel": "Friday - Lower B — Posterior Chain",
     "name": "45-Degree Back Extension",
     "weight": null,
     "weightText": "",
-    "sets": 3,
+    "sets": 2,
     "minReps": 10,
     "maxReps": 15,
     "rirMin": 2,
     "rirMax": 2,
     "restSeconds": 90,
     "notes": "Target RPE 8.0; rest 90 sec. Hip hinge; no lumbar hyperextension; substitute comfortable hip thrust if back objects. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 179
+    "sourceCsvRow": 176
   },
   {
     "id": "w4d5e5",
     "week": 4,
     "day": 5,
-    "dayLabel": "Friday - Lower B — Posterior Chain + Delts",
+    "dayLabel": "Friday - Lower B — Posterior Chain",
     "name": "Standing Calf Raise",
     "weight": 300,
     "weightText": "300 lb",
@@ -2581,30 +2530,13 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Full comfortable range. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 180
-  },
-  {
-    "id": "w4d5e6",
-    "week": 4,
-    "day": 5,
-    "dayLabel": "Friday - Lower B — Posterior Chain + Delts",
-    "name": "DB Lateral Raise",
-    "weight": 25,
-    "weightText": "25 lb per hand",
-    "sets": 3,
-    "minReps": 12,
-    "maxReps": 20,
-    "rirMin": 2,
-    "rirMax": 2,
-    "restSeconds": 60,
-    "notes": "Target RPE 8.0; rest 60 sec. Leave 1-2 reps in reserve for Saturday pressing. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 181
+    "sourceCsvRow": 177
   },
   {
     "id": "w4d5e7",
     "week": 4,
     "day": 5,
-    "dayLabel": "Friday - Lower B — Posterior Chain + Delts",
+    "dayLabel": "Friday - Lower B — Posterior Chain",
     "name": "Incline Treadmill Walk",
     "weight": null,
     "weightText": "",
@@ -2615,13 +2547,13 @@
     "rirMax": null,
     "restSeconds": null,
     "notes": "CARDIO ONLY: One timed cardio bout (not a resistance set). Cardio target: 15-20 min; Moderate pace. Moderate conversational pace. Keep cardio easy.",
-    "sourceCsvRow": 182
+    "sourceCsvRow": 178
   },
   {
     "id": "w4d6e1",
     "week": 4,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Dumbbell Incline Press",
     "weight": 85,
     "weightText": "85 lb per hand",
@@ -2632,13 +2564,13 @@
     "rirMax": 2,
     "restSeconds": 150,
     "notes": "ORIGINAL EXERCISE: Incline Dumbbell Bench Press. Perform INCLINE DUMBBELL BENCH PRESS; load stated PER HAND, not barbell. Target RPE 8.0; rest 150 sec. Low-to-moderate incline; progress with clean form. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 184
+    "sourceCsvRow": 180
   },
   {
     "id": "w4d6e2",
     "week": 4,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Low to High Cable Fly",
     "weight": null,
     "weightText": "",
@@ -2649,13 +2581,13 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "ORIGINAL EXERCISE: Low-to-High Cable Chest Fly. IMPORTANT: Perform LOW-TO-HIGH cable fly (upward direction), NOT high-to-low. IronLedger library label is reversed only to match library. Target RPE 8.0; rest 75 sec. Bring hands upward/inward; avoid shrugging. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 185
+    "sourceCsvRow": 181
   },
   {
     "id": "w4d6e3",
     "week": 4,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Chest Fly (Machine)",
     "weight": 140,
     "weightText": "140 lb",
@@ -2666,13 +2598,13 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Controlled stretched position. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 186
+    "sourceCsvRow": 182
   },
   {
     "id": "w4d6e4",
     "week": 4,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Preacher Curl",
     "weight": 70,
     "weightText": "70 lb total",
@@ -2683,13 +2615,13 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "ORIGINAL EXERCISE: EZ-Bar Preacher Curl. Perform EZ-BAR PREACHER CURL using preacher bench, NOT a standing EZ bar curl. Target RPE 8.0; rest 75 sec. Controlled full comfortable range. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 187
+    "sourceCsvRow": 183
   },
   {
     "id": "w4d6e5",
     "week": 4,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Single-Arm Overhead Cable Triceps Extension",
     "weight": null,
     "weightText": "",
@@ -2700,30 +2632,13 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Per arm; pain-free elbow path. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 188
-  },
-  {
-    "id": "w4d6e6",
-    "week": 4,
-    "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
-    "name": "Bayesian Curl",
-    "weight": 30,
-    "weightText": "30 lb",
-    "sets": 3,
-    "minReps": 10,
-    "maxReps": 15,
-    "rirMin": 2,
-    "rirMax": 2,
-    "restSeconds": 75,
-    "notes": "Target RPE 8.0; rest 75 sec. Reps per side. Controlled stretch; arm behind torso. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 189
+    "sourceCsvRow": 184
   },
   {
     "id": "w4d6e7",
     "week": 4,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Cross-Body Cable Triceps Extension",
     "weight": null,
     "weightText": "",
@@ -2734,47 +2649,30 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Reps per side. Per arm; stable elbow position. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 190
+    "sourceCsvRow": 185
   },
   {
     "id": "w4d6e8",
     "week": 4,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Hammer Curl",
     "weight": null,
     "weightText": "",
-    "sets": 2,
+    "sets": 3,
     "minReps": 10,
     "maxReps": 15,
     "rirMin": 2,
     "rirMax": 2,
     "restSeconds": 60,
     "notes": "Target RPE 8.0; rest 60 sec. Neutral grip; avoid torso swing. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 191
-  },
-  {
-    "id": "w4d6e9",
-    "week": 4,
-    "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
-    "name": "Straight-Bar Cable Triceps Extension",
-    "weight": null,
-    "weightText": "",
-    "sets": 2,
-    "minReps": 12,
-    "maxReps": 15,
-    "rirMin": 2,
-    "rirMax": 2,
-    "restSeconds": 60,
-    "notes": "Target RPE 8.0; rest 60 sec. Non-rope variation; substitute single-handle cross-body if uncomfortable. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 192
+    "sourceCsvRow": 186
   },
   {
     "id": "w4d6e10",
     "week": 4,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Hanging Leg Raise",
     "weight": null,
     "weightText": "",
@@ -2785,7 +2683,24 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "ORIGINAL EXERCISE: Hanging Straight-Leg Raise. Perform STRICT HANGING STRAIGHT-LEG RAISES, not knee raises. Target RPE 8.0; rest 75 sec. Strict with pelvic curl. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 193
+    "sourceCsvRow": 187
+  },
+  {
+    "id": "w4d6e11",
+    "week": 4,
+    "day": 6,
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
+    "name": "DB Lateral Raise",
+    "weight": 25,
+    "weightText": "25 lb per hand",
+    "sets": 3,
+    "minReps": 12,
+    "maxReps": 20,
+    "rirMin": 2,
+    "rirMax": 2,
+    "restSeconds": 60,
+    "notes": "Target RPE 8.0; rest 60 sec. Smooth controlled reps, avoid shrugging and body swing. Keep 2 reps in reserve after chest pressing. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
+    "sourceCsvRow": 188
   },
   {
     "id": "w5d1e1",
@@ -2802,7 +2717,7 @@
     "rirMax": 4,
     "restSeconds": 180,
     "notes": "Target RPE 6.5; rest 180 sec. Heavy compound; leave 1-3 reps in reserve. Deload: about half sets; 3-4 reps in reserve.",
-    "sourceCsvRow": 196
+    "sourceCsvRow": 191
   },
   {
     "id": "w5d1e2",
@@ -2819,7 +2734,7 @@
     "rirMax": 4,
     "restSeconds": 120,
     "notes": "ORIGINAL EXERCISE: Chest Supported Row (Dumbbell). Perform CHEST-SUPPORTED DUMBBELL ROW; 70 lb PER HAND, not machine weight. Target RPE 6.5; rest 120 sec. Controlled eccentric; full supported range. Deload: about half sets; 3-4 reps in reserve.",
-    "sourceCsvRow": 197
+    "sourceCsvRow": 192
   },
   {
     "id": "w5d1e3",
@@ -2836,7 +2751,7 @@
     "rirMax": 4,
     "restSeconds": 120,
     "notes": "Target RPE 6.5; rest 120 sec. Low incline; maintain upper-chest tension. Deload: about half sets; 3-4 reps in reserve. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 198
+    "sourceCsvRow": 193
   },
   {
     "id": "w5d1e4",
@@ -2853,7 +2768,7 @@
     "rirMax": 4,
     "restSeconds": 90,
     "notes": "Target RPE 6.5; rest 90 sec. Drive elbows down; control stretch. Deload: about half sets; 3-4 reps in reserve.",
-    "sourceCsvRow": 199
+    "sourceCsvRow": 194
   },
   {
     "id": "w5d1e5",
@@ -2870,7 +2785,7 @@
     "rirMax": 4,
     "restSeconds": 60,
     "notes": "Target RPE 6.5; rest 60 sec. Per arm; no body swing. Deload: about half sets; 3-4 reps in reserve. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 200
+    "sourceCsvRow": 195
   },
   {
     "id": "w5d1e6",
@@ -2887,7 +2802,7 @@
     "rirMax": 4,
     "restSeconds": 75,
     "notes": "Target RPE 6.5; rest 75 sec. Controlled lowering; elbow-friendly grip. Deload: about half sets; 3-4 reps in reserve.",
-    "sourceCsvRow": 201
+    "sourceCsvRow": 196
   },
   {
     "id": "w5d1e7",
@@ -2904,24 +2819,7 @@
     "rirMax": 4,
     "restSeconds": 75,
     "notes": "Target RPE 6.5; rest 75 sec. Per arm; use pain-free depth. Deload: about half sets; 3-4 reps in reserve. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 202
-  },
-  {
-    "id": "w5d1e8",
-    "week": 5,
-    "day": 1,
-    "dayLabel": "Monday - Upper A — Chest Focus",
-    "name": "Cable Crunch",
-    "weight": null,
-    "weightText": "",
-    "sets": 2,
-    "minReps": 10,
-    "maxReps": 15,
-    "rirMin": 3,
-    "rirMax": 4,
-    "restSeconds": 60,
-    "notes": "Target RPE 6.5; rest 60 sec. Progress load while maintaining controlled spinal flexion. Deload: about half sets; 3-4 reps in reserve. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 203
+    "sourceCsvRow": 197
   },
   {
     "id": "w5d2e1",
@@ -2938,7 +2836,7 @@
     "rirMax": 4,
     "restSeconds": 150,
     "notes": "Target RPE 6.5; rest 150 sec. Choose leg press or hip sled; consistent machine and depth for progression. Deload: about half sets; 3-4 reps in reserve.",
-    "sourceCsvRow": 205
+    "sourceCsvRow": 199
   },
   {
     "id": "w5d2e2",
@@ -2955,7 +2853,7 @@
     "rirMax": 4,
     "restSeconds": 150,
     "notes": "Target RPE 6.5; rest 150 sec. Neutral spine; 1-3 reps in reserve. Deload: about half sets; 3-4 reps in reserve.",
-    "sourceCsvRow": 206
+    "sourceCsvRow": 200
   },
   {
     "id": "w5d2e3",
@@ -2972,7 +2870,7 @@
     "rirMax": 4,
     "restSeconds": 75,
     "notes": "Target RPE 6.5; rest 75 sec. Full comfortable knee flexion. Deload: about half sets; 3-4 reps in reserve.",
-    "sourceCsvRow": 207
+    "sourceCsvRow": 201
   },
   {
     "id": "w5d2e4",
@@ -2989,24 +2887,7 @@
     "rirMax": 4,
     "restSeconds": 75,
     "notes": "Target RPE 6.5; rest 75 sec. Pause at stretched position. Deload: about half sets; 3-4 reps in reserve.",
-    "sourceCsvRow": 208
-  },
-  {
-    "id": "w5d2e5",
-    "week": 5,
-    "day": 2,
-    "dayLabel": "Tuesday - Lower A — Quad Focus + Delts",
-    "name": "DB Lateral Raise",
-    "weight": 25,
-    "weightText": "25 lb per hand",
-    "sets": 2,
-    "minReps": 12,
-    "maxReps": 20,
-    "rirMin": 3,
-    "rirMax": 4,
-    "restSeconds": 60,
-    "notes": "Target RPE 6.5; rest 60 sec. Smooth controlled reps. Deload: about half sets; 3-4 reps in reserve.",
-    "sourceCsvRow": 209
+    "sourceCsvRow": 202
   },
   {
     "id": "w5d2e6",
@@ -3023,7 +2904,7 @@
     "rirMax": 4,
     "restSeconds": 60,
     "notes": "Target RPE 6.5; rest 60 sec. Rear delts; avoid shrugging. Deload: about half sets; 3-4 reps in reserve. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 210
+    "sourceCsvRow": 203
   },
   {
     "id": "w5d3e1",
@@ -3040,7 +2921,7 @@
     "rirMax": null,
     "restSeconds": null,
     "notes": "CARDIO ONLY: One timed cardio bout (not a resistance set). Cardio target: 30 min; Moderate pace. Conversational pace; incline and speed as tolerated. Keep cardio easy.",
-    "sourceCsvRow": 212
+    "sourceCsvRow": 205
   },
   {
     "id": "w5d3e2",
@@ -3057,7 +2938,7 @@
     "rirMax": 4,
     "restSeconds": 75,
     "notes": "ORIGINAL EXERCISE: Hanging Straight-Leg Raise. Perform STRICT HANGING STRAIGHT-LEG RAISES, not knee raises. Target RPE 6.5; rest 75 sec. Strict; posterior pelvic tilt; no swing. Progress difficulty after 15 strict reps. Deload: about half sets; 3-4 reps in reserve. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 213
+    "sourceCsvRow": 206
   },
   {
     "id": "w5d3e3",
@@ -3074,7 +2955,7 @@
     "rirMax": 4,
     "restSeconds": 60,
     "notes": "Target RPE 6.5; rest 60 sec. Reps per side. Two sets per side; use controlled trunk rotation. Deload: about half sets; 3-4 reps in reserve. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 214
+    "sourceCsvRow": 207
   },
   {
     "id": "w5d4e1",
@@ -3091,7 +2972,7 @@
     "rirMax": 4,
     "restSeconds": 90,
     "notes": "Target RPE 6.5; rest 90 sec. Controlled vertical pull; grip for comfort. Deload: about half sets; 3-4 reps in reserve. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 216
+    "sourceCsvRow": 209
   },
   {
     "id": "w5d4e2",
@@ -3108,7 +2989,7 @@
     "rirMax": 4,
     "restSeconds": 90,
     "notes": "ORIGINAL EXERCISE: Chest Supported Row (Dumbbell). Perform CHEST-SUPPORTED DUMBBELL ROW; 70 lb PER HAND, not machine weight. Target RPE 6.5; rest 90 sec. Upper-back emphasis; controlled scapular movement. Deload: about half sets; 3-4 reps in reserve.",
-    "sourceCsvRow": 217
+    "sourceCsvRow": 210
   },
   {
     "id": "w5d4e3",
@@ -3125,7 +3006,7 @@
     "rirMax": 4,
     "restSeconds": 75,
     "notes": "Target RPE 6.5; rest 75 sec. Reps per side. Elbow toward hip; full comfortable stretch. Deload: about half sets; 3-4 reps in reserve. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 218
+    "sourceCsvRow": 211
   },
   {
     "id": "w5d4e4",
@@ -3142,7 +3023,7 @@
     "rirMax": 4,
     "restSeconds": 60,
     "notes": "Target RPE 6.5; rest 60 sec. Keep tension on lateral delts. Deload: about half sets; 3-4 reps in reserve. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 219
+    "sourceCsvRow": 212
   },
   {
     "id": "w5d4e5",
@@ -3159,7 +3040,7 @@
     "rirMax": 4,
     "restSeconds": 60,
     "notes": "Target RPE 6.5; rest 60 sec. Rear delts. Deload: about half sets; 3-4 reps in reserve. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 220
+    "sourceCsvRow": 213
   },
   {
     "id": "w5d4e6",
@@ -3176,7 +3057,7 @@
     "rirMax": 4,
     "restSeconds": 75,
     "notes": "Target RPE 6.5; rest 75 sec. Reps per side. Arm slightly behind torso; steady upper arm. Deload: about half sets; 3-4 reps in reserve. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 221
+    "sourceCsvRow": 214
   },
   {
     "id": "w5d4e7",
@@ -3193,13 +3074,13 @@
     "rirMax": 4,
     "restSeconds": 75,
     "notes": "Target RPE 6.5; rest 75 sec. Controlled long-head stretch; pain-free range. Deload: about half sets; 3-4 reps in reserve. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 222
+    "sourceCsvRow": 215
   },
   {
     "id": "w5d5e1",
     "week": 5,
     "day": 5,
-    "dayLabel": "Friday - Lower B — Posterior Chain + Delts",
+    "dayLabel": "Friday - Lower B — Posterior Chain",
     "name": "Hack Squat",
     "weight": 180,
     "weightText": "180 lb",
@@ -3210,13 +3091,13 @@
     "rirMax": 4,
     "restSeconds": 120,
     "notes": "Target RPE 6.5; rest 120 sec. Choose one machine and track consistently. Deload: about half sets; 3-4 reps in reserve. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 224
+    "sourceCsvRow": 217
   },
   {
     "id": "w5d5e2",
     "week": 5,
     "day": 5,
-    "dayLabel": "Friday - Lower B — Posterior Chain + Delts",
+    "dayLabel": "Friday - Lower B — Posterior Chain",
     "name": "Leg Extension",
     "weight": 200,
     "weightText": "200 lb",
@@ -3227,13 +3108,13 @@
     "rirMax": 4,
     "restSeconds": 75,
     "notes": "Target RPE 6.5; rest 75 sec. Controlled squeeze and descent. Deload: about half sets; 3-4 reps in reserve.",
-    "sourceCsvRow": 225
+    "sourceCsvRow": 218
   },
   {
     "id": "w5d5e3",
     "week": 5,
     "day": 5,
-    "dayLabel": "Friday - Lower B — Posterior Chain + Delts",
+    "dayLabel": "Friday - Lower B — Posterior Chain",
     "name": "Seated Leg Curl",
     "weight": null,
     "weightText": "",
@@ -3244,13 +3125,13 @@
     "rirMax": 4,
     "restSeconds": 75,
     "notes": "Target RPE 6.5; rest 75 sec. Keep pelvis planted. Deload: about half sets; 3-4 reps in reserve.",
-    "sourceCsvRow": 226
+    "sourceCsvRow": 219
   },
   {
     "id": "w5d5e4",
     "week": 5,
     "day": 5,
-    "dayLabel": "Friday - Lower B — Posterior Chain + Delts",
+    "dayLabel": "Friday - Lower B — Posterior Chain",
     "name": "45-Degree Back Extension",
     "weight": null,
     "weightText": "",
@@ -3261,13 +3142,13 @@
     "rirMax": 4,
     "restSeconds": 90,
     "notes": "Target RPE 6.5; rest 90 sec. Hip hinge; no lumbar hyperextension; substitute comfortable hip thrust if back objects. Deload: about half sets; 3-4 reps in reserve. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 227
+    "sourceCsvRow": 220
   },
   {
     "id": "w5d5e5",
     "week": 5,
     "day": 5,
-    "dayLabel": "Friday - Lower B — Posterior Chain + Delts",
+    "dayLabel": "Friday - Lower B — Posterior Chain",
     "name": "Standing Calf Raise",
     "weight": 300,
     "weightText": "300 lb",
@@ -3278,30 +3159,13 @@
     "rirMax": 4,
     "restSeconds": 75,
     "notes": "Target RPE 6.5; rest 75 sec. Full comfortable range. Deload: about half sets; 3-4 reps in reserve.",
-    "sourceCsvRow": 228
-  },
-  {
-    "id": "w5d5e6",
-    "week": 5,
-    "day": 5,
-    "dayLabel": "Friday - Lower B — Posterior Chain + Delts",
-    "name": "DB Lateral Raise",
-    "weight": 25,
-    "weightText": "25 lb per hand",
-    "sets": 2,
-    "minReps": 12,
-    "maxReps": 20,
-    "rirMin": 3,
-    "rirMax": 4,
-    "restSeconds": 60,
-    "notes": "Target RPE 6.5; rest 60 sec. Leave 1-2 reps in reserve for Saturday pressing. Deload: about half sets; 3-4 reps in reserve.",
-    "sourceCsvRow": 229
+    "sourceCsvRow": 221
   },
   {
     "id": "w5d5e7",
     "week": 5,
     "day": 5,
-    "dayLabel": "Friday - Lower B — Posterior Chain + Delts",
+    "dayLabel": "Friday - Lower B — Posterior Chain",
     "name": "Incline Treadmill Walk",
     "weight": null,
     "weightText": "",
@@ -3312,13 +3176,13 @@
     "rirMax": null,
     "restSeconds": null,
     "notes": "CARDIO ONLY: One timed cardio bout (not a resistance set). Cardio target: 15-20 min; Moderate pace. Moderate conversational pace. Keep cardio easy.",
-    "sourceCsvRow": 230
+    "sourceCsvRow": 222
   },
   {
     "id": "w5d6e1",
     "week": 5,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Dumbbell Incline Press",
     "weight": 85,
     "weightText": "85 lb per hand",
@@ -3329,13 +3193,13 @@
     "rirMax": 4,
     "restSeconds": 150,
     "notes": "ORIGINAL EXERCISE: Incline Dumbbell Bench Press. Perform INCLINE DUMBBELL BENCH PRESS; load stated PER HAND, not barbell. Target RPE 6.5; rest 150 sec. Low-to-moderate incline; progress with clean form. Deload: about half sets; 3-4 reps in reserve.",
-    "sourceCsvRow": 232
+    "sourceCsvRow": 224
   },
   {
     "id": "w5d6e2",
     "week": 5,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Low to High Cable Fly",
     "weight": null,
     "weightText": "",
@@ -3346,13 +3210,13 @@
     "rirMax": 4,
     "restSeconds": 75,
     "notes": "ORIGINAL EXERCISE: Low-to-High Cable Chest Fly. IMPORTANT: Perform LOW-TO-HIGH cable fly (upward direction), NOT high-to-low. IronLedger library label is reversed only to match library. Target RPE 6.5; rest 75 sec. Bring hands upward/inward; avoid shrugging. Deload: about half sets; 3-4 reps in reserve. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 233
+    "sourceCsvRow": 225
   },
   {
     "id": "w5d6e3",
     "week": 5,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Chest Fly (Machine)",
     "weight": 140,
     "weightText": "140 lb",
@@ -3363,13 +3227,13 @@
     "rirMax": 4,
     "restSeconds": 75,
     "notes": "Target RPE 6.5; rest 75 sec. Controlled stretched position. Deload: about half sets; 3-4 reps in reserve. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 234
+    "sourceCsvRow": 226
   },
   {
     "id": "w5d6e4",
     "week": 5,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Preacher Curl",
     "weight": 70,
     "weightText": "70 lb total",
@@ -3380,13 +3244,13 @@
     "rirMax": 4,
     "restSeconds": 75,
     "notes": "ORIGINAL EXERCISE: EZ-Bar Preacher Curl. Perform EZ-BAR PREACHER CURL using preacher bench, NOT a standing EZ bar curl. Target RPE 6.5; rest 75 sec. Controlled full comfortable range. Deload: about half sets; 3-4 reps in reserve. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 235
+    "sourceCsvRow": 227
   },
   {
     "id": "w5d6e5",
     "week": 5,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Single-Arm Overhead Cable Triceps Extension",
     "weight": null,
     "weightText": "",
@@ -3397,30 +3261,13 @@
     "rirMax": 4,
     "restSeconds": 75,
     "notes": "Target RPE 6.5; rest 75 sec. Per arm; pain-free elbow path. Deload: about half sets; 3-4 reps in reserve. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 236
-  },
-  {
-    "id": "w5d6e6",
-    "week": 5,
-    "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
-    "name": "Bayesian Curl",
-    "weight": 30,
-    "weightText": "30 lb",
-    "sets": 2,
-    "minReps": 10,
-    "maxReps": 15,
-    "rirMin": 3,
-    "rirMax": 4,
-    "restSeconds": 75,
-    "notes": "Target RPE 6.5; rest 75 sec. Reps per side. Controlled stretch; arm behind torso. Deload: about half sets; 3-4 reps in reserve. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 237
+    "sourceCsvRow": 228
   },
   {
     "id": "w5d6e7",
     "week": 5,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Cross-Body Cable Triceps Extension",
     "weight": null,
     "weightText": "",
@@ -3431,13 +3278,13 @@
     "rirMax": 4,
     "restSeconds": 75,
     "notes": "Target RPE 6.5; rest 75 sec. Reps per side. Per arm; stable elbow position. Deload: about half sets; 3-4 reps in reserve. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 238
+    "sourceCsvRow": 229
   },
   {
     "id": "w5d6e8",
     "week": 5,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Hammer Curl",
     "weight": null,
     "weightText": "",
@@ -3448,30 +3295,13 @@
     "rirMax": 4,
     "restSeconds": 60,
     "notes": "Target RPE 6.5; rest 60 sec. Neutral grip; avoid torso swing. Deload: about half sets; 3-4 reps in reserve. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 239
-  },
-  {
-    "id": "w5d6e9",
-    "week": 5,
-    "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
-    "name": "Straight-Bar Cable Triceps Extension",
-    "weight": null,
-    "weightText": "",
-    "sets": 1,
-    "minReps": 12,
-    "maxReps": 15,
-    "rirMin": 3,
-    "rirMax": 4,
-    "restSeconds": 60,
-    "notes": "Target RPE 6.5; rest 60 sec. Non-rope variation; substitute single-handle cross-body if uncomfortable. Deload: about half sets; 3-4 reps in reserve. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 240
+    "sourceCsvRow": 230
   },
   {
     "id": "w5d6e10",
     "week": 5,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Hanging Leg Raise",
     "weight": null,
     "weightText": "",
@@ -3482,7 +3312,24 @@
     "rirMax": 4,
     "restSeconds": 75,
     "notes": "ORIGINAL EXERCISE: Hanging Straight-Leg Raise. Perform STRICT HANGING STRAIGHT-LEG RAISES, not knee raises. Target RPE 6.5; rest 75 sec. Strict with pelvic curl. Deload: about half sets; 3-4 reps in reserve. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 241
+    "sourceCsvRow": 231
+  },
+  {
+    "id": "w5d6e11",
+    "week": 5,
+    "day": 6,
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
+    "name": "DB Lateral Raise",
+    "weight": 25,
+    "weightText": "25 lb per hand",
+    "sets": 2,
+    "minReps": 12,
+    "maxReps": 20,
+    "rirMin": 3,
+    "rirMax": 4,
+    "restSeconds": 60,
+    "notes": "Target RPE 6.5; rest 60 sec. Smooth controlled reps; avoid shrugging and body swing. Deload: about half sets; 3-4 reps in reserve.",
+    "sourceCsvRow": 232
   },
   {
     "id": "w6d1e1",
@@ -3499,7 +3346,7 @@
     "rirMax": 2,
     "restSeconds": 180,
     "notes": "Target RPE 8.0; rest 180 sec. Heavy compound; leave 1-3 reps in reserve. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 244
+    "sourceCsvRow": 235
   },
   {
     "id": "w6d1e2",
@@ -3516,7 +3363,7 @@
     "rirMax": 2,
     "restSeconds": 120,
     "notes": "ORIGINAL EXERCISE: Chest Supported Row (Dumbbell). Perform CHEST-SUPPORTED DUMBBELL ROW; 70 lb PER HAND, not machine weight. Target RPE 8.0; rest 120 sec. Controlled eccentric; full supported range. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 245
+    "sourceCsvRow": 236
   },
   {
     "id": "w6d1e3",
@@ -3533,7 +3380,7 @@
     "rirMax": 2,
     "restSeconds": 120,
     "notes": "Target RPE 8.0; rest 120 sec. Low incline; maintain upper-chest tension. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 246
+    "sourceCsvRow": 237
   },
   {
     "id": "w6d1e4",
@@ -3550,7 +3397,7 @@
     "rirMax": 2,
     "restSeconds": 90,
     "notes": "Target RPE 8.0; rest 90 sec. Drive elbows down; control stretch. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 247
+    "sourceCsvRow": 238
   },
   {
     "id": "w6d1e5",
@@ -3567,7 +3414,7 @@
     "rirMax": 2,
     "restSeconds": 60,
     "notes": "Target RPE 8.0; rest 60 sec. Per arm; no body swing. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 248
+    "sourceCsvRow": 239
   },
   {
     "id": "w6d1e6",
@@ -3584,7 +3431,7 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Controlled lowering; elbow-friendly grip. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 249
+    "sourceCsvRow": 240
   },
   {
     "id": "w6d1e7",
@@ -3601,24 +3448,7 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Per arm; use pain-free depth. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 250
-  },
-  {
-    "id": "w6d1e8",
-    "week": 6,
-    "day": 1,
-    "dayLabel": "Monday - Upper A — Chest Focus",
-    "name": "Cable Crunch",
-    "weight": null,
-    "weightText": "",
-    "sets": 3,
-    "minReps": 10,
-    "maxReps": 15,
-    "rirMin": 2,
-    "rirMax": 2,
-    "restSeconds": 60,
-    "notes": "Target RPE 8.0; rest 60 sec. Progress load while maintaining controlled spinal flexion. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 251
+    "sourceCsvRow": 241
   },
   {
     "id": "w6d2e1",
@@ -3635,7 +3465,7 @@
     "rirMax": 2,
     "restSeconds": 150,
     "notes": "Target RPE 8.0; rest 150 sec. Choose leg press or hip sled; consistent machine and depth for progression. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 253
+    "sourceCsvRow": 243
   },
   {
     "id": "w6d2e2",
@@ -3652,7 +3482,7 @@
     "rirMax": 2,
     "restSeconds": 150,
     "notes": "Target RPE 8.0; rest 150 sec. Neutral spine; 1-3 reps in reserve. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 254
+    "sourceCsvRow": 244
   },
   {
     "id": "w6d2e3",
@@ -3669,7 +3499,7 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Full comfortable knee flexion. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 255
+    "sourceCsvRow": 245
   },
   {
     "id": "w6d2e4",
@@ -3686,24 +3516,7 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Pause at stretched position. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 256
-  },
-  {
-    "id": "w6d2e5",
-    "week": 6,
-    "day": 2,
-    "dayLabel": "Tuesday - Lower A — Quad Focus + Delts",
-    "name": "DB Lateral Raise",
-    "weight": 25,
-    "weightText": "25 lb per hand",
-    "sets": 3,
-    "minReps": 12,
-    "maxReps": 20,
-    "rirMin": 2,
-    "rirMax": 2,
-    "restSeconds": 60,
-    "notes": "Target RPE 8.0; rest 60 sec. Smooth controlled reps. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 257
+    "sourceCsvRow": 246
   },
   {
     "id": "w6d2e6",
@@ -3720,7 +3533,7 @@
     "rirMax": 2,
     "restSeconds": 60,
     "notes": "Target RPE 8.0; rest 60 sec. Rear delts; avoid shrugging. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 258
+    "sourceCsvRow": 247
   },
   {
     "id": "w6d3e1",
@@ -3737,7 +3550,7 @@
     "rirMax": null,
     "restSeconds": null,
     "notes": "CARDIO ONLY: One timed cardio bout (not a resistance set). Cardio target: 30 min; Moderate pace. Conversational pace; incline and speed as tolerated. Keep cardio easy.",
-    "sourceCsvRow": 260
+    "sourceCsvRow": 249
   },
   {
     "id": "w6d3e2",
@@ -3754,7 +3567,7 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "ORIGINAL EXERCISE: Hanging Straight-Leg Raise. Perform STRICT HANGING STRAIGHT-LEG RAISES, not knee raises. Target RPE 8.0; rest 75 sec. Strict; posterior pelvic tilt; no swing. Progress difficulty after 15 strict reps. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 261
+    "sourceCsvRow": 250
   },
   {
     "id": "w6d3e3",
@@ -3771,7 +3584,7 @@
     "rirMax": 2,
     "restSeconds": 60,
     "notes": "Target RPE 8.0; rest 60 sec. Reps per side. Two sets per side; use controlled trunk rotation. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 262
+    "sourceCsvRow": 251
   },
   {
     "id": "w6d4e1",
@@ -3788,7 +3601,7 @@
     "rirMax": 2,
     "restSeconds": 90,
     "notes": "Target RPE 8.0; rest 90 sec. Controlled vertical pull; grip for comfort. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 264
+    "sourceCsvRow": 253
   },
   {
     "id": "w6d4e2",
@@ -3805,7 +3618,7 @@
     "rirMax": 2,
     "restSeconds": 90,
     "notes": "ORIGINAL EXERCISE: Chest Supported Row (Dumbbell). Perform CHEST-SUPPORTED DUMBBELL ROW; 70 lb PER HAND, not machine weight. Target RPE 8.0; rest 90 sec. Upper-back emphasis; controlled scapular movement. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 265
+    "sourceCsvRow": 254
   },
   {
     "id": "w6d4e3",
@@ -3822,7 +3635,7 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Reps per side. Elbow toward hip; full comfortable stretch. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 266
+    "sourceCsvRow": 255
   },
   {
     "id": "w6d4e4",
@@ -3839,7 +3652,7 @@
     "rirMax": 2,
     "restSeconds": 60,
     "notes": "Target RPE 8.0; rest 60 sec. Keep tension on lateral delts. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 267
+    "sourceCsvRow": 256
   },
   {
     "id": "w6d4e5",
@@ -3856,7 +3669,7 @@
     "rirMax": 2,
     "restSeconds": 60,
     "notes": "Target RPE 8.0; rest 60 sec. Rear delts. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 268
+    "sourceCsvRow": 257
   },
   {
     "id": "w6d4e6",
@@ -3873,7 +3686,7 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Reps per side. Arm slightly behind torso; steady upper arm. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 269
+    "sourceCsvRow": 258
   },
   {
     "id": "w6d4e7",
@@ -3890,13 +3703,13 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Controlled long-head stretch; pain-free range. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 270
+    "sourceCsvRow": 259
   },
   {
     "id": "w6d5e1",
     "week": 6,
     "day": 5,
-    "dayLabel": "Friday - Lower B — Posterior Chain + Delts",
+    "dayLabel": "Friday - Lower B — Posterior Chain",
     "name": "Hack Squat",
     "weight": 180,
     "weightText": "180 lb",
@@ -3907,13 +3720,13 @@
     "rirMax": 2,
     "restSeconds": 120,
     "notes": "Target RPE 8.0; rest 120 sec. Choose one machine and track consistently. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 272
+    "sourceCsvRow": 261
   },
   {
     "id": "w6d5e2",
     "week": 6,
     "day": 5,
-    "dayLabel": "Friday - Lower B — Posterior Chain + Delts",
+    "dayLabel": "Friday - Lower B — Posterior Chain",
     "name": "Leg Extension",
     "weight": 200,
     "weightText": "200 lb",
@@ -3924,13 +3737,13 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Controlled squeeze and descent. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 273
+    "sourceCsvRow": 262
   },
   {
     "id": "w6d5e3",
     "week": 6,
     "day": 5,
-    "dayLabel": "Friday - Lower B — Posterior Chain + Delts",
+    "dayLabel": "Friday - Lower B — Posterior Chain",
     "name": "Seated Leg Curl",
     "weight": null,
     "weightText": "",
@@ -3941,30 +3754,30 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Keep pelvis planted. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 274
+    "sourceCsvRow": 263
   },
   {
     "id": "w6d5e4",
     "week": 6,
     "day": 5,
-    "dayLabel": "Friday - Lower B — Posterior Chain + Delts",
+    "dayLabel": "Friday - Lower B — Posterior Chain",
     "name": "45-Degree Back Extension",
     "weight": null,
     "weightText": "",
-    "sets": 3,
+    "sets": 2,
     "minReps": 10,
     "maxReps": 15,
     "rirMin": 2,
     "rirMax": 2,
     "restSeconds": 90,
     "notes": "Target RPE 8.0; rest 90 sec. Hip hinge; no lumbar hyperextension; substitute comfortable hip thrust if back objects. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 275
+    "sourceCsvRow": 264
   },
   {
     "id": "w6d5e5",
     "week": 6,
     "day": 5,
-    "dayLabel": "Friday - Lower B — Posterior Chain + Delts",
+    "dayLabel": "Friday - Lower B — Posterior Chain",
     "name": "Standing Calf Raise",
     "weight": 300,
     "weightText": "300 lb",
@@ -3975,30 +3788,13 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Full comfortable range. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 276
-  },
-  {
-    "id": "w6d5e6",
-    "week": 6,
-    "day": 5,
-    "dayLabel": "Friday - Lower B — Posterior Chain + Delts",
-    "name": "DB Lateral Raise",
-    "weight": 25,
-    "weightText": "25 lb per hand",
-    "sets": 3,
-    "minReps": 12,
-    "maxReps": 20,
-    "rirMin": 2,
-    "rirMax": 2,
-    "restSeconds": 60,
-    "notes": "Target RPE 8.0; rest 60 sec. Leave 1-2 reps in reserve for Saturday pressing. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 277
+    "sourceCsvRow": 265
   },
   {
     "id": "w6d5e7",
     "week": 6,
     "day": 5,
-    "dayLabel": "Friday - Lower B — Posterior Chain + Delts",
+    "dayLabel": "Friday - Lower B — Posterior Chain",
     "name": "Incline Treadmill Walk",
     "weight": null,
     "weightText": "",
@@ -4009,13 +3805,13 @@
     "rirMax": null,
     "restSeconds": null,
     "notes": "CARDIO ONLY: One timed cardio bout (not a resistance set). Cardio target: 15-20 min; Moderate pace. Moderate conversational pace. Keep cardio easy.",
-    "sourceCsvRow": 278
+    "sourceCsvRow": 266
   },
   {
     "id": "w6d6e1",
     "week": 6,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Dumbbell Incline Press",
     "weight": 85,
     "weightText": "85 lb per hand",
@@ -4026,13 +3822,13 @@
     "rirMax": 2,
     "restSeconds": 150,
     "notes": "ORIGINAL EXERCISE: Incline Dumbbell Bench Press. Perform INCLINE DUMBBELL BENCH PRESS; load stated PER HAND, not barbell. Target RPE 8.0; rest 150 sec. Low-to-moderate incline; progress with clean form. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 280
+    "sourceCsvRow": 268
   },
   {
     "id": "w6d6e2",
     "week": 6,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Low to High Cable Fly",
     "weight": null,
     "weightText": "",
@@ -4043,13 +3839,13 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "ORIGINAL EXERCISE: Low-to-High Cable Chest Fly. IMPORTANT: Perform LOW-TO-HIGH cable fly (upward direction), NOT high-to-low. IronLedger library label is reversed only to match library. Target RPE 8.0; rest 75 sec. Bring hands upward/inward; avoid shrugging. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 281
+    "sourceCsvRow": 269
   },
   {
     "id": "w6d6e3",
     "week": 6,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Chest Fly (Machine)",
     "weight": 140,
     "weightText": "140 lb",
@@ -4060,13 +3856,13 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Controlled stretched position. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 282
+    "sourceCsvRow": 270
   },
   {
     "id": "w6d6e4",
     "week": 6,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Preacher Curl",
     "weight": 70,
     "weightText": "70 lb total",
@@ -4077,13 +3873,13 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "ORIGINAL EXERCISE: EZ-Bar Preacher Curl. Perform EZ-BAR PREACHER CURL using preacher bench, NOT a standing EZ bar curl. Target RPE 8.0; rest 75 sec. Controlled full comfortable range. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 283
+    "sourceCsvRow": 271
   },
   {
     "id": "w6d6e5",
     "week": 6,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Single-Arm Overhead Cable Triceps Extension",
     "weight": null,
     "weightText": "",
@@ -4094,30 +3890,13 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Per arm; pain-free elbow path. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 284
-  },
-  {
-    "id": "w6d6e6",
-    "week": 6,
-    "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
-    "name": "Bayesian Curl",
-    "weight": 30,
-    "weightText": "30 lb",
-    "sets": 3,
-    "minReps": 10,
-    "maxReps": 15,
-    "rirMin": 2,
-    "rirMax": 2,
-    "restSeconds": 75,
-    "notes": "Target RPE 8.0; rest 75 sec. Reps per side. Controlled stretch; arm behind torso. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 285
+    "sourceCsvRow": 272
   },
   {
     "id": "w6d6e7",
     "week": 6,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Cross-Body Cable Triceps Extension",
     "weight": null,
     "weightText": "",
@@ -4128,47 +3907,30 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Reps per side. Per arm; stable elbow position. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 286
+    "sourceCsvRow": 273
   },
   {
     "id": "w6d6e8",
     "week": 6,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Hammer Curl",
     "weight": null,
     "weightText": "",
-    "sets": 2,
+    "sets": 3,
     "minReps": 10,
     "maxReps": 15,
     "rirMin": 2,
     "rirMax": 2,
     "restSeconds": 60,
     "notes": "Target RPE 8.0; rest 60 sec. Neutral grip; avoid torso swing. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 287
-  },
-  {
-    "id": "w6d6e9",
-    "week": 6,
-    "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
-    "name": "Straight-Bar Cable Triceps Extension",
-    "weight": null,
-    "weightText": "",
-    "sets": 2,
-    "minReps": 12,
-    "maxReps": 15,
-    "rirMin": 2,
-    "rirMax": 2,
-    "restSeconds": 60,
-    "notes": "Target RPE 8.0; rest 60 sec. Non-rope variation; substitute single-handle cross-body if uncomfortable. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 288
+    "sourceCsvRow": 274
   },
   {
     "id": "w6d6e10",
     "week": 6,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Hanging Leg Raise",
     "weight": null,
     "weightText": "",
@@ -4179,7 +3941,24 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "ORIGINAL EXERCISE: Hanging Straight-Leg Raise. Perform STRICT HANGING STRAIGHT-LEG RAISES, not knee raises. Target RPE 8.0; rest 75 sec. Strict with pelvic curl. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 289
+    "sourceCsvRow": 275
+  },
+  {
+    "id": "w6d6e11",
+    "week": 6,
+    "day": 6,
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
+    "name": "DB Lateral Raise",
+    "weight": 25,
+    "weightText": "25 lb per hand",
+    "sets": 3,
+    "minReps": 12,
+    "maxReps": 20,
+    "rirMin": 2,
+    "rirMax": 2,
+    "restSeconds": 60,
+    "notes": "Target RPE 8.0; rest 60 sec. Smooth controlled reps, avoid shrugging and body swing. Keep 2 reps in reserve after chest pressing. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
+    "sourceCsvRow": 276
   },
   {
     "id": "w7d1e1",
@@ -4196,7 +3975,7 @@
     "rirMax": 2,
     "restSeconds": 180,
     "notes": "Target RPE 8.0; rest 180 sec. Heavy compound; leave 1-3 reps in reserve. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 292
+    "sourceCsvRow": 279
   },
   {
     "id": "w7d1e2",
@@ -4213,7 +3992,7 @@
     "rirMax": 2,
     "restSeconds": 120,
     "notes": "ORIGINAL EXERCISE: Chest Supported Row (Dumbbell). Perform CHEST-SUPPORTED DUMBBELL ROW; 70 lb PER HAND, not machine weight. Target RPE 8.0; rest 120 sec. Controlled eccentric; full supported range. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 293
+    "sourceCsvRow": 280
   },
   {
     "id": "w7d1e3",
@@ -4230,7 +4009,7 @@
     "rirMax": 2,
     "restSeconds": 120,
     "notes": "Target RPE 8.0; rest 120 sec. Low incline; maintain upper-chest tension. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 294
+    "sourceCsvRow": 281
   },
   {
     "id": "w7d1e4",
@@ -4247,7 +4026,7 @@
     "rirMax": 2,
     "restSeconds": 90,
     "notes": "Target RPE 8.0; rest 90 sec. Drive elbows down; control stretch. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 295
+    "sourceCsvRow": 282
   },
   {
     "id": "w7d1e5",
@@ -4264,7 +4043,7 @@
     "rirMax": 2,
     "restSeconds": 60,
     "notes": "Target RPE 8.0; rest 60 sec. Per arm; no body swing. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 296
+    "sourceCsvRow": 283
   },
   {
     "id": "w7d1e6",
@@ -4281,7 +4060,7 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Controlled lowering; elbow-friendly grip. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 297
+    "sourceCsvRow": 284
   },
   {
     "id": "w7d1e7",
@@ -4298,24 +4077,7 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Per arm; use pain-free depth. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 298
-  },
-  {
-    "id": "w7d1e8",
-    "week": 7,
-    "day": 1,
-    "dayLabel": "Monday - Upper A — Chest Focus",
-    "name": "Cable Crunch",
-    "weight": null,
-    "weightText": "",
-    "sets": 3,
-    "minReps": 10,
-    "maxReps": 15,
-    "rirMin": 2,
-    "rirMax": 2,
-    "restSeconds": 60,
-    "notes": "Target RPE 8.0; rest 60 sec. Progress load while maintaining controlled spinal flexion. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 299
+    "sourceCsvRow": 285
   },
   {
     "id": "w7d2e1",
@@ -4332,7 +4094,7 @@
     "rirMax": 2,
     "restSeconds": 150,
     "notes": "Target RPE 8.0; rest 150 sec. Choose leg press or hip sled; consistent machine and depth for progression. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 301
+    "sourceCsvRow": 287
   },
   {
     "id": "w7d2e2",
@@ -4349,7 +4111,7 @@
     "rirMax": 2,
     "restSeconds": 150,
     "notes": "Target RPE 8.0; rest 150 sec. Neutral spine; 1-3 reps in reserve. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 302
+    "sourceCsvRow": 288
   },
   {
     "id": "w7d2e3",
@@ -4366,7 +4128,7 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Full comfortable knee flexion. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 303
+    "sourceCsvRow": 289
   },
   {
     "id": "w7d2e4",
@@ -4383,24 +4145,7 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Pause at stretched position. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 304
-  },
-  {
-    "id": "w7d2e5",
-    "week": 7,
-    "day": 2,
-    "dayLabel": "Tuesday - Lower A — Quad Focus + Delts",
-    "name": "DB Lateral Raise",
-    "weight": 25,
-    "weightText": "25 lb per hand",
-    "sets": 3,
-    "minReps": 12,
-    "maxReps": 20,
-    "rirMin": 2,
-    "rirMax": 2,
-    "restSeconds": 60,
-    "notes": "Target RPE 8.0; rest 60 sec. Smooth controlled reps. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 305
+    "sourceCsvRow": 290
   },
   {
     "id": "w7d2e6",
@@ -4417,7 +4162,7 @@
     "rirMax": 2,
     "restSeconds": 60,
     "notes": "Target RPE 8.0; rest 60 sec. Rear delts; avoid shrugging. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 306
+    "sourceCsvRow": 291
   },
   {
     "id": "w7d3e1",
@@ -4434,7 +4179,7 @@
     "rirMax": null,
     "restSeconds": null,
     "notes": "CARDIO ONLY: One timed cardio bout (not a resistance set). Cardio target: 30 min; Moderate pace. Conversational pace; incline and speed as tolerated. Keep cardio easy.",
-    "sourceCsvRow": 308
+    "sourceCsvRow": 293
   },
   {
     "id": "w7d3e2",
@@ -4451,7 +4196,7 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "ORIGINAL EXERCISE: Hanging Straight-Leg Raise. Perform STRICT HANGING STRAIGHT-LEG RAISES, not knee raises. Target RPE 8.0; rest 75 sec. Strict; posterior pelvic tilt; no swing. Progress difficulty after 15 strict reps. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 309
+    "sourceCsvRow": 294
   },
   {
     "id": "w7d3e3",
@@ -4468,7 +4213,7 @@
     "rirMax": 2,
     "restSeconds": 60,
     "notes": "Target RPE 8.0; rest 60 sec. Reps per side. Two sets per side; use controlled trunk rotation. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 310
+    "sourceCsvRow": 295
   },
   {
     "id": "w7d4e1",
@@ -4485,7 +4230,7 @@
     "rirMax": 2,
     "restSeconds": 90,
     "notes": "Target RPE 8.0; rest 90 sec. Controlled vertical pull; grip for comfort. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 312
+    "sourceCsvRow": 297
   },
   {
     "id": "w7d4e2",
@@ -4502,7 +4247,7 @@
     "rirMax": 2,
     "restSeconds": 90,
     "notes": "ORIGINAL EXERCISE: Chest Supported Row (Dumbbell). Perform CHEST-SUPPORTED DUMBBELL ROW; 70 lb PER HAND, not machine weight. Target RPE 8.0; rest 90 sec. Upper-back emphasis; controlled scapular movement. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 313
+    "sourceCsvRow": 298
   },
   {
     "id": "w7d4e3",
@@ -4519,7 +4264,7 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Reps per side. Elbow toward hip; full comfortable stretch. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 314
+    "sourceCsvRow": 299
   },
   {
     "id": "w7d4e4",
@@ -4536,7 +4281,7 @@
     "rirMax": 2,
     "restSeconds": 60,
     "notes": "Target RPE 8.0; rest 60 sec. Keep tension on lateral delts. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 315
+    "sourceCsvRow": 300
   },
   {
     "id": "w7d4e5",
@@ -4553,7 +4298,7 @@
     "rirMax": 2,
     "restSeconds": 60,
     "notes": "Target RPE 8.0; rest 60 sec. Rear delts. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 316
+    "sourceCsvRow": 301
   },
   {
     "id": "w7d4e6",
@@ -4570,7 +4315,7 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Reps per side. Arm slightly behind torso; steady upper arm. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 317
+    "sourceCsvRow": 302
   },
   {
     "id": "w7d4e7",
@@ -4587,13 +4332,13 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Controlled long-head stretch; pain-free range. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 318
+    "sourceCsvRow": 303
   },
   {
     "id": "w7d5e1",
     "week": 7,
     "day": 5,
-    "dayLabel": "Friday - Lower B — Posterior Chain + Delts",
+    "dayLabel": "Friday - Lower B — Posterior Chain",
     "name": "Hack Squat",
     "weight": 180,
     "weightText": "180 lb",
@@ -4604,13 +4349,13 @@
     "rirMax": 2,
     "restSeconds": 120,
     "notes": "Target RPE 8.0; rest 120 sec. Choose one machine and track consistently. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 320
+    "sourceCsvRow": 305
   },
   {
     "id": "w7d5e2",
     "week": 7,
     "day": 5,
-    "dayLabel": "Friday - Lower B — Posterior Chain + Delts",
+    "dayLabel": "Friday - Lower B — Posterior Chain",
     "name": "Leg Extension",
     "weight": 200,
     "weightText": "200 lb",
@@ -4621,13 +4366,13 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Controlled squeeze and descent. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 321
+    "sourceCsvRow": 306
   },
   {
     "id": "w7d5e3",
     "week": 7,
     "day": 5,
-    "dayLabel": "Friday - Lower B — Posterior Chain + Delts",
+    "dayLabel": "Friday - Lower B — Posterior Chain",
     "name": "Seated Leg Curl",
     "weight": null,
     "weightText": "",
@@ -4638,30 +4383,30 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Keep pelvis planted. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 322
+    "sourceCsvRow": 307
   },
   {
     "id": "w7d5e4",
     "week": 7,
     "day": 5,
-    "dayLabel": "Friday - Lower B — Posterior Chain + Delts",
+    "dayLabel": "Friday - Lower B — Posterior Chain",
     "name": "45-Degree Back Extension",
     "weight": null,
     "weightText": "",
-    "sets": 3,
+    "sets": 2,
     "minReps": 10,
     "maxReps": 15,
     "rirMin": 2,
     "rirMax": 2,
     "restSeconds": 90,
     "notes": "Target RPE 8.0; rest 90 sec. Hip hinge; no lumbar hyperextension; substitute comfortable hip thrust if back objects. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 323
+    "sourceCsvRow": 308
   },
   {
     "id": "w7d5e5",
     "week": 7,
     "day": 5,
-    "dayLabel": "Friday - Lower B — Posterior Chain + Delts",
+    "dayLabel": "Friday - Lower B — Posterior Chain",
     "name": "Standing Calf Raise",
     "weight": 300,
     "weightText": "300 lb",
@@ -4672,30 +4417,13 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Full comfortable range. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 324
-  },
-  {
-    "id": "w7d5e6",
-    "week": 7,
-    "day": 5,
-    "dayLabel": "Friday - Lower B — Posterior Chain + Delts",
-    "name": "DB Lateral Raise",
-    "weight": 25,
-    "weightText": "25 lb per hand",
-    "sets": 3,
-    "minReps": 12,
-    "maxReps": 20,
-    "rirMin": 2,
-    "rirMax": 2,
-    "restSeconds": 60,
-    "notes": "Target RPE 8.0; rest 60 sec. Leave 1-2 reps in reserve for Saturday pressing. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 325
+    "sourceCsvRow": 309
   },
   {
     "id": "w7d5e7",
     "week": 7,
     "day": 5,
-    "dayLabel": "Friday - Lower B — Posterior Chain + Delts",
+    "dayLabel": "Friday - Lower B — Posterior Chain",
     "name": "Incline Treadmill Walk",
     "weight": null,
     "weightText": "",
@@ -4706,13 +4434,13 @@
     "rirMax": null,
     "restSeconds": null,
     "notes": "CARDIO ONLY: One timed cardio bout (not a resistance set). Cardio target: 15-20 min; Moderate pace. Moderate conversational pace. Keep cardio easy.",
-    "sourceCsvRow": 326
+    "sourceCsvRow": 310
   },
   {
     "id": "w7d6e1",
     "week": 7,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Dumbbell Incline Press",
     "weight": 85,
     "weightText": "85 lb per hand",
@@ -4723,13 +4451,13 @@
     "rirMax": 2,
     "restSeconds": 150,
     "notes": "ORIGINAL EXERCISE: Incline Dumbbell Bench Press. Perform INCLINE DUMBBELL BENCH PRESS; load stated PER HAND, not barbell. Target RPE 8.0; rest 150 sec. Low-to-moderate incline; progress with clean form. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 328
+    "sourceCsvRow": 312
   },
   {
     "id": "w7d6e2",
     "week": 7,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Low to High Cable Fly",
     "weight": null,
     "weightText": "",
@@ -4740,13 +4468,13 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "ORIGINAL EXERCISE: Low-to-High Cable Chest Fly. IMPORTANT: Perform LOW-TO-HIGH cable fly (upward direction), NOT high-to-low. IronLedger library label is reversed only to match library. Target RPE 8.0; rest 75 sec. Bring hands upward/inward; avoid shrugging. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 329
+    "sourceCsvRow": 313
   },
   {
     "id": "w7d6e3",
     "week": 7,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Chest Fly (Machine)",
     "weight": 140,
     "weightText": "140 lb",
@@ -4757,13 +4485,13 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Controlled stretched position. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 330
+    "sourceCsvRow": 314
   },
   {
     "id": "w7d6e4",
     "week": 7,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Preacher Curl",
     "weight": 70,
     "weightText": "70 lb total",
@@ -4774,13 +4502,13 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "ORIGINAL EXERCISE: EZ-Bar Preacher Curl. Perform EZ-BAR PREACHER CURL using preacher bench, NOT a standing EZ bar curl. Target RPE 8.0; rest 75 sec. Controlled full comfortable range. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 331
+    "sourceCsvRow": 315
   },
   {
     "id": "w7d6e5",
     "week": 7,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Single-Arm Overhead Cable Triceps Extension",
     "weight": null,
     "weightText": "",
@@ -4791,30 +4519,13 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Per arm; pain-free elbow path. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 332
-  },
-  {
-    "id": "w7d6e6",
-    "week": 7,
-    "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
-    "name": "Bayesian Curl",
-    "weight": 30,
-    "weightText": "30 lb",
-    "sets": 3,
-    "minReps": 10,
-    "maxReps": 15,
-    "rirMin": 2,
-    "rirMax": 2,
-    "restSeconds": 75,
-    "notes": "Target RPE 8.0; rest 75 sec. Reps per side. Controlled stretch; arm behind torso. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 333
+    "sourceCsvRow": 316
   },
   {
     "id": "w7d6e7",
     "week": 7,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Cross-Body Cable Triceps Extension",
     "weight": null,
     "weightText": "",
@@ -4825,47 +4536,30 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Reps per side. Per arm; stable elbow position. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 334
+    "sourceCsvRow": 317
   },
   {
     "id": "w7d6e8",
     "week": 7,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Hammer Curl",
     "weight": null,
     "weightText": "",
-    "sets": 2,
+    "sets": 3,
     "minReps": 10,
     "maxReps": 15,
     "rirMin": 2,
     "rirMax": 2,
     "restSeconds": 60,
     "notes": "Target RPE 8.0; rest 60 sec. Neutral grip; avoid torso swing. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 335
-  },
-  {
-    "id": "w7d6e9",
-    "week": 7,
-    "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
-    "name": "Straight-Bar Cable Triceps Extension",
-    "weight": null,
-    "weightText": "",
-    "sets": 2,
-    "minReps": 12,
-    "maxReps": 15,
-    "rirMin": 2,
-    "rirMax": 2,
-    "restSeconds": 60,
-    "notes": "Target RPE 8.0; rest 60 sec. Non-rope variation; substitute single-handle cross-body if uncomfortable. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 336
+    "sourceCsvRow": 318
   },
   {
     "id": "w7d6e10",
     "week": 7,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Hanging Leg Raise",
     "weight": null,
     "weightText": "",
@@ -4876,7 +4570,24 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "ORIGINAL EXERCISE: Hanging Straight-Leg Raise. Perform STRICT HANGING STRAIGHT-LEG RAISES, not knee raises. Target RPE 8.0; rest 75 sec. Strict with pelvic curl. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 337
+    "sourceCsvRow": 319
+  },
+  {
+    "id": "w7d6e11",
+    "week": 7,
+    "day": 6,
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
+    "name": "DB Lateral Raise",
+    "weight": 25,
+    "weightText": "25 lb per hand",
+    "sets": 3,
+    "minReps": 12,
+    "maxReps": 20,
+    "rirMin": 2,
+    "rirMax": 2,
+    "restSeconds": 60,
+    "notes": "Target RPE 8.0; rest 60 sec. Smooth controlled reps, avoid shrugging and body swing. Keep 2 reps in reserve after chest pressing. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
+    "sourceCsvRow": 320
   },
   {
     "id": "w8d1e1",
@@ -4893,7 +4604,7 @@
     "rirMax": 2,
     "restSeconds": 180,
     "notes": "Target RPE 8.0; rest 180 sec. Heavy compound; leave 1-3 reps in reserve. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 340
+    "sourceCsvRow": 323
   },
   {
     "id": "w8d1e2",
@@ -4910,7 +4621,7 @@
     "rirMax": 2,
     "restSeconds": 120,
     "notes": "ORIGINAL EXERCISE: Chest Supported Row (Dumbbell). Perform CHEST-SUPPORTED DUMBBELL ROW; 70 lb PER HAND, not machine weight. Target RPE 8.0; rest 120 sec. Controlled eccentric; full supported range. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 341
+    "sourceCsvRow": 324
   },
   {
     "id": "w8d1e3",
@@ -4927,7 +4638,7 @@
     "rirMax": 2,
     "restSeconds": 120,
     "notes": "Target RPE 8.0; rest 120 sec. Low incline; maintain upper-chest tension. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 342
+    "sourceCsvRow": 325
   },
   {
     "id": "w8d1e4",
@@ -4944,7 +4655,7 @@
     "rirMax": 2,
     "restSeconds": 90,
     "notes": "Target RPE 8.0; rest 90 sec. Drive elbows down; control stretch. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 343
+    "sourceCsvRow": 326
   },
   {
     "id": "w8d1e5",
@@ -4961,7 +4672,7 @@
     "rirMax": 2,
     "restSeconds": 60,
     "notes": "Target RPE 8.0; rest 60 sec. Per arm; no body swing. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 344
+    "sourceCsvRow": 327
   },
   {
     "id": "w8d1e6",
@@ -4978,7 +4689,7 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Controlled lowering; elbow-friendly grip. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 345
+    "sourceCsvRow": 328
   },
   {
     "id": "w8d1e7",
@@ -4995,24 +4706,7 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Per arm; use pain-free depth. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 346
-  },
-  {
-    "id": "w8d1e8",
-    "week": 8,
-    "day": 1,
-    "dayLabel": "Monday - Upper A — Chest Focus",
-    "name": "Cable Crunch",
-    "weight": null,
-    "weightText": "",
-    "sets": 3,
-    "minReps": 10,
-    "maxReps": 15,
-    "rirMin": 2,
-    "rirMax": 2,
-    "restSeconds": 60,
-    "notes": "Target RPE 8.0; rest 60 sec. Progress load while maintaining controlled spinal flexion. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 347
+    "sourceCsvRow": 329
   },
   {
     "id": "w8d2e1",
@@ -5029,7 +4723,7 @@
     "rirMax": 2,
     "restSeconds": 150,
     "notes": "Target RPE 8.0; rest 150 sec. Choose leg press or hip sled; consistent machine and depth for progression. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 349
+    "sourceCsvRow": 331
   },
   {
     "id": "w8d2e2",
@@ -5046,7 +4740,7 @@
     "rirMax": 2,
     "restSeconds": 150,
     "notes": "Target RPE 8.0; rest 150 sec. Neutral spine; 1-3 reps in reserve. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 350
+    "sourceCsvRow": 332
   },
   {
     "id": "w8d2e3",
@@ -5063,7 +4757,7 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Full comfortable knee flexion. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 351
+    "sourceCsvRow": 333
   },
   {
     "id": "w8d2e4",
@@ -5080,24 +4774,7 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Pause at stretched position. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 352
-  },
-  {
-    "id": "w8d2e5",
-    "week": 8,
-    "day": 2,
-    "dayLabel": "Tuesday - Lower A — Quad Focus + Delts",
-    "name": "DB Lateral Raise",
-    "weight": 25,
-    "weightText": "25 lb per hand",
-    "sets": 3,
-    "minReps": 12,
-    "maxReps": 20,
-    "rirMin": 2,
-    "rirMax": 2,
-    "restSeconds": 60,
-    "notes": "Target RPE 8.0; rest 60 sec. Smooth controlled reps. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 353
+    "sourceCsvRow": 334
   },
   {
     "id": "w8d2e6",
@@ -5114,7 +4791,7 @@
     "rirMax": 2,
     "restSeconds": 60,
     "notes": "Target RPE 8.0; rest 60 sec. Rear delts; avoid shrugging. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 354
+    "sourceCsvRow": 335
   },
   {
     "id": "w8d3e1",
@@ -5131,7 +4808,7 @@
     "rirMax": null,
     "restSeconds": null,
     "notes": "CARDIO ONLY: One timed cardio bout (not a resistance set). Cardio target: 30 min; Moderate pace. Conversational pace; incline and speed as tolerated. Keep cardio easy.",
-    "sourceCsvRow": 356
+    "sourceCsvRow": 337
   },
   {
     "id": "w8d3e2",
@@ -5148,7 +4825,7 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "ORIGINAL EXERCISE: Hanging Straight-Leg Raise. Perform STRICT HANGING STRAIGHT-LEG RAISES, not knee raises. Target RPE 8.0; rest 75 sec. Strict; posterior pelvic tilt; no swing. Progress difficulty after 15 strict reps. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 357
+    "sourceCsvRow": 338
   },
   {
     "id": "w8d3e3",
@@ -5165,7 +4842,7 @@
     "rirMax": 2,
     "restSeconds": 60,
     "notes": "Target RPE 8.0; rest 60 sec. Reps per side. Two sets per side; use controlled trunk rotation. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 358
+    "sourceCsvRow": 339
   },
   {
     "id": "w8d4e1",
@@ -5182,7 +4859,7 @@
     "rirMax": 2,
     "restSeconds": 90,
     "notes": "Target RPE 8.0; rest 90 sec. Controlled vertical pull; grip for comfort. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 360
+    "sourceCsvRow": 341
   },
   {
     "id": "w8d4e2",
@@ -5199,7 +4876,7 @@
     "rirMax": 2,
     "restSeconds": 90,
     "notes": "ORIGINAL EXERCISE: Chest Supported Row (Dumbbell). Perform CHEST-SUPPORTED DUMBBELL ROW; 70 lb PER HAND, not machine weight. Target RPE 8.0; rest 90 sec. Upper-back emphasis; controlled scapular movement. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 361
+    "sourceCsvRow": 342
   },
   {
     "id": "w8d4e3",
@@ -5216,7 +4893,7 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Reps per side. Elbow toward hip; full comfortable stretch. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 362
+    "sourceCsvRow": 343
   },
   {
     "id": "w8d4e4",
@@ -5233,7 +4910,7 @@
     "rirMax": 2,
     "restSeconds": 60,
     "notes": "Target RPE 8.0; rest 60 sec. Keep tension on lateral delts. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 363
+    "sourceCsvRow": 344
   },
   {
     "id": "w8d4e5",
@@ -5250,7 +4927,7 @@
     "rirMax": 2,
     "restSeconds": 60,
     "notes": "Target RPE 8.0; rest 60 sec. Rear delts. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 364
+    "sourceCsvRow": 345
   },
   {
     "id": "w8d4e6",
@@ -5267,7 +4944,7 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Reps per side. Arm slightly behind torso; steady upper arm. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 365
+    "sourceCsvRow": 346
   },
   {
     "id": "w8d4e7",
@@ -5284,13 +4961,13 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Controlled long-head stretch; pain-free range. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 366
+    "sourceCsvRow": 347
   },
   {
     "id": "w8d5e1",
     "week": 8,
     "day": 5,
-    "dayLabel": "Friday - Lower B — Posterior Chain + Delts",
+    "dayLabel": "Friday - Lower B — Posterior Chain",
     "name": "Hack Squat",
     "weight": 180,
     "weightText": "180 lb",
@@ -5301,13 +4978,13 @@
     "rirMax": 2,
     "restSeconds": 120,
     "notes": "Target RPE 8.0; rest 120 sec. Choose one machine and track consistently. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 368
+    "sourceCsvRow": 349
   },
   {
     "id": "w8d5e2",
     "week": 8,
     "day": 5,
-    "dayLabel": "Friday - Lower B — Posterior Chain + Delts",
+    "dayLabel": "Friday - Lower B — Posterior Chain",
     "name": "Leg Extension",
     "weight": 200,
     "weightText": "200 lb",
@@ -5318,13 +4995,13 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Controlled squeeze and descent. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 369
+    "sourceCsvRow": 350
   },
   {
     "id": "w8d5e3",
     "week": 8,
     "day": 5,
-    "dayLabel": "Friday - Lower B — Posterior Chain + Delts",
+    "dayLabel": "Friday - Lower B — Posterior Chain",
     "name": "Seated Leg Curl",
     "weight": null,
     "weightText": "",
@@ -5335,30 +5012,30 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Keep pelvis planted. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 370
+    "sourceCsvRow": 351
   },
   {
     "id": "w8d5e4",
     "week": 8,
     "day": 5,
-    "dayLabel": "Friday - Lower B — Posterior Chain + Delts",
+    "dayLabel": "Friday - Lower B — Posterior Chain",
     "name": "45-Degree Back Extension",
     "weight": null,
     "weightText": "",
-    "sets": 3,
+    "sets": 2,
     "minReps": 10,
     "maxReps": 15,
     "rirMin": 2,
     "rirMax": 2,
     "restSeconds": 90,
     "notes": "Target RPE 8.0; rest 90 sec. Hip hinge; no lumbar hyperextension; substitute comfortable hip thrust if back objects. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 371
+    "sourceCsvRow": 352
   },
   {
     "id": "w8d5e5",
     "week": 8,
     "day": 5,
-    "dayLabel": "Friday - Lower B — Posterior Chain + Delts",
+    "dayLabel": "Friday - Lower B — Posterior Chain",
     "name": "Standing Calf Raise",
     "weight": 300,
     "weightText": "300 lb",
@@ -5369,30 +5046,13 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Full comfortable range. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 372
-  },
-  {
-    "id": "w8d5e6",
-    "week": 8,
-    "day": 5,
-    "dayLabel": "Friday - Lower B — Posterior Chain + Delts",
-    "name": "DB Lateral Raise",
-    "weight": 25,
-    "weightText": "25 lb per hand",
-    "sets": 3,
-    "minReps": 12,
-    "maxReps": 20,
-    "rirMin": 2,
-    "rirMax": 2,
-    "restSeconds": 60,
-    "notes": "Target RPE 8.0; rest 60 sec. Leave 1-2 reps in reserve for Saturday pressing. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 373
+    "sourceCsvRow": 353
   },
   {
     "id": "w8d5e7",
     "week": 8,
     "day": 5,
-    "dayLabel": "Friday - Lower B — Posterior Chain + Delts",
+    "dayLabel": "Friday - Lower B — Posterior Chain",
     "name": "Incline Treadmill Walk",
     "weight": null,
     "weightText": "",
@@ -5403,13 +5063,13 @@
     "rirMax": null,
     "restSeconds": null,
     "notes": "CARDIO ONLY: One timed cardio bout (not a resistance set). Cardio target: 15-20 min; Moderate pace. Moderate conversational pace. Keep cardio easy.",
-    "sourceCsvRow": 374
+    "sourceCsvRow": 354
   },
   {
     "id": "w8d6e1",
     "week": 8,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Dumbbell Incline Press",
     "weight": 85,
     "weightText": "85 lb per hand",
@@ -5420,13 +5080,13 @@
     "rirMax": 2,
     "restSeconds": 150,
     "notes": "ORIGINAL EXERCISE: Incline Dumbbell Bench Press. Perform INCLINE DUMBBELL BENCH PRESS; load stated PER HAND, not barbell. Target RPE 8.0; rest 150 sec. Low-to-moderate incline; progress with clean form. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 376
+    "sourceCsvRow": 356
   },
   {
     "id": "w8d6e2",
     "week": 8,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Low to High Cable Fly",
     "weight": null,
     "weightText": "",
@@ -5437,13 +5097,13 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "ORIGINAL EXERCISE: Low-to-High Cable Chest Fly. IMPORTANT: Perform LOW-TO-HIGH cable fly (upward direction), NOT high-to-low. IronLedger library label is reversed only to match library. Target RPE 8.0; rest 75 sec. Bring hands upward/inward; avoid shrugging. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 377
+    "sourceCsvRow": 357
   },
   {
     "id": "w8d6e3",
     "week": 8,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Chest Fly (Machine)",
     "weight": 140,
     "weightText": "140 lb",
@@ -5454,13 +5114,13 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Controlled stretched position. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 378
+    "sourceCsvRow": 358
   },
   {
     "id": "w8d6e4",
     "week": 8,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Preacher Curl",
     "weight": 70,
     "weightText": "70 lb total",
@@ -5471,13 +5131,13 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "ORIGINAL EXERCISE: EZ-Bar Preacher Curl. Perform EZ-BAR PREACHER CURL using preacher bench, NOT a standing EZ bar curl. Target RPE 8.0; rest 75 sec. Controlled full comfortable range. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 379
+    "sourceCsvRow": 359
   },
   {
     "id": "w8d6e5",
     "week": 8,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Single-Arm Overhead Cable Triceps Extension",
     "weight": null,
     "weightText": "",
@@ -5488,30 +5148,13 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Per arm; pain-free elbow path. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 380
-  },
-  {
-    "id": "w8d6e6",
-    "week": 8,
-    "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
-    "name": "Bayesian Curl",
-    "weight": 30,
-    "weightText": "30 lb",
-    "sets": 3,
-    "minReps": 10,
-    "maxReps": 15,
-    "rirMin": 2,
-    "rirMax": 2,
-    "restSeconds": 75,
-    "notes": "Target RPE 8.0; rest 75 sec. Reps per side. Controlled stretch; arm behind torso. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 381
+    "sourceCsvRow": 360
   },
   {
     "id": "w8d6e7",
     "week": 8,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Cross-Body Cable Triceps Extension",
     "weight": null,
     "weightText": "",
@@ -5522,47 +5165,30 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Reps per side. Per arm; stable elbow position. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 382
+    "sourceCsvRow": 361
   },
   {
     "id": "w8d6e8",
     "week": 8,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Hammer Curl",
     "weight": null,
     "weightText": "",
-    "sets": 2,
+    "sets": 3,
     "minReps": 10,
     "maxReps": 15,
     "rirMin": 2,
     "rirMax": 2,
     "restSeconds": 60,
     "notes": "Target RPE 8.0; rest 60 sec. Neutral grip; avoid torso swing. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 383
-  },
-  {
-    "id": "w8d6e9",
-    "week": 8,
-    "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
-    "name": "Straight-Bar Cable Triceps Extension",
-    "weight": null,
-    "weightText": "",
-    "sets": 2,
-    "minReps": 12,
-    "maxReps": 15,
-    "rirMin": 2,
-    "rirMax": 2,
-    "restSeconds": 60,
-    "notes": "Target RPE 8.0; rest 60 sec. Non-rope variation; substitute single-handle cross-body if uncomfortable. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 384
+    "sourceCsvRow": 362
   },
   {
     "id": "w8d6e10",
     "week": 8,
     "day": 6,
-    "dayLabel": "Saturday - Upper C — Chest + Arms",
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
     "name": "Hanging Leg Raise",
     "weight": null,
     "weightText": "",
@@ -5573,6 +5199,23 @@
     "rirMax": 2,
     "restSeconds": 75,
     "notes": "ORIGINAL EXERCISE: Hanging Straight-Leg Raise. Perform STRICT HANGING STRAIGHT-LEG RAISES, not knee raises. Target RPE 8.0; rest 75 sec. Strict with pelvic curl. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 385
+    "sourceCsvRow": 363
+  },
+  {
+    "id": "w8d6e11",
+    "week": 8,
+    "day": 6,
+    "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
+    "name": "DB Lateral Raise",
+    "weight": 25,
+    "weightText": "25 lb per hand",
+    "sets": 3,
+    "minReps": 12,
+    "maxReps": 20,
+    "rirMin": 2,
+    "rirMax": 2,
+    "restSeconds": 60,
+    "notes": "Target RPE 8.0; rest 60 sec. Smooth controlled reps, avoid shrugging and body swing. Keep 2 reps in reserve after chest pressing. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
+    "sourceCsvRow": 364
   }
 ]

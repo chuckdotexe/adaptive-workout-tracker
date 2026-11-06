@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "revision": "processed-b69b42fd-c7a6-4e77-9aa9-eb44af10c154",
-  "updatedAt": "2026-11-06T14:12:21.463Z",
+  "revision": "adaptive-1.1-2026-11-06",
+  "updatedAt": "2026-11-06T17:20:51.612Z",
   "processedSessions": [
     {
       "id": "b4774b22-e8b1-406f-914c-cab7b67a2f86",
@@ -64,7 +64,7 @@
     {
       "week": 3,
       "day": 6,
-      "dayLabel": "Saturday - Upper C — Chest + Arms",
+      "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
       "exercises": [
         {
           "exerciseId": "w3d6e1",
@@ -152,23 +152,6 @@
           "restSeconds": 90
         },
         {
-          "exerciseId": "w3d6e6",
-          "weight": 90,
-          "targetReps": 12,
-          "increment": null,
-          "reason": "Nov 5 at confirmed 90 improved to 15/15/14 ending RIR 1 from Oct 31 15/14/12 ending RIR 0. Start with 12 reps and stop at RIR 2. Keep 90 while improving repeatability and use demonstrated 80 if the minimum 10 exceeds target effort.",
-          "lastSet": {
-            "date": "2026-11-05",
-            "weight": 90,
-            "unit": "lb",
-            "reps": 14,
-            "rir": 1,
-            "bodyweight": false,
-            "loadSemantics": "total"
-          },
-          "restSeconds": 90
-        },
-        {
           "exerciseId": "w3d6e7",
           "weight": 25,
           "targetReps": 10,
@@ -203,23 +186,6 @@
           "restSeconds": 90
         },
         {
-          "exerciseId": "w3d6e9",
-          "weight": 70,
-          "targetReps": 12,
-          "increment": null,
-          "reason": "Hold 70 lb and start at 12 reps at RIR 2–3. October 31 improved to 15/14 at RIR 2/1 from 12/11 at RIR 2/0 on October 23. Both sets now meet the minimum, so reassess fewer reps at 70 rather than automatically lowering the load; use a lower available setting if 12 cannot meet effort.",
-          "lastSet": {
-            "date": "2026-10-31",
-            "weight": 70,
-            "unit": "lb",
-            "reps": 14,
-            "rir": 1,
-            "bodyweight": false,
-            "loadSemantics": "total"
-          },
-          "restSeconds": 90
-        },
-        {
           "exerciseId": "w3d6e10",
           "weight": null,
           "targetReps": 10,
@@ -237,6 +203,23 @@
               "text": "Shoulders and grip fatigued - need to switch exercises",
               "date": "2026-11-04"
             }
+          },
+          "restSeconds": 90
+        },
+        {
+          "exerciseId": "w3d6e11",
+          "weight": 25,
+          "targetReps": 15,
+          "increment": null,
+          "reason": "Moved from Friday to Saturday to space direct shoulder work. November 6 recorded 25 lb per hand × 20 reps at RIR 2. Hold 25 lb per hand and aim for 15–20 controlled reps at RIR 2 after pressing; reassess after a full three-set Saturday session.",
+          "lastSet": {
+            "date": "2026-11-06",
+            "weight": 25,
+            "unit": "lb",
+            "reps": 20,
+            "rir": 2,
+            "bodyweight": false,
+            "loadSemantics": "per hand"
           },
           "restSeconds": 90
         }
@@ -365,23 +348,6 @@
             "loadSemantics": "total"
           },
           "restSeconds": 90
-        },
-        {
-          "exerciseId": "w4d1e8",
-          "weight": 70,
-          "targetReps": 15,
-          "increment": null,
-          "reason": "Initialize at demonstrated 70: November 2 3 x 15 at RIR 2/2/2, following October 26 3 x 15 at RIR 3/3/2 and October 15 successful 70 sets. Rep ceiling supports a conditional smallest available cable step, starting 10–12 at RIR 2. What step is available? Retain 70 x 15 until confirmed; no invented machine setting.",
-          "lastSet": {
-            "date": "2026-11-02",
-            "weight": 70,
-            "unit": "lb",
-            "reps": 15,
-            "rir": 2,
-            "bodyweight": false,
-            "loadSemantics": "total"
-          },
-          "restSeconds": 90
         }
       ]
     },
@@ -454,22 +420,6 @@
             "rir": 2,
             "bodyweight": false,
             "loadSemantics": "total"
-          },
-          "restSeconds": 90
-        },
-        {
-          "exerciseId": "w4d2e5",
-          "weight": 25,
-          "targetReps": 20,
-          "increment": null,
-          "reason": "Nov 6 repeated 25 per hand for 3x20 all RIR 2, improving from final RIR 1 on Nov 3 and Oct 30 and RIR 0 on Oct 27. Move baseline from 18 to 20; a smallest available dumbbell-step trial at 12–15/RIR 2 is supported once confirmed. What step follows 25? Keep 25x20 until known; return to 25 if trial misses effort.",
-          "lastSet": {
-            "date": "2026-11-06",
-            "weight": 25,
-            "reps": 20,
-            "rir": 2,
-            "bodyweight": false,
-            "loadSemantics": "25 lb per hand"
           },
           "restSeconds": 90
         },
@@ -686,7 +636,7 @@
     {
       "week": 4,
       "day": 5,
-      "dayLabel": "Friday - Lower B — Posterior Chain + Delts",
+      "dayLabel": "Friday - Lower B — Posterior Chain",
       "exercises": [
         {
           "exerciseId": "w4d5e1",
@@ -765,22 +715,6 @@
             "rir": 1,
             "bodyweight": false,
             "loadSemantics": "300 lb"
-          },
-          "restSeconds": 90
-        },
-        {
-          "exerciseId": "w4d5e6",
-          "weight": 25,
-          "targetReps": 20,
-          "increment": null,
-          "reason": "Nov 6 repeated 25 per hand for 3x20 all RIR 2, improving from final RIR 1 on Nov 3 and Oct 30 and RIR 0 on Oct 27. Move baseline from 18 to 20; a smallest available dumbbell-step trial at 12–15/RIR 2 is supported once confirmed. What step follows 25? Keep 25x20 until known; return to 25 if trial misses effort.",
-          "lastSet": {
-            "date": "2026-11-06",
-            "weight": 25,
-            "reps": 20,
-            "rir": 2,
-            "bodyweight": false,
-            "loadSemantics": "25 lb per hand"
           },
           "restSeconds": 90
         },
