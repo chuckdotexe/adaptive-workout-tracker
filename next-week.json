@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "revision": "adaptive-1.1-2026-11-06",
-  "updatedAt": "2026-11-06T17:20:51.612Z",
+  "revision": "adaptive-1.2-2026-11-06",
+  "updatedAt": "2026-11-06T22:08:01.240Z",
   "processedSessions": [
     {
       "id": "b4774b22-e8b1-406f-914c-cab7b67a2f86",
@@ -101,23 +101,6 @@
           "restSeconds": 90
         },
         {
-          "exerciseId": "w3d6e3",
-          "weight": 190,
-          "targetReps": 12,
-          "increment": null,
-          "reason": "October 31 190 x15/15 at RIR 3/4 improved from October 23 170/190 x12 ending RIR 2; older machine records lack effort and may differ in setup. Ceiling with reserve supports the smallest available same-machine step at 12 reps/RIR 2. What setting follows 190? Keep demonstrated 190 x12 while confirming; replace the previous unverified 200 target, not an actual record.",
-          "lastSet": {
-            "date": "2026-10-31",
-            "weight": 190,
-            "unit": "lb",
-            "reps": 15,
-            "rir": 4,
-            "bodyweight": false,
-            "loadSemantics": "total"
-          },
-          "restSeconds": 90
-        },
-        {
           "exerciseId": "w3d6e4",
           "weight": 70,
           "targetReps": 10,
@@ -190,21 +173,8 @@
           "weight": null,
           "targetReps": 10,
           "increment": null,
-          "reason": "November 4 bodyweight 15/11/11 at RIR 2/1/3 with reported shoulder/grip fatigue, versus October 31 15/15 at RIR 2 and October 28 15/15/14 ending RIR 1. Start 10 controlled reps per set at RIR 2, stop if grip/shoulders limit form; final RIR 3 does not justify adding reps after the earlier fatigue. No external load. Exercise substitution needs a separate program decision; preserve the original exercise here.",
-          "lastSet": {
-            "date": "2026-11-04",
-            "weight": null,
-            "unit": "",
-            "reps": 11,
-            "rir": 3,
-            "bodyweight": true,
-            "loadSemantics": "total",
-            "userComment": {
-              "text": "Shoulders and grip fatigued - need to switch exercises",
-              "date": "2026-11-04"
-            }
-          },
-          "restSeconds": 90
+          "reason": "Replaces hanging straight-leg raises because grip and shoulder fatigue limited abdominal work on November 4. Start with a controlled load for 10–15 strict cable crunches at 2 RIR; no comparable cable crunch log verified, so select initial load in gym.",
+          "restSeconds": 75
         },
         {
           "exerciseId": "w3d6e11",
@@ -472,21 +442,8 @@
           "weight": null,
           "targetReps": 10,
           "increment": null,
-          "reason": "November 4 bodyweight 15/11/11 at RIR 2/1/3 with reported shoulder/grip fatigue, versus October 31 15/15 at RIR 2 and October 28 15/15/14 ending RIR 1. Start 10 controlled reps per set at RIR 2, stop if grip/shoulders limit form; final RIR 3 does not justify adding reps after the earlier fatigue. No external load. Exercise substitution needs a separate program decision; preserve the original exercise here.",
-          "lastSet": {
-            "date": "2026-11-04",
-            "weight": null,
-            "unit": "",
-            "reps": 11,
-            "rir": 3,
-            "bodyweight": true,
-            "loadSemantics": "total",
-            "userComment": {
-              "text": "Shoulders and grip fatigued - need to switch exercises",
-              "date": "2026-11-04"
-            }
-          },
-          "restSeconds": 90
+          "reason": "Replaces unsupported hanging raises. Use forearm pads and straight legs, then actively curl pelvis upward. Bodyweight for 10–15 strict reps at 2 RIR; no comparable supported-chair record, so no past set is carried over.",
+          "restSeconds": 75
         },
         {
           "exerciseId": "w4d3e3",
