@@ -40,6 +40,8 @@ The active workout, session plan, exercise selection, pending submission and res
 
 The service worker caches only the public static application shell, not responses from GitHub. Existing legacy local records (`awt-v1` and `awt-v03-local`) are neither read, deleted, nor automatically uploaded. The earlier local-storage workflow is superseded; any existing device history remains there until separately migrated.
 
+If an old app version fails to load in a particular browser or Home Screen installation, open `/adaptive-workout-tracker/repair.html` in that same browser and select **Repair this app**. This standalone recovery page unregisters only the tracker's service worker and deletes only `workout-*` static caches, then reloads the current app. It does not clear local storage, the stored GitHub token, unsent workout sets, or other websites' data. An internet connection is needed to reload after recovery.
+
 The week/day cookie is a device preference. Successful submissions advance to the following training day. Sessions in the online queue and the first day in the upcoming plan provide the online position on other devices. Older workouts still awaiting Sheets processing cannot move the next workout backward: the saved plan position and furthest queued workout determine the next training day. This tracks training days, not calendar days. Week eight ends without silently looping to week one.
 
 ## Safety of queue processing

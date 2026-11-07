@@ -184,6 +184,7 @@ export default function Home() {
   return <main className={session ? "active-workout" : ""}>
     <h1>{programInfo.name}</h1>
     <p className="preview-navigation"><Link href="/upcoming/" target="_blank" rel="noopener noreferrer">Next five workouts →</Link></p>
+    <p className="preview-navigation"><a href={(process.env.NEXT_PUBLIC_BASE_PATH || '') + '/repair.html'}>Repair cached app files</a></p>
     <p className="intro">Workouts recover on this device after reload.</p>
     {error && <p role="alert">{error}</p>}
     {showMissing && missing.length > 0 && <div className="missing-sets"><strong>Missing sets</strong>{missing.map(e=><button key={e.id} className="secondary" onClick={()=>{setIdx(e.index);setError('');}}>{e.name} · {e.logged}/{e.sets}</button>)}</div>}

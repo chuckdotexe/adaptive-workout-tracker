@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-06 — Browser-specific cache recovery
+
+- Add a standalone `/repair.html` page that works even if the main application bundle is stale or fails to start.
+- Remove only this app's scoped service worker registration and `workout-*` caches, without touching GitHub credentials, local workout drafts, or other browser data.
+- Link to recovery from the tracker and reload the current deployment with a cache-busting URL.
+
 ## 2026-11-06 — Unblock Pages deployment after Adaptive 1.2 data update
 
 - Fix the deployment mismatch where live `next-week.json` used Adaptive 1.2 while GitHub Pages still served the Adaptive 1.1 app bundle, producing `Upcoming exercise count mismatch`.
