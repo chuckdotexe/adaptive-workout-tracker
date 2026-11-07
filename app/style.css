@@ -41,3 +41,9 @@ fieldset{border:0;margin:0;padding:0;min-width:0}fieldset:disabled{opacity:.7}
 .upcoming-exercises p{margin:7px 0;line-height:1.5}
 .preview-target{font-size:17px;font-weight:600}
 .upcoming-exercises details{margin:8px 0 0}
+
+.target-rationale{background:#101b2c;border:1px solid #455b78;border-radius:10px;padding:10px 12px;margin-top:12px}
+.target-rationale summary{color:#b4d0ff;font-weight:650;font-size:15px;min-height:28px}
+.target-rationale p,.active-workout .target-rationale p{font-size:14px;line-height:1.5;margin:10px 0 0;color:#e1e9f6}
+.active-workout .target-rationale{margin-top:10px}
+.active-workout .target-rationale summary{font-size:15px}

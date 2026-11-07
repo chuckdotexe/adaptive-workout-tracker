@@ -218,7 +218,6 @@ export default function Home() {
         <p className="workout-target" data-testid="target">{cardio ? `Cardio: ${cardioTarget(ex)} · conversational pace` : <>Target: {ex.sets} × {repRange(ex)} reps · {bodyweight ? 'Bodyweight' : `${targetWeight ?? 'Unspecified'} lb${ex.weightText.includes('per hand') ? ' per hand' : ''}`} · <span className="target-effort">RIR {ex.rirMin ?? 'unspecified'}{ex.rirMax !== ex.rirMin ? '–'+ex.rirMax : ''}</span></>}</p>
         <p className="extra">Program range: {ex.minReps}–{ex.maxReps} reps · Original load: {ex.weightText || 'Unspecified'} · Rest {REST_SECONDS} seconds</p>
         {lastSet?.userComment && <p className="last-history" data-testid="user-machine-note"><strong>Exercise notes ({lastSet.userComment.date}):</strong> {lastSet.userComment.text}</p>}
-        {target && <p className="extra">Upcoming target · {target.reason}</p>}
         {session && <fieldset disabled={busy || !!pending.current}>
           {cardio ? <div className="controls cardio-controls"><Stepper label="Minutes" value={minutes} onChange={setMinutes}/><Stepper label="Speed (mph)" value={speed} onChange={setSpeed} step={0.1}/><Stepper label="Incline (%)" value={incline} onChange={setIncline} max={100}/></div> : <div className="controls">
             {bodyweight ? <div className="bodyweight-label">Bodyweight</div> : <Stepper label="Load" value={weight} onChange={setWeight} step={session.increments?.[ex.id]||5}/> }
@@ -236,7 +235,9 @@ export default function Home() {
         {done.map((s,i)=><p key={s.id}>{s.kind==='cardio' ? `${s.durationMinutes} min · ${s.speedMph ?? '?'} mph · ${s.inclinePercent ?? '?'}% incline` : <>Set {i+1}: {s.bodyweight ? 'Bodyweight' : `${s.weight ?? 'Unspecified'} lb`} × {s.reps} · RIR {s.rir ?? 'unknown'}</>} {s.notes}
           <button className="secondary" disabled={busy || !!pending.current} onClick={()=>change(st=>({...st,sessions:st.sessions.map(x=>x.id===session.id ? {...x,sets:x.sets.filter(row=>row.id!==s.id)} : x)}))}>Remove set {i+1}</button>
         </p>)}
-        </div><details className="extra"><summary>Original program notes</summary><p>{ex.notes}</p></details>
+        </div>
+        {target && <details className="target-rationale" key={ex.id} data-testid="exercise-target-reason"><summary>Why this target?</summary><p>{target.reason}</p></details>}
+        <details className="extra"><summary>Original program notes</summary><p>{ex.notes}</p></details>
       </section>
       {session && <div className="next-up">Next up: {nextExercise?.name || 'Finish workout'}</div>}
       {session && <details className="workout-timing"><summary>Workout time {durationLabel(elapsedSeconds(session,clock))}</summary><fieldset disabled={busy || !!pending.current}><div className="row"><button className="secondary" onClick={()=>updateTiming(s=>s.timerStartedAt ? stopWorkoutTimer(s) : {...s,elapsedSeconds:s.elapsedSeconds||0,timerStartedAt:new Date().toISOString()})}>{session.timerStartedAt ? 'Stop workout timer' : 'Resume workout timer'}</button><label>Total minutes<input aria-label="Workout total minutes" type="number" min="0" step="0.1" value={Math.round(elapsedSeconds(session,clock)/60*10)/10} onChange={e=>{if(e.target.value!=='')updateTiming(s=>({...s,elapsedSeconds:+e.target.value*60,timerStartedAt:null}));}}/></label></div><small>Editing total minutes stops the timer. Resume to continue timing.</small></fieldset></details>}

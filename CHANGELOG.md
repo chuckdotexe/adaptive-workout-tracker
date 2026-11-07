@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-06 — Explain targets inside active workouts
+
+- Add a collapsed **Why this target?** panel at the bottom of each exercise card, including during active workouts.
+- Show the existing published per-exercise reasoning rather than recalculating or duplicating target data.
+- Leave load/repetition targets, GitHub submissions, and workout history untouched.
+
 ## 2026-11-06 — Make cache recovery navigation explicit
 
 - Keep the recovery result visible after the cache and worker are removed instead of navigating automatically, which could leave iPhone Chrome on a generic page-load failure without showing the result.
