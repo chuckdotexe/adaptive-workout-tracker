@@ -1,7 +1,9 @@
 (() => {
   const button = document.getElementById('repair');
   const status = document.getElementById('status');
-  if (!button || !status) return;
+  const reopen = document.getElementById('reopen');
+  const freshApp = document.getElementById('fresh-app');
+  if (!button || !status || !reopen || !freshApp) return;
 
   button.addEventListener('click', async () => {
     button.disabled = true;
@@ -26,8 +28,10 @@
         }
       }
 
-      status.textContent = `Cleared ${cachesCleared} app cache(s) and ${workers} background worker(s). Your saved workouts and GitHub token were not touched. Reloading…`;
-      setTimeout(() => window.location.replace(`./?cache-repaired=${Date.now()}`), 400);
+      status.textContent = `Recovery finished. Cleared ${cachesCleared} app cache(s) and ${workers} background worker(s). Your saved workouts and GitHub token were not touched. Tap below to reopen the app.`;
+      freshApp.href = `./?cache-repaired=${Date.now()}`;
+      reopen.hidden = false;
+      button.disabled = false;
     } catch (error) {
       status.textContent = `Could not complete recovery: ${error.message}. You can try again.`;
       button.disabled = false;

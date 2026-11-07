@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-06 — Make cache recovery navigation explicit
+
+- Keep the recovery result visible after the cache and worker are removed instead of navigating automatically, which could leave iPhone Chrome on a generic page-load failure without showing the result.
+- Provide a separate user-initiated, cache-busted app link and preserve all local workout and credential data.
+
 ## 2026-11-06 — Browser-specific cache recovery
 
 - Add a standalone `/repair.html` page that works even if the main application bundle is stale or fails to start.

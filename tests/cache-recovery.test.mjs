@@ -9,18 +9,19 @@ test('recovery removes only tracker caches and scoped worker without touching sa
   let onClick;
   const button = { disabled: false, addEventListener: (_, fn) => { onClick = fn; } };
   const status = { textContent: '' };
+  const reopen = { hidden: true };
+  const freshApp = { href: './' };
   const removed = [];
   const unregistered = [];
-  const redirects = [];
   const location = {
     href: 'https://chuckdotexe.github.io/adaptive-workout-tracker/repair.html',
-    replace: url => redirects.push(url),
+    replace: () => { throw new Error('Must not redirect automatically'); },
   };
   const scope = 'https://chuckdotexe.github.io/adaptive-workout-tracker/';
   const storage = new Proxy({}, { get: () => { throw new Error('Recovery must not access user storage'); } });
 
   vm.runInNewContext(source, {
-    document: { getElementById: id => id === 'repair' ? button : status },
+    document: { getElementById: id => ({repair:button,status,reopen,'fresh-app':freshApp})[id] },
     navigator: { serviceWorker: { getRegistrations: async () => [
       { scope, unregister: async () => { unregistered.push(scope); return true; } },
       { scope: 'https://chuckdotexe.github.io/other-app/', unregister: async () => { throw new Error('Other app worker touched'); } },
@@ -33,12 +34,13 @@ test('recovery removes only tracker caches and scoped worker without touching sa
     sessionStorage: storage,
     URL,
     Date: { now: () => 12345 },
-    setTimeout: fn => fn(),
   });
 
   await onClick();
   assert.deepEqual(unregistered, [scope]);
   assert.deepEqual(removed, ['workout-old', 'workout-new']);
-  assert.deepEqual(redirects, ['./?cache-repaired=12345']);
+  assert.equal(freshApp.href, './?cache-repaired=12345');
+  assert.equal(reopen.hidden, false);
+  assert.equal(button.disabled, false);
   assert.match(status.textContent, /saved workouts and GitHub token were not touched/);
 });
