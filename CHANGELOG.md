@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-09 — Optional treadmill after strength workouts
+
+- Add a collapsed optional treadmill recorder to active workouts. Record and remove one bonus walk with minutes, mph, incline and notes; preserve it through device recovery and GitHub submission.
+- Show an estimated belt-distance and step range from an explicit stride assumption rather than looking at daily step-count data. Export optional cardio to a distinct Workout Log row with session/set IDs, distance and notes.
+- Keep bonus treadmill work outside prescribed exercises, missing-set checks, strength progression and target recommendations. Validate and acknowledge it through the existing duplicate-safe queue/Sheets processing workflow.
+- Verification: 68 unit tests, production build and TypeScript check passed locally, including optional cardio validation, submission, estimated steps, Sheets mapping and receipt coverage. Browser tests could not start because the Chromium binary is absent and its download failed; GitHub Pages publication has not been verified.
+
 ## 2026-11-06 — Explain targets inside active workouts
 
 - Add a collapsed **Why this target?** panel at the bottom of each exercise card, including during active workouts.

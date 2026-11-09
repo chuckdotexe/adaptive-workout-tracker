@@ -33,6 +33,24 @@ test('cardio form uses minutes speed and incline and submits alongside resistanc
  const session=fixture.files['completed.json'].sessions[0];expect(session.sets).toHaveLength(18);expect(session.sets.at(-1)).toMatchObject({kind:'cardio',durationMinutes:10,speedMph:2.7,inclinePercent:10,weight:null,rir:null,reps:0});expect(session.skipped).toBeUndefined();
 });
 
+test('optional treadmill saves on device, remains removable, and stays outside the exercise selector',async({page})=>{
+ await mockGitHub(page);await connect(page);await page.getByRole('button',{name:'Start workout',exact:true}).click();
+ await expect(page.getByLabel('Exercise',{exact:true}).locator('option')).toHaveCount(program.filter(e=>e.week===1&&e.day===1).length);
+ await page.getByTestId('optional-treadmill').locator('summary').click();
+ await expect(page.getByLabel('Treadmill minutes')).toHaveValue('10');
+ await expect(page.getByLabel('Treadmill speed (mph)')).toHaveValue('2.6');
+ await expect(page.getByLabel('Treadmill incline (%)')).toHaveValue('11');
+ await page.getByLabel('Treadmill minutes').fill('20');
+ await page.getByRole('button',{name:'Log optional treadmill',exact:true}).click();
+ await expect(page.getByTestId('optional-treadmill')).toContainText('20 min · 2.6 mph · 11% incline');
+ await expect(page.getByText('0/4 sets logged',{exact:false})).toBeVisible();
+ await page.reload();
+ await page.getByTestId('optional-treadmill').locator('summary').click();
+ await expect(page.getByTestId('optional-treadmill')).toContainText('20 min · 2.6 mph · 11% incline');
+ await page.getByRole('button',{name:'Remove optional treadmill',exact:true}).click();
+ await expect(page.getByRole('button',{name:'Log optional treadmill',exact:true})).toBeVisible();
+});
+
 test('sound is opt-in and rest completes visibly after 90 seconds',async({page})=>{
  await page.addInitScript(()=>{window.__tones=[];window.AudioContext=class {currentTime=0;destination={};resume(){return Promise.resolve();}createGain(){return {gain:{value:0},connect(){}};}createOscillator(){return {frequency:{value:0},connect(){},start(time){window.__tones.push(time || 0);},stop(){}};}};});
  await page.clock.install();await mockGitHub(page);await connect(page);await page.getByRole('button',{name:'Start workout',exact:true}).click();

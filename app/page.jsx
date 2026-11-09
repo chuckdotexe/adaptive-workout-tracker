@@ -1,12 +1,12 @@
 'use client';
 import {useEffect, useRef, useState} from 'react';
 import Link from 'next/link';
-import {isCardio, cardioTarget,isBodyweight} from '../lib/activity.mjs';
+import {isCardio, cardioTarget,isBodyweight,OPTIONAL_TREADMILL_ID,treadmillMetrics} from '../lib/activity.mjs';
 import program from '../data/ironledger-program.json';
 import initialHistory from '../data/last-sets.json';
 import programInfo from '../data/program.json';
 import {lastRecordedSet,historyName,elapsedSeconds,stopWorkoutTimer,durationLabel} from '../lib/session-details.mjs';
-import {empty, start, record, setIncrement, validate} from '../lib/workout.mjs';
+import {empty, start, record, recordOptionalTreadmill, setIncrement, validate} from '../lib/workout.mjs';
 import {GitHubStore, DEFAULT_REPOSITORY} from '../lib/github-store.mjs';
 import {currentDay, makeSubmission, ordinal, targetFromPlan} from '../lib/online-workflow.mjs';
 
@@ -26,6 +26,7 @@ export default function Home() {
   const [ready,setReady]=useState(false), [restEnd,setRestEnd]=useState(null), [clock,setClock]=useState(Date.now());
   const [showMissing,setShowMissing]=useState(false);
   const [online,setOnline]=useState(true), [sound,setSound]=useState(false), [minutes,setMinutes]=useState(''), [speed,setSpeed]=useState(''), [incline,setIncline]=useState('');
+  const [bonusMinutes,setBonusMinutes]=useState('10'), [bonusSpeed,setBonusSpeed]=useState('2.6'), [bonusIncline,setBonusIncline]=useState('11'), [bonusNotes,setBonusNotes]=useState('');
   const audio=useRef(null), scheduled=useRef([]), sounded=useRef(null);
   const recovered=useRef(false);
   const pending = useRef(null), submitting = useRef(false);
@@ -38,6 +39,8 @@ export default function Home() {
   const targetWeight = target ? target.weight : ex.weight;
   const targetReps = target?.targetReps ?? ex.minReps;
   const done = session?.sets.filter(s => s.exerciseId === ex.id) ?? [];
+  const bonus = session?.sets.find(s => s.exerciseId === OPTIONAL_TREADMILL_ID);
+  const bonusMetrics = treadmillMetrics(+bonusMinutes,+bonusSpeed);
   // Keep active prescriptions pinned, but show history from the freshly fetched plan.
   const publishedHistory=[sessionPlan,remote?.plan].filter(Boolean).flatMap(p=>p.workouts.flatMap(w=>w.exercises)).filter(t=>historyName(program.find(e=>e.id===t.exerciseId)?.name)===historyName(ex.name)).map(t=>t.lastSet).filter(Boolean).sort((a,b)=>a.date.localeCompare(b.date)).at(-1);
   const historyFallback=[publishedHistory,initialHistory[historyName(ex.name)]].filter(Boolean).sort((a,b)=>a.date.localeCompare(b.date)).at(-1);
@@ -147,6 +150,11 @@ export default function Home() {
     });
     if(logged && !cardio) startRest();
   }
+  function logBonus() {
+    change(state=>recordOptionalTreadmill(state,{id:crypto.randomUUID(),durationMinutes:bonusMinutes===''?0:+bonusMinutes,
+      speedMph:bonusSpeed===''?0:+bonusSpeed,inclinePercent:bonusIncline===''?null:+bonusIncline,
+      notes:bonusNotes,created:new Date().toISOString()}));
+  }
   async function connect(event) {
     event.preventDefault();
     const value = credential.trim();
@@ -241,13 +249,27 @@ export default function Home() {
       </section>
       {session && <div className="next-up">Next up: {nextExercise?.name || 'Finish workout'}</div>}
       {session && <details className="workout-timing"><summary>Workout time {durationLabel(elapsedSeconds(session,clock))}</summary><fieldset disabled={busy || !!pending.current}><div className="row"><button className="secondary" onClick={()=>updateTiming(s=>s.timerStartedAt ? stopWorkoutTimer(s) : {...s,elapsedSeconds:s.elapsedSeconds||0,timerStartedAt:new Date().toISOString()})}>{session.timerStartedAt ? 'Stop workout timer' : 'Resume workout timer'}</button><label>Total minutes<input aria-label="Workout total minutes" type="number" min="0" step="0.1" value={Math.round(elapsedSeconds(session,clock)/60*10)/10} onChange={e=>{if(e.target.value!=='')updateTiming(s=>({...s,elapsedSeconds:+e.target.value*60,timerStartedAt:null}));}}/></label></div><small>Editing total minutes stops the timer. Resume to continue timing.</small></fieldset></details>}
+      {session && <details className="optional-treadmill" data-testid="optional-treadmill">
+        <summary>Optional treadmill {bonus ? '· logged' : '· add if time allows'}</summary>
+        {bonus ? <div className="optional-treadmill-record"><p>{bonus.durationMinutes} min · {bonus.speedMph} mph · {bonus.inclinePercent}% incline</p>
+          <p>About {treadmillMetrics(bonus.durationMinutes,bonus.speedMph)?.distanceMiles.toFixed(2)} mi · {treadmillMetrics(bonus.durationMinutes,bonus.speedMph)?.stepsLow.toLocaleString()}–{treadmillMetrics(bonus.durationMinutes,bonus.speedMph)?.stepsHigh.toLocaleString()} estimated steps</p>
+          {bonus.notes && <p>{bonus.notes}</p>}
+          <button className="secondary" disabled={busy || !!pending.current} onClick={()=>change(st=>({...st,sessions:st.sessions.map(s=>s.id===session.id?{...s,sets:s.sets.filter(x=>x.id!==bonus.id)}:s)}))}>Remove optional treadmill</button></div>
+          : <fieldset disabled={busy || !!pending.current}>
+            <div className="controls"><Stepper label="Treadmill minutes" value={bonusMinutes} onChange={setBonusMinutes}/><Stepper label="Treadmill speed (mph)" value={bonusSpeed} onChange={setBonusSpeed} step={0.1}/><Stepper label="Treadmill incline (%)" value={bonusIncline} onChange={setBonusIncline} max={100}/></div>
+            <label>Treadmill notes (optional)<input value={bonusNotes} onChange={e=>setBonusNotes(e.target.value)}/></label>
+            <p>{bonusMetrics ? <>About {bonusMetrics.distanceMiles.toFixed(2)} mi · {bonusMetrics.stepsLow.toLocaleString()}–{bonusMetrics.stepsHigh.toLocaleString()} estimated steps</> : 'Enter minutes and speed to estimate distance and steps'}</p>
+            <small>Steps estimated using 0.65–0.75 m per step. No daily step-count data is used. Skipping this does not affect workout completion.</small>
+            <button className="wide" onClick={logBonus}>Log optional treadmill</button>
+          </fieldset>}
+      </details>}
       <div className="row"><button disabled={idx>=exercises.length-1} onClick={()=>navigate(idx+1)}>Next exercise</button></div>
       {session && <button className="wide" disabled={busy} onClick={()=>finishWorkout()}>{busy ? 'Saving to Git…' : 'Finish workout'}</button>}
       <section className="card overview">
         <h2>Awaiting processing ({remote.queue.sessions.length})</h2>
         <p>Completed sessions stay queued until the scheduled processor verifies Sheets and publishes upcoming targets. The combined Outlook/workout task checks every two hours while the computer and app are running.</p>
         {remote.queue.sessions.map(s=><details key={s.id}><summary>{s.date} · W{s.week} D{s.day} · {s.sets.length} sets</summary>
-          {s.sets.map(set=><p key={set.id}>{program.find(e=>e.id===set.exerciseId)?.name} · {set.kind==='cardio' ? `${set.durationMinutes} min · ${set.speedMph ?? '?'} mph · ${set.inclinePercent ?? '?'}% incline` : `${set.bodyweight ? 'Bodyweight' : `${set.weight ?? 'unknown'} lb`} × ${set.reps} · RIR ${set.rir ?? 'unknown'}`}</p>)}
+          {s.sets.map(set=><p key={set.id}>{set.exerciseId===OPTIONAL_TREADMILL_ID ? 'Optional Treadmill Walk' : program.find(e=>e.id===set.exerciseId)?.name} · {set.kind==='cardio' ? `${set.durationMinutes} min · ${set.speedMph ?? '?'} mph · ${set.inclinePercent ?? '?'}% incline` : `${set.bodyweight ? 'Bodyweight' : `${set.weight ?? 'unknown'} lb`} × ${set.reps} · RIR ${set.rir ?? 'unknown'}`}</p>)}
         </details>)}
       </section>
       <section className="card overview"><h2>Next six workouts</h2><p>Plan updated {new Date(remote.plan.updatedAt).toLocaleString()}</p>
