@@ -1,11 +1,12 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {empty,start,record} from '../lib/workout.mjs';
-import {appendToQueue,digest,makeSubmission,seedPlan,validatePlan,currentDay} from '../lib/online-workflow.mjs';
+import {empty,start,record,recordOptionalTreadmill,validate} from '../lib/workout.mjs';
+import {appendToQueue,digest,makeSubmission,seedPlan,validatePlan,validateQueue,currentDay} from '../lib/online-workflow.mjs';
 import {GitHubStore} from '../lib/github-store.mjs';
 import {prepareBatch,finalizeProcessing,sheetRows} from '../lib/processing.mjs';
 import {GitHubFixture} from './helpers/github-fixture.mjs';
+import {OPTIONAL_TREADMILL_ID,treadmillMetrics} from '../lib/activity.mjs';
 const program=JSON.parse(fs.readFileSync(new URL('../data/ironledger-program.json',import.meta.url)));
 function submission(id='one',day=1){
   const plan=seedPlan(program), exercises=program.filter(e=>e.week===1&&e.day===day);
@@ -54,6 +55,60 @@ test('Sheets rows preserve unknown values, actual loads, RIR derivation, IDs and
   assert.match(rows[0][17],/café/);
   const unknown=rows.find((row,i)=>session.sets[i].weight===null);
   assert.equal(unknown[7],'');assert.equal(unknown[9],'');
+});
+test('optional treadmill estimates steps from distance, without daily step counts',()=>{
+ const metrics=treadmillMetrics(10,2.6);
+ assert.equal(Math.round(metrics.distanceMiles*1000),433);
+ assert.deepEqual([metrics.stepsLow,metrics.stepsHigh],[930,1073]);
+ assert.equal(treadmillMetrics(0,2.6),null);
+ assert.equal(treadmillMetrics(10,0),null);
+});
+test('optional treadmill is independent of required exercise counts and saved as a Sheet cardio row',()=>{
+ const exercises=program.filter(e=>e.week===1&&e.day===1);
+ let state=start(empty(),1,1,'with-treadmill','2026-11-09');
+ const bonus={id:'bonus-1',durationMinutes:20,speedMph:2.7,inclinePercent:12,notes:'After weights'};
+ state=recordOptionalTreadmill(state,bonus);
+ assert.equal(state.sessions[0].sets.length,1);
+ assert.equal(state.sessions[0].sets[0].exerciseId,OPTIONAL_TREADMILL_ID);
+ assert.throws(()=>recordOptionalTreadmill(state,{...bonus,id:'bonus-2'}),/Remove the existing/);
+ assert.throws(()=>makeSubmission(state.sessions[0],exercises,seedPlan(program)),/Incomplete/);
+ for(const ex of exercises)for(let i=0;i<ex.sets;i++)state=record(state,ex,{id:`bonus-${ex.id}-${i}`,weight:ex.weight,reps:ex.minReps,rir:ex.rirMin,notes:''});
+ const session=makeSubmission(state.sessions[0],exercises,seedPlan(program));
+ validate(JSON.parse(JSON.stringify(state)));validateQueue({version:1,sessions:[session]},program);
+ const rows=sheetRows(session),row=rows.find(r=>r[21]==='bonus-1');
+ assert.equal(rows.length,1+exercises.reduce((n,ex)=>n+ex.sets,0));
+ assert.equal(row[3],'Optional Treadmill Walk');assert.equal(row[11],20);
+ assert.equal(row[12],0.9);assert.equal(row[13],'mi');
+ assert.equal(row[6],'');assert.equal(row[7],'');assert.equal(row[10],'');assert.equal(row[19],'');
+ assert.match(row[17],/Optional post-workout cardio.*After weights.*Speed 2.7 mph.*Incline 12%.*Estimated steps/);
+ assert.equal(session.prescriptions.length,exercises.length);
+ const duplicate=structuredClone(session);duplicate.sets.push({...duplicate.sets[0],id:'duplicate-bonus'});
+ assert.throws(()=>validateQueue({version:1,sessions:[duplicate]},program),/Invalid workout/);
+ const unknown=structuredClone(session);unknown.sets[0].exerciseId='w2d1e1';
+ assert.throws(()=>validateQueue({version:1,sessions:[unknown]},program),/Invalid workout/);
+});
+test('optional treadmill must be a valid recorded cardio activity',()=>{
+ const state=start(empty(),1,1,'invalid-bonus','2026-11-09');
+ const base={id:'bonus',durationMinutes:10,speedMph:2.6,inclinePercent:11};
+ assert.throws(()=>recordOptionalTreadmill(state,{...base,durationMinutes:0}),/duration/);
+ assert.throws(()=>recordOptionalTreadmill(state,{...base,speedMph:0}),/Invalid workout/);
+ assert.throws(()=>recordOptionalTreadmill(state,{...base,inclinePercent:101}),/incline/);
+});
+test('Git queue and processing receipts retain optional treadmill set IDs safely',async()=>{
+ const {fixture,store}=setup(),exercises=program.filter(e=>e.week===1&&e.day===1);
+ let state=start(empty(),1,1,'bonus-processing','2026-11-09');
+ for(const ex of exercises)for(let i=0;i<ex.sets;i++)state=record(state,ex,{id:`${ex.id}-${i}`,weight:ex.weight,reps:ex.minReps,rir:ex.rirMin});
+ state=recordOptionalTreadmill(state,{id:'my-bonus',durationMinutes:10,speedMph:2.6,inclinePercent:11});
+ const session=makeSubmission(state.sessions[0],exercises,seedPlan(program));
+ await store.submit(session,program);await store.submit(session,program);
+ const batch=await prepareBatch(await store.snapshot(program),program);
+ assert.ok(batch.sessions[0].setIds.includes('my-bonus'));
+ assert.equal(batch.rows.filter(row=>row[21]==='my-bonus').length,1);
+ const short=receipt(batch);short.sessions=structuredClone(batch.sessions);short.sessions[0].setIds=short.sessions[0].setIds.filter(id=>id!=='my-bonus');
+ await assert.rejects(()=>finalizeProcessing(store,batch,batch.nextPlan,short,program),/receipt/);
+ const result=await finalizeProcessing(store,batch,batch.nextPlan,receipt(batch),program);
+ assert.equal(result.processed,1);assert.equal(fixture.files['completed.json'].sessions.length,0);
+ assert.equal(fixture.files['next-week.json'].processedSessions[0].digest,await digest(session));
 });
 test('processing requires a verified receipt for every set and never clears on missing receipt',async()=>{
   const {fixture,store}=setup();await store.submit(submission(),program);

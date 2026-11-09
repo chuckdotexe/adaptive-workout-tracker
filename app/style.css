@@ -47,3 +47,12 @@ fieldset{border:0;margin:0;padding:0;min-width:0}fieldset:disabled{opacity:.7}
 .target-rationale p,.active-workout .target-rationale p{font-size:14px;line-height:1.5;margin:10px 0 0;color:#e1e9f6}
 .active-workout .target-rationale{margin-top:10px}
 .active-workout .target-rationale summary{font-size:15px}
+
+.optional-treadmill{background:#172e35;border:1px solid #4a8185;border-radius:12px;margin:12px 0;padding:10px 12px}
+.optional-treadmill summary{font-size:16px;font-weight:700;color:#bcf4e5;padding:5px 0;min-height:28px}
+.optional-treadmill fieldset{padding-top:10px}
+.optional-treadmill .stepper{font-size:12px}
+.optional-treadmill .stepper input{font-size:21px}
+.optional-treadmill p,.active-workout .optional-treadmill p{font-size:14px;line-height:1.4;margin:8px 0}
+.optional-treadmill small{line-height:1.4}
+.optional-treadmill-record button{margin-top:6px}

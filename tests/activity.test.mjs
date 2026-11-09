@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {empty,start,record,validate} from '../lib/workout.mjs';
+import {empty,start,record,recordOptionalTreadmill,validate} from '../lib/workout.mjs';
 import {makeSubmission,seedPlan,validateQueue} from '../lib/online-workflow.mjs';
 import {sheetRows} from '../lib/processing.mjs';
 import {GitHubStore} from '../lib/github-store.mjs';
@@ -17,6 +17,19 @@ test('cardio and explicit omissions survive recovery and export as duration with
  validateQueue({version:1,sessions:[session]},program);
  const rows=sheetRows(session);assert.equal(rows.length,1);assert.equal(rows[0][1],'Cardio');assert.equal(rows[0][11],10);assert.equal(rows[0][6],'');assert.equal(rows[0][7],'');assert.equal(rows[0][10],'');assert.equal(rows[0][19],'');assert.match(rows[0][17],/2.7 mph.*10%/);
  assert.equal(Object.keys(session.skipped).length,6);
+});
+test('bonus treadmill remains separate from a day with prescribed cardio',()=>{
+ let state=record(partial(),cardio,measurement);
+ state=recordOptionalTreadmill(state,{id:'bonus-cardio-day',durationMinutes:15,speedMph:2.6,inclinePercent:11});
+ const session=makeSubmission(state.sessions[0],exercises,seedPlan(program));
+ const rows=sheetRows(session);
+ assert.equal(rows.length,2);
+ assert.equal(rows[0][3],cardio.name);
+ assert.equal(rows[1][3],'Optional Treadmill Walk');
+ assert.equal(rows[0][12],'');
+ assert.equal(rows[1][11],15);
+ assert.equal(rows[1][12],0.65);
+ assert.equal(rows[1][13],'mi');
 });
 test('duration is required; unacknowledged missing sets and forged skips are rejected',()=>{
  assert.throws(()=>record(partial(),cardio,{...measurement,durationMinutes:0}),/duration/);
