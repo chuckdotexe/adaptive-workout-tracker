@@ -278,6 +278,148 @@
           "increment": null
         }
       ]
+    },
+    {
+      "id": "5696539d-ef8f-46cf-be5f-8637e5c2994f",
+      "week": 4,
+      "day": 3,
+      "date": "2026-11-10",
+      "status": "finished",
+      "sets": [
+        {
+          "id": "033e1294-8de6-459d-a46c-9f89eee1da54",
+          "notes": "",
+          "created": "2026-11-11T11:50:10.283Z",
+          "kind": "cardio",
+          "durationMinutes": 30,
+          "speedMph": 2.7,
+          "inclinePercent": 11,
+          "reps": 0,
+          "weight": null,
+          "rir": null,
+          "exerciseId": "w4d3e1",
+          "unit": "",
+          "loadSemantics": "",
+          "rpe": null,
+          "rpeSource": "missing"
+        },
+        {
+          "id": "db33f3e4-df28-4144-9225-706bd581d859",
+          "notes": "",
+          "created": "2026-11-11T11:52:02.020Z",
+          "weight": null,
+          "reps": 13,
+          "rir": 2,
+          "bodyweight": true,
+          "exerciseId": "w4d3e2",
+          "unit": "",
+          "loadSemantics": "Bodyweight",
+          "rpe": 8,
+          "rpeSource": "derived"
+        },
+        {
+          "id": "eb4b8e03-7742-426e-aeae-8824b537a571",
+          "notes": "",
+          "created": "2026-11-11T11:54:03.498Z",
+          "weight": null,
+          "reps": 13,
+          "rir": 2,
+          "bodyweight": true,
+          "exerciseId": "w4d3e2",
+          "unit": "",
+          "loadSemantics": "Bodyweight",
+          "rpe": 8,
+          "rpeSource": "derived"
+        },
+        {
+          "id": "4e913245-f66c-4114-901c-730c44fc61a1",
+          "notes": "",
+          "created": "2026-11-11T11:57:20.023Z",
+          "weight": null,
+          "reps": 10,
+          "rir": 1,
+          "bodyweight": true,
+          "exerciseId": "w4d3e2",
+          "unit": "",
+          "loadSemantics": "Bodyweight",
+          "rpe": 9,
+          "rpeSource": "derived"
+        },
+        {
+          "id": "a3c85e8d-9ee2-4d34-ad24-cce938b4d3f9",
+          "notes": "",
+          "created": "2026-11-11T11:59:54.387Z",
+          "weight": 45,
+          "reps": 15,
+          "rir": 2,
+          "exerciseId": "w4d3e3",
+          "unit": "lb",
+          "loadSemantics": "",
+          "rpe": 8,
+          "rpeSource": "derived"
+        },
+        {
+          "id": "df947672-8945-43d0-924a-cbce5141d434",
+          "notes": "",
+          "created": "2026-11-11T12:02:32.860Z",
+          "weight": 45,
+          "reps": 15,
+          "rir": 2,
+          "exerciseId": "w4d3e3",
+          "unit": "lb",
+          "loadSemantics": "",
+          "rpe": 8,
+          "rpeSource": "derived"
+        }
+      ],
+      "decisions": {},
+      "increments": {},
+      "elapsedSeconds": 2673.678,
+      "timerStartedAt": null,
+      "durationMinutes": 44.56,
+      "submittedAt": "2026-11-11T12:02:35.582Z",
+      "planRevision": "processed-0c35d34f-0f44-4ed9-a81a-d00b7a2ba582",
+      "prescriptions": [
+        {
+          "exerciseId": "w4d3e1",
+          "name": "Incline Treadmill Walk",
+          "sets": 1,
+          "minReps": 1,
+          "maxReps": 1,
+          "weight": null,
+          "targetReps": 1,
+          "rirMin": null,
+          "rirMax": null,
+          "loadSemantics": "",
+          "increment": null
+        },
+        {
+          "exerciseId": "w4d3e2",
+          "name": "Captain's Chair Straight-Leg Raise + Hip Curl",
+          "sets": 3,
+          "minReps": 10,
+          "maxReps": 15,
+          "weight": null,
+          "targetReps": 10,
+          "rirMin": 2,
+          "rirMax": 2,
+          "loadSemantics": "Bodyweight",
+          "increment": null
+        },
+        {
+          "exerciseId": "w4d3e3",
+          "name": "Cable Woodchop",
+          "sets": 2,
+          "minReps": 12,
+          "maxReps": 15,
+          "weight": 45,
+          "targetReps": 15,
+          "rirMin": 2,
+          "rirMax": 2,
+          "loadSemantics": "",
+          "increment": null
+        }
+      ]
     }
   ]
 }
