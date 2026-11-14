@@ -92,3 +92,5 @@ On 2026-10-26, all 68 real entries from three sessions in staging were matched a
 Bayesian Curl uses the user-confirmed 90 lb machine setting; older 30 lb setup notes do not override recorded loads.
 
 Your set comments appear as “Exercise notes” when revisiting an exercise, separate from program notes. The latest nonempty comment is retained even when later sets have no comment. Newly processed Sheets notes label user comments explicitly; ambiguous legacy notes are not presented as yours.
+
+The main workout screen includes **Refresh app data**, which fetches the latest GitHub plan and queue even during an active workout without discarding locally logged sets or changing its pinned prescriptions. **Cancel workout** is available for unfinished sessions: a confirmation dialog warns that unsent sets will be discarded, then clears local recovery and returns to workout selection without submitting. Cancellation is disabled during saving and after an uncertain submission attempt to avoid falsely implying a remotely saved workout was discarded.
