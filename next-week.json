@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "revision": "processed-0c35d34f-0f44-4ed9-a81a-d00b7a2ba582",
-  "updatedAt": "2026-11-09T14:08:14.825Z",
+  "revision": "processed-2026-11-13-four-sessions",
+  "updatedAt": "2026-11-14T02:22:17.088Z",
   "processedSessions": [
     {
       "id": "b4774b22-e8b1-406f-914c-cab7b67a2f86",
@@ -66,403 +66,36 @@
     {
       "id": "9470896b-02fc-4e07-95e6-b5c7643935a5",
       "digest": "aac282a9f7c9e8666282571dc78fd68daa3a0b816a8781b122027f362f85d348"
+    },
+    {
+      "id": "6c4a5742-75f1-4171-9a60-3fa14475f8f3",
+      "digest": "f52935b741afa52aa48ea3c5d5fc21d2378b476d43d96b068de2a1500ff3466b"
+    },
+    {
+      "id": "5696539d-ef8f-46cf-be5f-8637e5c2994f",
+      "digest": "229da3645657bdfcab6a89fabc52c35aa136bd64825ce1c802602e7229726ea2"
+    },
+    {
+      "id": "856f5357-be85-4e38-a05f-5e88709a24e3",
+      "digest": "56b5c3b72e7433cded4c1a0e55b17bc69479d17a19d6f290fd8ce6df9f68d2cc"
+    },
+    {
+      "id": "02c3da9c-619e-4603-8b05-1236a5589b66",
+      "digest": "5c30e846e7aa54c34332cc976b9803f8e7e6ec9cbc8db78f81c0eef1f2946ad7"
     }
   ],
   "workouts": [
     {
-      "week": 4,
-      "day": 2,
-      "dayLabel": "Tuesday - Lower A — Quad Focus + Delts",
-      "exercises": [
-        {
-          "exerciseId": "w4d2e1",
-          "weight": 300,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Nov 3 all four 300x10 sets ended RIR 2, versus Oct 27 280x10 and Oct 17 300x10 with RIR 4. Keep 300 while confirming the inherited 280 label reflects the same machine/depth; then trial its smallest available step for 6–8 at RIR 2. What step follows 300? Older 340 records lack effort/setup and do not establish a current working load.",
-          "lastSet": {
-            "date": "2026-11-03",
-            "weight": 300,
-            "unit": "lb",
-            "reps": 10,
-            "rir": 2,
-            "bodyweight": false,
-            "loadSemantics": "total"
-          },
-          "restSeconds": 90
-        },
-        {
-          "exerciseId": "w4d2e2",
-          "weight": 205,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Nov 3 repeated 205x10 for three sets at RIR 2 after Oct 27 ramped 185/185/205x10; older 185 sets support this improvement. Keep 205x10 until the smallest available barbell increment is confirmed, then trial it for 6–8 at RIR 2, returning to 205 if needed. What increment is available?",
-          "lastSet": {
-            "date": "2026-11-03",
-            "weight": 205,
-            "unit": "lb",
-            "reps": 10,
-            "rir": 2,
-            "bodyweight": false,
-            "loadSemantics": "total"
-          },
-          "restSeconds": 90
-        },
-        {
-          "exerciseId": "w4d2e3",
-          "weight": 140,
-          "targetReps": 12,
-          "increment": null,
-          "reason": "Nov 6 140x14/13/14 all RIR 2 improves effort versus Oct 30 14/15/15 ending RIR 1; Nov 3 two sets of 12 were RIR 2. Keep this day's 10–12 range: 140x12 baseline, conditional smallest available stack-step trial at 10/RIR 2 once confirmed. What setting follows 140? No invented increment.",
-          "lastSet": {
-            "date": "2026-11-06",
-            "weight": 140,
-            "unit": "lb",
-            "reps": 14,
-            "rir": 2,
-            "bodyweight": false,
-            "loadSemantics": "total"
-          },
-          "restSeconds": 90
-        },
-        {
-          "exerciseId": "w4d2e4",
-          "weight": 175,
-          "targetReps": 15,
-          "increment": null,
-          "reason": "Nov 3 175x12/15/15 at RIR 2/3/2 improved on Oct 27 175x15 ending RIR 1 after 165. Older 165x15 supports progression to 175. Hold 175, build the opening set toward 15 at RIR 2 before another increase.",
-          "lastSet": {
-            "date": "2026-11-03",
-            "weight": 175,
-            "unit": "lb",
-            "reps": 15,
-            "rir": 2,
-            "bodyweight": false,
-            "loadSemantics": "total"
-          },
-          "restSeconds": 90
-        },
-        {
-          "exerciseId": "w4d2e6",
-          "weight": 90,
-          "targetReps": 20,
-          "increment": null,
-          "reason": "Nov 5 held 90 across 18/20/20 at RIR 2 on the confirmed machine after Nov 3 ramped 70/75/90×20. Keep 90 and build the opening set toward 20 at RIR 2. The older successful 100 setting is a bounded trial at 12–15 once all three sets reach 20 with reserve.",
-          "lastSet": {
-            "date": "2026-11-05",
-            "weight": 90,
-            "unit": "lb",
-            "reps": 20,
-            "rir": 2,
-            "bodyweight": false,
-            "loadSemantics": "total"
-          },
-          "restSeconds": 90
-        }
-      ]
-    },
-    {
-      "week": 4,
-      "day": 3,
-      "dayLabel": "Wednesday - Cardio + Core",
-      "exercises": [
-        {
-          "exerciseId": "w4d3e1",
-          "weight": null,
-          "targetReps": 1,
-          "increment": null,
-          "reason": "Nov 4 completed 40 min at 2.6 mph/10%; Nov 6 post-lifting bout was 20 min at the same settings, versus Oct 28 30 min at 2.7/11. Preserve this day's original 30 min conversational target, using 2.6/10 only as a demonstrated reference. Different duration/context is not a speed gain; no automatic intensity increase or resistance load.",
-          "lastSet": {
-            "date": "2026-11-06",
-            "weight": null,
-            "unit": "",
-            "reps": 0,
-            "rir": null,
-            "bodyweight": false,
-            "loadSemantics": "total",
-            "kind": "cardio",
-            "durationMinutes": 20,
-            "speedMph": 2.600000000000001,
-            "inclinePercent": 10
-          },
-          "restSeconds": 90
-        },
-        {
-          "exerciseId": "w4d3e2",
-          "weight": null,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Replaces unsupported hanging raises. Use forearm pads and straight legs, then actively curl pelvis upward. Bodyweight for 10–15 strict reps at 2 RIR; no comparable supported-chair record, so no past set is carried over.",
-          "restSeconds": 90
-        },
-        {
-          "exerciseId": "w4d3e3",
-          "weight": 45,
-          "targetReps": 15,
-          "increment": null,
-          "reason": "Initialize at successful 45 lb: November 4 both sets 15 at RIR 3, following October 28 ramp 40/45 x15 at RIR 2/5. Ceiling with reserve supports a smallest available same-cable step at 12 reps/RIR 2. What increment is available? Retain 45 x15 until confirmed; do not invent a setting.",
-          "lastSet": {
-            "date": "2026-11-04",
-            "weight": 45,
-            "unit": "lb",
-            "reps": 15,
-            "rir": 3,
-            "bodyweight": false,
-            "loadSemantics": "total"
-          },
-          "restSeconds": 90
-        }
-      ]
-    },
-    {
-      "week": 4,
-      "day": 4,
-      "dayLabel": "Thursday - Upper B — Back + Shoulders",
-      "exercises": [
-        {
-          "exerciseId": "w4d4e1",
-          "weight": 145,
-          "targetReps": 12,
-          "increment": null,
-          "reason": "Nov 5 repeated 145 for all three sets of 12 at RIR 3/3/2, after Oct 29 reached 145 only on the final set. At the ceiling, trial the smallest available same-machine step for 8–10 at RIR 2 once confirmed. What setting follows 145? Until then repeat 145.",
-          "lastSet": {
-            "date": "2026-11-05",
-            "weight": 145,
-            "unit": "lb",
-            "reps": 12,
-            "rir": 2,
-            "bodyweight": false,
-            "loadSemantics": "total"
-          },
-          "restSeconds": 90
-        },
-        {
-          "exerciseId": "w4d4e2",
-          "weight": 80,
-          "targetReps": 9,
-          "increment": null,
-          "reason": "80 per hand ×10/10/10/8 ended RIR 1 over four sets. Thursday has three sets; 9 reps leaves room for RIR 2–3, consistent with Nov 5 at 80×9.",
-          "lastSet": {
-            "date": "2026-11-09",
-            "weight": 80,
-            "reps": 8,
-            "rir": 1,
-            "bodyweight": false,
-            "loadSemantics": "70 lb per hand"
-          },
-          "restSeconds": 90
-        },
-        {
-          "exerciseId": "w4d4e3",
-          "weight": 65,
-          "targetReps": 12,
-          "increment": null,
-          "reason": "Nov 5 recorded 65×12 twice at RIR 2 before 60×12 at RIR 2 on set three. Oct 29 reached 60×15 after working up from 45. Start at the demonstrated 65 for 10–12 and use 60 on later sets if needed to maintain RIR 2.",
-          "lastSet": {
-            "date": "2026-11-05",
-            "weight": 60,
-            "unit": "lb",
-            "reps": 12,
-            "rir": 2,
-            "bodyweight": false,
-            "loadSemantics": "total"
-          },
-          "restSeconds": 90
-        },
-        {
-          "exerciseId": "w4d4e4",
-          "weight": 15,
-          "targetReps": 20,
-          "increment": null,
-          "reason": "Nov 5 repeated 15×20 on four sets ending RIR 3, up from RIR 1 at the same reps on Oct 29. What is the smallest available cable step above 15? Trial it at 12–15 reps and RIR 2, returning to 15 if the minimum is too hard. Until confirmed use 15×20.",
-          "lastSet": {
-            "date": "2026-11-05",
-            "weight": 15,
-            "unit": "lb",
-            "reps": 20,
-            "rir": 3,
-            "bodyweight": false,
-            "loadSemantics": "total"
-          },
-          "restSeconds": 90
-        },
-        {
-          "exerciseId": "w4d4e5",
-          "weight": 90,
-          "targetReps": 20,
-          "increment": null,
-          "reason": "Nov 5 held 90 across 18/20/20 at RIR 2 on the confirmed machine after Nov 3 ramped 70/75/90×20. Keep 90 and build the opening set toward 20 at RIR 2. The older successful 100 setting is a bounded trial at 12–15 once all three sets reach 20 with reserve.",
-          "lastSet": {
-            "date": "2026-11-05",
-            "weight": 90,
-            "unit": "lb",
-            "reps": 20,
-            "rir": 2,
-            "bodyweight": false,
-            "loadSemantics": "total"
-          },
-          "restSeconds": 90
-        },
-        {
-          "exerciseId": "w4d4e6",
-          "weight": 90,
-          "targetReps": 12,
-          "increment": null,
-          "reason": "Nov 5 at confirmed 90 improved to 15/15/14 ending RIR 1 from Oct 31 15/14/12 ending RIR 0. Start with 12 reps and stop at RIR 2. Keep 90 while improving repeatability and use demonstrated 80 if the minimum 10 exceeds target effort.",
-          "lastSet": {
-            "date": "2026-11-05",
-            "weight": 90,
-            "unit": "lb",
-            "reps": 14,
-            "rir": 1,
-            "bodyweight": false,
-            "loadSemantics": "total"
-          },
-          "restSeconds": 90
-        },
-        {
-          "exerciseId": "w4d4e7",
-          "weight": 65,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Nov 5 recorded 65×15/10/10 at RIR 3/2/2, versus Oct 29 65×15/12 ending RIR 0 after a 60 opening set. Repeat 65×10 across sets, then build reps while maintaining RIR 2. The late drop from 15 to 10 argues against adding load. Confirm the same rope and stack given the older 55 label.",
-          "lastSet": {
-            "date": "2026-11-05",
-            "weight": 65,
-            "unit": "lb",
-            "reps": 10,
-            "rir": 2,
-            "bodyweight": false,
-            "loadSemantics": "total"
-          },
-          "restSeconds": 90
-        }
-      ]
-    },
-    {
-      "week": 4,
-      "day": 5,
-      "dayLabel": "Friday - Lower B — Posterior Chain",
-      "exercises": [
-        {
-          "exerciseId": "w4d5e1",
-          "weight": 180,
-          "targetReps": 15,
-          "increment": null,
-          "reason": "Nov 6 repeated 180 for 3x15 all RIR 2, versus Oct 30 15/15/15 at RIR 3/3/2 and Oct 22 3x10. Ceiling supports a conditional smallest available same-machine step for 10–12 at RIR 2; what step follows 180? Until confirmed hold 180x15. Older 200/230 sets lack effort/setup and the 2007 entry is unresolved, not a usable load.",
-          "lastSet": {
-            "date": "2026-11-06",
-            "weight": 180,
-            "unit": "lb",
-            "reps": 15,
-            "rir": 2,
-            "bodyweight": false,
-            "loadSemantics": "total"
-          },
-          "restSeconds": 90
-        },
-        {
-          "exerciseId": "w4d5e2",
-          "weight": 200,
-          "targetReps": 15,
-          "increment": null,
-          "reason": "Nov 6 and Oct 30 both 200x15 twice at RIR 2, up from Oct 22 200x12. Trial the smallest confirmed same-machine step for 12 at RIR 2; what setting follows 200? Retain 200x15 until known. Older 210/230 records lack current effort/setup confirmation; do not assume equivalence.",
-          "lastSet": {
-            "date": "2026-11-06",
-            "weight": 200,
-            "unit": "lb",
-            "reps": 15,
-            "rir": 2,
-            "bodyweight": false,
-            "loadSemantics": "total"
-          },
-          "restSeconds": 90
-        },
-        {
-          "exerciseId": "w4d5e3",
-          "weight": 140,
-          "targetReps": 14,
-          "increment": null,
-          "reason": "Initialize at demonstrated 140. Nov 6 14/13/14 all RIR 2 versus Oct 30 14/15/15 ending RIR 1 and Oct 22 3x10 at RIR 2. Aim 14 each, then build to 15 without forcing effort; no load increase until repeatable at the ceiling.",
-          "lastSet": {
-            "date": "2026-11-06",
-            "weight": 140,
-            "unit": "lb",
-            "reps": 14,
-            "rir": 2,
-            "bodyweight": false,
-            "loadSemantics": "total"
-          },
-          "restSeconds": 90
-        },
-        {
-          "exerciseId": "w4d5e4",
-          "weight": 45,
-          "targetReps": 15,
-          "increment": null,
-          "reason": "Initialize at 45: Nov 6 all three sets 45x15 at RIR 2, after Oct 30 successfully ramped 25/45/45x15 and Oct 22 25x10. Do not revert to 25. Ceiling supports a conditional smallest available added-load step for 10–12 at RIR 2; what safe increment is available? Until confirmed hold 45x15.",
-          "lastSet": {
-            "date": "2026-11-06",
-            "weight": 45,
-            "unit": "lb",
-            "reps": 15,
-            "rir": 2,
-            "bodyweight": false,
-            "loadSemantics": "total"
-          },
-          "restSeconds": 90
-        },
-        {
-          "exerciseId": "w4d5e5",
-          "weight": 300,
-          "targetReps": 18,
-          "increment": null,
-          "reason": "Nov 6 300x20/20/20 ended RIR 1, better than Oct 30 20/20/19 ending RIR 0, but late fatigue remains. Keep 300, start 18 each at RIR 2 rather than exhausting reserve early. Fewer reps within 12–20 should restore effort; reduce to a confirmed lower setting if minimum reps exceed effort. Older heavier sets lack RIR/setup evidence; no load increase.",
-          "lastSet": {
-            "date": "2026-11-06",
-            "weight": 300,
-            "unit": "lb",
-            "reps": 20,
-            "rir": 1,
-            "bodyweight": false,
-            "loadSemantics": "total"
-          },
-          "restSeconds": 90
-        },
-        {
-          "exerciseId": "w4d5e7",
-          "weight": null,
-          "targetReps": 1,
-          "increment": null,
-          "reason": "Nov 6 completed 20 min at approximately 2.6 mph/10%, versus Oct 30 10 min at 2.7 mph/11%; Nov 4 separate cardio day was 40 min at 2.6/10. Preserve this day's 15–20 min conversational target, with 2.6/10 only a demonstrated reference. No automatic intensity increase and no resistance load.",
-          "lastSet": {
-            "date": "2026-11-06",
-            "weight": null,
-            "unit": "",
-            "reps": 0,
-            "rir": null,
-            "bodyweight": false,
-            "loadSemantics": "total",
-            "kind": "cardio",
-            "durationMinutes": 20,
-            "speedMph": 2.600000000000001,
-            "inclinePercent": 10
-          },
-          "restSeconds": 90
-        }
-      ]
-    },
-    {
-      "week": 4,
+      "week": 5,
       "day": 6,
       "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
       "exercises": [
         {
-          "exerciseId": "w4d6e1",
+          "exerciseId": "w5d6e1",
           "weight": 85,
-          "targetReps": 9,
+          "targetReps": 8,
           "increment": null,
-          "reason": "At 85 per hand, 10/10/9/9 ends RIR 2 vs 8 at RIR 1 previously. Start at 9 and stop at RIR 2.",
+          "reason": "Week-five deload: original program target; adjust to 3–4 RIR.",
           "lastSet": {
             "date": "2026-11-07",
             "weight": 85,
@@ -471,15 +104,14 @@
             "rir": 2,
             "bodyweight": false,
             "loadSemantics": "per hand"
-          },
-          "restSeconds": 90
+          }
         },
         {
-          "exerciseId": "w4d6e2",
-          "weight": 80,
-          "targetReps": 15,
+          "exerciseId": "w5d6e2",
+          "weight": null,
+          "targetReps": 10,
           "increment": null,
-          "reason": "80 x15 twice ended RIR 2 vs 1 previously. Confirm smallest cable step for a trial at 10–12; otherwise repeat 80.",
+          "reason": "Week-five deload: original program target; adjust to 3–4 RIR.",
           "lastSet": {
             "date": "2026-11-07",
             "weight": 80,
@@ -488,15 +120,14 @@
             "rir": 2,
             "bodyweight": false,
             "loadSemantics": "total"
-          },
-          "restSeconds": 90
+          }
         },
         {
-          "exerciseId": "w4d6e4",
+          "exerciseId": "w5d6e4",
           "weight": 70,
-          "targetReps": 11,
+          "targetReps": 8,
           "increment": null,
-          "reason": "70 x12/11/11 ended RIR 2 vs 1 at 11 previously. Target 11 across before rebuilding to 12.",
+          "reason": "Week-five deload: original program target; adjust to 3–4 RIR.",
           "lastSet": {
             "date": "2026-11-07",
             "weight": 70,
@@ -505,15 +136,14 @@
             "rir": 2,
             "bodyweight": false,
             "loadSemantics": "total"
-          },
-          "restSeconds": 90
+          }
         },
         {
-          "exerciseId": "w4d6e5",
-          "weight": 30,
-          "targetReps": 12,
+          "exerciseId": "w5d6e5",
+          "weight": null,
+          "targetReps": 10,
           "increment": null,
-          "reason": "Hold 30×12 across three Saturday sets: Monday achieved 15 twice at RIR 3/2 but Saturday’s third set reached RIR 1 at 12. Start at 12 and stop with two in reserve.",
+          "reason": "Week-five deload: original program target; adjust to 3–4 RIR.",
           "lastSet": {
             "date": "2026-11-09",
             "weight": 30,
@@ -521,15 +151,14 @@
             "rir": 2,
             "bodyweight": false,
             "loadSemantics": ""
-          },
-          "restSeconds": 90
+          }
         },
         {
-          "exerciseId": "w4d6e7",
-          "weight": 25,
-          "targetReps": 12,
+          "exerciseId": "w5d6e7",
+          "weight": null,
+          "targetReps": 10,
           "increment": null,
-          "reason": "25 x14/13/12 ended with two RIR 1 sets. Hold 25 and start at 12 rather than forcing 14.",
+          "reason": "Week-five deload: original program target; adjust to 3–4 RIR.",
           "lastSet": {
             "date": "2026-11-07",
             "weight": 25,
@@ -538,15 +167,14 @@
             "rir": 1,
             "bodyweight": false,
             "loadSemantics": "total"
-          },
-          "restSeconds": 90
+          }
         },
         {
-          "exerciseId": "w4d6e8",
-          "weight": 30,
-          "targetReps": 14,
+          "exerciseId": "w5d6e8",
+          "weight": null,
+          "targetReps": 10,
           "increment": null,
-          "reason": "30 x15 three times ended RIR 1 vs 14 at RIR 1 previously. Use 14 for RIR 2 before increasing load.",
+          "reason": "Week-five deload: original program target; adjust to 3–4 RIR.",
           "lastSet": {
             "date": "2026-11-07",
             "weight": 30,
@@ -555,16 +183,14 @@
             "rir": 1,
             "bodyweight": false,
             "loadSemantics": "total"
-          },
-          "restSeconds": 90
+          }
         },
         {
-          "exerciseId": "w4d6e10",
-          "weight": 75,
-          "targetReps": 13,
+          "exerciseId": "w5d6e10",
+          "weight": null,
+          "targetReps": 10,
           "increment": null,
-          "reason": "70 x15 at RIR 4 then 75 x15 at RIR 2 supports 75 as working load. Start at 13 and build to 15 across sets.",
-          "restSeconds": 90,
+          "reason": "Week-five deload: original program target; adjust to 3–4 RIR.",
           "lastSet": {
             "date": "2026-11-07",
             "weight": 75,
@@ -576,11 +202,11 @@
           }
         },
         {
-          "exerciseId": "w4d6e11",
+          "exerciseId": "w5d6e11",
           "weight": 25,
-          "targetReps": 17,
+          "targetReps": 12,
           "increment": null,
-          "reason": "25 per hand x15 three times at RIR 3; previously 20 at RIR 2. Progress to 17 before testing 20.",
+          "reason": "Week-five deload: original program target; adjust to 3–4 RIR.",
           "lastSet": {
             "date": "2026-11-07",
             "weight": 25,
@@ -593,22 +219,21 @@
               "text": "New program - probably should have started new on Monday. Did this same excess yesteday",
               "date": "2026-11-07"
             }
-          },
-          "restSeconds": 90
+          }
         }
       ]
     },
     {
-      "week": 5,
+      "week": 6,
       "day": 1,
       "dayLabel": "Monday - Upper A — Chest Focus",
       "exercises": [
         {
-          "exerciseId": "w5d1e1",
+          "exerciseId": "w6d1e1",
           "weight": 255,
           "targetReps": 4,
           "increment": null,
-          "reason": "255×5 opened at RIR 2 and the fourth set needed 4. Hold 255×4 for two deload sets at RIR 3–4; use a lighter available load if needed.",
+          "reason": "Week-five deload: original program target; adjust to 3–4 RIR.",
           "lastSet": {
             "date": "2026-11-09",
             "weight": 255,
@@ -616,31 +241,29 @@
             "rir": 2,
             "bodyweight": false,
             "loadSemantics": "255 lb"
-          },
-          "restSeconds": 90
+          }
         },
         {
-          "exerciseId": "w5d1e2",
+          "exerciseId": "w6d1e2",
           "weight": 80,
-          "targetReps": 8,
+          "targetReps": 7,
           "increment": null,
-          "reason": "80 per hand ×10 opened at RIR 3 and the fourth set fell to 8 at RIR 1. Use 80×8 for two deload sets at RIR 3–4, easing load if needed.",
+          "reason": "2026-11-12: 80 × 9 at RIR 2. Deload target 7 reps, 3–4 RIR; reduce load if necessary.",
           "lastSet": {
-            "date": "2026-11-09",
+            "date": "2026-11-12",
             "weight": 80,
-            "reps": 8,
-            "rir": 1,
+            "reps": 9,
+            "rir": 2,
             "bodyweight": false,
             "loadSemantics": "70 lb per hand"
-          },
-          "restSeconds": 90
+          }
         },
         {
-          "exerciseId": "w5d1e3",
-          "weight": 180,
-          "targetReps": 10,
+          "exerciseId": "w6d1e3",
+          "weight": null,
+          "targetReps": 8,
           "increment": null,
-          "reason": "180×12 opened at RIR 4 and ended at 2, repeating last week's ceiling. Initialize 180×10 on the same machine for deload reserve.",
+          "reason": "Week-five deload: original program target; adjust to 3–4 RIR.",
           "lastSet": {
             "date": "2026-11-09",
             "weight": 180,
@@ -648,15 +271,14 @@
             "rir": 2,
             "bodyweight": false,
             "loadSemantics": ""
-          },
-          "restSeconds": 90
+          }
         },
         {
-          "exerciseId": "w5d1e4",
+          "exerciseId": "w6d1e4",
           "weight": 160,
-          "targetReps": 10,
+          "targetReps": 8,
           "increment": null,
-          "reason": "160×12 finished at RIR 2 versus 1 last week. Hold load and use 10 for two sets at deload effort.",
+          "reason": "Week-five deload: original program target; adjust to 3–4 RIR.",
           "lastSet": {
             "date": "2026-11-09",
             "weight": 160,
@@ -664,15 +286,14 @@
             "rir": 2,
             "bodyweight": false,
             "loadSemantics": "160 lb"
-          },
-          "restSeconds": 90
+          }
         },
         {
-          "exerciseId": "w5d1e5",
-          "weight": 15,
-          "targetReps": 17,
+          "exerciseId": "w6d1e5",
+          "weight": null,
+          "targetReps": 12,
           "increment": null,
-          "reason": "15 per arm ×20 for three sets at RIR 2 improves on 19 at RIR 1. Initialize 15×17 for two deload sets.",
+          "reason": "Week-five deload: original program target; adjust to 3–4 RIR.",
           "lastSet": {
             "date": "2026-11-09",
             "weight": 15,
@@ -680,15 +301,14 @@
             "rir": 2,
             "bodyweight": false,
             "loadSemantics": ""
-          },
-          "restSeconds": 90
+          }
         },
         {
-          "exerciseId": "w5d1e6",
+          "exerciseId": "w6d1e6",
           "weight": 70,
-          "targetReps": 10,
+          "targetReps": 8,
           "increment": null,
-          "reason": "70×12 opened at RIR 3 but ended at 1; previous 80×8 reached failure. Keep 70×10 for one controlled deload set.",
+          "reason": "Week-five deload: original program target; adjust to 3–4 RIR.",
           "lastSet": {
             "date": "2026-11-09",
             "weight": 70,
@@ -696,15 +316,14 @@
             "rir": 1,
             "bodyweight": false,
             "loadSemantics": "70 lb total"
-          },
-          "restSeconds": 90
+          }
         },
         {
-          "exerciseId": "w5d1e7",
-          "weight": 30,
-          "targetReps": 13,
+          "exerciseId": "w6d1e7",
+          "weight": null,
+          "targetReps": 10,
           "increment": null,
-          "reason": "30×15 ended at RIR 2 over two sets; Saturday's third set fell to 12 at RIR 1. Use 30×13 for one deload set at RIR 3–4.",
+          "reason": "Week-five deload: original program target; adjust to 3–4 RIR.",
           "lastSet": {
             "date": "2026-11-09",
             "weight": 30,
@@ -712,18 +331,371 @@
             "rir": 2,
             "bodyweight": false,
             "loadSemantics": ""
-          },
-          "restSeconds": 90
+          }
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "day": 2,
+      "dayLabel": "Tuesday - Lower A — Quad Focus + Delts",
+      "exercises": [
+        {
+          "exerciseId": "w6d2e1",
+          "weight": 320,
+          "targetReps": 8,
+          "increment": null,
+          "reason": "2026-11-10: 320 × 10 at RIR 2. Deload target 8 reps, 3–4 RIR; reduce load if necessary.",
+          "lastSet": {
+            "date": "2026-11-10",
+            "weight": 320,
+            "reps": 10,
+            "rir": 2,
+            "bodyweight": false,
+            "loadSemantics": "280 lb"
+          }
+        },
+        {
+          "exerciseId": "w6d2e2",
+          "weight": 205,
+          "targetReps": 8,
+          "increment": null,
+          "reason": "2026-11-10: 205 × 10 at RIR 2. Deload target 8 reps, 3–4 RIR; reduce load if necessary.",
+          "lastSet": {
+            "date": "2026-11-10",
+            "weight": 205,
+            "reps": 10,
+            "rir": 2,
+            "bodyweight": false,
+            "loadSemantics": "185 lb"
+          }
+        },
+        {
+          "exerciseId": "w6d2e3",
+          "weight": 140,
+          "targetReps": 12,
+          "increment": null,
+          "reason": "2026-11-13: 140 × 15 at RIR 1. Deload target 12 reps, 3–4 RIR; reduce load if necessary.",
+          "lastSet": {
+            "date": "2026-11-13",
+            "weight": 140,
+            "reps": 15,
+            "rir": 1,
+            "bodyweight": false,
+            "loadSemantics": ""
+          }
+        },
+        {
+          "exerciseId": "w6d2e4",
+          "weight": 175,
+          "targetReps": 13,
+          "increment": null,
+          "reason": "2026-11-10: 175 × 15 at RIR 2. Deload target 13 reps, 3–4 RIR; reduce load if necessary.",
+          "lastSet": {
+            "date": "2026-11-10",
+            "weight": 175,
+            "reps": 15,
+            "rir": 2,
+            "bodyweight": false,
+            "loadSemantics": "165 lb"
+          }
+        },
+        {
+          "exerciseId": "w6d2e6",
+          "weight": 90,
+          "targetReps": 18,
+          "increment": null,
+          "reason": "2026-11-12: 90 × 20 at RIR 1. Deload target 18 reps, 3–4 RIR; reduce load if necessary.",
+          "lastSet": {
+            "date": "2026-11-12",
+            "weight": 90,
+            "reps": 20,
+            "rir": 1,
+            "bodyweight": false,
+            "loadSemantics": ""
+          }
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "day": 3,
+      "dayLabel": "Wednesday - Cardio + Core",
+      "exercises": [
+        {
+          "exerciseId": "w6d3e1",
+          "weight": null,
+          "targetReps": 1,
+          "increment": null,
+          "reason": "2026-11-13: 10 min at 2.7 mph and 12% incline. Maintain conversational deload effort.",
+          "lastSet": {
+            "date": "2026-11-13",
+            "weight": null,
+            "reps": 0,
+            "rir": null,
+            "bodyweight": false,
+            "loadSemantics": "",
+            "kind": "cardio",
+            "durationMinutes": 10,
+            "speedMph": 2.7,
+            "inclinePercent": 12
+          }
+        },
+        {
+          "exerciseId": "w6d3e2",
+          "weight": null,
+          "targetReps": 10,
+          "increment": null,
+          "reason": "2026-11-10: bodyweight × 10 at RIR 1. Deload target 10 reps, 3–4 RIR; reduce load if necessary.",
+          "lastSet": {
+            "date": "2026-11-10",
+            "weight": null,
+            "reps": 10,
+            "rir": 1,
+            "bodyweight": true,
+            "loadSemantics": "Bodyweight"
+          }
+        },
+        {
+          "exerciseId": "w6d3e3",
+          "weight": 45,
+          "targetReps": 13,
+          "increment": null,
+          "reason": "2026-11-10: 45 × 15 at RIR 2. Deload target 13 reps, 3–4 RIR; reduce load if necessary.",
+          "lastSet": {
+            "date": "2026-11-10",
+            "weight": 45,
+            "reps": 15,
+            "rir": 2,
+            "bodyweight": false,
+            "loadSemantics": ""
+          }
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "day": 4,
+      "dayLabel": "Thursday - Upper B — Back + Shoulders",
+      "exercises": [
+        {
+          "exerciseId": "w6d4e1",
+          "weight": 150,
+          "targetReps": 8,
+          "increment": null,
+          "reason": "2026-11-12: 150 × 10 at RIR 2. Deload target 8 reps, 3–4 RIR; reduce load if necessary.",
+          "lastSet": {
+            "date": "2026-11-12",
+            "weight": 150,
+            "reps": 10,
+            "rir": 2,
+            "bodyweight": false,
+            "loadSemantics": ""
+          }
+        },
+        {
+          "exerciseId": "w6d4e2",
+          "weight": 80,
+          "targetReps": 8,
+          "increment": null,
+          "reason": "2026-11-12: 80 × 9 at RIR 2. Deload target 8 reps, 3–4 RIR; reduce load if necessary.",
+          "lastSet": {
+            "date": "2026-11-12",
+            "weight": 80,
+            "reps": 9,
+            "rir": 2,
+            "bodyweight": false,
+            "loadSemantics": "70 lb per hand"
+          }
+        },
+        {
+          "exerciseId": "w6d4e3",
+          "weight": 65,
+          "targetReps": 11,
+          "increment": null,
+          "reason": "2026-11-12: 65 × 13 at RIR 2. Deload target 11 reps, 3–4 RIR; reduce load if necessary.",
+          "lastSet": {
+            "date": "2026-11-12",
+            "weight": 65,
+            "reps": 13,
+            "rir": 2,
+            "bodyweight": false,
+            "loadSemantics": ""
+          }
+        },
+        {
+          "exerciseId": "w6d4e4",
+          "weight": 20,
+          "targetReps": 13,
+          "increment": null,
+          "reason": "2026-11-12: 20 × 15 at RIR 1. Deload target 13 reps, 3–4 RIR; reduce load if necessary.",
+          "lastSet": {
+            "date": "2026-11-12",
+            "weight": 20,
+            "reps": 15,
+            "rir": 1,
+            "bodyweight": false,
+            "loadSemantics": ""
+          }
+        },
+        {
+          "exerciseId": "w6d4e5",
+          "weight": 90,
+          "targetReps": 18,
+          "increment": null,
+          "reason": "2026-11-12: 90 × 20 at RIR 1. Deload target 18 reps, 3–4 RIR; reduce load if necessary.",
+          "lastSet": {
+            "date": "2026-11-12",
+            "weight": 90,
+            "reps": 20,
+            "rir": 1,
+            "bodyweight": false,
+            "loadSemantics": ""
+          }
+        },
+        {
+          "exerciseId": "w6d4e6",
+          "weight": 90,
+          "targetReps": 10,
+          "increment": null,
+          "reason": "2026-11-12: 90 × 12 at RIR 2. Deload target 10 reps, 3–4 RIR; reduce load if necessary.",
+          "lastSet": {
+            "date": "2026-11-12",
+            "weight": 90,
+            "reps": 12,
+            "rir": 2,
+            "bodyweight": false,
+            "loadSemantics": "30 lb"
+          }
+        },
+        {
+          "exerciseId": "w6d4e7",
+          "weight": 65,
+          "targetReps": 11,
+          "increment": null,
+          "reason": "2026-11-12: 65 × 13 at RIR 1. Deload target 11 reps, 3–4 RIR; reduce load if necessary.",
+          "lastSet": {
+            "date": "2026-11-12",
+            "weight": 65,
+            "reps": 13,
+            "rir": 1,
+            "bodyweight": false,
+            "loadSemantics": "55 lb"
+          }
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "day": 5,
+      "dayLabel": "Friday - Lower B — Posterior Chain",
+      "exercises": [
+        {
+          "exerciseId": "w6d5e1",
+          "weight": 180,
+          "targetReps": 13,
+          "increment": null,
+          "reason": "2026-11-13: 180 × 15 at RIR 2. Deload target 13 reps, 3–4 RIR; reduce load if necessary.",
+          "lastSet": {
+            "date": "2026-11-13",
+            "weight": 180,
+            "reps": 15,
+            "rir": 2,
+            "bodyweight": false,
+            "loadSemantics": "180 lb"
+          }
+        },
+        {
+          "exerciseId": "w6d5e2",
+          "weight": 200,
+          "targetReps": 15,
+          "increment": null,
+          "reason": "2026-11-13: 200 × 15 at RIR 3. Deload target 15 reps, 3–4 RIR; reduce load if necessary.",
+          "lastSet": {
+            "date": "2026-11-13",
+            "weight": 200,
+            "reps": 15,
+            "rir": 3,
+            "bodyweight": false,
+            "loadSemantics": "200 lb"
+          }
+        },
+        {
+          "exerciseId": "w6d5e3",
+          "weight": 140,
+          "targetReps": 13,
+          "increment": null,
+          "reason": "2026-11-13: 140 × 15 at RIR 1. Deload target 13 reps, 3–4 RIR; reduce load if necessary.",
+          "lastSet": {
+            "date": "2026-11-13",
+            "weight": 140,
+            "reps": 15,
+            "rir": 1,
+            "bodyweight": false,
+            "loadSemantics": ""
+          }
+        },
+        {
+          "exerciseId": "w6d5e4",
+          "weight": 45,
+          "targetReps": 13,
+          "increment": null,
+          "reason": "2026-11-13: 45 × 15 at RIR 2. Deload target 13 reps, 3–4 RIR; reduce load if necessary.",
+          "lastSet": {
+            "date": "2026-11-13",
+            "weight": 45,
+            "reps": 15,
+            "rir": 2,
+            "bodyweight": false,
+            "loadSemantics": ""
+          }
+        },
+        {
+          "exerciseId": "w6d5e5",
+          "weight": 300,
+          "targetReps": 18,
+          "increment": null,
+          "reason": "2026-11-13: 300 × 20 at RIR 2. Deload target 18 reps, 3–4 RIR; reduce load if necessary.",
+          "lastSet": {
+            "date": "2026-11-13",
+            "weight": 300,
+            "reps": 20,
+            "rir": 2,
+            "bodyweight": false,
+            "loadSemantics": "300 lb"
+          }
+        },
+        {
+          "exerciseId": "w6d5e7",
+          "weight": null,
+          "targetReps": 1,
+          "increment": null,
+          "reason": "2026-11-13: 10 min at 2.7 mph and 12% incline. Maintain conversational deload effort.",
+          "lastSet": {
+            "date": "2026-11-13",
+            "weight": null,
+            "reps": 0,
+            "rir": null,
+            "bodyweight": false,
+            "loadSemantics": "",
+            "kind": "cardio",
+            "durationMinutes": 10,
+            "speedMph": 2.7,
+            "inclinePercent": 12
+          }
         }
       ]
     }
   ],
   "sheetsReceipt": {
     "spreadsheetId": "1sNIsfGpvUEk_qcd5oj23vur7xdBFrBC4NfxOs6WVML4",
-    "range": "'Workout Log'!A1207:V1227",
-    "verifiedAt": "2026-11-09T14:08:14.825Z",
+    "range": "'Workout Log'!A1229:V1285",
+    "verifiedAt": "2026-11-14T02:22:17.089Z",
     "sessionIds": [
-      "9470896b-02fc-4e07-95e6-b5c7643935a5"
+      "6c4a5742-75f1-4171-9a60-3fa14475f8f3",
+      "5696539d-ef8f-46cf-be5f-8637e5c2994f",
+      "856f5357-be85-4e38-a05f-5e88709a24e3",
+      "02c3da9c-619e-4603-8b05-1236a5589b66"
     ]
   }
 }
