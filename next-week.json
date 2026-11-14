@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "revision": "processed-2026-11-13-corrected-six-sessions",
-  "updatedAt": "2026-11-14T02:22:25.768Z",
+  "revision": "corrected-week4-day6-regular-training",
+  "updatedAt": "2026-11-14T14:04:27.013Z",
   "processedSessions": [
     {
       "id": "b4774b22-e8b1-406f-914c-cab7b67a2f86",
@@ -95,7 +95,7 @@
           "weight": 85,
           "targetReps": 8,
           "increment": null,
-          "reason": "Original week-five deload target; aim for 3–4 RIR.",
+          "reason": "Regular Week 4 target: 8–12 reps at 2 RIR; adjust based on verified performance.",
           "lastSet": {
             "date": "2026-11-07",
             "weight": 85,
@@ -111,7 +111,7 @@
           "weight": null,
           "targetReps": 10,
           "increment": null,
-          "reason": "Original week-five deload target; aim for 3–4 RIR.",
+          "reason": "Regular Week 4 target: 10–15 reps at 2 RIR; adjust based on verified performance.",
           "lastSet": {
             "date": "2026-11-07",
             "weight": 80,
@@ -127,7 +127,7 @@
           "weight": 70,
           "targetReps": 8,
           "increment": null,
-          "reason": "Original week-five deload target; aim for 3–4 RIR.",
+          "reason": "Regular Week 4 target: 8–12 reps at 2 RIR; adjust based on verified performance.",
           "lastSet": {
             "date": "2026-11-07",
             "weight": 70,
@@ -143,7 +143,7 @@
           "weight": null,
           "targetReps": 10,
           "increment": null,
-          "reason": "Original week-five deload target; aim for 3–4 RIR.",
+          "reason": "Regular Week 4 target: 10–15 reps at 2 RIR; adjust based on verified performance.",
           "lastSet": {
             "date": "2026-11-09",
             "weight": 30,
@@ -158,7 +158,7 @@
           "weight": null,
           "targetReps": 10,
           "increment": null,
-          "reason": "Original week-five deload target; aim for 3–4 RIR.",
+          "reason": "Regular Week 4 target: 10–15 reps at 2 RIR; adjust based on verified performance.",
           "lastSet": {
             "date": "2026-11-07",
             "weight": 25,
@@ -174,7 +174,7 @@
           "weight": null,
           "targetReps": 10,
           "increment": null,
-          "reason": "Original week-five deload target; aim for 3–4 RIR.",
+          "reason": "Regular Week 4 target: 10–15 reps at 2 RIR; adjust based on verified performance.",
           "lastSet": {
             "date": "2026-11-07",
             "weight": 30,
@@ -190,7 +190,7 @@
           "weight": null,
           "targetReps": 10,
           "increment": null,
-          "reason": "Original week-five deload target; aim for 3–4 RIR.",
+          "reason": "Regular Week 4 target: 10–15 reps at 2 RIR; adjust based on verified performance.",
           "lastSet": {
             "date": "2026-11-07",
             "weight": 75,
@@ -206,7 +206,7 @@
           "weight": 25,
           "targetReps": 12,
           "increment": null,
-          "reason": "Original week-five deload target; aim for 3–4 RIR.",
+          "reason": "Regular Week 4 target: 12–20 reps at 2 RIR; adjust based on verified performance.",
           "lastSet": {
             "date": "2026-11-07",
             "weight": 25,
