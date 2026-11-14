@@ -1,6 +1,7 @@
 # Changelog
 
 ## 2026-11-14
+- Normalized Kneeling Cable Crunch to Cable Crunch across program prescriptions and production Workout Log history; retained a legacy history alias and removed the inaccurate no-comparable-history note.
 - Removed the repair link and deleted `public/repair.html` after the recovery page proved ineffective.
 - Added **Refresh app data** on the main tracker, including during an active session; refreshes GitHub data without clearing local workout entries.
 - Added confirmed **Cancel workout** for unfinished, not-yet-submitted sessions; clears the local draft and rest timer without uploading it. Disabled while saving or when submission status is uncertain.
