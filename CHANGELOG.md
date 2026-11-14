@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-14
+- Added **Refresh app data** on the main tracker, including during an active session; refreshes GitHub data without clearing local workout entries.
+- Added confirmed **Cancel workout** for unfinished, not-yet-submitted sessions; clears the local draft and rest timer without uploading it. Disabled while saving or when submission status is uncertain.
+- GitHub source change committed; automated tests and live deployment not independently verified.
+
 ## 2026-11-09 — Optional treadmill after strength workouts
 
 - Add a collapsed optional treadmill recorder to active workouts. Record and remove one bonus walk with minutes, mph, incline and notes; preserve it through device recovery and GitHub submission.
