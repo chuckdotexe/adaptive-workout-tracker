@@ -173,6 +173,16 @@ export default function Home() {
     }
     localStorage.setItem(RECOVERY,JSON.stringify({draft:next,remote,sessionPlan:remote.plan,idx}));recovered.current=true;setDraft(next); setSessionPlan(remote.plan); pending.current = null; setMessage(''); setError('');
   }
+  function cancelWorkout() {
+    if (!session || busy || submitting.current || pending.current) return;
+    if (!window.confirm('Cancel this workout? All sets logged in this unfinished workout will be discarded. This cannot be undone.')) return;
+    const cleared = empty();
+    try { localStorage.setItem(RECOVERY, JSON.stringify({draft:cleared,remote,sessionPlan:null,idx:0,restEnd:null,pending:null})); }
+    catch (e) { setError('Could not clear saved workout: '+e.message); return; }
+    stopAlarm(); setRestEnd(null); setIdx(0); setShowMissing(false);
+    pending.current=null; recovered.current=false; setDraft(cleared); setSessionPlan(null);
+    setError(''); setMessage('Workout canceled. No workout was submitted.');
+  }
   async function finishWorkout() {
     if (submitting.current) return;
     setShowMissing(missing.length>0);
@@ -204,7 +214,7 @@ export default function Home() {
         <small>Use a fine-grained token for {DEFAULT_REPOSITORY} with Contents read/write. It is remembered in this browser on this device and sent only to GitHub. Disconnect removes it.</small>
         <button disabled={!ready || busy || !credential}>Connect GitHub</button>
       </form> : <p>{online ? (token ? 'Token saved · sync on Finish' : 'Connect to sync') : 'Offline · logging on device'}. <button className="secondary" disabled={busy} onClick={() => {localStorage.removeItem(AUTH);setToken(''); setMessage('GitHub disconnected.');}}>Disconnect</button></p>}
-      <button className="secondary" disabled={!ready || busy || !!session} onClick={() => load()}>Refresh from Git</button>
+      <button className="secondary" disabled={!ready || busy} onClick={() => load()}>{busy ? 'Refreshing…' : 'Refresh app data'}</button>
       <small>Sets save on this device immediately. Internet is required to submit to GitHub.</small>
     </section>
     {!remote ? <p>{busy ? 'Loading workouts from Git…' : 'Connect or refresh to load the workout files.'}</p> : <>
@@ -265,6 +275,8 @@ export default function Home() {
       </details>}
       <div className="row"><button disabled={idx>=exercises.length-1} onClick={()=>navigate(idx+1)}>Next exercise</button></div>
       {session && <button className="wide" disabled={busy} onClick={()=>finishWorkout()}>{busy ? 'Saving to Git…' : 'Finish workout'}</button>}
+       {session && <button className="secondary wide" disabled={busy || !!pending.current} onClick={cancelWorkout}>Cancel workout</button>}
+       {session && pending.current && <small>Cancellation is unavailable after a submission attempt until GitHub confirms whether it was saved.</small>}
       <section className="card overview">
         <h2>Awaiting processing ({remote.queue.sessions.length})</h2>
         <p>Completed sessions stay queued until the scheduled processor verifies Sheets and publishes upcoming targets. The combined Outlook/workout task checks every two hours while the computer and app are running.</p>
