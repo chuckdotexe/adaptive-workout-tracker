@@ -1,7 +1,7 @@
 # Changelog
 
 ## 2026-11-14
-- Removed the visible repair link from the main workout screen while retaining the standalone `repair.html` recovery page.
+- Removed the repair link and deleted `public/repair.html` after the recovery page proved ineffective.
 - Added **Refresh app data** on the main tracker, including during an active session; refreshes GitHub data without clearing local workout entries.
 - Added confirmed **Cancel workout** for unfinished, not-yet-submitted sessions; clears the local draft and rest timer without uploading it. Disabled while saving or when submission status is uncertain.
 - GitHub source change committed; automated tests and live deployment not independently verified.
