@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "revision": "corrected-week4-day6-regular-training",
-  "updatedAt": "2026-11-14T14:04:27.013Z",
+  "revision": "processed-2026-11-14-week4-day6",
+  "updatedAt": "2026-11-14T15:20:00.000Z",
   "processedSessions": [
     {
       "id": "b4774b22-e8b1-406f-914c-cab7b67a2f86",
@@ -82,147 +82,13 @@
     {
       "id": "02c3da9c-619e-4603-8b05-1236a5589b66",
       "digest": "5c30e846e7aa54c34332cc976b9803f8e7e6ec9cbc8db78f81c0eef1f2946ad7"
+    },
+    {
+      "id": "489ab23e-6144-403d-aedc-e06cf39666ab",
+      "digest": "b8ae2ce98f038bf3288b7aee4d5acc50817ea8617a0a4232aa238af3d60f09f4"
     }
   ],
   "workouts": [
-    {
-      "week": 4,
-      "day": 6,
-      "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
-      "exercises": [
-        {
-          "exerciseId": "w4d6e1",
-          "weight": 85,
-          "targetReps": 8,
-          "increment": null,
-          "reason": "Regular Week 4 target: 8–12 reps at 2 RIR; adjust based on verified performance.",
-          "lastSet": {
-            "date": "2026-11-07",
-            "weight": 85,
-            "unit": "lb",
-            "reps": 9,
-            "rir": 2,
-            "bodyweight": false,
-            "loadSemantics": "per hand"
-          }
-        },
-        {
-          "exerciseId": "w4d6e2",
-          "weight": null,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Regular Week 4 target: 10–15 reps at 2 RIR; adjust based on verified performance.",
-          "lastSet": {
-            "date": "2026-11-07",
-            "weight": 80,
-            "unit": "lb",
-            "reps": 15,
-            "rir": 2,
-            "bodyweight": false,
-            "loadSemantics": "total"
-          }
-        },
-        {
-          "exerciseId": "w4d6e4",
-          "weight": 70,
-          "targetReps": 8,
-          "increment": null,
-          "reason": "Regular Week 4 target: 8–12 reps at 2 RIR; adjust based on verified performance.",
-          "lastSet": {
-            "date": "2026-11-07",
-            "weight": 70,
-            "unit": "lb",
-            "reps": 11,
-            "rir": 2,
-            "bodyweight": false,
-            "loadSemantics": "total"
-          }
-        },
-        {
-          "exerciseId": "w4d6e5",
-          "weight": null,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Regular Week 4 target: 10–15 reps at 2 RIR; adjust based on verified performance.",
-          "lastSet": {
-            "date": "2026-11-09",
-            "weight": 30,
-            "reps": 15,
-            "rir": 2,
-            "bodyweight": false,
-            "loadSemantics": ""
-          }
-        },
-        {
-          "exerciseId": "w4d6e7",
-          "weight": null,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Regular Week 4 target: 10–15 reps at 2 RIR; adjust based on verified performance.",
-          "lastSet": {
-            "date": "2026-11-07",
-            "weight": 25,
-            "unit": "lb",
-            "reps": 12,
-            "rir": 1,
-            "bodyweight": false,
-            "loadSemantics": "total"
-          }
-        },
-        {
-          "exerciseId": "w4d6e8",
-          "weight": null,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Regular Week 4 target: 10–15 reps at 2 RIR; adjust based on verified performance.",
-          "lastSet": {
-            "date": "2026-11-07",
-            "weight": 30,
-            "unit": "lb",
-            "reps": 15,
-            "rir": 1,
-            "bodyweight": false,
-            "loadSemantics": "total"
-          }
-        },
-        {
-          "exerciseId": "w4d6e10",
-          "weight": null,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Regular Week 4 target: 10–15 reps at 2 RIR; adjust based on verified performance.",
-          "lastSet": {
-            "date": "2026-11-07",
-            "weight": 75,
-            "unit": "lb",
-            "reps": 15,
-            "rir": 2,
-            "bodyweight": false,
-            "loadSemantics": "total"
-          }
-        },
-        {
-          "exerciseId": "w4d6e11",
-          "weight": 25,
-          "targetReps": 12,
-          "increment": null,
-          "reason": "Regular Week 4 target: 12–20 reps at 2 RIR; adjust based on verified performance.",
-          "lastSet": {
-            "date": "2026-11-07",
-            "weight": 25,
-            "unit": "lb",
-            "reps": 15,
-            "rir": 3,
-            "bodyweight": false,
-            "loadSemantics": "per hand",
-            "userComment": {
-              "text": "New program - probably should have started new on Monday. Did this same excess yesteday",
-              "date": "2026-11-07"
-            }
-          }
-        }
-      ]
-    },
     {
       "week": 5,
       "day": 1,
@@ -685,17 +551,141 @@
           }
         }
       ]
+    },
+    {
+      "week": 5,
+      "day": 6,
+      "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
+      "exercises": [
+        {
+          "exerciseId": "w5d6e1",
+          "weight": 85,
+          "targetReps": 8,
+          "increment": null,
+          "reason": "2026-11-14: 85 × 9, RIR 2. Week 5 deload: target 3–4 RIR; reduce load as needed, particularly if this load cannot meet the effort target.",
+          "lastSet": {
+            "date": "2026-11-14",
+            "weight": 85,
+            "reps": 9,
+            "rir": 2,
+            "bodyweight": false,
+            "loadSemantics": "85 lb per hand"
+          }
+        },
+        {
+          "exerciseId": "w5d6e2",
+          "weight": 80,
+          "targetReps": 13,
+          "increment": null,
+          "reason": "2026-11-14: 80 × 15, RIR 2. Week 5 deload: target 3–4 RIR; reduce load as needed, particularly if this load cannot meet the effort target.",
+          "lastSet": {
+            "date": "2026-11-14",
+            "weight": 80,
+            "reps": 15,
+            "rir": 2,
+            "bodyweight": false,
+            "loadSemantics": ""
+          }
+        },
+        {
+          "exerciseId": "w5d6e4",
+          "weight": 70,
+          "targetReps": 8,
+          "increment": null,
+          "reason": "2026-11-14: 70 × 10, RIR 1. Week 5 deload: target 3–4 RIR; reduce load as needed, particularly if this load cannot meet the effort target.",
+          "lastSet": {
+            "date": "2026-11-14",
+            "weight": 70,
+            "reps": 10,
+            "rir": 1,
+            "bodyweight": false,
+            "loadSemantics": "70 lb total"
+          }
+        },
+        {
+          "exerciseId": "w5d6e5",
+          "weight": 35,
+          "targetReps": 13,
+          "increment": null,
+          "reason": "2026-11-14: 35 × 15, RIR 2. Week 5 deload: target 3–4 RIR; reduce load as needed, particularly if this load cannot meet the effort target.",
+          "lastSet": {
+            "date": "2026-11-14",
+            "weight": 35,
+            "reps": 15,
+            "rir": 2,
+            "bodyweight": false,
+            "loadSemantics": ""
+          }
+        },
+        {
+          "exerciseId": "w5d6e7",
+          "weight": 25,
+          "targetReps": 10,
+          "increment": null,
+          "reason": "2026-11-14: 25 × 10, RIR 2. Week 5 deload: target 3–4 RIR; reduce load as needed, particularly if this load cannot meet the effort target.",
+          "lastSet": {
+            "date": "2026-11-14",
+            "weight": 25,
+            "reps": 10,
+            "rir": 2,
+            "bodyweight": false,
+            "loadSemantics": ""
+          }
+        },
+        {
+          "exerciseId": "w5d6e8",
+          "weight": 30,
+          "targetReps": 13,
+          "increment": null,
+          "reason": "2026-11-14: 30 × 15, RIR 1. Week 5 deload: target 3–4 RIR; reduce load as needed, particularly if this load cannot meet the effort target.",
+          "lastSet": {
+            "date": "2026-11-14",
+            "weight": 30,
+            "reps": 15,
+            "rir": 1,
+            "bodyweight": false,
+            "loadSemantics": ""
+          }
+        },
+        {
+          "exerciseId": "w5d6e10",
+          "weight": 75,
+          "targetReps": 13,
+          "increment": null,
+          "reason": "2026-11-14: 75 × 15, RIR 3. Week 5 deload: target 3–4 RIR; reduce load as needed, particularly if this load cannot meet the effort target.",
+          "lastSet": {
+            "date": "2026-11-14",
+            "weight": 75,
+            "reps": 15,
+            "rir": 3,
+            "bodyweight": false,
+            "loadSemantics": ""
+          }
+        },
+        {
+          "exerciseId": "w5d6e11",
+          "weight": 25,
+          "targetReps": 13,
+          "increment": null,
+          "reason": "2026-11-14: 25 × 15, RIR 1. Week 5 deload: target 3–4 RIR; reduce load as needed, particularly if this load cannot meet the effort target.",
+          "lastSet": {
+            "date": "2026-11-14",
+            "weight": 25,
+            "reps": 15,
+            "rir": 1,
+            "bodyweight": false,
+            "loadSemantics": "25 lb per hand"
+          }
+        }
+      ]
     }
   ],
   "sheetsReceipt": {
     "spreadsheetId": "1sNIsfGpvUEk_qcd5oj23vur7xdBFrBC4NfxOs6WVML4",
-    "range": "'Workout Log'!A1229:V1285",
-    "verifiedAt": "2026-11-14T02:22:17.089Z",
+    "range": "'Workout Log'!A1286:V1308",
+    "verifiedAt": "2026-11-14T15:20:00.000Z",
     "sessionIds": [
-      "6c4a5742-75f1-4171-9a60-3fa14475f8f3",
-      "5696539d-ef8f-46cf-be5f-8637e5c2994f",
-      "856f5357-be85-4e38-a05f-5e88709a24e3",
-      "02c3da9c-619e-4603-8b05-1236a5589b66"
+      "489ab23e-6144-403d-aedc-e06cf39666ab"
     ]
   }
 }
