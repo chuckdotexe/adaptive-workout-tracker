@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "revision": "processed-2026-11-13-four-sessions",
-  "updatedAt": "2026-11-14T02:22:17.088Z",
+  "revision": "processed-2026-11-13-corrected-six-sessions",
+  "updatedAt": "2026-11-14T02:22:25.768Z",
   "processedSessions": [
     {
       "id": "b4774b22-e8b1-406f-914c-cab7b67a2f86",
@@ -86,16 +86,16 @@
   ],
   "workouts": [
     {
-      "week": 5,
+      "week": 4,
       "day": 6,
       "dayLabel": "Saturday - Upper C — Chest + Arms + Delts",
       "exercises": [
         {
-          "exerciseId": "w5d6e1",
+          "exerciseId": "w4d6e1",
           "weight": 85,
           "targetReps": 8,
           "increment": null,
-          "reason": "Week-five deload: original program target; adjust to 3–4 RIR.",
+          "reason": "Original week-five deload target; aim for 3–4 RIR.",
           "lastSet": {
             "date": "2026-11-07",
             "weight": 85,
@@ -107,11 +107,11 @@
           }
         },
         {
-          "exerciseId": "w5d6e2",
+          "exerciseId": "w4d6e2",
           "weight": null,
           "targetReps": 10,
           "increment": null,
-          "reason": "Week-five deload: original program target; adjust to 3–4 RIR.",
+          "reason": "Original week-five deload target; aim for 3–4 RIR.",
           "lastSet": {
             "date": "2026-11-07",
             "weight": 80,
@@ -123,11 +123,11 @@
           }
         },
         {
-          "exerciseId": "w5d6e4",
+          "exerciseId": "w4d6e4",
           "weight": 70,
           "targetReps": 8,
           "increment": null,
-          "reason": "Week-five deload: original program target; adjust to 3–4 RIR.",
+          "reason": "Original week-five deload target; aim for 3–4 RIR.",
           "lastSet": {
             "date": "2026-11-07",
             "weight": 70,
@@ -139,11 +139,11 @@
           }
         },
         {
-          "exerciseId": "w5d6e5",
+          "exerciseId": "w4d6e5",
           "weight": null,
           "targetReps": 10,
           "increment": null,
-          "reason": "Week-five deload: original program target; adjust to 3–4 RIR.",
+          "reason": "Original week-five deload target; aim for 3–4 RIR.",
           "lastSet": {
             "date": "2026-11-09",
             "weight": 30,
@@ -154,11 +154,11 @@
           }
         },
         {
-          "exerciseId": "w5d6e7",
+          "exerciseId": "w4d6e7",
           "weight": null,
           "targetReps": 10,
           "increment": null,
-          "reason": "Week-five deload: original program target; adjust to 3–4 RIR.",
+          "reason": "Original week-five deload target; aim for 3–4 RIR.",
           "lastSet": {
             "date": "2026-11-07",
             "weight": 25,
@@ -170,11 +170,11 @@
           }
         },
         {
-          "exerciseId": "w5d6e8",
+          "exerciseId": "w4d6e8",
           "weight": null,
           "targetReps": 10,
           "increment": null,
-          "reason": "Week-five deload: original program target; adjust to 3–4 RIR.",
+          "reason": "Original week-five deload target; aim for 3–4 RIR.",
           "lastSet": {
             "date": "2026-11-07",
             "weight": 30,
@@ -186,11 +186,11 @@
           }
         },
         {
-          "exerciseId": "w5d6e10",
+          "exerciseId": "w4d6e10",
           "weight": null,
           "targetReps": 10,
           "increment": null,
-          "reason": "Week-five deload: original program target; adjust to 3–4 RIR.",
+          "reason": "Original week-five deload target; aim for 3–4 RIR.",
           "lastSet": {
             "date": "2026-11-07",
             "weight": 75,
@@ -202,11 +202,11 @@
           }
         },
         {
-          "exerciseId": "w5d6e11",
+          "exerciseId": "w4d6e11",
           "weight": 25,
           "targetReps": 12,
           "increment": null,
-          "reason": "Week-five deload: original program target; adjust to 3–4 RIR.",
+          "reason": "Original week-five deload target; aim for 3–4 RIR.",
           "lastSet": {
             "date": "2026-11-07",
             "weight": 25,
@@ -224,16 +224,16 @@
       ]
     },
     {
-      "week": 6,
+      "week": 5,
       "day": 1,
       "dayLabel": "Monday - Upper A — Chest Focus",
       "exercises": [
         {
-          "exerciseId": "w6d1e1",
+          "exerciseId": "w5d1e1",
           "weight": 255,
           "targetReps": 4,
           "increment": null,
-          "reason": "Week-five deload: original program target; adjust to 3–4 RIR.",
+          "reason": "Original week-five deload target; aim for 3–4 RIR.",
           "lastSet": {
             "date": "2026-11-09",
             "weight": 255,
@@ -244,11 +244,11 @@
           }
         },
         {
-          "exerciseId": "w6d1e2",
+          "exerciseId": "w5d1e2",
           "weight": 80,
           "targetReps": 7,
           "increment": null,
-          "reason": "2026-11-12: 80 × 9 at RIR 2. Deload target 7 reps, 3–4 RIR; reduce load if necessary.",
+          "reason": "2026-11-12: 80 × 9, RIR 2. Deload 7 reps at 3–4 RIR; reduce load if necessary.",
           "lastSet": {
             "date": "2026-11-12",
             "weight": 80,
@@ -259,11 +259,11 @@
           }
         },
         {
-          "exerciseId": "w6d1e3",
+          "exerciseId": "w5d1e3",
           "weight": null,
           "targetReps": 8,
           "increment": null,
-          "reason": "Week-five deload: original program target; adjust to 3–4 RIR.",
+          "reason": "Original week-five deload target; aim for 3–4 RIR.",
           "lastSet": {
             "date": "2026-11-09",
             "weight": 180,
@@ -274,11 +274,11 @@
           }
         },
         {
-          "exerciseId": "w6d1e4",
+          "exerciseId": "w5d1e4",
           "weight": 160,
           "targetReps": 8,
           "increment": null,
-          "reason": "Week-five deload: original program target; adjust to 3–4 RIR.",
+          "reason": "Original week-five deload target; aim for 3–4 RIR.",
           "lastSet": {
             "date": "2026-11-09",
             "weight": 160,
@@ -289,11 +289,11 @@
           }
         },
         {
-          "exerciseId": "w6d1e5",
+          "exerciseId": "w5d1e5",
           "weight": null,
           "targetReps": 12,
           "increment": null,
-          "reason": "Week-five deload: original program target; adjust to 3–4 RIR.",
+          "reason": "Original week-five deload target; aim for 3–4 RIR.",
           "lastSet": {
             "date": "2026-11-09",
             "weight": 15,
@@ -304,11 +304,11 @@
           }
         },
         {
-          "exerciseId": "w6d1e6",
+          "exerciseId": "w5d1e6",
           "weight": 70,
           "targetReps": 8,
           "increment": null,
-          "reason": "Week-five deload: original program target; adjust to 3–4 RIR.",
+          "reason": "Original week-five deload target; aim for 3–4 RIR.",
           "lastSet": {
             "date": "2026-11-09",
             "weight": 70,
@@ -319,11 +319,11 @@
           }
         },
         {
-          "exerciseId": "w6d1e7",
+          "exerciseId": "w5d1e7",
           "weight": null,
           "targetReps": 10,
           "increment": null,
-          "reason": "Week-five deload: original program target; adjust to 3–4 RIR.",
+          "reason": "Original week-five deload target; aim for 3–4 RIR.",
           "lastSet": {
             "date": "2026-11-09",
             "weight": 30,
@@ -336,16 +336,16 @@
       ]
     },
     {
-      "week": 6,
+      "week": 5,
       "day": 2,
       "dayLabel": "Tuesday - Lower A — Quad Focus + Delts",
       "exercises": [
         {
-          "exerciseId": "w6d2e1",
+          "exerciseId": "w5d2e1",
           "weight": 320,
           "targetReps": 8,
           "increment": null,
-          "reason": "2026-11-10: 320 × 10 at RIR 2. Deload target 8 reps, 3–4 RIR; reduce load if necessary.",
+          "reason": "2026-11-10: 320 × 10, RIR 2. Deload 8 reps at 3–4 RIR; reduce load if necessary.",
           "lastSet": {
             "date": "2026-11-10",
             "weight": 320,
@@ -356,11 +356,11 @@
           }
         },
         {
-          "exerciseId": "w6d2e2",
+          "exerciseId": "w5d2e2",
           "weight": 205,
           "targetReps": 8,
           "increment": null,
-          "reason": "2026-11-10: 205 × 10 at RIR 2. Deload target 8 reps, 3–4 RIR; reduce load if necessary.",
+          "reason": "2026-11-10: 205 × 10, RIR 2. Deload 8 reps at 3–4 RIR; reduce load if necessary.",
           "lastSet": {
             "date": "2026-11-10",
             "weight": 205,
@@ -371,11 +371,11 @@
           }
         },
         {
-          "exerciseId": "w6d2e3",
+          "exerciseId": "w5d2e3",
           "weight": 140,
           "targetReps": 12,
           "increment": null,
-          "reason": "2026-11-13: 140 × 15 at RIR 1. Deload target 12 reps, 3–4 RIR; reduce load if necessary.",
+          "reason": "2026-11-13: 140 × 15, RIR 1. Deload 12 reps at 3–4 RIR; reduce load if necessary.",
           "lastSet": {
             "date": "2026-11-13",
             "weight": 140,
@@ -386,11 +386,11 @@
           }
         },
         {
-          "exerciseId": "w6d2e4",
+          "exerciseId": "w5d2e4",
           "weight": 175,
           "targetReps": 13,
           "increment": null,
-          "reason": "2026-11-10: 175 × 15 at RIR 2. Deload target 13 reps, 3–4 RIR; reduce load if necessary.",
+          "reason": "2026-11-10: 175 × 15, RIR 2. Deload 13 reps at 3–4 RIR; reduce load if necessary.",
           "lastSet": {
             "date": "2026-11-10",
             "weight": 175,
@@ -401,11 +401,11 @@
           }
         },
         {
-          "exerciseId": "w6d2e6",
+          "exerciseId": "w5d2e6",
           "weight": 90,
           "targetReps": 18,
           "increment": null,
-          "reason": "2026-11-12: 90 × 20 at RIR 1. Deload target 18 reps, 3–4 RIR; reduce load if necessary.",
+          "reason": "2026-11-12: 90 × 20, RIR 1. Deload 18 reps at 3–4 RIR; reduce load if necessary.",
           "lastSet": {
             "date": "2026-11-12",
             "weight": 90,
@@ -418,16 +418,16 @@
       ]
     },
     {
-      "week": 6,
+      "week": 5,
       "day": 3,
       "dayLabel": "Wednesday - Cardio + Core",
       "exercises": [
         {
-          "exerciseId": "w6d3e1",
+          "exerciseId": "w5d3e1",
           "weight": null,
           "targetReps": 1,
           "increment": null,
-          "reason": "2026-11-13: 10 min at 2.7 mph and 12% incline. Maintain conversational deload effort.",
+          "reason": "2026-11-13: 10 min at 2.7 mph/12% incline; maintain conversational effort.",
           "lastSet": {
             "date": "2026-11-13",
             "weight": null,
@@ -442,11 +442,11 @@
           }
         },
         {
-          "exerciseId": "w6d3e2",
+          "exerciseId": "w5d3e2",
           "weight": null,
           "targetReps": 10,
           "increment": null,
-          "reason": "2026-11-10: bodyweight × 10 at RIR 1. Deload target 10 reps, 3–4 RIR; reduce load if necessary.",
+          "reason": "2026-11-10: bodyweight × 10, RIR 1. Deload 10 reps at 3–4 RIR; reduce load if necessary.",
           "lastSet": {
             "date": "2026-11-10",
             "weight": null,
@@ -457,11 +457,11 @@
           }
         },
         {
-          "exerciseId": "w6d3e3",
+          "exerciseId": "w5d3e3",
           "weight": 45,
           "targetReps": 13,
           "increment": null,
-          "reason": "2026-11-10: 45 × 15 at RIR 2. Deload target 13 reps, 3–4 RIR; reduce load if necessary.",
+          "reason": "2026-11-10: 45 × 15, RIR 2. Deload 13 reps at 3–4 RIR; reduce load if necessary.",
           "lastSet": {
             "date": "2026-11-10",
             "weight": 45,
@@ -474,16 +474,16 @@
       ]
     },
     {
-      "week": 6,
+      "week": 5,
       "day": 4,
       "dayLabel": "Thursday - Upper B — Back + Shoulders",
       "exercises": [
         {
-          "exerciseId": "w6d4e1",
+          "exerciseId": "w5d4e1",
           "weight": 150,
           "targetReps": 8,
           "increment": null,
-          "reason": "2026-11-12: 150 × 10 at RIR 2. Deload target 8 reps, 3–4 RIR; reduce load if necessary.",
+          "reason": "2026-11-12: 150 × 10, RIR 2. Deload 8 reps at 3–4 RIR; reduce load if necessary.",
           "lastSet": {
             "date": "2026-11-12",
             "weight": 150,
@@ -494,11 +494,11 @@
           }
         },
         {
-          "exerciseId": "w6d4e2",
+          "exerciseId": "w5d4e2",
           "weight": 80,
           "targetReps": 8,
           "increment": null,
-          "reason": "2026-11-12: 80 × 9 at RIR 2. Deload target 8 reps, 3–4 RIR; reduce load if necessary.",
+          "reason": "2026-11-12: 80 × 9, RIR 2. Deload 8 reps at 3–4 RIR; reduce load if necessary.",
           "lastSet": {
             "date": "2026-11-12",
             "weight": 80,
@@ -509,11 +509,11 @@
           }
         },
         {
-          "exerciseId": "w6d4e3",
+          "exerciseId": "w5d4e3",
           "weight": 65,
           "targetReps": 11,
           "increment": null,
-          "reason": "2026-11-12: 65 × 13 at RIR 2. Deload target 11 reps, 3–4 RIR; reduce load if necessary.",
+          "reason": "2026-11-12: 65 × 13, RIR 2. Deload 11 reps at 3–4 RIR; reduce load if necessary.",
           "lastSet": {
             "date": "2026-11-12",
             "weight": 65,
@@ -524,11 +524,11 @@
           }
         },
         {
-          "exerciseId": "w6d4e4",
+          "exerciseId": "w5d4e4",
           "weight": 20,
           "targetReps": 13,
           "increment": null,
-          "reason": "2026-11-12: 20 × 15 at RIR 1. Deload target 13 reps, 3–4 RIR; reduce load if necessary.",
+          "reason": "2026-11-12: 20 × 15, RIR 1. Deload 13 reps at 3–4 RIR; reduce load if necessary.",
           "lastSet": {
             "date": "2026-11-12",
             "weight": 20,
@@ -539,11 +539,11 @@
           }
         },
         {
-          "exerciseId": "w6d4e5",
+          "exerciseId": "w5d4e5",
           "weight": 90,
           "targetReps": 18,
           "increment": null,
-          "reason": "2026-11-12: 90 × 20 at RIR 1. Deload target 18 reps, 3–4 RIR; reduce load if necessary.",
+          "reason": "2026-11-12: 90 × 20, RIR 1. Deload 18 reps at 3–4 RIR; reduce load if necessary.",
           "lastSet": {
             "date": "2026-11-12",
             "weight": 90,
@@ -554,11 +554,11 @@
           }
         },
         {
-          "exerciseId": "w6d4e6",
+          "exerciseId": "w5d4e6",
           "weight": 90,
           "targetReps": 10,
           "increment": null,
-          "reason": "2026-11-12: 90 × 12 at RIR 2. Deload target 10 reps, 3–4 RIR; reduce load if necessary.",
+          "reason": "2026-11-12: 90 × 12, RIR 2. Deload 10 reps at 3–4 RIR; reduce load if necessary.",
           "lastSet": {
             "date": "2026-11-12",
             "weight": 90,
@@ -569,11 +569,11 @@
           }
         },
         {
-          "exerciseId": "w6d4e7",
+          "exerciseId": "w5d4e7",
           "weight": 65,
           "targetReps": 11,
           "increment": null,
-          "reason": "2026-11-12: 65 × 13 at RIR 1. Deload target 11 reps, 3–4 RIR; reduce load if necessary.",
+          "reason": "2026-11-12: 65 × 13, RIR 1. Deload 11 reps at 3–4 RIR; reduce load if necessary.",
           "lastSet": {
             "date": "2026-11-12",
             "weight": 65,
@@ -586,16 +586,16 @@
       ]
     },
     {
-      "week": 6,
+      "week": 5,
       "day": 5,
       "dayLabel": "Friday - Lower B — Posterior Chain",
       "exercises": [
         {
-          "exerciseId": "w6d5e1",
+          "exerciseId": "w5d5e1",
           "weight": 180,
           "targetReps": 13,
           "increment": null,
-          "reason": "2026-11-13: 180 × 15 at RIR 2. Deload target 13 reps, 3–4 RIR; reduce load if necessary.",
+          "reason": "2026-11-13: 180 × 15, RIR 2. Deload 13 reps at 3–4 RIR; reduce load if necessary.",
           "lastSet": {
             "date": "2026-11-13",
             "weight": 180,
@@ -606,11 +606,11 @@
           }
         },
         {
-          "exerciseId": "w6d5e2",
+          "exerciseId": "w5d5e2",
           "weight": 200,
           "targetReps": 15,
           "increment": null,
-          "reason": "2026-11-13: 200 × 15 at RIR 3. Deload target 15 reps, 3–4 RIR; reduce load if necessary.",
+          "reason": "2026-11-13: 200 × 15, RIR 3. Deload 15 reps at 3–4 RIR; reduce load if necessary.",
           "lastSet": {
             "date": "2026-11-13",
             "weight": 200,
@@ -621,11 +621,11 @@
           }
         },
         {
-          "exerciseId": "w6d5e3",
+          "exerciseId": "w5d5e3",
           "weight": 140,
           "targetReps": 13,
           "increment": null,
-          "reason": "2026-11-13: 140 × 15 at RIR 1. Deload target 13 reps, 3–4 RIR; reduce load if necessary.",
+          "reason": "2026-11-13: 140 × 15, RIR 1. Deload 13 reps at 3–4 RIR; reduce load if necessary.",
           "lastSet": {
             "date": "2026-11-13",
             "weight": 140,
@@ -636,11 +636,11 @@
           }
         },
         {
-          "exerciseId": "w6d5e4",
+          "exerciseId": "w5d5e4",
           "weight": 45,
           "targetReps": 13,
           "increment": null,
-          "reason": "2026-11-13: 45 × 15 at RIR 2. Deload target 13 reps, 3–4 RIR; reduce load if necessary.",
+          "reason": "2026-11-13: 45 × 15, RIR 2. Deload 13 reps at 3–4 RIR; reduce load if necessary.",
           "lastSet": {
             "date": "2026-11-13",
             "weight": 45,
@@ -651,11 +651,11 @@
           }
         },
         {
-          "exerciseId": "w6d5e5",
+          "exerciseId": "w5d5e5",
           "weight": 300,
           "targetReps": 18,
           "increment": null,
-          "reason": "2026-11-13: 300 × 20 at RIR 2. Deload target 18 reps, 3–4 RIR; reduce load if necessary.",
+          "reason": "2026-11-13: 300 × 20, RIR 2. Deload 18 reps at 3–4 RIR; reduce load if necessary.",
           "lastSet": {
             "date": "2026-11-13",
             "weight": 300,
@@ -666,11 +666,11 @@
           }
         },
         {
-          "exerciseId": "w6d5e7",
+          "exerciseId": "w5d5e7",
           "weight": null,
           "targetReps": 1,
           "increment": null,
-          "reason": "2026-11-13: 10 min at 2.7 mph and 12% incline. Maintain conversational deload effort.",
+          "reason": "2026-11-13: 10 min at 2.7 mph/12% incline; maintain conversational effort.",
           "lastSet": {
             "date": "2026-11-13",
             "weight": null,
