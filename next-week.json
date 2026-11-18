@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "revision": "processed-week5-day3-2026-11-18",
-  "updatedAt": "2026-11-18T12:43:00.000Z",
+  "revision": "corrected-week6-post-deload-2026-11-18",
+  "updatedAt": "2026-11-18T20:06:00.000Z",
   "processedSessions": [
     {
       "id": "b4774b22-e8b1-406f-914c-cab7b67a2f86",
@@ -449,9 +449,9 @@
         {
           "exerciseId": "w6d1e1",
           "weight": 255,
-          "targetReps": 4,
+          "targetReps": 5,
           "increment": null,
-          "reason": "Week 6 regular training. Latest: 225 lb x 5, 3 RIR. Resume normal working sets, adjust load to target effort.",
+          "reason": "Nov 9 pre-deload: 255 lb for 5/5/5/4 reps. Resume normal Week 4 working load; deload excluded.",
           "lastSet": {
             "date": "2026-11-16",
             "weight": 225,
@@ -463,10 +463,10 @@
         },
         {
           "exerciseId": "w6d1e2",
-          "weight": 70,
-          "targetReps": 6,
+          "weight": 80,
+          "targetReps": 8,
           "increment": null,
-          "reason": "Week 6 regular training. Latest: 70 lb x 7, 3 RIR. Resume normal working sets, adjust load to target effort.",
+          "reason": "Nov 9 pre-deload: 80 lb for 10/10/10/8 reps. Resume established 80 lb, not deload 70 lb.",
           "lastSet": {
             "date": "2026-11-16",
             "weight": 70,
@@ -479,9 +479,9 @@
         {
           "exerciseId": "w6d1e3",
           "weight": 180,
-          "targetReps": 8,
+          "targetReps": 12,
           "increment": null,
-          "reason": "Week 6 regular training. Latest: 160 lb x 8, 3 RIR. Resume normal working sets, adjust load to target effort.",
+          "reason": "Nov 9 pre-deload: 180 lb for 12/12/12 reps. Resume established normal-training load.",
           "lastSet": {
             "date": "2026-11-16",
             "weight": 160,
@@ -494,9 +494,9 @@
         {
           "exerciseId": "w6d1e4",
           "weight": 160,
-          "targetReps": 8,
+          "targetReps": 12,
           "increment": null,
-          "reason": "Week 6 regular training. Latest: 140 lb x 9, 4 RIR. Resume normal working sets, adjust load to target effort.",
+          "reason": "Nov 9 pre-deload: 160 lb for 12/12/12 reps. Resume established normal-training load.",
           "lastSet": {
             "date": "2026-11-16",
             "weight": 140,
@@ -509,9 +509,9 @@
         {
           "exerciseId": "w6d1e5",
           "weight": 15,
-          "targetReps": 12,
+          "targetReps": 20,
           "increment": null,
-          "reason": "Week 6 regular training. Latest: 15 lb x 15, 3 RIR. Resume normal working sets, adjust load to target effort.",
+          "reason": "Nov 9 pre-deload: 15 lb for 20/20/20 reps. Repeat pre-deload prescription; no deload-based adjustment.",
           "lastSet": {
             "date": "2026-11-16",
             "weight": 15,
@@ -524,9 +524,9 @@
         {
           "exerciseId": "w6d1e6",
           "weight": 70,
-          "targetReps": 8,
+          "targetReps": 12,
           "increment": null,
-          "reason": "Week 6 regular training. Latest: 60 lb x 8, 3 RIR. Resume normal working sets, adjust load to target effort.",
+          "reason": "Nov 9 pre-deload: 70 lb for 12/12 reps. Resume pre-deload working prescription.",
           "lastSet": {
             "date": "2026-11-16",
             "weight": 60,
@@ -539,9 +539,9 @@
         {
           "exerciseId": "w6d1e7",
           "weight": 30,
-          "targetReps": 10,
+          "targetReps": 15,
           "increment": null,
-          "reason": "Week 6 regular training. Latest: 25 lb x 10, 3 RIR. Resume normal working sets, adjust load to target effort.",
+          "reason": "Nov 9 pre-deload: 30 lb for 15/15 reps. Resume pre-deload working prescription.",
           "lastSet": {
             "date": "2026-11-16",
             "weight": 25,
@@ -560,10 +560,10 @@
       "exercises": [
         {
           "exerciseId": "w6d2e1",
-          "weight": 280,
-          "targetReps": 6,
+          "weight": 300,
+          "targetReps": 10,
           "increment": null,
-          "reason": "Week 5 lighter session: 280 lb x 8 at 3 RIR; use regular Week 6 effort.",
+          "reason": "Nov 10 pre-deload: 300 lb x10 for two sets then 320 lb x10 for two sets. Use 300 lb as conservative repeatable opening target; 320 lb was demonstrated but progression is not automatic after deload.",
           "lastSet": {
             "date": "2026-11-17",
             "weight": 280,
@@ -573,10 +573,10 @@
         },
         {
           "exerciseId": "w6d2e2",
-          "weight": 185,
-          "targetReps": 6,
+          "weight": 205,
+          "targetReps": 10,
           "increment": null,
-          "reason": "Week 5 lighter session: 185 lb x 8 at 3 RIR; use regular Week 6 effort.",
+          "reason": "Nov 10 pre-deload: 205 lb x10 for three sets. Resume normal-training load; exclude deload 185 lb.",
           "lastSet": {
             "date": "2026-11-17",
             "weight": 185,
@@ -586,10 +586,10 @@
         },
         {
           "exerciseId": "w6d2e3",
-          "weight": 120,
+          "weight": 145,
           "targetReps": 10,
           "increment": null,
-          "reason": "Week 5 lighter session: 120 lb x 12 at 3 RIR; use regular Week 6 effort.",
+          "reason": "Nov 10 pre-deload: 145 lb x10 for two sets. Resume normal-training load; exclude deload 120 lb.",
           "lastSet": {
             "date": "2026-11-17",
             "weight": 120,
@@ -599,10 +599,10 @@
         },
         {
           "exerciseId": "w6d2e4",
-          "weight": 165,
-          "targetReps": 10,
+          "weight": 175,
+          "targetReps": 15,
           "increment": null,
-          "reason": "Week 5 lighter session: 165 lb x 13 at 3 RIR; use regular Week 6 effort.",
+          "reason": "Nov 10 pre-deload: 175 lb x15 for three sets. Resume normal-training load; exclude deload 165 lb.",
           "lastSet": {
             "date": "2026-11-17",
             "weight": 165,
@@ -612,10 +612,10 @@
         },
         {
           "exerciseId": "w6d2e6",
-          "weight": 90,
-          "targetReps": 12,
+          "weight": 110,
+          "targetReps": 16,
           "increment": null,
-          "reason": "Week 5 lighter session: 90 lb x 18 at 3 RIR; use regular Week 6 effort.",
+          "reason": "Nov 10 pre-deload: 110 lb x16 for three sets. Resume normal-training load; exclude deload 90 lb.",
           "lastSet": {
             "date": "2026-11-17",
             "weight": 90,
