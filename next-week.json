@@ -654,7 +654,7 @@
           "weight": null,
           "targetReps": 10,
           "increment": null,
-          "reason": "Resume pre-deload 10 reps with prescribed sets and RIR 2; do not use deload RIR to progress.",
+          "reason": "Resume prior normal-training 10 reps with prescribed sets and RIR 2; do not use recovery-week RIR to progress.",
           "lastSet": {
             "date": "2026-11-18",
             "weight": null,
@@ -669,7 +669,7 @@
           "weight": 45,
           "targetReps": 13,
           "increment": null,
-          "reason": "Resume pre-deload 45 lb working load; prior 45 × 15 at RIR 2; target 13 within range.",
+          "reason": "Resume prior normal-training 45 lb working load; prior 45 × 15 at RIR 2; target 13 within range.",
           "lastSet": {
             "date": "2026-11-18",
             "weight": 40,
