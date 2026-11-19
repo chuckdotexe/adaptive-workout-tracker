@@ -451,7 +451,7 @@
           "weight": 255,
           "targetReps": 5,
           "increment": null,
-          "reason": "Nov 9 pre-deload: 255 lb for 5/5/5/4 reps. Resume normal Week 4 working load; deload excluded.",
+          "reason": "Nov 9 prior normal-training: 255 lb for 5/5/5/4 reps. Resume normal Week 4 working load; recovery week excluded.",
           "lastSet": {
             "date": "2026-11-16",
             "weight": 225,
@@ -466,7 +466,7 @@
           "weight": 80,
           "targetReps": 8,
           "increment": null,
-          "reason": "Nov 9 pre-deload: 80 lb for 10/10/10/8 reps. Resume established 80 lb, not deload 70 lb.",
+          "reason": "Nov 9 prior normal-training: 80 lb for 10/10/10/8 reps. Resume established 80 lb, not recovery week 70 lb.",
           "lastSet": {
             "date": "2026-11-16",
             "weight": 70,
@@ -481,7 +481,7 @@
           "weight": 180,
           "targetReps": 12,
           "increment": null,
-          "reason": "Nov 9 pre-deload: 180 lb for 12/12/12 reps. Resume established normal-training load.",
+          "reason": "Nov 9 prior normal-training: 180 lb for 12/12/12 reps. Resume established normal-training load.",
           "lastSet": {
             "date": "2026-11-16",
             "weight": 160,
@@ -496,7 +496,7 @@
           "weight": 160,
           "targetReps": 12,
           "increment": null,
-          "reason": "Nov 9 pre-deload: 160 lb for 12/12/12 reps. Resume established normal-training load.",
+          "reason": "Nov 9 prior normal-training: 160 lb for 12/12/12 reps. Resume established normal-training load.",
           "lastSet": {
             "date": "2026-11-16",
             "weight": 140,
@@ -511,7 +511,7 @@
           "weight": 15,
           "targetReps": 20,
           "increment": null,
-          "reason": "Nov 9 pre-deload: 15 lb for 20/20/20 reps. Repeat pre-deload prescription; no deload-based adjustment.",
+          "reason": "Nov 9 prior normal-training: 15 lb for 20/20/20 reps. Repeat prior normal-training prescription; no recovery-week-based adjustment.",
           "lastSet": {
             "date": "2026-11-16",
             "weight": 15,
@@ -526,7 +526,7 @@
           "weight": 70,
           "targetReps": 12,
           "increment": null,
-          "reason": "Nov 9 pre-deload: 70 lb for 12/12 reps. Resume pre-deload working prescription.",
+          "reason": "Nov 9 prior normal-training: 70 lb for 12/12 reps. Resume prior normal-training working prescription.",
           "lastSet": {
             "date": "2026-11-16",
             "weight": 60,
@@ -541,7 +541,7 @@
           "weight": 30,
           "targetReps": 15,
           "increment": null,
-          "reason": "Nov 9 pre-deload: 30 lb for 15/15 reps. Resume pre-deload working prescription.",
+          "reason": "Nov 9 prior normal-training: 30 lb for 15/15 reps. Resume prior normal-training working prescription.",
           "lastSet": {
             "date": "2026-11-16",
             "weight": 25,
@@ -563,7 +563,7 @@
           "weight": 300,
           "targetReps": 10,
           "increment": null,
-          "reason": "Nov 10 pre-deload: 300 lb x10 for two sets then 320 lb x10 for two sets. Use 300 lb as conservative repeatable opening target; 320 lb was demonstrated but progression is not automatic after deload.",
+          "reason": "Nov 10 prior normal-training: 300 lb x10 for two sets then 320 lb x10 for two sets. Use 300 lb as conservative repeatable opening target; 320 lb was demonstrated but progression is not automatic after recovery week.",
           "lastSet": {
             "date": "2026-11-17",
             "weight": 280,
@@ -576,7 +576,7 @@
           "weight": 205,
           "targetReps": 10,
           "increment": null,
-          "reason": "Nov 10 pre-deload: 205 lb x10 for three sets. Resume normal-training load; exclude deload 185 lb.",
+          "reason": "Nov 10 prior normal-training: 205 lb x10 for three sets. Resume normal-training load; exclude recovery week 185 lb.",
           "lastSet": {
             "date": "2026-11-17",
             "weight": 185,
@@ -589,7 +589,7 @@
           "weight": 145,
           "targetReps": 10,
           "increment": null,
-          "reason": "Nov 10 pre-deload: 145 lb x10 for two sets. Resume normal-training load; exclude deload 120 lb.",
+          "reason": "Nov 10 prior normal-training: 145 lb x10 for two sets. Resume normal-training load; exclude recovery week 120 lb.",
           "lastSet": {
             "date": "2026-11-17",
             "weight": 120,
@@ -602,7 +602,7 @@
           "weight": 175,
           "targetReps": 15,
           "increment": null,
-          "reason": "Nov 10 pre-deload: 175 lb x15 for three sets. Resume normal-training load; exclude deload 165 lb.",
+          "reason": "Nov 10 prior normal-training: 175 lb x15 for three sets. Resume normal-training load; exclude recovery week 165 lb.",
           "lastSet": {
             "date": "2026-11-17",
             "weight": 165,
@@ -615,7 +615,7 @@
           "weight": 110,
           "targetReps": 16,
           "increment": null,
-          "reason": "Nov 10 pre-deload: 110 lb x16 for three sets. Resume normal-training load; exclude deload 90 lb.",
+          "reason": "Nov 10 prior normal-training: 110 lb x16 for three sets. Resume normal-training load; exclude recovery week 90 lb.",
           "lastSet": {
             "date": "2026-11-17",
             "weight": 90,
