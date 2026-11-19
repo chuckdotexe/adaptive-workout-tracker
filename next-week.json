@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "revision": "corrected-week6-post-deload-2026-11-18",
-  "updatedAt": "2026-11-18T20:06:00.000Z",
+  "revision": "processed-week5-day4-2026-11-19",
+  "updatedAt": "2026-11-19T13:16:00.000Z",
   "processedSessions": [
     {
       "id": "b4774b22-e8b1-406f-914c-cab7b67a2f86",
@@ -98,121 +98,13 @@
     {
       "id": "12eb6409-4fa7-4c1f-b591-0c79629e365a",
       "digest": "900ca8b85a19fc387190fdf5455a79db7a3896167449246c3109c08cf2065273"
+    },
+    {
+      "id": "9337ce8f-8837-43d9-95cf-a64eca02bbc8",
+      "digest": "65d7f5498a3070ede548bf38ca83b6fe10604c536a350384c5177405a66cc5e2"
     }
   ],
   "workouts": [
-    {
-      "week": 5,
-      "day": 4,
-      "dayLabel": "Thursday - Upper B — Back + Shoulders",
-      "exercises": [
-        {
-          "exerciseId": "w5d4e1",
-          "weight": 130,
-          "targetReps": 8,
-          "increment": null,
-          "reason": "Week 5 deload: proposed reduced starting load; about half normal working sets, aim for 4–5 RIR. Adjust load down if needed; no failure or PR attempts.",
-          "lastSet": {
-            "date": "2026-11-12",
-            "weight": 150,
-            "reps": 10,
-            "rir": 2,
-            "bodyweight": false,
-            "loadSemantics": ""
-          }
-        },
-        {
-          "exerciseId": "w5d4e2",
-          "weight": 70,
-          "targetReps": 8,
-          "increment": null,
-          "reason": "Week 5 deload: proposed reduced starting load; about half normal working sets, aim for 4–5 RIR. Adjust load down if needed; no failure or PR attempts.",
-          "lastSet": {
-            "date": "2026-11-12",
-            "weight": 80,
-            "reps": 9,
-            "rir": 2,
-            "bodyweight": false,
-            "loadSemantics": "70 lb per hand"
-          }
-        },
-        {
-          "exerciseId": "w5d4e3",
-          "weight": 55,
-          "targetReps": 11,
-          "increment": null,
-          "reason": "Week 5 deload: proposed reduced starting load; about half normal working sets, aim for 4–5 RIR. Adjust load down if needed; no failure or PR attempts.",
-          "lastSet": {
-            "date": "2026-11-12",
-            "weight": 65,
-            "reps": 13,
-            "rir": 2,
-            "bodyweight": false,
-            "loadSemantics": ""
-          }
-        },
-        {
-          "exerciseId": "w5d4e4",
-          "weight": 17.5,
-          "targetReps": 13,
-          "increment": null,
-          "reason": "Week 5 deload: proposed reduced starting load; about half normal working sets, aim for 4–5 RIR. Adjust load down if needed; no failure or PR attempts.",
-          "lastSet": {
-            "date": "2026-11-12",
-            "weight": 20,
-            "reps": 15,
-            "rir": 1,
-            "bodyweight": false,
-            "loadSemantics": ""
-          }
-        },
-        {
-          "exerciseId": "w5d4e5",
-          "weight": 80,
-          "targetReps": 18,
-          "increment": null,
-          "reason": "Week 5 deload: proposed reduced starting load; about half normal working sets, aim for 4–5 RIR. Adjust load down if needed; no failure or PR attempts.",
-          "lastSet": {
-            "date": "2026-11-12",
-            "weight": 90,
-            "reps": 20,
-            "rir": 1,
-            "bodyweight": false,
-            "loadSemantics": ""
-          }
-        },
-        {
-          "exerciseId": "w5d4e6",
-          "weight": 80,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Week 5 deload: proposed reduced starting load; about half normal working sets, aim for 4–5 RIR. Adjust load down if needed; no failure or PR attempts.",
-          "lastSet": {
-            "date": "2026-11-12",
-            "weight": 90,
-            "reps": 12,
-            "rir": 2,
-            "bodyweight": false,
-            "loadSemantics": "30 lb"
-          }
-        },
-        {
-          "exerciseId": "w5d4e7",
-          "weight": 55,
-          "targetReps": 11,
-          "increment": null,
-          "reason": "Week 5 deload: proposed reduced starting load; about half normal working sets, aim for 4–5 RIR. Adjust load down if needed; no failure or PR attempts.",
-          "lastSet": {
-            "date": "2026-11-12",
-            "weight": 65,
-            "reps": 13,
-            "rir": 1,
-            "bodyweight": false,
-            "loadSemantics": "55 lb"
-          }
-        }
-      ]
-    },
     {
       "week": 5,
       "day": 5,
@@ -223,7 +115,7 @@
           "weight": 160,
           "targetReps": 13,
           "increment": null,
-          "reason": "Week 5 deload: proposed reduced starting load; about half normal working sets, aim for 4–5 RIR. Adjust load down if needed; no failure or PR attempts.",
+          "reason": "Week 5 reduced-effort week: proposed reduced starting load; about half normal working sets, aim for 4–5 RIR. Adjust load down if needed; no failure or PR attempts.",
           "lastSet": {
             "date": "2026-11-13",
             "weight": 180,
@@ -238,7 +130,7 @@
           "weight": 175,
           "targetReps": 15,
           "increment": null,
-          "reason": "Week 5 deload: proposed reduced starting load; about half normal working sets, aim for 4–5 RIR. Adjust load down if needed; no failure or PR attempts.",
+          "reason": "Week 5 reduced-effort week: proposed reduced starting load; about half normal working sets, aim for 4–5 RIR. Adjust load down if needed; no failure or PR attempts.",
           "lastSet": {
             "date": "2026-11-13",
             "weight": 200,
@@ -253,7 +145,7 @@
           "weight": 120,
           "targetReps": 13,
           "increment": null,
-          "reason": "Week 5 deload: proposed reduced starting load; about half normal working sets, aim for 4–5 RIR. Adjust load down if needed; no failure or PR attempts.",
+          "reason": "Week 5 reduced-effort week: proposed reduced starting load; about half normal working sets, aim for 4–5 RIR. Adjust load down if needed; no failure or PR attempts.",
           "lastSet": {
             "date": "2026-11-13",
             "weight": 140,
@@ -268,7 +160,7 @@
           "weight": 35,
           "targetReps": 13,
           "increment": null,
-          "reason": "Week 5 deload: proposed reduced starting load; about half normal working sets, aim for 4–5 RIR. Adjust load down if needed; no failure or PR attempts.",
+          "reason": "Week 5 reduced-effort week: proposed reduced starting load; about half normal working sets, aim for 4–5 RIR. Adjust load down if needed; no failure or PR attempts.",
           "lastSet": {
             "date": "2026-11-13",
             "weight": 45,
@@ -283,7 +175,7 @@
           "weight": 260,
           "targetReps": 18,
           "increment": null,
-          "reason": "Week 5 deload: proposed reduced starting load; about half normal working sets, aim for 4–5 RIR. Adjust load down if needed; no failure or PR attempts.",
+          "reason": "Week 5 reduced-effort week: proposed reduced starting load; about half normal working sets, aim for 4–5 RIR. Adjust load down if needed; no failure or PR attempts.",
           "lastSet": {
             "date": "2026-11-13",
             "weight": 300,
@@ -298,7 +190,7 @@
           "weight": null,
           "targetReps": 1,
           "increment": null,
-          "reason": "Week 5 deload: 10 min easy conversational incline walk.",
+          "reason": "Week 5 reduced-effort week: 10 min easy conversational incline walk.",
           "lastSet": {
             "date": "2026-11-13",
             "weight": null,
@@ -324,7 +216,7 @@
           "weight": 75,
           "targetReps": 8,
           "increment": null,
-          "reason": "Week 5 deload: proposed reduced starting load; about half normal working sets, aim for 4–5 RIR. Adjust load down if needed; no failure or PR attempts.",
+          "reason": "Week 5 reduced-effort week: proposed reduced starting load; about half normal working sets, aim for 4–5 RIR. Adjust load down if needed; no failure or PR attempts.",
           "lastSet": {
             "date": "2026-11-14",
             "weight": 85,
@@ -339,7 +231,7 @@
           "weight": 70,
           "targetReps": 13,
           "increment": null,
-          "reason": "Week 5 deload: proposed reduced starting load; about half normal working sets, aim for 4–5 RIR. Adjust load down if needed; no failure or PR attempts.",
+          "reason": "Week 5 reduced-effort week: proposed reduced starting load; about half normal working sets, aim for 4–5 RIR. Adjust load down if needed; no failure or PR attempts.",
           "lastSet": {
             "date": "2026-11-14",
             "weight": 80,
@@ -354,7 +246,7 @@
           "weight": 60,
           "targetReps": 8,
           "increment": null,
-          "reason": "Week 5 deload: proposed reduced starting load; about half normal working sets, aim for 4–5 RIR. Adjust load down if needed; no failure or PR attempts.",
+          "reason": "Week 5 reduced-effort week: proposed reduced starting load; about half normal working sets, aim for 4–5 RIR. Adjust load down if needed; no failure or PR attempts.",
           "lastSet": {
             "date": "2026-11-14",
             "weight": 70,
@@ -369,7 +261,7 @@
           "weight": 30,
           "targetReps": 13,
           "increment": null,
-          "reason": "Week 5 deload: proposed reduced starting load; about half normal working sets, aim for 4–5 RIR. Adjust load down if needed; no failure or PR attempts.",
+          "reason": "Week 5 reduced-effort week: proposed reduced starting load; about half normal working sets, aim for 4–5 RIR. Adjust load down if needed; no failure or PR attempts.",
           "lastSet": {
             "date": "2026-11-14",
             "weight": 35,
@@ -384,7 +276,7 @@
           "weight": 20,
           "targetReps": 10,
           "increment": null,
-          "reason": "Week 5 deload: proposed reduced starting load; about half normal working sets, aim for 4–5 RIR. Adjust load down if needed; no failure or PR attempts.",
+          "reason": "Week 5 reduced-effort week: proposed reduced starting load; about half normal working sets, aim for 4–5 RIR. Adjust load down if needed; no failure or PR attempts.",
           "lastSet": {
             "date": "2026-11-14",
             "weight": 25,
@@ -399,7 +291,7 @@
           "weight": 25,
           "targetReps": 13,
           "increment": null,
-          "reason": "Week 5 deload: proposed reduced starting load; about half normal working sets, aim for 4–5 RIR. Adjust load down if needed; no failure or PR attempts.",
+          "reason": "Week 5 reduced-effort week: proposed reduced starting load; about half normal working sets, aim for 4–5 RIR. Adjust load down if needed; no failure or PR attempts.",
           "lastSet": {
             "date": "2026-11-14",
             "weight": 30,
@@ -414,7 +306,7 @@
           "weight": 65,
           "targetReps": 13,
           "increment": null,
-          "reason": "Week 5 deload: proposed reduced starting load; about half normal working sets, aim for 4–5 RIR. Adjust load down if needed; no failure or PR attempts.",
+          "reason": "Week 5 reduced-effort week: proposed reduced starting load; about half normal working sets, aim for 4–5 RIR. Adjust load down if needed; no failure or PR attempts.",
           "lastSet": {
             "date": "2026-11-14",
             "weight": 75,
@@ -429,7 +321,7 @@
           "weight": 20,
           "targetReps": 13,
           "increment": null,
-          "reason": "Week 5 deload: proposed reduced starting load; about half normal working sets, aim for 4–5 RIR. Adjust load down if needed; no failure or PR attempts.",
+          "reason": "Week 5 reduced-effort week: proposed reduced starting load; about half normal working sets, aim for 4–5 RIR. Adjust load down if needed; no failure or PR attempts.",
           "lastSet": {
             "date": "2026-11-14",
             "weight": 25,
@@ -680,14 +572,126 @@
           }
         }
       ]
+    },
+    {
+      "week": 6,
+      "day": 4,
+      "dayLabel": "Thursday - Upper B — Back + Shoulders",
+      "exercises": [
+        {
+          "exerciseId": "w6d4e1",
+          "weight": 150,
+          "targetReps": 10,
+          "increment": null,
+          "reason": "Resume established normal-training load of 150 lb. Reduced-effort Week 5 results are retained as history, not progression evidence. Target 10 reps at prescribed RIR 2; adjust if needed.",
+          "lastSet": {
+            "date": "2026-11-19",
+            "weight": 130,
+            "reps": 8,
+            "rir": 4,
+            "bodyweight": false,
+            "loadSemantics": ""
+          }
+        },
+        {
+          "exerciseId": "w6d4e2",
+          "weight": 80,
+          "targetReps": 9,
+          "increment": null,
+          "reason": "Resume established normal-training load of 80 lb. Reduced-effort Week 5 results are retained as history, not progression evidence. Target 9 reps at prescribed RIR 2; adjust if needed.",
+          "lastSet": {
+            "date": "2026-11-19",
+            "weight": 70,
+            "reps": 8,
+            "rir": 3,
+            "bodyweight": false,
+            "loadSemantics": "70 lb per hand"
+          }
+        },
+        {
+          "exerciseId": "w6d4e3",
+          "weight": 65,
+          "targetReps": 13,
+          "increment": null,
+          "reason": "Resume established normal-training load of 65 lb. Reduced-effort Week 5 results are retained as history, not progression evidence. Target 13 reps at prescribed RIR 2; adjust if needed.",
+          "lastSet": {
+            "date": "2026-11-19",
+            "weight": 55,
+            "reps": 11,
+            "rir": 3,
+            "bodyweight": false,
+            "loadSemantics": ""
+          }
+        },
+        {
+          "exerciseId": "w6d4e4",
+          "weight": 20,
+          "targetReps": 15,
+          "increment": null,
+          "reason": "Resume established normal-training load of 20 lb. Reduced-effort Week 5 results are retained as history, not progression evidence. Target 15 reps at prescribed RIR 2; adjust if needed.",
+          "lastSet": {
+            "date": "2026-11-19",
+            "weight": 15,
+            "reps": 13,
+            "rir": 4,
+            "bodyweight": false,
+            "loadSemantics": ""
+          }
+        },
+        {
+          "exerciseId": "w6d4e5",
+          "weight": 90,
+          "targetReps": 18,
+          "increment": null,
+          "reason": "Resume established normal-training load of 90 lb. Reduced-effort Week 5 results are retained as history, not progression evidence. Target 18 reps at prescribed RIR 2; adjust if needed.",
+          "lastSet": {
+            "date": "2026-11-19",
+            "weight": 90,
+            "reps": 18,
+            "rir": 3,
+            "bodyweight": false,
+            "loadSemantics": ""
+          }
+        },
+        {
+          "exerciseId": "w6d4e6",
+          "weight": 90,
+          "targetReps": 10,
+          "increment": null,
+          "reason": "Resume established normal-training load of 90 lb. Reduced-effort Week 5 results are retained as history, not progression evidence. Target 10 reps at prescribed RIR 2; adjust if needed.",
+          "lastSet": {
+            "date": "2026-11-19",
+            "weight": 80,
+            "reps": 10,
+            "rir": 3,
+            "bodyweight": false,
+            "loadSemantics": "30 lb"
+          }
+        },
+        {
+          "exerciseId": "w6d4e7",
+          "weight": 65,
+          "targetReps": 12,
+          "increment": null,
+          "reason": "Resume established normal-training load of 65 lb. Reduced-effort Week 5 results are retained as history, not progression evidence. Target 12 reps at prescribed RIR 2; adjust if needed.",
+          "lastSet": {
+            "date": "2026-11-19",
+            "weight": 55,
+            "reps": 11,
+            "rir": 3,
+            "bodyweight": false,
+            "loadSemantics": "55 lb"
+          }
+        }
+      ]
     }
   ],
   "sheetsReceipt": {
     "spreadsheetId": "1sNIsfGpvUEk_qcd5oj23vur7xdBFrBC4NfxOs6WVML4",
-    "range": "'Workout Log'!A1332:V1335",
-    "verifiedAt": "2026-11-18T12:43:00.000Z",
+    "range": "'Workout Log'!A1336:V1350",
+    "verifiedAt": "2026-11-19T13:16:00.000Z",
     "sessionIds": [
-      "12eb6409-4fa7-4c1f-b591-0c79629e365a"
+      "9337ce8f-8837-43d9-95cf-a64eca02bbc8"
     ]
   }
 }
