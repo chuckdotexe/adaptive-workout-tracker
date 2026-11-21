@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "revision": "processed-week5-complete-2026-11-21",
-  "updatedAt": "2026-11-21T14:08:00Z",
+  "revision": "week6-day1-reviewed-2026-11-21",
+  "updatedAt": "2026-11-21T14:12:46.549Z",
   "processedSessions": [
     {
       "id": "b4774b22-e8b1-406f-914c-cab7b67a2f86",
@@ -150,10 +150,10 @@
         },
         {
           "exerciseId": "w6d1e3",
-          "weight": 180,
-          "targetReps": 12,
+          "weight": 190,
+          "targetReps": 10,
           "increment": null,
-          "reason": "Nov 9 prior normal-training: 180 lb for 12/12/12 reps. Resume established normal-training load.",
+          "reason": "Progress from 180 lb after three sets of 12 at 2–4 RIR.",
           "lastSet": {
             "date": "2026-11-16",
             "weight": 160,
@@ -165,10 +165,10 @@
         },
         {
           "exerciseId": "w6d1e4",
-          "weight": 160,
-          "targetReps": 12,
+          "weight": 170,
+          "targetReps": 10,
           "increment": null,
-          "reason": "Nov 9 prior normal-training: 160 lb for 12/12/12 reps. Resume established normal-training load.",
+          "reason": "Progress from 160 lb after three sets of 12 at 2–3 RIR.",
           "lastSet": {
             "date": "2026-11-16",
             "weight": 140,
@@ -180,10 +180,10 @@
         },
         {
           "exerciseId": "w6d1e5",
-          "weight": 15,
-          "targetReps": 20,
+          "weight": 20,
+          "targetReps": 12,
           "increment": null,
-          "reason": "Nov 9 prior normal-training: 15 lb for 20/20/20 reps. Repeat prior normal-training prescription; no recovery-week-based adjustment.",
+          "reason": "User confirmed 20 lb cable progression; rebuild reps toward 20 at 2 RIR.",
           "lastSet": {
             "date": "2026-11-16",
             "weight": 15,
@@ -196,9 +196,9 @@
         {
           "exerciseId": "w6d1e6",
           "weight": 70,
-          "targetReps": 12,
+          "targetReps": 11,
           "increment": null,
-          "reason": "Nov 9 prior normal-training: 70 lb for 12/12 reps. Resume prior normal-training working prescription.",
+          "reason": "Retain 70 lb and reduce target to 11 reps to maintain 2 RIR.",
           "lastSet": {
             "date": "2026-11-16",
             "weight": 60,
