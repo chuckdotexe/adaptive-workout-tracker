@@ -3468,23 +3468,6 @@
     "sourceCsvRow": 247
   },
   {
-    "id": "w6d3e1",
-    "week": 6,
-    "day": 3,
-    "dayLabel": "Wednesday - Cardio + Core",
-    "name": "Incline Treadmill Walk",
-    "weight": null,
-    "weightText": "",
-    "sets": 1,
-    "minReps": 1,
-    "maxReps": 1,
-    "rirMin": null,
-    "rirMax": null,
-    "restSeconds": null,
-    "notes": "CARDIO ONLY: One timed cardio bout (not a resistance set). Cardio target: 30 min; Moderate pace. Conversational pace; incline and speed as tolerated. Keep cardio easy.",
-    "sourceCsvRow": 249
-  },
-  {
     "id": "w6d3e2",
     "week": 6,
     "day": 3,
@@ -3517,6 +3500,23 @@
     "restSeconds": 60,
     "notes": "Target RPE 8.0; rest 60 sec. Reps per side. Two sets per side; use controlled trunk rotation. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
     "sourceCsvRow": 251
+  },
+  {
+    "id": "w6d3e1",
+    "week": 6,
+    "day": 3,
+    "dayLabel": "Wednesday - Cardio + Core",
+    "name": "Incline Treadmill Walk",
+    "weight": null,
+    "weightText": "",
+    "sets": 1,
+    "minReps": 1,
+    "maxReps": 1,
+    "rirMin": null,
+    "rirMax": null,
+    "restSeconds": null,
+    "notes": "CARDIO ONLY: One timed cardio bout after core work. Cardio target: 30 min; 2.7 mph; 11% incline; conversational pace as tolerated.",
+    "sourceCsvRow": 249
   },
   {
     "id": "w6d4e1",
