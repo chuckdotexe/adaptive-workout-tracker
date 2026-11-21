@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "revision": "week6-day5-reviewed-2026-11-21",
-  "updatedAt": "2026-11-21T14:31:49.338Z",
+  "revision": "week6-day6-reviewed-2026-11-21",
+  "updatedAt": "2026-11-21T14:34:21.189Z",
   "processedSessions": [
     {
       "id": "b4774b22-e8b1-406f-914c-cab7b67a2f86",
@@ -583,9 +583,9 @@
         {
           "exerciseId": "w6d6e1",
           "weight": 85,
-          "targetReps": 9,
+          "targetReps": 10,
           "increment": null,
-          "reason": "Resume established Week 4 working load; target 2 RIR and adjust if needed.",
+          "reason": "Nov 14: 85 x 10/10/10/9; consolidate ten reps.",
           "lastSet": {
             "date": "2026-11-21",
             "weight": 75,
@@ -597,10 +597,10 @@
         },
         {
           "exerciseId": "w6d6e2",
-          "weight": 80,
-          "targetReps": 13,
+          "weight": 90,
+          "targetReps": 12,
           "increment": null,
-          "reason": "Resume established Week 4 working load; target 2 RIR and adjust if needed.",
+          "reason": "Nov 14: 80 x 15 twice, final 2 RIR; progress load.",
           "lastSet": {
             "date": "2026-11-21",
             "weight": 70,
@@ -611,11 +611,26 @@
           }
         },
         {
+          "exerciseId": "w6d6e11",
+          "weight": 25,
+          "targetReps": 17,
+          "increment": null,
+          "reason": "Nov 14: 25 x 20/20/15, final 1 RIR; target consistent reps.",
+          "lastSet": {
+            "date": "2026-11-21",
+            "weight": 20,
+            "reps": 13,
+            "rir": 3,
+            "bodyweight": false,
+            "loadSemantics": ""
+          }
+        },
+        {
           "exerciseId": "w6d6e4",
           "weight": 70,
-          "targetReps": 9,
+          "targetReps": 10,
           "increment": null,
-          "reason": "Resume established Week 4 working load; target 2 RIR and adjust if needed.",
+          "reason": "Nov 14: 70 x 12/12/10, final 1 RIR; consolidate at 2 RIR.",
           "lastSet": {
             "date": "2026-11-21",
             "weight": 60,
@@ -630,7 +645,7 @@
           "weight": 35,
           "targetReps": 13,
           "increment": null,
-          "reason": "Resume established Week 4 working load; target 2 RIR and adjust if needed.",
+          "reason": "Nov 14: 35 x 15 at 2 RIR on final set; consolidate across three sets.",
           "lastSet": {
             "date": "2026-11-21",
             "weight": 30,
@@ -641,26 +656,11 @@
           }
         },
         {
-          "exerciseId": "w6d6e7",
-          "weight": 25,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Resume established Week 4 working load; target 2 RIR and adjust if needed.",
-          "lastSet": {
-            "date": "2026-11-21",
-            "weight": 20,
-            "reps": 10,
-            "rir": 3,
-            "bodyweight": false,
-            "loadSemantics": ""
-          }
-        },
-        {
           "exerciseId": "w6d6e8",
           "weight": 30,
-          "targetReps": 13,
+          "targetReps": 14,
           "increment": null,
-          "reason": "Resume established Week 4 working load; target 2 RIR and adjust if needed.",
+          "reason": "Nov 14: 30 x 15 three sets, final 1 RIR; reduce one rep.",
           "lastSet": {
             "date": "2026-11-21",
             "weight": 25,
@@ -671,29 +671,29 @@
           }
         },
         {
-          "exerciseId": "w6d6e10",
-          "weight": 75,
-          "targetReps": 15,
+          "exerciseId": "w6d6e7",
+          "weight": 25,
+          "targetReps": 11,
           "increment": null,
-          "reason": "Resume established Week 4 working load; target 2 RIR and adjust if needed.",
+          "reason": "Nov 14: 25 x 12/10/10 at 2 RIR; build consistency.",
           "lastSet": {
             "date": "2026-11-21",
-            "weight": 65,
-            "reps": 13,
+            "weight": 20,
+            "reps": 10,
             "rir": 3,
             "bodyweight": false,
             "loadSemantics": ""
           }
         },
         {
-          "exerciseId": "w6d6e11",
-          "weight": 25,
+          "exerciseId": "w6d6e10",
+          "weight": 80,
           "targetReps": 15,
           "increment": null,
-          "reason": "Resume established Week 4 working load; target 2 RIR and adjust if needed.",
+          "reason": "Nov 14: 75 x 15 twice at 3 RIR; increase load.",
           "lastSet": {
             "date": "2026-11-21",
-            "weight": 20,
+            "weight": 65,
             "reps": 13,
             "rir": 3,
             "bodyweight": false,
