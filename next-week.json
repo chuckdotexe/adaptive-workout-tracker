@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "revision": "week6-day1-reviewed-2026-11-21",
-  "updatedAt": "2026-11-21T14:12:46.549Z",
+  "revision": "week6-day2-reviewed-2026-11-21",
+  "updatedAt": "2026-11-21T14:21:28.025Z",
   "processedSessions": [
     {
       "id": "b4774b22-e8b1-406f-914c-cab7b67a2f86",
@@ -232,14 +232,14 @@
       "exercises": [
         {
           "exerciseId": "w6d2e1",
-          "weight": 300,
+          "weight": 200,
           "targetReps": 10,
           "increment": null,
-          "reason": "Nov 10 prior normal-training: 300 lb x10 for two sets then 320 lb x10 for two sets. Use 300 lb as conservative repeatable opening target; 320 lb was demonstrated but progression is not automatic after recovery week.",
+          "reason": "Approved progression after 180 lb for 3 x 15 at 2 RIR on Nov 6 and 13.",
           "lastSet": {
-            "date": "2026-11-17",
-            "weight": 280,
-            "reps": 8,
+            "date": "2026-11-20",
+            "weight": 160,
+            "reps": 13,
             "rir": 3,
             "bodyweight": false,
             "loadSemantics": ""
@@ -247,25 +247,17 @@
         },
         {
           "exerciseId": "w6d2e2",
-          "weight": 205,
-          "targetReps": 10,
+          "weight": 20,
+          "targetReps": 8,
           "increment": null,
-          "reason": "Nov 10 prior normal-training: 205 lb x10 for three sets. Resume normal-training load; exclude recovery week 185 lb.",
-          "lastSet": {
-            "date": "2026-11-17",
-            "weight": 185,
-            "reps": 8,
-            "rir": 3,
-            "bodyweight": false,
-            "loadSemantics": ""
-          }
+          "reason": "Approved initial trial per dumbbell; 8 reps per leg at 2 RIR."
         },
         {
           "exerciseId": "w6d2e3",
           "weight": 145,
-          "targetReps": 10,
+          "targetReps": 11,
           "increment": null,
-          "reason": "Nov 10 prior normal-training: 145 lb x10 for two sets. Resume normal-training load; exclude recovery week 120 lb.",
+          "reason": "Approved rep progression from 145 x 10 at 2 RIR Nov 10.",
           "lastSet": {
             "date": "2026-11-20",
             "weight": 120,
@@ -276,11 +268,26 @@
           }
         },
         {
-          "exerciseId": "w6d2e4",
-          "weight": 175,
-          "targetReps": 15,
+          "exerciseId": "w6d2e5",
+          "weight": 205,
+          "targetReps": 12,
           "increment": null,
-          "reason": "Nov 10 prior normal-training: 175 lb x15 for three sets. Resume normal-training load; exclude recovery week 165 lb.",
+          "reason": "Approved initial Tuesday target; adjust to 2 RIR.",
+          "lastSet": {
+            "date": "2026-11-20",
+            "weight": 175,
+            "reps": 15,
+            "rir": 3,
+            "bodyweight": false,
+            "loadSemantics": ""
+          }
+        },
+        {
+          "exerciseId": "w6d2e4",
+          "weight": 185,
+          "targetReps": 12,
+          "increment": null,
+          "reason": "Approved progression from 175 x 15 at 2 RIR Nov 10.",
           "lastSet": {
             "date": "2026-11-17",
             "weight": 165,
@@ -292,18 +299,10 @@
         },
         {
           "exerciseId": "w6d2e6",
-          "weight": 110,
-          "targetReps": 16,
+          "weight": 10,
+          "targetReps": 15,
           "increment": null,
-          "reason": "Nov 10 prior normal-training: 110 lb x16 for three sets. Resume normal-training load; exclude recovery week 90 lb.",
-          "lastSet": {
-            "date": "2026-11-19",
-            "weight": 90,
-            "reps": 18,
-            "rir": 3,
-            "bodyweight": false,
-            "loadSemantics": ""
-          }
+          "reason": "Approved initial trial per cable, bilateral cross-body fly."
         }
       ]
     },
@@ -482,14 +481,14 @@
       "exercises": [
         {
           "exerciseId": "w6d5e1",
-          "weight": 180,
-          "targetReps": 13,
+          "weight": 205,
+          "targetReps": 10,
           "increment": null,
-          "reason": "Resume established Week 4 working load; target 2 RIR and adjust if needed.",
+          "reason": "Moved from Tuesday; retain published target pending Friday review.",
           "lastSet": {
-            "date": "2026-11-20",
-            "weight": 160,
-            "reps": 13,
+            "date": "2026-11-17",
+            "weight": 185,
+            "reps": 8,
             "rir": 3,
             "bodyweight": false,
             "loadSemantics": ""
@@ -497,14 +496,14 @@
         },
         {
           "exerciseId": "w6d5e2",
-          "weight": 200,
-          "targetReps": 15,
+          "weight": 300,
+          "targetReps": 10,
           "increment": null,
-          "reason": "Resume established Week 4 working load; target 2 RIR and adjust if needed.",
+          "reason": "Moved from Tuesday; retain published target pending Friday review.",
           "lastSet": {
-            "date": "2026-11-20",
-            "weight": 175,
-            "reps": 15,
+            "date": "2026-11-17",
+            "weight": 280,
+            "reps": 8,
             "rir": 3,
             "bodyweight": false,
             "loadSemantics": ""
