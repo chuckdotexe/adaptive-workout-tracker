@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "revision": "week6-day3-reviewed-2026-11-21",
-  "updatedAt": "2026-11-21T14:24:17.843Z",
+  "revision": "week6-day4-reviewed-2026-11-21",
+  "updatedAt": "2026-11-21T14:27:53.862Z",
   "processedSessions": [
     {
       "id": "b4774b22-e8b1-406f-914c-cab7b67a2f86",
@@ -368,11 +368,26 @@
       "dayLabel": "Thursday - Upper B — Back + Shoulders",
       "exercises": [
         {
+          "exerciseId": "w6d4e2",
+          "weight": 220,
+          "targetReps": 10,
+          "increment": null,
+          "reason": "Oct 1 and 8: 220 x 10 for three sets; reestablish at 2 RIR.",
+          "lastSet": {
+            "date": "2026-10-08",
+            "weight": 220,
+            "reps": 10,
+            "rir": null,
+            "bodyweight": false,
+            "loadSemantics": ""
+          }
+        },
+        {
           "exerciseId": "w6d4e1",
           "weight": 150,
           "targetReps": 10,
           "increment": null,
-          "reason": "Resume established normal-training load of 150 lb. Reduced-effort Week 5 results are retained as history, not progression evidence. Target 10 reps at prescribed RIR 2; adjust if needed.",
+          "reason": "Nov 12: 150 x 10 twice at 2 RIR; retain load.",
           "lastSet": {
             "date": "2026-11-19",
             "weight": 130,
@@ -383,41 +398,11 @@
           }
         },
         {
-          "exerciseId": "w6d4e2",
-          "weight": 80,
-          "targetReps": 9,
-          "increment": null,
-          "reason": "Resume established normal-training load of 80 lb. Reduced-effort Week 5 results are retained as history, not progression evidence. Target 9 reps at prescribed RIR 2; adjust if needed.",
-          "lastSet": {
-            "date": "2026-11-19",
-            "weight": 70,
-            "reps": 8,
-            "rir": 3,
-            "bodyweight": false,
-            "loadSemantics": ""
-          }
-        },
-        {
-          "exerciseId": "w6d4e3",
-          "weight": 65,
-          "targetReps": 13,
-          "increment": null,
-          "reason": "Resume established normal-training load of 65 lb. Reduced-effort Week 5 results are retained as history, not progression evidence. Target 13 reps at prescribed RIR 2; adjust if needed.",
-          "lastSet": {
-            "date": "2026-11-19",
-            "weight": 55,
-            "reps": 11,
-            "rir": 3,
-            "bodyweight": false,
-            "loadSemantics": ""
-          }
-        },
-        {
           "exerciseId": "w6d4e4",
           "weight": 20,
-          "targetReps": 15,
+          "targetReps": 14,
           "increment": null,
-          "reason": "Resume established normal-training load of 20 lb. Reduced-effort Week 5 results are retained as history, not progression evidence. Target 15 reps at prescribed RIR 2; adjust if needed.",
+          "reason": "Nov 12: 20 x 15 four sets, final 1 RIR; reduce one rep.",
           "lastSet": {
             "date": "2026-11-19",
             "weight": 15,
@@ -428,11 +413,26 @@
           }
         },
         {
+          "exerciseId": "w6d4e3",
+          "weight": 65,
+          "targetReps": 13,
+          "increment": null,
+          "reason": "Nov 12: 65 x 12/13/13 at 2 RIR; consolidate 13 reps.",
+          "lastSet": {
+            "date": "2026-11-19",
+            "weight": 55,
+            "reps": 11,
+            "rir": 3,
+            "bodyweight": false,
+            "loadSemantics": ""
+          }
+        },
+        {
           "exerciseId": "w6d4e5",
           "weight": 90,
-          "targetReps": 18,
+          "targetReps": 19,
           "increment": null,
-          "reason": "Resume established normal-training load of 90 lb. Reduced-effort Week 5 results are retained as history, not progression evidence. Target 18 reps at prescribed RIR 2; adjust if needed.",
+          "reason": "Nov 12: 90 x 20 three sets, final 1 RIR; reduce one rep.",
           "lastSet": {
             "date": "2026-11-19",
             "weight": 90,
@@ -443,30 +443,30 @@
           }
         },
         {
-          "exerciseId": "w6d4e6",
-          "weight": 90,
-          "targetReps": 10,
+          "exerciseId": "w6d4e7",
+          "weight": 65,
+          "targetReps": 13,
           "increment": null,
-          "reason": "Resume established normal-training load of 90 lb. Reduced-effort Week 5 results are retained as history, not progression evidence. Target 10 reps at prescribed RIR 2; adjust if needed.",
+          "reason": "Nov 12: 65 x 15/15/13, final 1 RIR; target consistent 13 at 2 RIR.",
           "lastSet": {
             "date": "2026-11-19",
-            "weight": 80,
-            "reps": 10,
+            "weight": 55,
+            "reps": 11,
             "rir": 3,
             "bodyweight": false,
             "loadSemantics": ""
           }
         },
         {
-          "exerciseId": "w6d4e7",
-          "weight": 65,
-          "targetReps": 12,
+          "exerciseId": "w6d4e6",
+          "weight": 90,
+          "targetReps": 13,
           "increment": null,
-          "reason": "Resume established normal-training load of 65 lb. Reduced-effort Week 5 results are retained as history, not progression evidence. Target 12 reps at prescribed RIR 2; adjust if needed.",
+          "reason": "Nov 12: 90 x 12/13/12 at final 2 RIR; build to 13.",
           "lastSet": {
             "date": "2026-11-19",
-            "weight": 55,
-            "reps": 11,
+            "weight": 80,
+            "reps": 10,
             "rir": 3,
             "bodyweight": false,
             "loadSemantics": ""
