@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "revision": "week6-day4-reviewed-2026-11-21",
-  "updatedAt": "2026-11-21T14:27:53.862Z",
+  "revision": "week6-day5-reviewed-2026-11-21",
+  "updatedAt": "2026-11-21T14:31:49.338Z",
   "processedSessions": [
     {
       "id": "b4774b22-e8b1-406f-914c-cab7b67a2f86",
@@ -480,26 +480,11 @@
       "dayLabel": "Friday - Lower B — Posterior Chain",
       "exercises": [
         {
-          "exerciseId": "w6d5e1",
-          "weight": 205,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Moved from Tuesday; retain published target pending Friday review.",
-          "lastSet": {
-            "date": "2026-11-17",
-            "weight": 185,
-            "reps": 8,
-            "rir": 3,
-            "bodyweight": false,
-            "loadSemantics": ""
-          }
-        },
-        {
           "exerciseId": "w6d5e2",
-          "weight": 300,
+          "weight": 320,
           "targetReps": 10,
           "increment": null,
-          "reason": "Moved from Tuesday; retain published target pending Friday review.",
+          "reason": "Nov 10: 320 x 10 twice at 2 RIR; consolidate working load.",
           "lastSet": {
             "date": "2026-11-17",
             "weight": 280,
@@ -510,11 +495,41 @@
           }
         },
         {
-          "exerciseId": "w6d5e3",
-          "weight": 140,
-          "targetReps": 13,
+          "exerciseId": "w6d5e1",
+          "weight": 215,
+          "targetReps": 8,
           "increment": null,
-          "reason": "Resume established Week 4 working load; target 2 RIR and adjust if needed.",
+          "reason": "Nov 10: 205 x 10 for three sets at 2 RIR; progress load.",
+          "lastSet": {
+            "date": "2026-11-17",
+            "weight": 185,
+            "reps": 8,
+            "rir": 3,
+            "bodyweight": false,
+            "loadSemantics": ""
+          }
+        },
+        {
+          "exerciseId": "w6d5e4",
+          "weight": 200,
+          "targetReps": 8,
+          "increment": null,
+          "reason": "Oct 9: machine hip thrust 200 x 8 for three sets; resume established weight, target 2 RIR.",
+          "lastSet": {
+            "date": "2026-10-09",
+            "weight": 200,
+            "reps": 8,
+            "rir": null,
+            "bodyweight": false,
+            "loadSemantics": ""
+          }
+        },
+        {
+          "exerciseId": "w6d5e3",
+          "weight": 145,
+          "targetReps": 12,
+          "increment": null,
+          "reason": "Nov 13: 140 x 15 three sets, final 1 RIR; increase load and rebuild reps.",
           "lastSet": {
             "date": "2026-11-20",
             "weight": 120,
@@ -525,26 +540,11 @@
           }
         },
         {
-          "exerciseId": "w6d5e4",
-          "weight": 45,
-          "targetReps": 13,
-          "increment": null,
-          "reason": "Resume established Week 4 working load; target 2 RIR and adjust if needed.",
-          "lastSet": {
-            "date": "2026-11-20",
-            "weight": 45,
-            "reps": 13,
-            "rir": 3,
-            "bodyweight": false,
-            "loadSemantics": ""
-          }
-        },
-        {
           "exerciseId": "w6d5e5",
-          "weight": 300,
-          "targetReps": 18,
+          "weight": 320,
+          "targetReps": 15,
           "increment": null,
-          "reason": "Resume established Week 4 working load; target 2 RIR and adjust if needed.",
+          "reason": "Nov 13: 300 x 20 three sets at 2 RIR; increase load.",
           "lastSet": {
             "date": "2026-11-20",
             "weight": 260,
@@ -559,7 +559,7 @@
           "weight": null,
           "targetReps": 1,
           "increment": null,
-          "reason": "15–20 minutes at conversational pace.",
+          "reason": "15–20 minutes at 2.7 mph and 11–12% incline; conversational pace.",
           "lastSet": {
             "date": "2026-11-20",
             "weight": null,
