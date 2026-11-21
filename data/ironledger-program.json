@@ -3519,6 +3519,23 @@
     "sourceCsvRow": 249
   },
   {
+    "id": "w6d4e2",
+    "week": 6,
+    "day": 4,
+    "dayLabel": "Thursday - Upper B — Back + Shoulders",
+    "name": "Seated Row (Cable)",
+    "weight": 220,
+    "weightText": "220 lb",
+    "sets": 3,
+    "minReps": 8,
+    "maxReps": 12,
+    "rirMin": 2,
+    "rirMax": 2,
+    "restSeconds": 90,
+    "notes": "Medium-width neutral grip; upper and mid-back emphasis. Controlled horizontal pull. Target 2 RIR; rest 90 sec. Double progression within rep range.",
+    "sourceCsvRow": 254
+  },
+  {
     "id": "w6d4e1",
     "week": 6,
     "day": 4,
@@ -3534,40 +3551,6 @@
     "restSeconds": 90,
     "notes": "Target RPE 8.0; rest 90 sec. Controlled vertical pull; grip for comfort. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
     "sourceCsvRow": 253
-  },
-  {
-    "id": "w6d4e2",
-    "week": 6,
-    "day": 4,
-    "dayLabel": "Thursday - Upper B — Back + Shoulders",
-    "name": "DB Chest Supported Row",
-    "weight": 70,
-    "weightText": "70 lb per hand",
-    "sets": 3,
-    "minReps": 8,
-    "maxReps": 12,
-    "rirMin": 2,
-    "rirMax": 2,
-    "restSeconds": 90,
-    "notes": "ORIGINAL EXERCISE: Chest Supported Row (Dumbbell). Perform CHEST-SUPPORTED DUMBBELL ROW; 70 lb PER HAND, not machine weight. Target RPE 8.0; rest 90 sec. Upper-back emphasis; controlled scapular movement. Double progression: increase reps within range, then load; stay 1-3 reps from failure.",
-    "sourceCsvRow": 254
-  },
-  {
-    "id": "w6d4e3",
-    "week": 6,
-    "day": 4,
-    "dayLabel": "Thursday - Upper B — Back + Shoulders",
-    "name": "Single-Arm Cable Lat Pulldown",
-    "weight": null,
-    "weightText": "",
-    "sets": 3,
-    "minReps": 10,
-    "maxReps": 15,
-    "rirMin": 2,
-    "rirMax": 2,
-    "restSeconds": 75,
-    "notes": "Target RPE 8.0; rest 75 sec. Reps per side. Elbow toward hip; full comfortable stretch. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 255
   },
   {
     "id": "w6d4e4",
@@ -3587,6 +3570,23 @@
     "sourceCsvRow": 256
   },
   {
+    "id": "w6d4e3",
+    "week": 6,
+    "day": 4,
+    "dayLabel": "Thursday - Upper B — Back + Shoulders",
+    "name": "Single-Arm Cable Lat Pulldown",
+    "weight": null,
+    "weightText": "",
+    "sets": 3,
+    "minReps": 10,
+    "maxReps": 15,
+    "rirMin": 2,
+    "rirMax": 2,
+    "restSeconds": 75,
+    "notes": "Target RPE 8.0; rest 75 sec. Reps per side. Elbow toward hip; full comfortable stretch. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
+    "sourceCsvRow": 255
+  },
+  {
     "id": "w6d4e5",
     "week": 6,
     "day": 4,
@@ -3604,23 +3604,6 @@
     "sourceCsvRow": 257
   },
   {
-    "id": "w6d4e6",
-    "week": 6,
-    "day": 4,
-    "dayLabel": "Thursday - Upper B — Back + Shoulders",
-    "name": "Bayesian Curl",
-    "weight": 30,
-    "weightText": "30 lb",
-    "sets": 3,
-    "minReps": 10,
-    "maxReps": 15,
-    "rirMin": 2,
-    "rirMax": 2,
-    "restSeconds": 75,
-    "notes": "Target RPE 8.0; rest 75 sec. Reps per side. Arm slightly behind torso; steady upper arm. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
-    "sourceCsvRow": 258
-  },
-  {
     "id": "w6d4e7",
     "week": 6,
     "day": 4,
@@ -3636,6 +3619,23 @@
     "restSeconds": 75,
     "notes": "Target RPE 8.0; rest 75 sec. Controlled long-head stretch; pain-free range. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
     "sourceCsvRow": 259
+  },
+  {
+    "id": "w6d4e6",
+    "week": 6,
+    "day": 4,
+    "dayLabel": "Thursday - Upper B — Back + Shoulders",
+    "name": "Bayesian Curl",
+    "weight": 30,
+    "weightText": "30 lb",
+    "sets": 3,
+    "minReps": 10,
+    "maxReps": 15,
+    "rirMin": 2,
+    "rirMax": 2,
+    "restSeconds": 75,
+    "notes": "Target RPE 8.0; rest 75 sec. Reps per side. Arm slightly behind torso; steady upper arm. Double progression: increase reps within range, then load; stay 1-3 reps from failure. If blank, obtain load from most recent comparable logged set; do not infer machine-equivalent weights.",
+    "sourceCsvRow": 258
   },
   {
     "id": "w6d5e1",
