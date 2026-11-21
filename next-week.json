@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "revision": "week6-day2-reviewed-2026-11-21",
-  "updatedAt": "2026-11-21T14:21:28.025Z",
+  "revision": "week6-day3-reviewed-2026-11-21",
+  "updatedAt": "2026-11-21T14:24:17.843Z",
   "processedSessions": [
     {
       "id": "b4774b22-e8b1-406f-914c-cab7b67a2f86",
@@ -312,30 +312,11 @@
       "dayLabel": "Wednesday - Cardio + Core",
       "exercises": [
         {
-          "exerciseId": "w6d3e1",
-          "weight": null,
-          "targetReps": 1,
-          "increment": null,
-          "reason": "30 min conversational cardio; maintain aerobic conditioning while managing fatigue.",
-          "lastSet": {
-            "date": "2026-11-20",
-            "weight": null,
-            "reps": 0,
-            "rir": null,
-            "bodyweight": false,
-            "loadSemantics": "",
-            "kind": "cardio",
-            "durationMinutes": 10,
-            "speedMph": 2.65,
-            "inclinePercent": 11.5
-          }
-        },
-        {
           "exerciseId": "w6d3e2",
           "weight": null,
-          "targetReps": 10,
+          "targetReps": 12,
           "increment": null,
-          "reason": "Resume prior normal-training 10 reps with prescribed sets and RIR 2; do not use recovery-week RIR to progress.",
+          "reason": "Approved target of 12 strict reps at 2 RIR; Nov 10 performance 13/13/10.",
           "lastSet": {
             "date": "2026-11-18",
             "weight": null,
@@ -347,10 +328,10 @@
         },
         {
           "exerciseId": "w6d3e3",
-          "weight": 45,
-          "targetReps": 13,
+          "weight": 50,
+          "targetReps": 12,
           "increment": null,
-          "reason": "Resume prior normal-training 45 lb working load; prior 45 × 15 at RIR 2; target 13 within range.",
+          "reason": "Approved progression from 45 lb x 15 for both sets at 2 RIR; 12 reps per side.",
           "lastSet": {
             "date": "2026-11-18",
             "weight": 40,
@@ -358,6 +339,25 @@
             "rir": 5,
             "bodyweight": false,
             "loadSemantics": ""
+          }
+        },
+        {
+          "exerciseId": "w6d3e1",
+          "weight": null,
+          "targetReps": 1,
+          "increment": null,
+          "reason": "After core work: 30 min at 2.7 mph and 11% incline, conversational pace.",
+          "lastSet": {
+            "date": "2026-11-20",
+            "weight": null,
+            "reps": 0,
+            "rir": null,
+            "bodyweight": false,
+            "loadSemantics": "",
+            "kind": "cardio",
+            "durationMinutes": 10,
+            "speedMph": 2.65,
+            "inclinePercent": 11.5
           }
         }
       ]
