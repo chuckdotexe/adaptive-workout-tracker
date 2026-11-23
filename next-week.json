@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "revision": "week6-day6-reviewed-2026-11-21",
-  "updatedAt": "2026-11-21T14:34:21.189Z",
+  "revision": "processed-2026-11-23-w6d1",
+  "updatedAt": "2026-11-23T13:07:01.835Z",
   "processedSessions": [
     {
       "id": "b4774b22-e8b1-406f-914c-cab7b67a2f86",
@@ -110,121 +110,13 @@
     {
       "id": "626bfe33-e5c2-4b7f-86e2-e2235846e5a4",
       "digest": "bcb6694aaf693d35b25d97277272fd0c0792a74d84136f9f6b2ee8f6cfd4027e"
+    },
+    {
+      "id": "47bc9baf-8d1c-49f7-8786-8b6bdb0f62fc",
+      "digest": "7d112b4c9da87f42fd5e946f1f7c6f4f9e1122efc03d871eff91633cbc6641cc"
     }
   ],
   "workouts": [
-    {
-      "week": 6,
-      "day": 1,
-      "dayLabel": "Monday - Upper A — Chest Focus",
-      "exercises": [
-        {
-          "exerciseId": "w6d1e1",
-          "weight": 255,
-          "targetReps": 5,
-          "increment": null,
-          "reason": "Nov 9 prior normal-training: 255 lb for 5/5/5/4 reps. Resume normal Week 4 working load; recovery week excluded.",
-          "lastSet": {
-            "date": "2026-11-16",
-            "weight": 225,
-            "reps": 5,
-            "rir": 3,
-            "bodyweight": false,
-            "loadSemantics": ""
-          }
-        },
-        {
-          "exerciseId": "w6d1e2",
-          "weight": 80,
-          "targetReps": 8,
-          "increment": null,
-          "reason": "Nov 9 prior normal-training: 80 lb for 10/10/10/8 reps. Resume established 80 lb, not recovery week 70 lb.",
-          "lastSet": {
-            "date": "2026-11-19",
-            "weight": 70,
-            "reps": 8,
-            "rir": 3,
-            "bodyweight": false,
-            "loadSemantics": ""
-          }
-        },
-        {
-          "exerciseId": "w6d1e3",
-          "weight": 190,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Progress from 180 lb after three sets of 12 at 2–4 RIR.",
-          "lastSet": {
-            "date": "2026-11-16",
-            "weight": 160,
-            "reps": 8,
-            "rir": 3,
-            "bodyweight": false,
-            "loadSemantics": ""
-          }
-        },
-        {
-          "exerciseId": "w6d1e4",
-          "weight": 170,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Progress from 160 lb after three sets of 12 at 2–3 RIR.",
-          "lastSet": {
-            "date": "2026-11-16",
-            "weight": 140,
-            "reps": 9,
-            "rir": 4,
-            "bodyweight": false,
-            "loadSemantics": ""
-          }
-        },
-        {
-          "exerciseId": "w6d1e5",
-          "weight": 20,
-          "targetReps": 12,
-          "increment": null,
-          "reason": "User confirmed 20 lb cable progression; rebuild reps toward 20 at 2 RIR.",
-          "lastSet": {
-            "date": "2026-11-16",
-            "weight": 15,
-            "reps": 15,
-            "rir": 3,
-            "bodyweight": false,
-            "loadSemantics": ""
-          }
-        },
-        {
-          "exerciseId": "w6d1e6",
-          "weight": 70,
-          "targetReps": 11,
-          "increment": null,
-          "reason": "Retain 70 lb and reduce target to 11 reps to maintain 2 RIR.",
-          "lastSet": {
-            "date": "2026-11-16",
-            "weight": 60,
-            "reps": 8,
-            "rir": 3,
-            "bodyweight": false,
-            "loadSemantics": ""
-          }
-        },
-        {
-          "exerciseId": "w6d1e7",
-          "weight": 30,
-          "targetReps": 15,
-          "increment": null,
-          "reason": "Nov 9 prior normal-training: 30 lb for 15/15 reps. Resume prior normal-training working prescription.",
-          "lastSet": {
-            "date": "2026-11-21",
-            "weight": 30,
-            "reps": 13,
-            "rir": 3,
-            "bodyweight": false,
-            "loadSemantics": ""
-          }
-        }
-      ]
-    },
     {
       "week": 6,
       "day": 2,
@@ -696,6 +588,118 @@
             "weight": 65,
             "reps": 13,
             "rir": 3,
+            "bodyweight": false,
+            "loadSemantics": ""
+          }
+        }
+      ]
+    },
+    {
+      "week": 7,
+      "day": 1,
+      "dayLabel": "Monday - Upper A — Chest Focus",
+      "exercises": [
+        {
+          "exerciseId": "w7d1e1",
+          "weight": 255,
+          "targetReps": 6,
+          "increment": null,
+          "reason": "Week 6: 255 x 6/6/6/5 at 2 RIR; build final set to six before increasing load.",
+          "lastSet": {
+            "date": "2026-11-23",
+            "weight": 255,
+            "reps": 5,
+            "rir": 2,
+            "bodyweight": false,
+            "loadSemantics": "255 lb"
+          }
+        },
+        {
+          "exerciseId": "w7d1e2",
+          "weight": 80,
+          "targetReps": 8,
+          "increment": null,
+          "reason": "Week 6: 80 x 8/8/7/7 at 2 RIR; consolidate eight reps.",
+          "lastSet": {
+            "date": "2026-11-23",
+            "weight": 80,
+            "reps": 7,
+            "rir": 2,
+            "bodyweight": false,
+            "loadSemantics": "70 lb per hand"
+          }
+        },
+        {
+          "exerciseId": "w7d1e3",
+          "weight": 200,
+          "targetReps": 10,
+          "increment": null,
+          "reason": "Week 6: 200 x 10/10/8 at 2 RIR; consolidate ten reps.",
+          "lastSet": {
+            "date": "2026-11-23",
+            "weight": 200,
+            "reps": 8,
+            "rir": 2,
+            "bodyweight": false,
+            "loadSemantics": ""
+          }
+        },
+        {
+          "exerciseId": "w7d1e4",
+          "weight": 170,
+          "targetReps": 10,
+          "increment": null,
+          "reason": "Week 6: 170 x 10/10/8 at 2 RIR; consolidate ten reps.",
+          "lastSet": {
+            "date": "2026-11-23",
+            "weight": 170,
+            "reps": 8,
+            "rir": 2,
+            "bodyweight": false,
+            "loadSemantics": "160 lb"
+          }
+        },
+        {
+          "exerciseId": "w7d1e5",
+          "weight": 20,
+          "targetReps": 12,
+          "increment": null,
+          "reason": "Week 6: 20 x 12/12/14, final 1 RIR; target consistent 2 RIR.",
+          "lastSet": {
+            "date": "2026-11-23",
+            "weight": 20,
+            "reps": 14,
+            "rir": 1,
+            "bodyweight": false,
+            "loadSemantics": ""
+          }
+        },
+        {
+          "exerciseId": "w7d1e6",
+          "weight": 70,
+          "targetReps": 11,
+          "increment": null,
+          "reason": "Week 6: 70 x 11/11 at 2 RIR; build reps.",
+          "lastSet": {
+            "date": "2026-11-23",
+            "weight": 70,
+            "reps": 11,
+            "rir": 2,
+            "bodyweight": false,
+            "loadSemantics": "70 lb total"
+          }
+        },
+        {
+          "exerciseId": "w7d1e7",
+          "weight": 30,
+          "targetReps": 15,
+          "increment": null,
+          "reason": "Week 6: 30 x 15/15 at 2 RIR; maintain load pending small increment.",
+          "lastSet": {
+            "date": "2026-11-23",
+            "weight": 30,
+            "reps": 15,
+            "rir": 2,
             "bodyweight": false,
             "loadSemantics": ""
           }
