@@ -346,6 +346,148 @@
           "increment": null
         }
       ]
+    },
+    {
+      "id": "ae725053-88ce-4631-b177-aff957d5a51d",
+      "week": 6,
+      "day": 3,
+      "date": "2026-11-25",
+      "status": "finished",
+      "sets": [
+        {
+          "id": "38084f4b-fdb2-4f8d-9de2-cbf2b475596d",
+          "notes": "",
+          "created": "2026-11-25T14:02:12.009Z",
+          "weight": null,
+          "reps": 12,
+          "rir": 2,
+          "bodyweight": true,
+          "exerciseId": "w6d3e2",
+          "unit": "",
+          "loadSemantics": "Bodyweight",
+          "rpe": 8,
+          "rpeSource": "derived"
+        },
+        {
+          "id": "d5f2b6d4-932c-4dfb-9446-222c12ae6ecd",
+          "notes": "",
+          "created": "2026-11-25T14:02:12.662Z",
+          "weight": null,
+          "reps": 12,
+          "rir": 2,
+          "bodyweight": true,
+          "exerciseId": "w6d3e2",
+          "unit": "",
+          "loadSemantics": "Bodyweight",
+          "rpe": 8,
+          "rpeSource": "derived"
+        },
+        {
+          "id": "ad60c675-0643-44fc-9fb6-743fbfa8d489",
+          "notes": "",
+          "created": "2026-11-25T14:02:14.431Z",
+          "weight": null,
+          "reps": 12,
+          "rir": 2,
+          "bodyweight": true,
+          "exerciseId": "w6d3e2",
+          "unit": "",
+          "loadSemantics": "Bodyweight",
+          "rpe": 8,
+          "rpeSource": "derived"
+        },
+        {
+          "id": "08dfc41d-7a88-4ba6-9391-4ef18c07d564",
+          "notes": "",
+          "created": "2026-11-25T14:04:48.278Z",
+          "weight": 50,
+          "reps": 13,
+          "rir": 2,
+          "exerciseId": "w6d3e3",
+          "unit": "lb",
+          "loadSemantics": "",
+          "rpe": 8,
+          "rpeSource": "derived"
+        },
+        {
+          "id": "62138c73-5ccb-4215-8955-ed48864413fc",
+          "notes": "",
+          "created": "2026-11-25T14:08:38.453Z",
+          "weight": 50,
+          "reps": 13,
+          "rir": 2,
+          "exerciseId": "w6d3e3",
+          "unit": "lb",
+          "loadSemantics": "",
+          "rpe": 8,
+          "rpeSource": "derived"
+        },
+        {
+          "id": "4645fb29-3b86-44ec-b216-9c69d62c8348",
+          "notes": "",
+          "created": "2026-11-25T14:41:09.297Z",
+          "kind": "cardio",
+          "durationMinutes": 30,
+          "speedMph": 2.6,
+          "inclinePercent": 11,
+          "reps": 0,
+          "weight": null,
+          "rir": null,
+          "exerciseId": "w6d3e1",
+          "unit": "",
+          "loadSemantics": "",
+          "rpe": null,
+          "rpeSource": "missing"
+        }
+      ],
+      "decisions": {},
+      "increments": {},
+      "elapsedSeconds": 2716.952,
+      "timerStartedAt": null,
+      "durationMinutes": 45.28,
+      "submittedAt": "2026-11-25T14:41:10.864Z",
+      "planRevision": "processed-2026-11-23-w6d1",
+      "prescriptions": [
+        {
+          "exerciseId": "w6d3e2",
+          "name": "Captain's Chair Straight-Leg Raise + Hip Curl",
+          "sets": 3,
+          "minReps": 10,
+          "maxReps": 15,
+          "weight": null,
+          "targetReps": 12,
+          "rirMin": 2,
+          "rirMax": 2,
+          "loadSemantics": "Bodyweight",
+          "increment": null
+        },
+        {
+          "exerciseId": "w6d3e3",
+          "name": "Cable Woodchop",
+          "sets": 2,
+          "minReps": 12,
+          "maxReps": 15,
+          "weight": 50,
+          "targetReps": 12,
+          "rirMin": 2,
+          "rirMax": 2,
+          "loadSemantics": "",
+          "increment": null
+        },
+        {
+          "exerciseId": "w6d3e1",
+          "name": "Incline Treadmill Walk",
+          "sets": 1,
+          "minReps": 1,
+          "maxReps": 1,
+          "weight": null,
+          "targetReps": 1,
+          "rirMin": null,
+          "rirMax": null,
+          "loadSemantics": "",
+          "increment": null
+        }
+      ]
     }
   ]
 }
