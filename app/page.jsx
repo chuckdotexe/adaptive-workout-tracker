@@ -13,27 +13,6 @@ import {currentDay, makeSubmission, ordinal, targetFromPlan} from '../lib/online
 const REST_SECONDS = 90;
 const repRange = ex => ex.minReps === ex.maxReps ? `${ex.minReps}` : `${ex.minReps}–${ex.maxReps}`;
 const RECOVERY = 'awt-recovery-v1', AUTH = 'awt-github-token';
-const HEALTH = 'awt-apple-health-v1', HEALTH_START = 'awt-apple-health-start-v1';
-function localTimestamp(ms) {
-  const d=new Date(ms), pad=n=>String(n).padStart(2,'0');
-  return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate())+' '+pad(d.getHours())+':'+pad(d.getMinutes())+':'+pad(d.getSeconds());
-}
-function healthEntries(s, start) {
-  const cardio=s.sets.filter(x=>x.kind==='cardio');
-  const total=Number(s.durationMinutes), cardioMinutes=cardio.reduce((n,x)=>n+x.durationMinutes,0);
-  const end=Date.parse(s.submittedAt), entries=[];
-  const strength=total-cardioMinutes;
-  if(s.sets.some(x=>x.kind!=='cardio') && strength>0 && Number.isFinite(end)) {
-    const actualStart=start?.id===s.id ? Date.parse(start.at) : NaN;
-    entries.push({id:s.id+'-strength',type:'Traditional Strength Training',date:localTimestamp(Number.isFinite(actualStart)?actualStart:end-total*60000),duration:Math.round(strength*100)/100,calories:0,distance:0,attempted:false});
-  }
-  for(const x of cardio) {
-    const finish=Date.parse(x.created);
-    if(!(x.durationMinutes>0) || !Number.isFinite(finish)) continue;
-    entries.push({id:x.id,type:'Walking',date:localTimestamp(finish-x.durationMinutes*60000),duration:x.durationMinutes,calories:0,distance:Number.isFinite(x.speedMph)?Math.round(x.speedMph*x.durationMinutes/60*1000)/1000:0,attempted:false});
-  }
-  return entries;
-}
 function Stepper({label,value,onChange,step=1,max=Infinity}) {
  return <label className="stepper">{label}<input aria-label={label} type="number" min="0" max={max} step="any" value={value} onChange={e=>onChange(e.target.value)}/><div><button type="button" aria-label={'Decrease '+label} onClick={()=>onChange(Math.max(0,+(value||0)-step))}>−</button><button type="button" aria-label={'Increase '+label} onClick={()=>onChange(Math.min(max,+(value||0)+step))}>+</button></div></label>;
 }
@@ -51,7 +30,6 @@ export default function Home() {
   const audio=useRef(null), scheduled=useRef([]), sounded=useRef(null);
   const recovered=useRef(false);
   const pending = useRef(null), submitting = useRef(false);
-  const [health,setHealth]=useState(null);
   const session = draft.sessions.find(s => s.id === draft.activeId);
   const exercises = program.filter(e => e.week === (session?.week ?? week) && e.day === (session?.day ?? day));
   const ex = exercises[idx] ?? exercises[0];
@@ -99,7 +77,6 @@ export default function Home() {
       const raw=localStorage.getItem(RECOVERY);
       if(raw) {const saved=JSON.parse(raw); const state=validate(saved.draft); recovered.current=!!state.activeId; setDraft(state);setRemote(saved.remote);setSessionPlan(saved.sessionPlan);setIdx(saved.idx||0);setRestEnd(saved.restEnd||null);pending.current=saved.pending||null;}
     } catch(e) {setError('Device recovery unavailable: '+e.message);}
-    try {setHealth(JSON.parse(localStorage.getItem(HEALTH)||'null'));} catch {}
     setOnline(navigator.onLine);
     try {setSound(localStorage.getItem('awt-timer-sound')==='true');} catch {}
     setReady(true); load(auth,true);
@@ -190,7 +167,6 @@ export default function Home() {
     const date = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}`;
     let next = start(empty(), week, day, crypto.randomUUID(), date);
     next.sessions[0]={...next.sessions[0],elapsedSeconds:0,timerStartedAt:now.toISOString()};
-    try {localStorage.setItem(HEALTH_START,JSON.stringify({id:next.sessions[0].id,at:now.toISOString()}));} catch {}
     for (const e of exercises) {
       const increment = targetFromPlan(remote.plan, e)?.increment;
       if (increment != null) next = setIncrement(next, e, increment);
@@ -216,11 +192,6 @@ export default function Home() {
       localStorage.setItem(RECOVERY,JSON.stringify({draft,remote,sessionPlan,idx,restEnd,pending:pending.current}));
       const auth=localStorage.getItem(AUTH)||token;
       const result = await new GitHubStore({token:auth}).submit(pending.current, program);
-      try {
-        const saved=pending.current, entries=healthEntries(saved,JSON.parse(localStorage.getItem(HEALTH_START)||'null'));
-        const prior=JSON.parse(localStorage.getItem(HEALTH)||'null');
-        if(prior?.id!==saved.id) {const record={id:saved.id,date:saved.date,entries};localStorage.setItem(HEALTH,JSON.stringify(record));setHealth(record);}
-      } catch {setError('Workout saved, but Apple Health export could not be prepared.');}
       localStorage.setItem(RECOVERY,JSON.stringify({draft:empty(),remote:result}));recovered.current=false;setRestEnd(null);setRemote(result); setDraft(empty()); setSessionPlan(null); pending.current = null;
       const next = currentDay(result.plan, result.queue); if (next) choose(next.week, next.day, result.plan.revision);
       setMessage('Workout saved to Git. Awaiting target processing; refresh from Git to check for an updated plan.');
@@ -228,25 +199,6 @@ export default function Home() {
     finally {setBusy(false); submitting.current = false;}
   }
 
-  function prepareHealth(saved) {
-    try {
-      const entries=healthEntries(saved,JSON.parse(localStorage.getItem(HEALTH_START)||'null'));
-      if(!entries.length) {setError('No valid workout duration available for Apple Health.');return;}
-      const prior=JSON.parse(localStorage.getItem(HEALTH)||'null');
-      if(prior?.id===saved.id) {setHealth(prior);return;}
-      if(prior?.entries?.some(x=>x.attempted) && !window.confirm('Switch Apple Health export to this workout? Check Health before exporting any previously logged workout.')) return;
-      const record={id:saved.id,date:saved.date,entries};
-      localStorage.setItem(HEALTH,JSON.stringify(record));setHealth(record);
-      window.scrollTo({top:0,behavior:'smooth'});
-    } catch(e) {setError('Could not prepare Apple Health export: '+e.message);}
-  }
-  function logHealth(entry) {
-    if(entry.attempted && !window.confirm('Only retry if this workout is missing from Apple Health. Retrying may create a duplicate. Continue?')) return;
-    const updated={...health,entries:health.entries.map(x=>x.id===entry.id?{...x,attempted:true}:x)};
-    try {localStorage.setItem(HEALTH,JSON.stringify(updated));setHealth(updated);} catch {setError('Cannot save Apple Health export status.');return;}
-    const {type,date,duration,calories,distance}=entry;
-    window.location.href='shortcuts://run-shortcut?name='+encodeURIComponent('Log Workout to Apple Health')+'&input=text&text='+encodeURIComponent(JSON.stringify({type,date,duration,calories,distance}));
-  }
   return <main className={session ? "active-workout" : ""}>
     <h1>{programInfo.name}</h1>
     <p className="preview-navigation"><Link href="/upcoming/" target="_blank" rel="noopener noreferrer">Next five workouts →</Link></p>
@@ -254,7 +206,6 @@ export default function Home() {
     {error && <p role="alert">{error}</p>}
     {showMissing && missing.length > 0 && <div className="missing-sets"><strong>Missing sets</strong>{missing.map(e=><button key={e.id} className="secondary" onClick={()=>{setIdx(e.index);setError('');}}>{e.name} · {e.logged}/{e.sets}</button>)}</div>}
     {message && <p role="status">{message}</p>}
-    {!session && health?.entries?.length>0 && <section className="card"><h2>Apple Health · {health.date}</h2><small>Open on iPhone. Calories are not measured; start times for cardio are based on logging time. Check Health after each launch.</small>{health.entries.map(entry=><div key={entry.id}><p>{entry.type} · {entry.duration} min{entry.distance>0?' · '+entry.distance+' mi':''}</p><button className="wide secondary" onClick={()=>logHealth(entry)}>{entry.attempted?'Retry Apple Health (check first)':'Log to Apple Health'} · {entry.type}</button></div>)}</section>}
     <section className={session ? "card connection compact-connection" : "card connection"}>
       <h2>{token ? 'GitHub connected' : 'Connect GitHub'}</h2>
       {!token ? <form onSubmit={connect}>
@@ -329,7 +280,6 @@ export default function Home() {
         <h2>Awaiting processing ({remote.queue.sessions.length})</h2>
         <p>Completed sessions stay queued until the scheduled processor verifies Sheets and publishes upcoming targets. The combined Outlook/workout task checks every two hours while the computer and app are running.</p>
         {remote.queue.sessions.map(s=><details key={s.id}><summary>{s.date} · W{s.week} D{s.day} · {s.sets.length} sets</summary>
-          <button className="secondary wide" onClick={()=>prepareHealth(s)}>Prepare Apple Health export</button>
           {s.sets.map(set=><p key={set.id}>{set.exerciseId===OPTIONAL_TREADMILL_ID ? 'Optional Treadmill Walk' : program.find(e=>e.id===set.exerciseId)?.name} · {set.kind==='cardio' ? `${set.durationMinutes} min · ${set.speedMph ?? '?'} mph · ${set.inclinePercent ?? '?'}% incline` : `${set.bodyweight ? 'Bodyweight' : `${set.weight ?? 'unknown'} lb`} × ${set.reps} · RIR ${set.rir ?? 'unknown'}`}</p>)}
         </details>)}
       </section>
