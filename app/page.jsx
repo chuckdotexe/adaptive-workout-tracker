@@ -5,7 +5,7 @@ import {isCardio, cardioTarget,isBodyweight,OPTIONAL_TREADMILL_ID,treadmillMetri
 import program from '../data/ironledger-program.json';
 import initialHistory from '../data/last-sets.json';
 import programInfo from '../data/program.json';
-import {lastRecordedSet,historyName,elapsedSeconds,stopWorkoutTimer,durationLabel} from '../lib/session-details.mjs';
+import {latestHistory,lastRecordedSet,historyName,elapsedSeconds,stopWorkoutTimer,durationLabel} from '../lib/session-details.mjs';
 import {empty, start, record, recordOptionalTreadmill, setIncrement, validate} from '../lib/workout.mjs';
 import {GitHubStore, DEFAULT_REPOSITORY} from '../lib/github-store.mjs';
 import {currentDay, makeSubmission, ordinal, targetFromPlan} from '../lib/online-workflow.mjs';
@@ -42,8 +42,8 @@ export default function Home() {
   const bonus = session?.sets.find(s => s.exerciseId === OPTIONAL_TREADMILL_ID);
   const bonusMetrics = treadmillMetrics(+bonusMinutes,+bonusSpeed);
   // Keep active prescriptions pinned, but show history from the freshly fetched plan.
-  const publishedHistory=[sessionPlan,remote?.plan].filter(Boolean).flatMap(p=>p.workouts.flatMap(w=>w.exercises)).filter(t=>historyName(program.find(e=>e.id===t.exerciseId)?.name)===historyName(ex.name)).map(t=>t.lastSet).filter(Boolean).sort((a,b)=>a.date.localeCompare(b.date)).at(-1);
-  const historyFallback=[publishedHistory,initialHistory[historyName(ex.name)]].filter(Boolean).sort((a,b)=>a.date.localeCompare(b.date)).at(-1);
+  const publishedHistory=latestHistory([sessionPlan,remote?.plan].filter(Boolean).flatMap(p=>p.workouts.flatMap(w=>w.exercises)).filter(t=>historyName(program.find(e=>e.id===t.exerciseId)?.name)===historyName(ex.name)).map(t=>t.lastSet));
+  const historyFallback=latestHistory([publishedHistory,initialHistory[historyName(ex.name)]]);
   const lastSet=lastRecordedSet(ex,[...(remote?.queue.sessions || []),...draft.sessions.filter(s=>s.status==='finished')],program,historyFallback);
   const nextExercise = session ? [...exercises.slice(idx+1),...exercises.slice(0,idx)].find(e=>!session.skipped?.[e.id] && session.sets.filter(s=>s.exerciseId===e.id).length<e.sets) : exercises[idx+1];
   const missing = session ? exercises.map((e,i)=>({...e,index:i,logged:session.sets.filter(s=>s.exerciseId===e.id).length})).filter(e=>e.logged<e.sets && !session.skipped?.[e.id]) : [];

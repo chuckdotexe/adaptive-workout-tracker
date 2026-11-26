@@ -141,12 +141,13 @@
           "increment": null,
           "reason": "Nov 10: 320 x 10 twice at 2 RIR; consolidate working load.",
           "lastSet": {
-            "date": 46269,
-            "weight": 340,
-            "reps": 15,
-            "rir": null,
+            "date": "2026-11-17",
+            "weight": 280,
+            "unit": "lb",
+            "reps": 8,
+            "rir": 3,
             "bodyweight": false,
-            "loadSemantics": ""
+            "loadSemantics": "total"
           }
         },
         {
@@ -158,10 +159,11 @@
           "lastSet": {
             "date": "2026-11-17",
             "weight": 185,
+            "unit": "lb",
             "reps": 8,
             "rir": 3,
             "bodyweight": false,
-            "loadSemantics": ""
+            "loadSemantics": "total"
           }
         },
         {
@@ -173,6 +175,7 @@
           "lastSet": {
             "date": "2026-10-09",
             "weight": 200,
+            "unit": "lb",
             "reps": 8,
             "rir": null,
             "bodyweight": false,
@@ -188,10 +191,11 @@
           "lastSet": {
             "date": "2026-11-24",
             "weight": 145,
+            "unit": "lb",
             "reps": 11,
             "rir": 2,
             "bodyweight": false,
-            "loadSemantics": ""
+            "loadSemantics": "total"
           }
         },
         {
@@ -201,12 +205,13 @@
           "increment": null,
           "reason": "Nov 13: 300 x 20 three sets at 2 RIR; increase load.",
           "lastSet": {
-            "date": 46266,
-            "weight": 360,
-            "reps": 10,
-            "rir": null,
+            "date": "2026-11-20",
+            "weight": 260,
+            "unit": "lb",
+            "reps": 18,
+            "rir": 3,
             "bodyweight": false,
-            "loadSemantics": ""
+            "loadSemantics": "total"
           }
         },
         {
@@ -216,16 +221,17 @@
           "increment": null,
           "reason": "15–20 minutes at 2.7 mph and 11–12% incline; conversational pace.",
           "lastSet": {
-            "date": 46268,
+            "date": "2026-11-25",
             "weight": null,
+            "unit": "",
             "reps": 0,
             "rir": null,
             "bodyweight": false,
-            "loadSemantics": "",
+            "loadSemantics": "total",
             "kind": "cardio",
-            "durationMinutes": 5,
-            "speedMph": null,
-            "inclinePercent": null
+            "durationMinutes": 30,
+            "speedMph": 2.6,
+            "inclinePercent": 11
           }
         }
       ]
@@ -244,10 +250,11 @@
           "lastSet": {
             "date": "2026-11-21",
             "weight": 75,
+            "unit": "lb",
             "reps": 8,
             "rir": 3,
             "bodyweight": false,
-            "loadSemantics": ""
+            "loadSemantics": "per hand"
           }
         },
         {
@@ -259,10 +266,11 @@
           "lastSet": {
             "date": "2026-11-21",
             "weight": 70,
+            "unit": "lb",
             "reps": 13,
             "rir": 3,
             "bodyweight": false,
-            "loadSemantics": ""
+            "loadSemantics": "total"
           }
         },
         {
@@ -274,10 +282,15 @@
           "lastSet": {
             "date": "2026-11-21",
             "weight": 20,
+            "unit": "lb",
             "reps": 13,
             "rir": 3,
             "bodyweight": false,
-            "loadSemantics": ""
+            "loadSemantics": "per hand",
+            "userComment": {
+              "text": "New program - probably should have started new on Monday. Did this same excess yesteday",
+              "date": "2026-11-07"
+            }
           }
         },
         {
@@ -289,10 +302,11 @@
           "lastSet": {
             "date": "2026-11-21",
             "weight": 60,
+            "unit": "lb",
             "reps": 8,
             "rir": 4,
             "bodyweight": false,
-            "loadSemantics": ""
+            "loadSemantics": "total"
           }
         },
         {
@@ -304,10 +318,11 @@
           "lastSet": {
             "date": "2026-11-23",
             "weight": 30,
+            "unit": "lb",
             "reps": 15,
             "rir": 2,
             "bodyweight": false,
-            "loadSemantics": ""
+            "loadSemantics": "total"
           }
         },
         {
@@ -319,10 +334,11 @@
           "lastSet": {
             "date": "2026-11-21",
             "weight": 25,
+            "unit": "lb",
             "reps": 13,
             "rir": 3,
             "bodyweight": false,
-            "loadSemantics": ""
+            "loadSemantics": "total"
           }
         },
         {
@@ -334,10 +350,11 @@
           "lastSet": {
             "date": "2026-11-21",
             "weight": 20,
+            "unit": "lb",
             "reps": 10,
             "rir": 3,
             "bodyweight": false,
-            "loadSemantics": ""
+            "loadSemantics": "total"
           }
         },
         {
@@ -349,10 +366,11 @@
           "lastSet": {
             "date": "2026-11-21",
             "weight": 65,
+            "unit": "lb",
             "reps": 13,
             "rir": 3,
             "bodyweight": false,
-            "loadSemantics": ""
+            "loadSemantics": "total"
           }
         }
       ]
@@ -371,10 +389,11 @@
           "lastSet": {
             "date": "2026-11-23",
             "weight": 255,
+            "unit": "lb",
             "reps": 5,
             "rir": 2,
             "bodyweight": false,
-            "loadSemantics": ""
+            "loadSemantics": "total"
           }
         },
         {
@@ -386,10 +405,11 @@
           "lastSet": {
             "date": "2026-11-23",
             "weight": 80,
+            "unit": "lb",
             "reps": 7,
             "rir": 2,
             "bodyweight": false,
-            "loadSemantics": ""
+            "loadSemantics": "per hand"
           }
         },
         {
@@ -401,10 +421,11 @@
           "lastSet": {
             "date": "2026-11-23",
             "weight": 200,
+            "unit": "lb",
             "reps": 8,
             "rir": 2,
             "bodyweight": false,
-            "loadSemantics": ""
+            "loadSemantics": "total"
           }
         },
         {
@@ -416,10 +437,11 @@
           "lastSet": {
             "date": "2026-11-23",
             "weight": 170,
+            "unit": "lb",
             "reps": 8,
             "rir": 2,
             "bodyweight": false,
-            "loadSemantics": ""
+            "loadSemantics": "total"
           }
         },
         {
@@ -431,10 +453,11 @@
           "lastSet": {
             "date": "2026-11-23",
             "weight": 20,
+            "unit": "lb",
             "reps": 14,
             "rir": 1,
             "bodyweight": false,
-            "loadSemantics": ""
+            "loadSemantics": "total"
           }
         },
         {
@@ -446,10 +469,11 @@
           "lastSet": {
             "date": "2026-11-23",
             "weight": 70,
+            "unit": "lb",
             "reps": 11,
             "rir": 2,
             "bodyweight": false,
-            "loadSemantics": ""
+            "loadSemantics": "total"
           }
         },
         {
@@ -461,10 +485,11 @@
           "lastSet": {
             "date": "2026-11-23",
             "weight": 30,
+            "unit": "lb",
             "reps": 15,
             "rir": 2,
             "bodyweight": false,
-            "loadSemantics": ""
+            "loadSemantics": "total"
           }
         }
       ]
@@ -481,12 +506,13 @@
           "increment": null,
           "reason": "Nov 10: 320 x 10 twice at 2 RIR; consolidate working load.",
           "lastSet": {
-            "date": 46269,
-            "weight": 340,
-            "reps": 15,
-            "rir": null,
+            "date": "2026-11-17",
+            "weight": 280,
+            "unit": "lb",
+            "reps": 8,
+            "rir": 3,
             "bodyweight": false,
-            "loadSemantics": ""
+            "loadSemantics": "total"
           }
         },
         {
@@ -498,10 +524,11 @@
           "lastSet": {
             "date": "2026-11-17",
             "weight": 185,
+            "unit": "lb",
             "reps": 8,
             "rir": 3,
             "bodyweight": false,
-            "loadSemantics": ""
+            "loadSemantics": "total"
           }
         },
         {
@@ -513,10 +540,11 @@
           "lastSet": {
             "date": "2026-11-24",
             "weight": 145,
+            "unit": "lb",
             "reps": 11,
             "rir": 2,
             "bodyweight": false,
-            "loadSemantics": ""
+            "loadSemantics": "total"
           }
         },
         {
@@ -526,12 +554,13 @@
           "increment": null,
           "reason": "Approved progression from 175 x 15 at 2 RIR Nov 10.",
           "lastSet": {
-            "date": 46269,
-            "weight": 115,
-            "reps": 20,
-            "rir": null,
+            "date": "2026-11-24",
+            "weight": 185,
+            "unit": "lb",
+            "reps": 13,
+            "rir": 2,
             "bodyweight": false,
-            "loadSemantics": ""
+            "loadSemantics": "total"
           }
         },
         {
@@ -543,10 +572,11 @@
           "lastSet": {
             "date": "2026-11-26",
             "weight": 90,
+            "unit": "lb",
             "reps": 20,
             "rir": 2,
             "bodyweight": false,
-            "loadSemantics": ""
+            "loadSemantics": "total"
           }
         }
       ]
@@ -563,16 +593,17 @@
           "increment": null,
           "reason": "After core work: 30 min at 2.7 mph and 11% incline, conversational pace.",
           "lastSet": {
-            "date": 46268,
+            "date": "2026-11-25",
             "weight": null,
+            "unit": "",
             "reps": 0,
             "rir": null,
             "bodyweight": false,
-            "loadSemantics": "",
+            "loadSemantics": "total",
             "kind": "cardio",
-            "durationMinutes": 5,
-            "speedMph": null,
-            "inclinePercent": null
+            "durationMinutes": 30,
+            "speedMph": 2.6,
+            "inclinePercent": 11
           }
         },
         {
@@ -584,10 +615,11 @@
           "lastSet": {
             "date": "2026-11-25",
             "weight": null,
+            "unit": "",
             "reps": 12,
             "rir": 2,
             "bodyweight": true,
-            "loadSemantics": ""
+            "loadSemantics": "total"
           }
         },
         {
@@ -599,10 +631,11 @@
           "lastSet": {
             "date": "2026-11-25",
             "weight": 50,
+            "unit": "lb",
             "reps": 13,
             "rir": 2,
             "bodyweight": false,
-            "loadSemantics": ""
+            "loadSemantics": "total"
           }
         }
       ]
@@ -621,10 +654,11 @@
           "lastSet": {
             "date": "2026-11-26",
             "weight": 150,
+            "unit": "lb",
             "reps": 11,
             "rir": 2,
             "bodyweight": false,
-            "loadSemantics": ""
+            "loadSemantics": "total"
           }
         },
         {
@@ -636,10 +670,11 @@
           "lastSet": {
             "date": "2026-11-23",
             "weight": 80,
+            "unit": "lb",
             "reps": 7,
             "rir": 2,
             "bodyweight": false,
-            "loadSemantics": ""
+            "loadSemantics": "per hand"
           }
         },
         {
@@ -651,10 +686,11 @@
           "lastSet": {
             "date": "2026-11-26",
             "weight": 65,
+            "unit": "lb",
             "reps": 11,
             "rir": 2,
             "bodyweight": false,
-            "loadSemantics": ""
+            "loadSemantics": "total"
           }
         },
         {
@@ -666,10 +702,11 @@
           "lastSet": {
             "date": "2026-11-26",
             "weight": 20,
+            "unit": "lb",
             "reps": 14,
             "rir": 2,
             "bodyweight": false,
-            "loadSemantics": ""
+            "loadSemantics": "total"
           }
         },
         {
@@ -681,10 +718,11 @@
           "lastSet": {
             "date": "2026-11-26",
             "weight": 90,
+            "unit": "lb",
             "reps": 20,
             "rir": 2,
             "bodyweight": false,
-            "loadSemantics": ""
+            "loadSemantics": "total"
           }
         },
         {
@@ -696,10 +734,11 @@
           "lastSet": {
             "date": "2026-11-26",
             "weight": 90,
+            "unit": "lb",
             "reps": 12,
             "rir": 2,
             "bodyweight": false,
-            "loadSemantics": ""
+            "loadSemantics": "total"
           }
         },
         {
@@ -711,10 +750,11 @@
           "lastSet": {
             "date": "2026-11-26",
             "weight": 65,
+            "unit": "lb",
             "reps": 13,
             "rir": 1,
             "bodyweight": false,
-            "loadSemantics": ""
+            "loadSemantics": "total"
           }
         }
       ]
