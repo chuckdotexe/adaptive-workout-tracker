@@ -228,6 +228,18 @@ export default function Home() {
     finally {setBusy(false); submitting.current = false;}
   }
 
+  function prepareHealth(saved) {
+    try {
+      const entries=healthEntries(saved,JSON.parse(localStorage.getItem(HEALTH_START)||'null'));
+      if(!entries.length) {setError('No valid workout duration available for Apple Health.');return;}
+      const prior=JSON.parse(localStorage.getItem(HEALTH)||'null');
+      if(prior?.id===saved.id) {setHealth(prior);return;}
+      if(prior?.entries?.some(x=>x.attempted) && !window.confirm('Switch Apple Health export to this workout? Check Health before exporting any previously logged workout.')) return;
+      const record={id:saved.id,date:saved.date,entries};
+      localStorage.setItem(HEALTH,JSON.stringify(record));setHealth(record);
+      window.scrollTo({top:0,behavior:'smooth'});
+    } catch(e) {setError('Could not prepare Apple Health export: '+e.message);}
+  }
   function logHealth(entry) {
     if(entry.attempted && !window.confirm('Only retry if this workout is missing from Apple Health. Retrying may create a duplicate. Continue?')) return;
     const updated={...health,entries:health.entries.map(x=>x.id===entry.id?{...x,attempted:true}:x)};
@@ -317,6 +329,7 @@ export default function Home() {
         <h2>Awaiting processing ({remote.queue.sessions.length})</h2>
         <p>Completed sessions stay queued until the scheduled processor verifies Sheets and publishes upcoming targets. The combined Outlook/workout task checks every two hours while the computer and app are running.</p>
         {remote.queue.sessions.map(s=><details key={s.id}><summary>{s.date} · W{s.week} D{s.day} · {s.sets.length} sets</summary>
+          <button className="secondary wide" onClick={()=>prepareHealth(s)}>Prepare Apple Health export</button>
           {s.sets.map(set=><p key={set.id}>{set.exerciseId===OPTIONAL_TREADMILL_ID ? 'Optional Treadmill Walk' : program.find(e=>e.id===set.exerciseId)?.name} · {set.kind==='cardio' ? `${set.durationMinutes} min · ${set.speedMph ?? '?'} mph · ${set.inclinePercent ?? '?'}% incline` : `${set.bodyweight ? 'Bodyweight' : `${set.weight ?? 'unknown'} lb`} × ${set.reps} · RIR ${set.rir ?? 'unknown'}`}</p>)}
         </details>)}
       </section>
