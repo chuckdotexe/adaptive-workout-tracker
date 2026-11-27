@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "revision": "processed-2026-11-26-w6d4",
-  "updatedAt": "2026-11-26T16:28:42.715Z",
+  "revision": "processed-2026-11-27-w6d5",
+  "updatedAt": "2026-11-27T14:31:44.262Z",
   "processedSessions": [
     {
       "id": "b4774b22-e8b1-406f-914c-cab7b67a2f86",
@@ -126,116 +126,13 @@
     {
       "id": "0fe5f68c-64b1-4e57-88b9-1fbee848e0a5",
       "digest": "0c80bd400d0cf6ed8b583f0965e2b0d8875c42b86b3d0fe9d102db02a3084181"
+    },
+    {
+      "id": "31d0d958-a7a9-4769-b991-2a39a0cd02e0",
+      "digest": "566389e82ffdab6ea5ab63a77fc39b444e577e5c60ab5f515273ab4a70aa76d0"
     }
   ],
   "workouts": [
-    {
-      "week": 6,
-      "day": 5,
-      "dayLabel": "Friday - Lower B — Posterior Chain",
-      "exercises": [
-        {
-          "exerciseId": "w6d5e2",
-          "weight": 320,
-          "targetReps": 10,
-          "increment": null,
-          "reason": "Nov 10: 320 x 10 twice at 2 RIR; consolidate working load.",
-          "lastSet": {
-            "date": "2026-11-17",
-            "weight": 280,
-            "unit": "lb",
-            "reps": 8,
-            "rir": 3,
-            "bodyweight": false,
-            "loadSemantics": "total"
-          }
-        },
-        {
-          "exerciseId": "w6d5e1",
-          "weight": 215,
-          "targetReps": 8,
-          "increment": null,
-          "reason": "Nov 10: 205 x 10 for three sets at 2 RIR; progress load.",
-          "lastSet": {
-            "date": "2026-11-17",
-            "weight": 185,
-            "unit": "lb",
-            "reps": 8,
-            "rir": 3,
-            "bodyweight": false,
-            "loadSemantics": "total"
-          }
-        },
-        {
-          "exerciseId": "w6d5e4",
-          "weight": 200,
-          "targetReps": 8,
-          "increment": null,
-          "reason": "Oct 9: machine hip thrust 200 x 8 for three sets; resume established weight, target 2 RIR.",
-          "lastSet": {
-            "date": "2026-10-09",
-            "weight": 200,
-            "unit": "lb",
-            "reps": 8,
-            "rir": null,
-            "bodyweight": false,
-            "loadSemantics": ""
-          }
-        },
-        {
-          "exerciseId": "w6d5e3",
-          "weight": 145,
-          "targetReps": 11,
-          "increment": null,
-          "reason": "2026-11-24: 145 x 11/11 at final 2 RIR; consolidate at 11 reps.",
-          "lastSet": {
-            "date": "2026-11-24",
-            "weight": 145,
-            "unit": "lb",
-            "reps": 11,
-            "rir": 2,
-            "bodyweight": false,
-            "loadSemantics": "total"
-          }
-        },
-        {
-          "exerciseId": "w6d5e5",
-          "weight": 320,
-          "targetReps": 15,
-          "increment": null,
-          "reason": "Nov 13: 300 x 20 three sets at 2 RIR; increase load.",
-          "lastSet": {
-            "date": "2026-11-20",
-            "weight": 260,
-            "unit": "lb",
-            "reps": 18,
-            "rir": 3,
-            "bodyweight": false,
-            "loadSemantics": "total"
-          }
-        },
-        {
-          "exerciseId": "w6d5e7",
-          "weight": null,
-          "targetReps": 1,
-          "increment": null,
-          "reason": "15–20 minutes at 2.7 mph and 11–12% incline; conversational pace.",
-          "lastSet": {
-            "date": "2026-11-25",
-            "weight": null,
-            "unit": "",
-            "reps": 0,
-            "rir": null,
-            "bodyweight": false,
-            "loadSemantics": "total",
-            "kind": "cardio",
-            "durationMinutes": 30,
-            "speedMph": 2.6,
-            "inclinePercent": 11
-          }
-        }
-      ]
-    },
     {
       "week": 6,
       "day": 6,
@@ -286,11 +183,7 @@
             "reps": 13,
             "rir": 3,
             "bodyweight": false,
-            "loadSemantics": "per hand",
-            "userComment": {
-              "text": "New program - probably should have started new on Monday. Did this same excess yesteday",
-              "date": "2026-11-07"
-            }
+            "loadSemantics": "per hand"
           }
         },
         {
@@ -504,29 +397,29 @@
           "weight": 320,
           "targetReps": 10,
           "increment": null,
-          "reason": "Nov 10: 320 x 10 twice at 2 RIR; consolidate working load.",
+          "reason": "Nov 27: 320 x 10 for three sets at 2 RIR; hold ceiling until increment confirmed.",
           "lastSet": {
-            "date": "2026-11-17",
-            "weight": 280,
+            "date": "2026-11-27",
+            "weight": 320,
             "unit": "lb",
-            "reps": 8,
-            "rir": 3,
+            "reps": 10,
+            "rir": 2,
             "bodyweight": false,
             "loadSemantics": "total"
           }
         },
         {
           "exerciseId": "w7d2e2",
-          "weight": 215,
+          "weight": 225,
           "targetReps": 8,
           "increment": null,
-          "reason": "Nov 10: 205 x 10 for three sets at 2 RIR; progress load.",
+          "reason": "Nov 27: 225 x 8 for three sets at 2 RIR; consolidate demonstrated load.",
           "lastSet": {
-            "date": "2026-11-17",
-            "weight": 185,
+            "date": "2026-11-27",
+            "weight": 225,
             "unit": "lb",
             "reps": 8,
-            "rir": 3,
+            "rir": 2,
             "bodyweight": false,
             "loadSemantics": "total"
           }
@@ -534,11 +427,11 @@
         {
           "exerciseId": "w7d2e3",
           "weight": 145,
-          "targetReps": 11,
+          "targetReps": 12,
           "increment": null,
-          "reason": "2026-11-24: 145 x 11/11 at final 2 RIR; consolidate at 11 reps.",
+          "reason": "Nov 24 and 27: 145 x 11 at 2 RIR; trial 12 reps, retain 2 RIR.",
           "lastSet": {
-            "date": "2026-11-24",
+            "date": "2026-11-27",
             "weight": 145,
             "unit": "lb",
             "reps": 11,
@@ -593,7 +486,7 @@
           "increment": null,
           "reason": "After core work: 30 min at 2.7 mph and 11% incline, conversational pace.",
           "lastSet": {
-            "date": "2026-11-25",
+            "date": "2026-11-27",
             "weight": null,
             "unit": "",
             "reps": 0,
@@ -601,9 +494,9 @@
             "bodyweight": false,
             "loadSemantics": "total",
             "kind": "cardio",
-            "durationMinutes": 30,
-            "speedMph": 2.6,
-            "inclinePercent": 11
+            "durationMinutes": 20,
+            "speedMph": 2.7,
+            "inclinePercent": 12
           }
         },
         {
@@ -618,7 +511,7 @@
             "unit": "",
             "reps": 12,
             "rir": 2,
-            "bodyweight": true,
+            "bodyweight": false,
             "loadSemantics": "total"
           }
         },
@@ -758,16 +651,121 @@
           }
         }
       ]
+    },
+    {
+      "week": 7,
+      "day": 5,
+      "dayLabel": "Friday - Lower B — Posterior Chain",
+      "exercises": [
+        {
+          "exerciseId": "w7d5e1",
+          "weight": 200,
+          "targetReps": 10,
+          "increment": null,
+          "reason": "Repeat latest comparable normal-session load and reps; no equipment substitution inferred.",
+          "lastSet": {
+            "date": "2026-11-24",
+            "weight": 200,
+            "unit": "lb",
+            "reps": 10,
+            "rir": 2,
+            "bodyweight": false,
+            "loadSemantics": "total"
+          }
+        },
+        {
+          "exerciseId": "w7d5e2",
+          "weight": 205,
+          "targetReps": 12,
+          "increment": null,
+          "reason": "Repeat latest comparable normal-session load and reps; no equipment substitution inferred.",
+          "lastSet": {
+            "date": "2026-11-24",
+            "weight": 205,
+            "unit": "lb",
+            "reps": 10,
+            "rir": 2,
+            "bodyweight": false,
+            "loadSemantics": "total"
+          }
+        },
+        {
+          "exerciseId": "w7d5e3",
+          "weight": 145,
+          "targetReps": 12,
+          "increment": null,
+          "reason": "Nov 24 and 27: 145 x 11 at 2 RIR; trial 12 reps, retain 2 RIR.",
+          "lastSet": {
+            "date": "2026-11-27",
+            "weight": 145,
+            "unit": "lb",
+            "reps": 11,
+            "rir": 2,
+            "bodyweight": false,
+            "loadSemantics": "total"
+          }
+        },
+        {
+          "exerciseId": "w7d5e4",
+          "weight": 45,
+          "targetReps": 15,
+          "increment": null,
+          "reason": "Repeat latest comparable normal-session load and reps; no equipment substitution inferred.",
+          "lastSet": {
+            "date": "2026-11-20",
+            "weight": 45,
+            "unit": "lb",
+            "reps": 13,
+            "rir": 3,
+            "bodyweight": false,
+            "loadSemantics": "total"
+          }
+        },
+        {
+          "exerciseId": "w7d5e5",
+          "weight": 320,
+          "targetReps": 16,
+          "increment": null,
+          "reason": "Nov 27: 320 x 15/15/20 at 2 RIR; trial 16 reps across sets.",
+          "lastSet": {
+            "date": "2026-11-27",
+            "weight": 320,
+            "unit": "lb",
+            "reps": 20,
+            "rir": 2,
+            "bodyweight": false,
+            "loadSemantics": "total"
+          }
+        },
+        {
+          "exerciseId": "w7d5e7",
+          "weight": null,
+          "targetReps": 1,
+          "increment": null,
+          "reason": "Nov 27: 20 min at 2.7 mph, 12% incline; repeat if conversational effort.",
+          "lastSet": {
+            "date": "2026-11-27",
+            "weight": null,
+            "unit": "",
+            "reps": 0,
+            "rir": null,
+            "bodyweight": false,
+            "loadSemantics": "total",
+            "kind": "cardio",
+            "durationMinutes": 20,
+            "speedMph": 2.7,
+            "inclinePercent": 12
+          }
+        }
+      ]
     }
   ],
   "sheetsReceipt": {
     "spreadsheetId": "1sNIsfGpvUEk_qcd5oj23vur7xdBFrBC4NfxOs6WVML4",
-    "range": "'Workout Log'!A1397:V1444",
-    "verifiedAt": "2026-11-26T16:28:42.715Z",
+    "range": "'Workout Log'!A1445:V1460",
+    "verifiedAt": "2026-11-27T14:31:44.262Z",
     "sessionIds": [
-      "8fa28375-b2a1-4b60-89b9-95c4cfe0f745",
-      "ae725053-88ce-4631-b177-aff957d5a51d",
-      "0fe5f68c-64b1-4e57-88b9-1fbee848e0a5"
+      "31d0d958-a7a9-4769-b991-2a39a0cd02e0"
     ]
   }
 }
