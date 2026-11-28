@@ -43,7 +43,7 @@ try {
     const {batch, nextPlan, sheetReceipt,historySource} = JSON.parse(Buffer.concat(chunks).toString('utf8'));
     const config=JSON.parse(await fs.readFile(new URL('../.github/workout-automation.json', import.meta.url)));
     if(historySource?.spreadsheetId!==config.spreadsheetId || sheetReceipt?.spreadsheetId!==config.spreadsheetId || !Array.isArray(historySource?.values) || !SHEET_HEADERS.every((h,i)=>historySource.values[0]?.[i]===h))throw Error('Verified production historySource with A:V headers is required before publishing. Queue preserved.');
-    const withHistory=attachSheetHistory(nextPlan,program,historySource.values.slice(1),config.excludedSessionIds);
+    const withHistory=attachSheetHistory(nextPlan,program,historySource.values.slice(1),config.excludedSessionIds,true);
     console.log(JSON.stringify(await finalizeProcessing(store, batch, withHistory, sheetReceipt, program), null, 2));
   } else {
     throw Error('Usage: node scripts/process-workouts.mjs prepare | finalize | history (finalize/history read JSON from stdin)');
